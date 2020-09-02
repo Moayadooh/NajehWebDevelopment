@@ -1,0 +1,47 @@
+﻿body {
+    background-color: cornflowerblue;
+    color: white; /*change text color*/
+}
+
+table {
+    border-collapse: collapse; /*set singe line*/
+}
+
+tr:nth-child(even) {
+    background-color: red;
+}
+
+tr:nth-child(odd) {
+    background-color: orangered;
+}
+
+button {
+    width: 80px; /*width: 100%; (100% of the screen size)*/
+}
+
+#title1 { /*id (used for one element only)*/
+    background-color: black;
+    text-align: center;
+    font-size: 20px;
+}
+
+.group1 { /*class (used for more than one element)*/
+    background-color: gray;
+}
+
+img {
+    border: 3px solid black;
+    width: 30%;
+}
+
+#images {
+    display: none; /*hide the element*/
+    /*display: block; (display the elements)*/
+}
+
+* { /*access to all the elements*/
+    direction: ltr; /*direction: rtl; (the content start from the right)*/
+    /*float: left; float: right;*/
+    /*clear: both; (fix the problms of float)*/
+    /*margin: auto; (align other elements int middel)*/
+}
