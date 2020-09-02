@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Home.html?page-name=Home">Home</a> </li>
+            <li><a href="Register.html?page-name=Register">Register</a></li>
+            <li><a href="Blog.html?page-blog=blog">Blog</a></li>
+            <li><a href="Contact.html?page-Contact=Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <fieldset>
+        <legend>Register - HTML5</legend>
+        <form>
+            <label> Name</label> <br />
+            <input type="text" required="required" /><br />
+
+            <label> Email</label> <br />
+            <input type="email" required="required" title="Should be live,hotmail or gmail" pattern="[a-zA-Z0-9_\.+]+@(live|hotmail|gmail)(\.com)" /><br />
+
+            <label> Age</label> <br />
+            <input type="number" min="18" max="60" /><br />
+
+            <label> Color</label> <br />
+            <input type="color" /><br />
+
+            <label> date </label> <br />
+            <input type="datetime-local" /><br />
+
+            <label> range </label> <br />
+            <input type="range" step="2" min="18" max="60" /><br /> <!--'step' attribute is the number of incrementation or decrementation per step-->
+
+            <label> Jordan NUmber </label> <br />
+            <input type="tel" pattern="^07[789]-\d{7}$" title="Should be zain,umnia or orange" /><br />
+
+            <label> Omani NUmber </label> <br />
+            <input type="tel" pattern="^(?:\+?968)?01[15-9]\d{8}$" title="Should be begin with 968 as omani number" /><br />
+
+            <label> URL </label> <br />
+            <input type="url" /><br />
+
+            <label> time </label> <br />
+            <input type="time" /><br />
+
+            <label> Week </label> <br />
+            <input type="week" /><br />
+
+            <label> month </label> <br />
+            <input type="month" /><br />
+
+            <label> Search </label> <br />
+            <input type="search" /><br />
+
+            <input type="submit" value="Submit Form" />
+        </form>
+    </fieldset>
+</body>
+</html>
