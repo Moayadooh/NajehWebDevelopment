@@ -1,0 +1,45 @@
+﻿/* Selectors Types: */
+
+
+/*Selector By Tag Name*/
+body {
+}
+
+nav {
+
+}
+
+ul {
+
+}
+
+section {
+
+}
+
+div {
+
+}
+
+/*Selector By ID   #   */
+#div1{
+}
+
+#nav-menu{
+}
+
+#nav-sitemap {
+}
+
+/*Selector by Class   .   */
+.Theme {
+}
+
+#Theme1 {
+}
+
+#Theme2 {
+}
+
+#Theme3 {
+}

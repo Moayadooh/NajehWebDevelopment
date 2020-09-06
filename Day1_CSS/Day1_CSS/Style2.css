@@ -1,0 +1,59 @@
+﻿/*
+ 1- Margin & Padding
+ 2- position
+ 3- colors & background
+ 4- Fonts & Text Alignment
+ 5- Borders & BoxModel
+ 6- Flex
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 700px; /*mostly the height of screen that good for all devices is (650px - 700px)*/
+    /*background: -webkit-linear-gradient(120deg,#808080,#ffffff); Safari
+    background: -moz-linear-gradient(120deg,#808080,#ffffff); Mozila Firefox
+    background: -o-linear-gradient(120deg,#808080,#ffffff); Opera
+    background: -ms-linear-gradient(120deg,#808080,#ffffff); Microsoft Edge*/
+    background: linear-gradient(120deg,#808080,#ffffff); /*120deg or left top*/
+    background: radial-gradient(#ffffff,#4c0f8d); /*Override linear-gradient*/
+    background: url('Images/bg.jpg'); /*Override radial-gradient*/
+    background-repeat: no-repeat; /*don't repeat the image. Repeat the image when the width is 1 or 2 px*/
+    background-size: cover; /*fit the image to the whole screen*/
+}
+
+/*Standard Width Devices*/
+/* Desktop     laptop       notebook     tablet     mobile  */
+/* 1200px      960px        768px        630px      520px  */
+
+header {
+    width: 960px;
+    background: #f0e12d;
+    margin: 100px auto; /*if width is 100% don't use the margin*/
+}
+
+li {
+    list-style: none;
+    display: inline;
+    padding: 0px 50px 0px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li:hover {
+    text-shadow: 3px 2px 2px #ff0000;
+    cursor: pointer;
+    border-bottom: 1px dotted black;
+}
+
+.sperator {
+    border-right: 1px solid #000000;
+    /*border-width:1px;
+    border-style: solid;
+    border-color:#000000;*/
+}
+nav {
+    border: 1px solid black;
+    border-radius: 6px;
+}
