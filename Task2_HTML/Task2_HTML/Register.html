@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Register</legend>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Name</label>
+                    </td>
+                    <td>
+                        <label>Email</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" required />
+                    </td>
+                    <td>
+                        <input type="email" pattern="[a-zA-Z0-9_\.+]+@(.*)(\.com|\.om)" title="Email must end with '.om' or '.com'" /> <!--'.*' mean any character-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password</label>
+                    </td>
+                    <td>
+                        <label>Confirm Password</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" />
+                    </td>
+                    <td>
+                        <input type="password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Age</label>
+                    </td>
+                    <td>
+                        <label>Message</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="number" min="18" max="50" />
+                    </td>
+                    <td>
+                        <textarea></textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" />
+        </form>
+    </fieldset>
+</body>
+</html>
