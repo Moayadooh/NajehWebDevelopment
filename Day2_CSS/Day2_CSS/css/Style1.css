@@ -1,0 +1,71 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 960px;
+    margin: 100px auto;
+    background: radial-gradient(#ffffff, #2ebecc); /*gradient start from the middel*/
+}
+
+nav ul.main > li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Calibri;
+    font-weight: bold;
+    padding: 25px 25px 25px 25px;
+}
+
+.services {
+    position: relative;
+}
+
+.sub-services {
+    position: absolute;
+    background: #17a3b1;
+    list-style: none;
+    padding: 0;
+    left: 0;
+    top: 20px;
+    width: 130px;
+    display: none;
+}
+
+    .sub-services li {
+        border-bottom: 1px solid #ffffff;
+        line-height: 35px; /*height of <li> element*/
+    }
+
+.services:hover .sub-services {
+    display: block;
+}
+
+.sub-services li:hover {
+    background: #000000;
+}
+
+ul.main > li:first-child {
+    position: relative;
+}
+
+    ul.main > li:first-child img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -11px;
+        top: -12px;
+    }
+
+/*ul.main > li:first-child {
+    background:#000000;
+}
+
+ul.main > li:last-child {
+    background: #000000;
+}*/

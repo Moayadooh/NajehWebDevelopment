@@ -1,0 +1,104 @@
+﻿body {
+
+    margin:0;
+    padding:0;
+
+ 
+    
+}
+
+*{
+    box-sizing:border-box;
+}
+
+#bg{
+    opacity:0.5;
+    position:absolute;
+    width:100%;
+    min-height:600px;
+    z-index:-99999;
+}
+
+form {
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background: linear-gradient(#7579fe,#b324f0);
+    padding: 55px;
+    top:130px;
+    position:relative;
+   
+}
+
+form img#logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+
+h2 {
+    color:white;
+    text-transform:uppercase
+}
+
+input[type=text], input[type=password] {
+    background:none;
+    border:none;
+    outline:none;
+    padding:16px;
+   
+
+}
+
+input::placeholder {
+    color: #e3d6f0;
+}
+
+div.input-user {
+    border-bottom: 1px solid white;
+    text-align: left;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+div.input-user img{
+    width:20px;
+    height:20px
+}
+
+
+form div:nth-child(5) {
+    text-align: left;
+    color: #e3d6f0;
+    margin-bottom:35px;
+}
+
+input[type=submit]{
+    width:120px;
+    height:50px;
+    border-radius:5%;
+    border:none;
+    outline:none;
+    text-transform:capitalize;
+    font-size:22px;
+    margin-bottom:35px;
+    background:white;
+}
+
+form a {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #e3d6f0;
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+   
+
