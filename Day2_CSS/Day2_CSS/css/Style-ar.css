@@ -17,7 +17,7 @@ nav {
         display: inline;
     }
 
-/*fonts by CSS 3*/
+/*fonts by CSS 3. "type @font-face than double tap"*/
 @font-face {
     font-family: 'AmmarFont';
     src: url('../fonts/Janna LT Bold.ttf');
