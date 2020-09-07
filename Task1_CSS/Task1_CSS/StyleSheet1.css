@@ -1,0 +1,40 @@
+﻿body {
+    height: 700px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI';
+}
+
+header {
+    background-color: #ff0000;
+    height: 90px;
+}
+
+h1 {
+    float: left;
+    margin-left: 30px;
+    color: #ffffff;
+}
+
+nav {
+    float: right;
+    margin-top: 15px;
+    margin-right: 40px;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+a:hover {
+    border-radius: 6px;
+    background-color: #a79a9a;
+}
