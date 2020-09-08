@@ -7,14 +7,23 @@
     box-sizing: border-box;
 }
 
+#background-img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+}
+
 form {
     width: 500px;
-    margin: 100px auto;
+    margin: 0px auto;
     text-align: center;
     padding: 55px 55px 35px;
     background: linear-gradient(#7679fe, #b326ef);
     border-radius: 6px;
     color: #ffffff;
+    position: relative;
+    top: 100px;
 }
 
 #logo img {
@@ -25,7 +34,7 @@ form {
 }
 
 #login-text {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -46,15 +55,18 @@ input[type=text], input[type=password] {
     border: none;
     background: none;
     border-bottom: 1px solid white;
-    margin-bottom: 35px;
     text-align: left;
+}
+
+input[type=password] {
+    margin-bottom: 25px;
 }
 
 input::placeholder {
     color: #ffffff;
 }
 
-form div:nth-child(7) {
+form div:nth-child(5) {
     text-align: left;
     margin-bottom: 35px;
 }
@@ -67,7 +79,7 @@ input[type=submit] {
     border-radius: 6px;
     outline: none;
     border: none;
-    margin-bottom: 95px;
+    margin-bottom: 75px;
 }
 
 div a {
