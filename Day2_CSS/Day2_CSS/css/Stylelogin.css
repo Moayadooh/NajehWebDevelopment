@@ -38,6 +38,7 @@ h2 {
 
 input[type=text], input[type=password] {
     background: none;
+    /*width: 400px;*/
     border: none;
     outline: none;
     padding: 16px;
@@ -79,7 +80,7 @@ input[type=submit] {
 
 form a {
     text-transform: capitalize;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: #e3d6f0;
     text-decoration: none;
 }

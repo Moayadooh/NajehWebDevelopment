@@ -67,8 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\StyleSheet2.css" />
+    <Content Include="Images\Home.png" />
+    <Content Include="Images\lock.png" />
+    <Content Include="Images\mountain.png" />
+    <Content Include="Images\PMgxJe.jpg" />
+    <Content Include="Images\user.png" />
+    <Content Include="LoginForm.html" />
     <Content Include="Menu.html" />
-    <Content Include="StyleSheet1.css" />
+    <Content Include="CSS\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
