@@ -1,0 +1,29 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    height: 200px;
+    font-size: 22px;
+    font-weight: bolder;
+    background: #ffd800;
+    z-index: -1;
+}
+
+img {
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+}
+
+div {
+    height: 200px;
+    font-size: 22px;
+    font-weight: bolder;
+    background: #90ec5c;
+    z-index: 2;
+    position: relative; /*Release the image to the front*/
+    opacity: 0.5;
+}

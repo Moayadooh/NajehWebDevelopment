@@ -1,0 +1,29 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+p:nth-child(1) {
+    height: 200px;
+    background: linear-gradient(#00ff21, #b6ff00);
+    font-size: 20px;
+    z-index: 1;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    z-index: 2;
+    position: absolute;
+    left: 40%;
+    top: 100px;
+}
+
+p:nth-child(3) {
+    height: 200px;
+    background: linear-gradient(#ff0000, #ffd800);
+    font-size: 20px;
+    z-index: 3;
+    position: relative; /*Release the image to the front*/
+    opacity: 0.5;
+}

@@ -1,0 +1,38 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+figure {
+    padding: 10px;
+    margin: 0;
+    border: 1px inset #808080;
+    float: left;
+    width: 25%;
+}
+
+    figure figcaption {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    figure img {
+        width: 100%;
+        height: 250px;
+    }
+
+@media screen and (max-width:960px) {
+    figure {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    figure {
+        width: 100%;
+    }
+}
