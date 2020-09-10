@@ -51,17 +51,31 @@ article {
     flex-wrap: wrap;
 }
 
-.image {
+/*.image {
     flex: 30%;
     height: 160px;
     background: #808080;
     margin-right: 15px;
 }
 
-    /*=============================================================*/
     .image + div {
         flex: 70%;
+    }*/
+
+div.image {
+    flex: 24%;
+    height: 160px;
+    background: #808080;
+    margin-right: 15px;
+}
+
+    div.image + div {
+        flex: 73%;
+        height: 160px;
     }
+
+/*=============================================================*/
+
 
 footer {
     background: #333333;
@@ -70,21 +84,17 @@ footer {
     color: white;
 }
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:700px) {
 
     article, .container {
         flex-direction: column;
     }
 
+    div.image {
+        flex: none;
+    }
+
     nav a {
         display: block;
     }
-
-    .image {
-        flex: 100%;
-    }
-
-        .image + div {
-            flex: 100%;
-        }
 }
