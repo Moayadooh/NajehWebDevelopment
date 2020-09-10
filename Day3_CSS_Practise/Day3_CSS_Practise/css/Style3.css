@@ -1,0 +1,72 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(#ffd800, #0094ff);
+    padding: 90px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    transition: font-size 500ms ease-out;
+    /*transition-delay: 5s;*/
+}
+
+    h1:hover {
+        font-size: 100px;
+    }
+
+nav {
+    background: rgba(221, 176, 176, 0.2);
+    padding: 10px;
+    box-shadow: 3px 3px 3px 3px #000000;
+    border-radius: 6px;
+}
+
+    nav a {
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 3px 3px 3px #000000;
+        font-size: 20px;
+        padding: 10px;
+        display: inline-block; /*necessary to apply the animation*/
+        transform: rotateZ(0deg);
+        transition: transform 1s;
+    }
+
+a:hover {
+    transform: rotateZ(90deg);
+}
+
+
+.row .column {
+    border: 2px solid #ffd800;
+    border-radius: 6px;
+    width: 32%;
+    margin: 2px 1px 0px;
+    float: left;
+    text-align: center;
+    height: 100px;
+    transition: height 300ms;
+}
+
+.column:hover {
+    height: 200px;
+}
+
+@media screen and (max-width:630px) {
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    .row .column {
+        float: none;
+        width: 100%;
+    }
+}

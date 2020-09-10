@@ -68,12 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\StyleSheet2.css" />
+    <Content Include="CSS\StyleSheet3.css" />
     <Content Include="Images\Home.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\mountain.png" />
     <Content Include="Images\PMgxJe.jpg" />
     <Content Include="Images\user.png" />
     <Content Include="LoginForm.html" />
+    <Content Include="Menu-ar.html" />
     <Content Include="Menu.html" />
     <Content Include="CSS\StyleSheet1.css" />
     <Content Include="Web.config" />
@@ -82,6 +84,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\Janna LT Bold.ttf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

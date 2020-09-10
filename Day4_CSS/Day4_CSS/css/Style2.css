@@ -1,0 +1,72 @@
+﻿body {
+}
+
+a:link { /*change properties of links only 'href'*/
+    font-size: 30px;
+}
+
+a:visited { /*after click the link the design will be changed 'visited'*/
+    background: #ffd800;
+    padding: 10px;
+    display: block;
+    color: #b220e9;
+}
+
+a:hover {
+    border: 2px outset #0a7c19;
+}
+
+a:active { /*when hold the element by mouse*/
+    background: #e6a9e9;
+}
+
+div.container p:first-child {
+    background: #e6a9e9;
+    font-size: 20px;
+    padding: 35px;
+}
+
+div.container p:last-child {
+    background: #ea23ac;
+    font-size: 20px;
+    padding: 35px;
+}
+
+div.container p:nth-child(3) { /*nth --> next child*/
+    background: #3befd3;
+    font-size: 20px;
+    padding: 35px;
+}
+
+div.container p:last-of-type { /*last <p> element*/
+    background: #ffd800;
+    font-size: 20px;
+    padding: 35px;
+}
+
+div.container article:only-of-type { /*if there is only one <aricle> element*/
+    background: #ea23ac;
+    font-size: 20px;
+    padding: 35px;
+    color: white;
+}
+
+div.container p:first-of-type { /*first <p> element*/
+    background: #d0d438;
+    font-size: 20px;
+    padding: 35px;
+    color: #000000;
+}
+
+/*div.container p:nth-child(2),
+div.container p:nth-child(4),
+div.container p:nth-child(5),
+div.container p:nth-child(7),
+div.container p:nth-child(8),*/
+div.container p:nth-child(even) { /*2, 4, 6 ..*/
+    background: #000000;
+    font-size: 30px;
+    padding: 35px;
+    color: white
+}
+/*div.container p:nth-child(odd)  1, 3, 5 ..*/

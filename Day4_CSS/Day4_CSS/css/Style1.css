@@ -1,0 +1,27 @@
+﻿body {
+}
+
+div {
+    border: 3px solid red;
+    padding: 20px 15px;
+}
+
+    div > p { /*call all <p> tags which are childs for <div>*/
+        border: 3px solid green;
+        padding: 20px;
+    }
+
+section ~ a { /*call all <a> tags which are outside <section>*/
+    background: #ffd800;
+    padding: 10px;
+}
+
+section + a { /*call next 'single' <a> tag which is outside <section>*/
+    background: #4dff0e;
+    font-size: 30px;
+}
+
+/*Combinators*/
+div p {
+    color: red;
+}
