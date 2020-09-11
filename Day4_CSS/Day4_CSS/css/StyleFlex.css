@@ -26,7 +26,6 @@ nav {
         text-align: center;
         font-size: 18px;
     }
-
 /*=============================================================*/
 article {
     display: flex;
@@ -42,25 +41,12 @@ article {
     padding: 50px;
     background: #e5e5e5;
 }
-
-/*=============================================================*/
 /*=============================================================*/
 .container {
     padding: 42px 20px 42px 20px;
     display: flex;
     flex-wrap: wrap;
 }
-
-/*.image {
-    flex: 30%;
-    height: 160px;
-    background: #808080;
-    margin-right: 15px;
-}
-
-    .image + div {
-        flex: 70%;
-    }*/
 
 div.image {
     flex: 24%;
@@ -74,9 +60,17 @@ div.image {
         height: 160px;
     }
 
+/*.image {
+    flex: 30%;
+    height: 160px;
+    background: #808080;
+    margin-right: 15px;
+}
+
+    .image + div {
+        flex: 70%;
+    }*/
 /*=============================================================*/
-
-
 footer {
     background: #333333;
     text-align: center;

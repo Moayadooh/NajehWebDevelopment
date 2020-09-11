@@ -13,6 +13,7 @@
         border: 1px solid red;
         flex-grow: 1; /*item wight*/
         /*flex: 100%;*/
+        /*flex-direction: column;*/
     }
 
 /*.container div:first-child {
