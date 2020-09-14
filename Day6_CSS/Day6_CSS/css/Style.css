@@ -1,0 +1,61 @@
+﻿body {
+    margin:80px;
+}
+
+/* css will apply on div class begin with 'container'  */
+div[class^=container]{
+    background:yellow;
+    color:orange;
+}
+
+/* css will apply on div class contains with 'box'  */
+[class*=box]{
+
+    border:5px inset orange;
+}
+
+/* css will apply on div class equals 'ammar-yas'  */
+div[class~=ammar-yas]{
+    border:1px solid red;
+}
+
+/* css will apply on div class end with  'ox'  */
+
+div[class$=ox] {
+    background:green;
+}
+
+/* css will apply on div id contains 'div'  */
+
+div[id|=div] {
+    background: #38b7c0;
+}
+
+div[class~=ammar-yas] {
+    border: 4px solid #808080;
+}
+
+
+#p1{
+
+    column-count:4;
+    column-gap:5px;
+    column-rule:2px solid red;
+    background:linear-gradient(#38b7c0,#a4e0e2,#a5d7e9);
+}
+
+#p2{
+   height:240px;
+   width:300px;
+   overflow:hidden;
+   /* overflow-y:scroll*/
+}
+
+
+
+
+
+
+
+
+
