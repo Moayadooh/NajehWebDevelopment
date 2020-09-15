@@ -1,0 +1,63 @@
+
+Day2_HTML:
+-basic HTML
+-meta
+-get & post
+
+Day3_HTML:
+-input types
+-most used HTML tags
+
+Day1_CSS:
+-basic CSS
+-selector types
+
+Day2_CSS:
+-navigation bar (ul)
+-login form
+-custom font (Arabic)
+
+Day3_CSS:
+-responsive
+-Z-index
+-media query
+-transformation
+-font awesome
+
+Day4_CSS:
+-combinator
+-deal with links in CSS
+-deal with input types in CSS
+-animation
+-flex
+
+Day6_CSS:
+-more combinator
+-parallax
+
+Day1_Bootstrap
+-basic bootstrap
+-template
+
+Day2_Bootstrap
+-PSD template
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

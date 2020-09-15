@@ -1,26 +1,29 @@
-﻿body {   
-    margin:0;
-    padding:0;
-    font-family:Tahoma;
-    height:100%;
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+    height: 100%;
 }
 
-header,#bg2,#bg3 , footer{
-    background-attachment:fixed;
-    text-align:center;
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+header, #bg2, #bg3, footer {
+    background-attachment: fixed; /*stop image moving*/
+    text-align: center;
+    background-size: cover; /*image size fit to the screen size*/
+    /*background-size: contain;*/ /*resize the image to make it fully visible*/
+    background-position: center; /*image appear in the center instead of in the 'top-left'*/
+    background-repeat: no-repeat;
+}
 
+header, footer {
+    background-image: url('../images/a1.jpg');
+    min-height: 700px; /*fix the minimum height of the image*/
 }
-header,footer{
-    background-image:url('../images/a1.jpg');
-    min-height:700px;
+
+#bg2 {
+    background-image: url('../images/a2.jpg');
+    min-height: 700px;
 }
-#bg2{
-    background-image:url('../images/a2.jpg');
-    min-height:700px;
-}
+
 #bg3 {
     background-image: url('../images/a3.jpg');
     min-height: 700px;
@@ -29,38 +32,39 @@ header,footer{
 #ar1, #ar2, #ar3 {
     text-align: center;
     padding: 50px;
-    background:#e6a4a4;
-}
-article p{
-    line-height:30px;
-    font-size:20px;
-   
-}
-h1,h2,h3{
-    margin:0;
-    color:white;
+    background: #e6a4a4;
 }
 
-h1{
-    padding:100px;
-    color:white;
-    letter-spacing:10px;
-}
-nav{
-    padding:15px;
-    background:white;
-    text-align:right;
-    position:fixed;
-    width:100%;
-    opacity:0.6;
-         
-}
-nav a{
-    display:inline-block;
-    text-decoration:none;
-    font-size:22px;
-    letter-spacing:5px;
-    color: black;
-    padding:20px;
+article p {
+    line-height: 30px; /*paraghraph lines spacing '|'*/
+    font-size: 20px;
 }
 
+h1, h2, h3 {
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    padding: 100px;
+    color: white;
+    letter-spacing: 10px;
+}
+
+nav {
+    padding: 15px;
+    background: white;
+    text-align: right;
+    position: fixed; /*element remain in the screen*/
+    width: 100%; /*position fixed will affect on the width*/
+    opacity: 0.6;
+}
+
+    nav a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 22px;
+        letter-spacing: 5px;
+        color: black;
+        padding: 20px;
+    }
