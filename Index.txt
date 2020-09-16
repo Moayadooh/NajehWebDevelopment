@@ -40,7 +40,10 @@ Day1_Bootstrap
 -template
 
 Day2_Bootstrap
--PSD template
+-PSD template part 1
+
+Day3_Bootstrap
+-PSD template part 2
 
 
 
