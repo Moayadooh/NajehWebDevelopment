@@ -43,7 +43,7 @@ Day2_Bootstrap
 -PSD template part 1
 
 Day3_Bootstrap
--PSD template part 2
+-PSD template part 2..........
 
 
 
