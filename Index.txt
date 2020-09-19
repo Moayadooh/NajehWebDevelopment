@@ -36,8 +36,8 @@ Day6_CSS:
 -parallax
 
 Day1_Bootstrap
--basic bootstrap
--template
+-basic bootstrap tips
+-basic template
 
 Day2_Bootstrap
 -PSD template part 1
