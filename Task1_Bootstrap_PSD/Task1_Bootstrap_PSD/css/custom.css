@@ -137,14 +137,37 @@ h1 {
     word-wrap: break-word;
 }
 
-.paragraph-black-15px {
-    font-size: 15px;
-}
-
 .composite-path {
     margin-top: 35px;
     margin-bottom: 35px;
 }
+
+.paragraph-black-15px {
+    font-size: 15px;
+}
+
+.line div {
+    position: relative;
+}
+
+    .line div figure {
+        position: absolute;
+        left: 50%;
+        top: 137px;
+        transform: translateX(-50%);
+        max-width: 1000px;
+    }
+
+    .line div figure img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width:992px) {
+        .line div figure {
+            display: none;
+        }
+    }
 
 .services-images {
     margin-top: 90px;
@@ -547,7 +570,7 @@ h6 {
     background-position: center;
     background-image: url('../images/mail text background.png');
     height: 41px;
-    width: 370px;
+    max-width: 370px;
     font-size: 15px;
     color: #637988;
     margin-top: 25px;
@@ -583,7 +606,7 @@ h6 {
     border: 1px solid #c8ced1;
     border-radius: 6px;
     height: 58px;
-    width: 370px;
+    max-width: 370px;
     font-size: 15px;
     color: #ffffff;
     /*margin-top: 25px;*/
@@ -603,7 +626,7 @@ h6 {
     border: 1px solid #c8ced1;
     border-radius: 6px;
     height: 220px;
-    width: 1150px;
+    max-width: 1150px;
     font-size: 15px;
     color: #ffffff;
     /*margin-top: 25px;*/
