@@ -79,6 +79,28 @@ main {
     }
 }
 
+@media screen and (max-width:400px) {
+    .navbar-inverse .navbar-nav > li > a {
+        padding-left: 30px;
+    }
+}
+
+.navbar-toggle {
+    background-color: #ffe500;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #ffe500;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #ffe500;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #ffe500;
+}
+
 
 
 
@@ -235,8 +257,11 @@ h4 {
 }
 
 #description {
-    background-image: url('../images/We Make.png');
+    background-color: #324651;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/We Make.png');
     min-height: 470px;
     border-top: 1px solid #7b878d;
 }
@@ -333,6 +358,14 @@ h3 {
 
 /*_________________________________________________________________________________________________*/
 /*Portfolio*/
+#portfolio img {
+    transition: all 2s ease;
+}
+
+    #portfolio img:hover {
+        transform: scaleX(-1);
+    }
+
 .links {
     margin-bottom: 67px;
     margin-top: 100px;
@@ -353,11 +386,6 @@ h3 {
 
 .links a:hover {
     color: #ffffff;
-    /*border-top-right-radius: 25%;
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    border-bottom-left-radius: 25%;
-    background-color: #ffe500;*/
     background-image: url('../images/yellow background.png');
     background-size: 100%;
     background-position: center;
@@ -432,13 +460,14 @@ h3 {
 
 #portfolio-next video {
     max-width: 100%;
-    min-height: 80%;
+    min-height: 60%;
     object-fit: cover;
 }
 
 @media screen and (max-width:600px) {
     #portfolio-next video {
         width: 427px;
+        margin-bottom: 10px;
     }
 }
 
@@ -456,6 +485,12 @@ h3 {
 
 #portfolio-next h4 {
     margin-top: 0;
+}
+
+@media screen and (max-width:991.5px) {
+    #portfolio-next h4 {
+        margin-top: 10px;
+    }
 }
 
 #portfolio-next .text-container {
@@ -501,6 +536,11 @@ h3 {
 
 #portfolio-last {
     background-color: #324651;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/Ad Background.png');
+    opacity: 0.9;
 }
 
     #portfolio-last h3 {
@@ -636,7 +676,12 @@ h5 {
     border-radius: 50%;
     padding: 10px;
     color: #324651;
+    transition: all 1s ease;
 }
+
+    .fab:hover, .fas:hover {
+        transform: scaleX(-1);
+    }
 
 #about-us-bottom {
     background-color: #324651;
@@ -761,7 +806,7 @@ h6 {
     background: none;
     outline: none;
     border: none;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../images/mail text background.png');
