@@ -72,12 +72,14 @@
     <Content Include="css\custom.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\OpenSans-Regular.ttf" />
+    <Content Include="images\About Background.png" />
     <Content Include="images\allrounder.png" />
     <Content Include="images\Browsers.png" />
     <Content Include="images\camera1.jpg" />
     <Content Include="images\camera2.jpg" />
     <Content Include="images\camera3.jpeg" />
     <Content Include="images\Composite Path.png" />
+    <Content Include="images\Contact Background.png" />
     <Content Include="images\Develop.png" />
     <Content Include="images\Graphic.png" />
     <Content Include="images\hover background.png" />
@@ -96,6 +98,7 @@
     <Content Include="images\phone3.jpg" />
     <Content Include="images\Phones.png" />
     <Content Include="images\Photo.png" />
+    <Content Include="images\Slider Background.png" />
     <Content Include="images\yellow background.png" />
     <Content Include="images\We Make.png" />
     <Content Include="images\Web.png" />

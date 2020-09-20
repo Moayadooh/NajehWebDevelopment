@@ -86,14 +86,59 @@ main {
 /*Home*/
 #home {
     background-color: #324651;
-    padding-top: 475px;
-    padding-bottom: 475px;
+}
+
+    #home.container-fluid {
+        padding: 0;
+    }
+
+.carousel-indicators {
+    top: 650px;
+    left: 50%;
+}
+
+#carousel-example-generic > ol > li {
+    background-color: #ffffff;
+    margin: 15px;
+}
+
+    #carousel-example-generic > ol > li.active {
+        background-color: #ffe500;
+    }
+
+.carousel-inner > .item > img {
+    width: 100%;
+    height: 950px;
+    object-fit: cover;
+}
+
+#carousel-example-generic {
+    position: relative;
+}
+
+#home .mid-content {
+    position: absolute;
+    left: 50%;
+    top: 475px;
+    transform: translate3d(-50%, -50%, 0);
+    text-align: center;
 }
 
 h1 {
     font-size: 110px;
     color: #ffffff;
     word-wrap: break-word;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 430px) {
+    h1 {
+        max-width: 300px;
+    }
+
+    .carousel-indicators {
+        top: 740px;
+    }
 }
 
 .paragraph-white-20px {
@@ -597,6 +642,11 @@ h5 {
     background-color: #324651;
     padding-top: 91px;
     padding-bottom: 95px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/About Background.png');
+    opacity: 0.9;
 }
 
     #about-us-bottom h4 {
@@ -745,6 +795,11 @@ h6 {
 /*Contact us*/
 #contact-us {
     background-color: #324651;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/Contact Background.png');
+    opacity: 0.9;
 }
 
 .h2-70px {
