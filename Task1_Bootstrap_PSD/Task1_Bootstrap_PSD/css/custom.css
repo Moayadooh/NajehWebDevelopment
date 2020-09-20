@@ -63,6 +63,10 @@ main {
     font-size: 15px;
 }
 
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #000000;
+    }
+
 @media screen and (min-width:1200px) {
     .navbar-inverse .navbar-nav > li > a {
         padding-right: 30px;
@@ -130,6 +134,7 @@ h1 {
     color: #2c4755;
     font-size: 70px;
     padding-top: 90px;
+    margin: 0;
     word-wrap: break-word;
 }
 
@@ -180,6 +185,10 @@ h4 {
     color: #637988;
 }
 
+#description p {
+    max-width: 600px;
+}
+
 #description {
     background-image: url('../images/We Make.png');
     background-size: cover;
@@ -194,7 +203,6 @@ h4 {
 .phones {
     transform: translate3d(0,17%,0);
     width: 390px;
-    height: 440px
 }
 
 @media screen and (max-width:1820px) {
@@ -255,26 +263,19 @@ h3 {
     }
 }
 
-/*#description .row div:nth-child(3) {
-    position: relative;
-}
-
 .description-ul {
     list-style: none;
     text-align: left;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}*/
-
-.description-ul {
-    list-style: none;
-    text-align: left;
+    margin-top: 45px;
 }
 
-    .description-ul li span {
-        margin-right: 30px;
+    .description-ul li {
+        margin-top: 30px;
     }
+
+        .description-ul li span {
+            margin-right: 30px;
+        }
 
 @media screen and (max-width:992px) {
     #description {
@@ -386,7 +387,7 @@ h3 {
 
 #portfolio-next video {
     max-width: 100%;
-    max-height: 100%;
+    min-height: 80%;
     object-fit: cover;
 }
 
@@ -430,7 +431,6 @@ h3 {
 
 @media screen and (max-width:991px) {
     #portfolio-next .video, #portfolio-next .text-container {
-        
     }
 }
 
@@ -488,6 +488,14 @@ h5 {
     color: #ffe600;
 }
 
+#about-us > div.container:first-child > div.row:first-child {
+    margin-bottom: 115px;
+}
+
+#about-us > div.container:nth-child(2) > div.row:first-child {
+    margin-bottom: 20px;
+}
+
 #about-us figure {
     max-width: 370px;
     max-height: 440px;
@@ -507,7 +515,7 @@ h5 {
 #about-us > div:last-child figure {
     position: absolute;
     left: 80%;
-    top: -438px;
+    top: -460px;
 }
 
 @media screen and (max-width:1910px) {
@@ -552,15 +560,14 @@ h5 {
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
     #about-us {
         min-height: 1300px;
     }
 
         #about-us > div:last-child figure {
-            /*position: absolute;*/
-            left: 57%;
-            top: -408px;
+            left: 60%;
+            top: -170px;
         }
 
         #about-us div.text-container {
@@ -568,7 +575,7 @@ h5 {
         }
 }
 
-@media screen and (max-width:725px) {
+@media screen and (max-width:991.5px) {
     #about-us > div:last-child figure {
         position: unset;
     }
@@ -704,16 +711,19 @@ h6 {
     background: none;
     outline: none;
     border: none;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     background-image: url('../images/mail text background.png');
     height: 41px;
     max-width: 370px;
     font-size: 15px;
     color: #637988;
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
     text-indent: 23px;
 }
+
+
 
 #blog-bottom input::placeholder {
     font-style: italic;
@@ -721,7 +731,11 @@ h6 {
 
 #blog-bottom input[type=button] {
     color: #334752;
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
+}
+
+#blog-bottom form.container.row {
+    margin: auto;
 }
 
 
@@ -736,6 +750,8 @@ h6 {
 .h2-70px {
     color: #ffffff;
     font-size: 70px;
+    margin-top: 90px;
+    margin-bottom: 0;
     word-wrap: break-word;
 }
 
@@ -744,13 +760,18 @@ h6 {
     outline: none;
     border: 1px solid #c8ced1;
     border-radius: 6px;
-    height: 58px;
-    max-width: 370px;
+    max-height: 58px;
+    max-width: 1150px;
     font-size: 15px;
     color: #ffffff;
     text-indent: 25px;
-    margin-right: 28px;
-    margin-bottom: 28px;
+    margin: 0 auto 15px auto;
+}
+
+@media screen and (min-width: 992px) {
+    #contact-us input[type=text], #contact-us input[type=email] {
+        height: 58px;
+    }
 }
 
 #contact-us ::placeholder {
@@ -773,13 +794,17 @@ h6 {
 #contact-us input[type=button] {
     font-size: 13px;
     color: #334752;
-    margin-top: 52px;
-    margin-bottom: 93px;
+    margin: 52px auto 93px auto;
 }
 
-#contact-us > div.container > div.row:nth-child(2) {
+#contact-us form.container.row {
+    margin: auto;
     margin-top: 90px;
 }
+
+    #contact-us form.container.row div:last-child {
+        margin: auto;
+    }
 
 
 
@@ -815,3 +840,15 @@ footer {
     footer span {
         color: #ffe600;
     }
+
+@media only screen and (max-width: 400px) {
+    .fab, .fas {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 352px) {
+    .fab, .fas {
+        margin-right: 5px;
+    }
+}
