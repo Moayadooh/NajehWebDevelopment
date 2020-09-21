@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var objName = new String("Moayad");
+        alert(objName.toUpperCase());
+
+        var num = new Number("13");
+
+        var date = new Date();
+        document.writeln(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()); //getDay() --> week 0, 1, 2, 3, 4, 5, 6, 7
+
+        try {
+            var val = prompt("Enter a number..");
+            if (val == 0) {
+                throw ("This operation can not be performed!")
+            }
+            else {
+                val /= 2;
+                alert((val * 2) + " / 2 = " + val);
+            }
+        } catch (e) {
+            alert(e);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

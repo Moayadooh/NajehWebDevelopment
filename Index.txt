@@ -45,7 +45,11 @@ Day2_Bootstrap
 Day3_Bootstrap
 -PSD template part 2..........
 
+Day1_JavaScript
+-inroduction to JavaScript
 
+Day1_JavaScript
+-inroduction to jQuery
 
 
 

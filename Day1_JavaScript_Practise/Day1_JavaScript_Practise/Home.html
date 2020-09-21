@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        function getName() {
+            //document.getElementById("p1").innerText = "Moayad";
+            alert("Hi!!");
+            var name = prompt("Who are you ?");
+            document.getElementById("p4").innerHTML = "<b>Hello " + name + "<b/>";
+        }
+
+        function Person(name, age, gender) {
+            this.personName = name;
+            this.personAge = age;
+            this.personGender = gender;
+        }
+
+        function Show() {
+            var obj = new Person("Moayad", 22, "Male");
+            document.getElementById("p1").innerText = obj.personName;
+            document.getElementById("p2").innerText = obj.personAge;
+            document.getElementById("p3").innerText = obj.personGender;
+        }
+    </script>
+</head>
+<body onload="Show()">
+    <div class="container jumbotron">
+        <div class="form-group">
+            <button class="btn btn-danger" onclick="getName();">What !!</button>
+        </div>
+        <p id="p1">
+
+        </p>
+        <p id="p2">
+
+        </p>
+        <p id="p3">
+
+        </p>
+        <p id="p4">
+
+        </p>
+    </div>
+</body>
+</html>
