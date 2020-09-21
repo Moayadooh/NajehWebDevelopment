@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        //           0      1     2       3               = 4 length of array
+        var lang = ["C#", "VB", "HTML", "Java"];
+        var lang2 = new Array("C#", "VB", "HTML", "Java");
+
+        //json
+        var sweets = {
+            id: 4,
+            name: "cupcake",
+            type: "vanilla",
+            price: "1",
+        }
+
+        $(document).ready(function () {
+            var list = "<ul class='list-group'>"
+            for (var i = 0; i < lang.length; i++) { // refer to number rows
+                list += "<li class='list-group-item'>" + lang[i] + "</li>";
+            }
+            list += "</ul>";
+
+           // $(".jumbotron").html(list);
+            $(".jumbotron").html(" ID:" + trainee.id + "<br/>" +
+                " name:" + trainee.name + "<br/>" +
+                "password:" + trainee.password + "<br/>" +
+                "confirm:" + trainee.confirm + "<br/>" 
+                );
+        }); // main function 
+    </script>
+</head>
+<body>
+    <div class="jumbotron">
+
+    </div>
+</body>
+</html>

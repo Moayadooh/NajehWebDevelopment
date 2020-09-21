@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+        img{
+            width:700px;
+            height:400px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#fadein").click(function () {
+                $("#img1").fadeIn(1000);
+            });
+            $("#fadeout").click(function () {
+                $("#img1").fadeOut(1000);
+            });
+            $("#fadeto").click(function () {
+                $("#img1").fadeTo(1000,0.5);
+            });
+            $("#fadetoggle").click(function () {
+                $("#img1").fadeToggle(2000);
+            });
+            $("#show").click(function () {
+                $("#img1").show(2000);
+            });
+            $("#hide").click(function () {
+                $("#img1").hide(2000);
+            });
+
+            $("select").change(function () {
+                var x = $("#ddlfade").val();
+                //var x = document.getElementById("ddlfade").value;
+                switch (x) {
+                    case "fadein": $("img").fadeIn();
+                        break;
+                    case "fadeout": $("img").fadeOut();
+                        break;
+                    case "fadeto": $("img").fadeTo(1000,0.5);
+                        break;
+                    case "fadetoggle": $("img").fadeToggle();
+                        break;
+                    case "show": $("img").show(500);
+                        break;
+                    case "hide": $("img").hide(1000);
+                        break;
+                    default:
+                        alert("null value");
+                }
+            });
+
+            $(".btn.btn-info").click(function () {
+                alert("Name :" + $("#txtname").val() + ", Email :" + $("#txtemail").val());
+               // document.getElementById("jumb").innerText = "Name :" + $("#txtname").val() + ", Email :" + $("#txtemail").val()
+                $(".jumbotron").text("Name :" + $("#txtname").val() + ", Email :" + $("#txtemail").val());
+            });
+        }); // by default onload
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="Images/s1.jpg" id="img1" />
+    </div>
+
+    <div class="alert alert-warning">
+        <input type="text" id="txtname" class="form-control"/>
+        <input type="text" id="txtemail" class="form-control" />
+        <input type="button" class="btn btn-info" value="Get info" />
+    </div>
+    <div class="jumbotron" id="jumb">
+
+    </div>
+    <div class="alert alert-success form-group">
+        <input type="radio" name="r1" id="fadein" />Fade In
+        <input type="radio" name="r1" id="fadeout" />Fade Out
+        <input type="radio" name="r1" id="fadeto" />Fade To
+        <input type="radio" name="r1" id="fadetoggle" />Fade Toggle
+        <input type="radio" name="r1" id="show" />Show
+        <input type="radio" name="r1" id="hide" />hide
+    </div>
+
+    <div class="alert alert-danger form-group">
+        <select class="form-control" id="ddlfade" >
+            <option value="null">select</option>
+            <option value="fadein">Fade In</option>
+            <option value="fadeout">Fade out</option>
+            <option value="fadetoggle">Fade Toggle</option>
+            <option value="fadeto">Fade To</option>
+            <option value="show">Show</option>
+            <option value="hide">Hide</option>
+        </select>
+    </div>
+</body>
+</html>

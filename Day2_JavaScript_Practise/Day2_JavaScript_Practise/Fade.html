@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("#img1").fadeIn(1000); //fadeIn("slow") or fadeIn("fast")
+            });
+            $("#btn2").click(function () {
+                $("#img1").fadeOut(1000);
+            });
+            $("#btn3").click(function () {
+                $("#img1").fadeTo(1000, 0.5); //0.5 is opacity
+            });
+            $("#btn4").click(function () {
+                $("#img1").fadeToggle(2000);
+            });
+            $("#btn5").click(function () {
+                $("#img1").show(1000);
+            });
+            $("#btn6").click(function () {
+                $("#img1").hide(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container jumbotron">
+        <div class="alert-info text-center">
+            <button id="btn1" class="btn btn-info">fade in</button>
+            <button id="btn2" class="btn btn-info">fade out</button>
+            <button id="btn3" class="btn btn-info">fade to</button>
+            <button id="btn4" class="btn btn-info">fade toggle</button>
+            <button id="btn5" class="btn btn-info">show</button>
+            <button id="btn6" class="btn btn-info">hide</button>
+        </div>
+    </div>
+    <div class="container jumbotron">
+        <div class="alert-success text-center">
+            <img id="img1" src="images/mo.jpg" alt="..." title="Mountain" width="600" height="400" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input[type=button]").click(function () {
+                var msg = confirm("Are you sure!!"); // true or false
+                if (msg) {
+                    $(".alert.alert-success").html("<strong>True</strong>")
+                }
+                else {
+                    $(".alert.alert-success").html("<strong>False</strong>")
+                }
+            });
+            $(".btn.btn-link").click(function () {
+                window.location = "http://google.com";
+            });
+        });// Main function
+
+        function GotoGoogle() {
+            window.location = "http://google.com";
+
+        }
+
+        function car(Brand,Color) {
+            this.carBrand = Brand;
+            this.carColor = Color;
+            this.carprice = getprice ;
+
+        }
+
+        function getprice(amount) {
+            this.price = amount + (amount * .2);
+            return this.price; // inside memory
+        }
+
+        // to insert values , we have 3 ways:
+        // 1- By params
+        //2 - By functions
+        //3- By prototype for main function name as "car"
+
+        function output() {
+            var c = new car("BMW", "Black");
+            car.prototype.modeldate = "2020";
+            document.getElementById("jump").innerHTML = "Car Brand " + c.carBrand + "<br/>"
+            document.getElementById("jump").innerHTML += "Car Color " + c.carColor + "<br/>"
+            document.getElementById("jump").innerHTML += "Car Price " + c.carprice(10000) + "<br/>";
+            document.getElementById("jump").innerHTML += "Car Model " + c.modeldate;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="button" value="confirm" />
+    </div>
+
+    <div class="alert alert-success">
+        <a href="javascript:void(alert('YES!!'))">get Message</a>
+    </div>
+
+    <button class="btn btn-link">Go to Google By JQ</button>
+    <button class="btn btn-success" onclick="GotoGoogle()">Go to Google By JS</button>
+    <button class="btn btn-primary" onclick="output()">GEt car info</button>
+
+    <div class="jumbotron" id="jump">
+    </div>
+</body>
+</html>
