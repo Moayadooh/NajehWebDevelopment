@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var mydate = new Date();
+        // alert(mydate);
+        //alert(mydate.getHours() + " : " + mydate.getMinutes() + " : " + mydate.getSeconds());
+
+        var name = new String("ammar").toUpperCase();
+        //alert(name);
+
+        function PrintCalc() {
+            try {
+                var num = prompt("Enter Number"); //get input from user
+                if (num == 0)
+                    throw ("Not Accepted to divide number by zero")
+                else
+                    alert(84 / num);
+            } catch (e) {
+                alert("Exception error :" + e )
+            }
+        }
+
+        function printnames() {
+            var firstname = "ammar";
+            firstname += " yaser";
+            firstname += " qasem";
+            document.getElementById("d1").innerHTML = "<h1>" + firstname +  "</h1>"
+        }
+
+        function printTable() {
+            var table = "<table class='table table-hover'>";
+            table += "<tr><th>Number</th></tr>";
+            for (var i = 0; i < 10; i++) {
+                table += "<tr><td> Number" + i + "</td></tr>";
+            }
+            table += "</table>";
+            document.getElementById("d2").innerHTML = table;
+        }
+
+        function printList() {
+            var list = "<ul class='list-group'> ";
+            for (var i = 0; i < 3; i++) {
+                list += "<li class='list-group-item'>" + i + "</li>";
+            }
+            list += "</ul>";
+            document.getElementById("d2").innerHTML = list;
+        }
+    </script>
+</head>
+<body onload="PrintCalc()">
+    <div id="d1" class="container alert alert-danger">
+
+    </div>
+    <div id="d2" class="container">
+
+    </div>
+    <input type="button" class="btn btn-info" value="print full name" onclick="printnames()" />
+    <input type="button" class="btn btn-warning" value="print table" onclick="printTable()" />
+    <input type="button" class="btn btn-primary" value="print list" onclick="printList()" />
+</body>
+</html>

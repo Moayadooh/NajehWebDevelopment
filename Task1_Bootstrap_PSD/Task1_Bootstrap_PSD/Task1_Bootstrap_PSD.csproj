@@ -74,6 +74,7 @@
     <Content Include="fonts\OpenSans-Regular.ttf" />
     <Content Include="images\About Background.png" />
     <Content Include="images\Ad Background.png" />
+    <Content Include="images\all and apps.png" />
     <Content Include="images\Background2.jpg" />
     <Content Include="images\Background1.jpg" />
     <Content Include="images\Browsers.png" />
@@ -82,8 +83,8 @@
     <Content Include="images\Composite Path.png" />
     <Content Include="images\Contact Background.png" />
     <Content Include="images\Develop.png" />
+    <Content Include="images\graphic design.png" />
     <Content Include="images\Graphic.png" />
-    <Content Include="images\hover background.png" />
     <Content Include="images\laptop1.jpg" />
     <Content Include="images\laptop2.jpg" />
     <Content Include="images\laptop3.jpg" />
@@ -101,7 +102,9 @@
     <Content Include="images\Path.png" />
     <Content Include="images\Phones.png" />
     <Content Include="images\Photo.png" />
+    <Content Include="images\photography.png" />
     <Content Include="images\Slider Background.png" />
+    <Content Include="images\web design.png" />
     <Content Include="images\yellow background.png" />
     <Content Include="images\We Make.png" />
     <Content Include="images\Web.png" />

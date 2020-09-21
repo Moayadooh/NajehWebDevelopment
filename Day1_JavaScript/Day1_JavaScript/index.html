@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JS</title>
+    <link href="css/all.css" rel="stylesheet" />
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/bootstrap.js"></script>
+    <script>
+        //var --> variant
+        var x = 1; // varialble
+        var name = "ammar"; //variable
+        var salary = 3455.3; //variable
+        document.write("value of x " + x + "</br>");
+        document.write("Name " + name + "</br>");
+        document.write("Salary :" + salary + "</br>");
+
+        var firstName = new String("ali"); // object string
+        var age = new Number("34"); // object number
+        document.write("first name" + firstname + "</br>");
+        document.write("age " + age + "</br>");
+
+        function printout() {
+            //innerHTML-- > print as HTML code
+            //innerText-- > print as text
+            document.getElementById("p1").innerText = "<h2>By inner Text ammmar</h2>";
+            document.getElementById("p2").innerHTML = "<h2> By inner HTML ammmar</h2>";
+            document.getElementById("p3").innerHTML = "<h2>First Name :" + firstname + " Age :" + age + "</h2>";
+            document.getElementById("d1").innerHTML = "After moved" + document.getElementById("p3").innerHTML;
+        }
+
+        function printInsideText() {
+            document.getElementById("txt1").value = "Mohammad"; // set
+            var n = document.getElementById("txt1").value; // get
+            alert("n value " + n); //pop up message
+        }
+    </script>
+</head>
+<body onload="printout()">
+    <div class="container jumbotron">
+        <h1>Introduction to Java Script</h1>
+        <p id="p1">
+
+        </p>
+        <p id="p2">
+
+        </p>
+        <p id="p3">
+            
+        </p>
+        <div id="d1">
+
+        </div>
+        <div class="form-group">
+            <!--always use button in javascript not submit-->
+            <button class="btn btn-success" type="button" onclick="printInsideText()">
+                Get Text
+            </button>
+        </div>
+        <div class="form-group">
+            <input type="text" class=" form-control" placeholder="enter name" id="txt1" />
+        </div>
+    </div>
+
+</body>
+</html>

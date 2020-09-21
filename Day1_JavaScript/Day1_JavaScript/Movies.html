@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+        function getMovies(title,hero,genre) {
+            this.mytitleMovie = title;  // create property for current function
+            this.myheroMovie = hero;
+            this.mygenreMovie = genre;
+        } 
+        function output() {
+            var m = new getMovies("november", "ammar", "drama");
+            document.getElementById("titles").innerHTML = m.mytitleMovie;
+            document.getElementById("heros").innerHTML = m.myheroMovie;
+            document.getElementById("genre").innerHTML = m.mygenreMovie;
+        }
+    </script>
+    </head>
+<body onload="output()">
+    <div id="titles" class="alert alert-success">
+
+    </div>
+    <div id="heros" class="alert alert-success">
+
+    </div>
+    <div id="genre" class="alert alert-success">
+
+    </div>
+</body>
+</html>

@@ -386,31 +386,30 @@ h3 {
 
 .links a:hover {
     color: #ffffff;
-    background-image: url('../images/yellow background.png');
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/*.links a:hover:first-child {
-        background-image: url('../images/hover background.png');
+    .links a:hover:first-child {
+        background-image: url('../images/all and apps.png');
     }
 
     .links a:hover:nth-child(2) {
-        background-image: url('../images/yellow background.png');
+        background-image: url('../images/web design.png');
     }
 
     .links a:hover:nth-child(3) {
-        background-image: url('../images/yellow background.png');
+        background-image: url('../images/graphic design.png');
     }
 
     .links a:hover:nth-child(4) {
-        background-image: url('../images/yellow background.png');
+        background-image: url('../images/photography.png');
     }
 
     .links a:hover:last-child {
-        background-image: url('../images/yellow background.png');
-    }*/
+        background-image: url('../images/all and apps.png');
+    }
 
 #portfolio > div:nth-child(2) figure, #portfolio > div:nth-child(3) figure, #portfolio > div:nth-child(4) figure {
     max-width: 370px;
@@ -872,6 +871,10 @@ h6 {
     #contact-us input[type=text], #contact-us input[type=email] {
         height: 58px;
     }
+
+    #contact-us form.container.row {
+        margin: auto;
+    }
 }
 
 #contact-us ::placeholder {
@@ -898,7 +901,7 @@ h6 {
 }
 
 #contact-us form.container.row {
-    margin: auto;
+    /*margin: auto;*/
     margin-top: 90px;
 }
 
