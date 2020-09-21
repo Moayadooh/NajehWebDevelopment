@@ -75,8 +75,8 @@
     <Content Include="images\About Background.png" />
     <Content Include="images\Ad Background.png" />
     <Content Include="images\all and apps.png" />
-    <Content Include="images\Background2.jpg" />
     <Content Include="images\Background1.jpg" />
+    <Content Include="images\Background2.jpg" />
     <Content Include="images\Browsers.png" />
     <Content Include="images\building1.jpg" />
     <Content Include="images\building2.jpg" />
