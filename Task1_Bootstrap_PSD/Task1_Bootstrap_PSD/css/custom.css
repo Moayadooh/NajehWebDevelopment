@@ -257,6 +257,7 @@ h4 {
 }
 
 #description {
+    background-attachment: fixed;
     background-color: #324651;
     background-size: cover;
     background-position: center;
@@ -305,14 +306,6 @@ h4 {
         max-width: 100%;
         max-height: 100%;
     }
-    #description {
-        position: relative;
-    }
-    .description-ul {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
 
 h3 {
@@ -345,7 +338,7 @@ h3 {
             margin-right: 30px;
         }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
     #description .row div:nth-child(2) {
         margin-left: 0;
     }
@@ -359,7 +352,7 @@ h3 {
         }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:992px) {
     #description {
         text-align: center;
     }
@@ -550,6 +543,7 @@ h3 {
 }
 
 #portfolio-last {
+    background-attachment: fixed;
     background-color: #324651;
     background-size: cover;
     background-position: center;
@@ -699,6 +693,7 @@ h5 {
     }
 
 #about-us-bottom {
+    background-attachment: fixed;
     background-color: #324651;
     padding-top: 91px;
     padding-bottom: 95px;
@@ -876,6 +871,7 @@ h6 {
 /*_________________________________________________________________________________________________*/
 /*Contact us*/
 #contact-us {
+    background-attachment: fixed;
     background-color: #324651;
     background-size: cover;
     background-position: center;
