@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        //function DisplayItem() {
+        //    document.getElementById("p1").innerText = "Selected item is " + document.getElementById("list1").value;
+        //}
+        //function ChaneColor() {
+        //    document.getElementById("p2").style = "background-color: red;";
+        //}
+        //function CreateBorder() {
+        //    document.getElementById("txt1").style = "border: 5px inset blue;"
+        //}
+
+        $(function () {
+            $("#list1").change(function () {
+                $("#p1").html("Selected item is " + $("#list1").val());
+                //$("#p1").html("Selected item is " + $(this).val());
+            });
+            $("#p2").mousemove(function () {
+                $(this).css("background-color","#ffffff");
+            });
+            $("#txt1").blur(function () {
+                $(this).css("border","5px inset blue");
+            });
+            $("form").submit(function () {
+                alert("form submession is done!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container jumbotron">
+        <form>
+            <select id="list1" class="form-control"> <!--onchange="DisplayItem()"-->
+            <option value="item 1">item 1</option>
+            <option value="item 2" selected="selected">item 2</option>
+            <option value="item 3">item 3</option>
+            </select>
+            <p id="p1" class="text-center">
+
+            </p>
+            <p id="p2" class="text-center"> <!--onmousemove="ChaneColor()"-->
+                Hello There!!
+            </p>
+            <input type="text" placeholder="DO NOT TYPE!!" class="form-control" id="txt1" /> <!--onblur="CreateBorder()"-->
+            <input type="submit" /> <!--onsubmit=""-->
+        </form>
+    </div>
+</body>
+</html>

@@ -67,8 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Array_and_JSON.html" />
+    <Content Include="Confirm.html" />
     <Content Include="css\all.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="Events.html" />
     <Content Include="Fade.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.html" />

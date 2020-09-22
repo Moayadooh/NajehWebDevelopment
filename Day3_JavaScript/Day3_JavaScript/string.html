@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            var c = new Object();
+            c.id = 23;
+            c.name = "ammar";
+            c.job = "developer";
+            $(".container").html("<p>" + c.id + " </p>" +
+                "<p>" + c.name + " </p>" +
+                "<p>" + c.job + " </p>"
+            );
+            var statment = "asp.net is a microsoft technology for web development";
+            $(".container").html("<b>" + statment.toUpperCase() + "</b><br/>");
+            $(".container").append("<b>" + statment.toLowerCase() + "</b><br/>");
+            $(".container").append("<b>" + statment.charAt(11) + "</b><br/>");
+            $(".container").append("<b>" + statment.substr(0, 10) + "</b><br/>");
+            $(".container").append("<b>" + statment.trim() + "</b><br/>");
+            $(".container").append("<b>" + statment.indexOf("i",7) + "</b>");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>

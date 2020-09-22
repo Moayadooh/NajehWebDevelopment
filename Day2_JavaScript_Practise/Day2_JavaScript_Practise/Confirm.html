@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var n = confirm("Are you sure you want to go?");
+        if (n)
+            window.location = "https://youtube.com";
+        else
+            alert("GOOD BOY!");
+
+        function Device(name, price) {
+            this.deviceName = name;
+            this.devicePrice = price;
+            this.deviceDiscount = getDiscount;
+        }
+
+        function getDiscount(price, discount) {
+            return ((1 - discount) * price);
+        }
+
+        function Demo() {
+            var device = new Device("iPhone", 200);
+
+            Device.prototype.year = 2017; //get value at run time
+
+            document.getElementById("p1").innerHTML = "Device name: " + device.deviceName
+                + "<br>" + "Device price: " + device.devicePrice
+                + "<br>" + "Device after discount: " + device.deviceDiscount(device.devicePrice, 0.1)
+                + "<br>" + "Device model: " + device.year;
+        }
+    </script>
+</head>
+<body onload="Demo()">
+    <div class="container jumbotron">
+        <p id="p1">
+
+        </p>
+        <div class="alert alert-info">
+            <a href="javascript:void(alert('What!'))">click</a> <!--inline javascript!-->
+        </div>
+    </div>
+</body>
+</html>

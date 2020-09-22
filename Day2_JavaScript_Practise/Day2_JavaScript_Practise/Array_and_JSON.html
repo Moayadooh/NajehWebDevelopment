@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        //var names = ["Moayad", "Mohanned", "Mohammed", "Eyad"];
+        var names = new Array("Moayad", "Mohanned", "Mohammed", "Eyad");
+        var list = "<ul>";
+        for (var i = 0; i < names.length; i++) {
+            list += "<li>" + names[i] + "</li>";
+        }
+        list += "</ul>";
+
+        var data = {
+            name: "Salim",
+            gender: "Male"
+        }
+
+        //fire after the DOM 'Document Object Model' (HTML elements) is loaded
+        $(document).ready(function () {
+            $("#p1").html(list);
+            $("#p2").html("Name is " + data.name + "<br>" + "Gender is " + data.gender);
+        });
+
+        //fire after all elements (HTML, CSS, images, etc) is loaded
+        $(window).load(function () {
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container jumbotron">
+        <p id="p1">
+
+        </p>
+        <p id="p2" class="text-center">
+
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        //static json code
+        var trainee = [{ id: 10, name: "muayyad", job: "developer" },
+        { id: 11, name: "Mohammad", job: "Designer" },
+        { id: 12, name: "lubna", job: "front end engineer" },
+        { id: 13, name: "iman", job: "back end developer" },
+        { id: 14, name: "loay", job: "Designer" },
+        { id: 15, name: "hajar", job: "softwate engineer" },
+        { id: 16, name: "fatma", job: "web desginer" },
+        { id: 17, name: "mai", job: "fullstack" }];
+
+        var laptops = ["HP", "Dell", "Sony", "MSI", "Samsung", "Toshiba", "Asus"];
+
+        $(function () {
+            $("#btnGet").click(function () {
+                var table = "<table class='table table-hover'>";
+                table += "<tr><th>ID</th><th>Name</th><th>Job</th></tr>";
+                for (var i = 0; i < trainee.length; i++) {
+                    table += "<tr><td>" + trainee[i].id + "</td>";
+                    table += "<td>" + trainee[i].name + "</td>";
+                    table += "<td>" + trainee[i].job + "</td></tr>";
+                }
+                table += "</table>";
+                $("#output").html(table);
+            });
+            $("#btnLaptops").click(function () {
+                var select = "<select class='form-control'>";
+                select += "<option>select brand</option>";
+                for (var i in laptops) {
+                    select += "<option value=" + i + ">" + laptops[i] + "</option>";
+                }
+                select += "</select>";
+                $("#output").html(select);
+            });
+        }); // main
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="button" id="btnGet" class="btn btn-primary" value="get json data" />
+        </div>
+
+        <div class="form-group">
+            <input type="button" id="btnLaptops" class="btn btn-success" value="get array laptops" />
+        </div>
+
+        <div class="form-group">
+            <input type="button" id="btnPrint" onclick="window.print()"  class="btn btn-warning" value="print" />
+        </div>
+
+        <div id="output">
+        </div>
+    </div>
+</body>
+</html>
