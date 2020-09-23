@@ -70,7 +70,6 @@
     <Content Include="css\all.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\custom.css" />
-    <Content Include="css\StyleSheet1.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.html" />
     <Content Include="Images\a2.jpg" />

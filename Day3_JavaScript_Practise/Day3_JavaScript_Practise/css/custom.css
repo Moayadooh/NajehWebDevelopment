@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.Blue {
+    background-color: #0094ff;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.Red {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50px;
+}
+
+.Black {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50px;
+}
