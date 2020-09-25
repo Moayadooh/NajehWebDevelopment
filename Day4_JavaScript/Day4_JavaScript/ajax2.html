@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        
+        $(function () {
+
+            $("#btnGet").click(function () {
+                $.ajax({
+                    url: "TextFile1.txt",
+                    type: "get",
+                    success: function (data) {
+                        $("#output").html("<h1>" + data + "</h1>");
+                    }
+                });
+
+            });
+
+            $("#btnGetEmployee").click(function () {
+                $.getJSON("employee.js", function (data) {
+
+                    var table = "<table class='table table-hover'>"
+                    table += "<tr><th>ID</th><th>Name</th><th>Job</th></tr>";
+                    $.each(data, function (i, field) {
+                        table += "<tr><td>" + field.id  + " </td>";
+                        table += "<td>" + field.name + i +"</td>";
+                        table += "<td>" + field.Job + "</td></tr>";
+
+                      
+                    });
+                    table += "</table>";
+                    $("#output").html(table);
+                 
+
+                });
+
+            });
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="button" id="btnGet" class="btn btn-primary" value="Load Text" />
+
+        </div>
+        <div class="form-group">
+            <input type="button" id="btnGetEmployee" class="btn btn-primary" value="Load Employees" />
+
+        </div>
+    </div>
+
+    <div class="container" id="output">
+
+    </div>
+
+</body>
+</html>

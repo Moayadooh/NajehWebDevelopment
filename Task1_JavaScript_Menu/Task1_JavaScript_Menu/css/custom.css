@@ -1,0 +1,61 @@
+﻿body {
+}
+
+.nav > li:first-child {
+    display: flex;
+}
+
+    .nav > li:first-child span {
+        margin-left: auto;
+        margin-right: 26px;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+.container-fluid {
+    padding: 0;
+}
+
+#navbar {
+    background: #222222;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        position: relative;
+        left: -100%;
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav > li:first-child span {
+        display: none;
+    }
+
+    #navbar {
+        opacity: 1 !important;
+        position: unset !important;
+    }
+}
+
+.navbar {
+    height: 50px;
+}
+
+.navbar-header {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar-nav {
+    margin-top: 0;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #222222;
+}

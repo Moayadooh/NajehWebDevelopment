@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/custom.css" rel="stylesheet" />
+    <script>
+        $(function () {
+            $("input[type=buttonx]").click(function () {
+                //$("ul").next().css("background", "orange");
+                //$("ul").nextAll().css("background", "yellow");
+                //$("ul").nextUntil("p").css("background", "green");
+                //$("li").parent().css("border", "2px solid red");
+                //$("li").parents().css("border", "2px solid orange");
+                //$("li").parentsUntil("div").css("border", "2px solid green");
+                //$("p").prev().css("color", "red");
+                //$("p").prevAll().css("color", "orange");
+                //$("p").prevUntil("ul").css("color", "#0094ff");
+               // $("body").children().css("color", "#8e32df");
+                //$("section").find("h2").css("color", "blue");
+
+
+
+            });
+            $("#btnaffect").click(function () {
+
+                //$("table tr").first().css("border", "2px solid red");
+                //$("table tr td").first().css("background", "yellow");
+                //$("table tr td").last().css("background", "yellow");
+               // $("table tr:nth-child(2)").first().css("background", "green");
+                //$("table tr:nth-child(3) td").eq(1).css("background", "orange");
+                //$("div").filter(".alert-success").empty();
+                //$("div").filter(".alert-success").remove();
+                $("div").not(".alert-success").remove();
+
+
+            });
+
+
+
+            $("nav a").click(function () {
+                $(this).siblings().removeClass();
+                $(this).addClass("active");
+            });
+
+        });// main
+
+
+    </script>
+    <style>
+        body{
+            margin:100px;
+           
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <input type="button" value="find" class="btn btn-primary" />
+    <input type="button" id="btnaffect" value="click" class="btn btn-success" />
+    <div class="container">
+
+        main div
+        <ul>
+            <li><span>Home</span></li>
+            <li><span>About</span></li>
+            <li><span>Contact</span></li>
+        </ul>
+        <h1>Ammar</h1>
+        <h2>Yaser</h2>
+        <p>Front end developer</p>
+    </div>
+    <section>
+        section container
+        <h2>Section headline</h2>
+    </section>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>Mohammad</td>
+            <td>Bushar</td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td>Loay</td>
+            <td>Gala</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>Muayyd</td>
+            <td>Matrah</td>
+        </tr>
+        <tr>
+            <td>126</td>
+            <td>Khlouad</td>
+            <td>Gala</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td>Iman</td>
+            <td>alkhwair</td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td>hajar</td>
+            <td>alseeb</td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td>lubna</td>
+            <td>bdyya</td>
+        </tr>
+
+    </table>
+
+
+    <div class="alert alert-success">
+        success
+    </div>
+    <div class="alert alert-success">
+        success
+    </div>
+    <div class="alert alert-warning">
+        success
+    </div>
+
+</body>
+</html>

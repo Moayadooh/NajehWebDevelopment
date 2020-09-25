@@ -13,6 +13,8 @@
 
     .navbar-inverse .navbar-nav > li > a {
         color: #e8e6e6;
+        font-size: 20px;
+        text-transform: capitalize;
     }
 
         .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li:hover {
@@ -45,6 +47,9 @@
     background: #b7bcbe;
     padding-right: 113px;
     font-family: athelas-regular;
+    background-image: url('../Images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
     .bg-welcome > div > p:first-child {
@@ -111,6 +116,26 @@
     background: #bfc7cb;
     height: 568px;
     margin: 38px;
+    transition: all 2s ease;
+}
+
+    .gray-img:hover {
+        transform: scaleX(-1);
+    }
+
+figure.gray-img:first-child {
+    background: url('../Images/s4.jpg') no-repeat;
+    background-size: cover;
+}
+
+#s5 {
+    background: url('../Images/s5.jpg') no-repeat;
+    background-size: cover;
+}
+
+#s6 {
+    background: url('../Images/s6.jpg') no-repeat;
+    background-size: cover;
 }
 
 .lorem-p {
@@ -217,6 +242,7 @@ form.container.row {
 .carousel-inner > .item > img {
     width: 100%;
     height: 760px;
+    object-fit: cover;
 }
 
 .left.carousel-control span {
@@ -275,6 +301,9 @@ span.glyphicon:hover {
 .copyright {
     background: #000000;
     color: white;
+    margin: auto;
+    height: auto;
+    padding: 30px 165px;
 }
 
     .copyright > p:first-child {
@@ -290,7 +319,14 @@ span.glyphicon:hover {
         width: 40px;
         height: 40px;
         text-align: center;
+        transition: all 2s ease;
     }
+
+        .copyright > p > .fab:hover {
+            transform: scaleX(-1);
+        }
+
+
 
         .copyright > p > .fab:hover {
             cursor: pointer;
@@ -303,15 +339,24 @@ span.glyphicon:hover {
         padding: 10px;
     }
 
+    .copyright {
+        padding: 5px;
+    }
 
-        .bg-welcome > div {
-            top: 200px;
+        .copyright p {
             text-align: center;
         }
 
-            .bg-welcome > div > p {
-                font-size: 45px;
-            }
+
+
+    .bg-welcome > div {
+        top: 200px;
+        text-align: center;
+    }
+
+        .bg-welcome > div > p {
+            font-size: 45px;
+        }
     /*  #sitemap{
 
                 height:650px;
