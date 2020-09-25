@@ -12,30 +12,21 @@
             $("#btnGet").click(function () {
                 $.get("WebForm1.aspx", function (data) {
                     $("#output").html(data);
-                    $("#output").load("TextFile1.txt");
+                    //$("#output").load("TextFile1.txt"); //load() to load a file
                 });
             });
-
 
             $("#btnSend").click(function () {
                 var userdata = {
                     name: $("#txtname").val(),
                     email: $("#txtemail").val()
                 } // JSON
-
                 $.post("info.aspx", userdata, function (data) {
                     $("#output").html(data);
-
                 });
-
-
             }); // btnSend click
 
-
         });// Main
-
-
-
     </script>
     <style>
         body {
@@ -44,23 +35,22 @@
     </style>
 </head>
 <body>
-
     <div class="contianer form-group">
         <input type="button" id="btnGet" class="btn btn-primary" value="Get Webform" />
-
     </div>
+
     <div class="contianer form-group">
         <input type="text" id="txtname" class="form-control" placeholder="Enter Name" />
     </div>
     <div class="contianer form-group">
         <input type="email" id="txtemail" class="form-control" placeholder="Enter email" />
     </div>
+
     <div class="contianer form-group">
         <input type="button" id="btnSend" class="btn btn-success" value="Send Data" />
     </div>
-    <div class="container" id="output">
 
-        
+    <div class="container" id="output">
 
     </div>
 </body>
