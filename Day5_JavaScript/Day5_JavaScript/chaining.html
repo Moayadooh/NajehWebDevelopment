@@ -9,41 +9,39 @@
     <script>
         $(function () {
             $("input[type=button]").click(function () {
-
-                $(".alert").css("display", "block").
-                    animate({ top: "50px" }, 1000, function () {
-                        alert("animate is done");
-                    }).
-                    html("<h2>Ammar Yaser</h2>").slideUp(1000).slideDown(1000);
+                $(".alert").css("display", "block").animate({ top: "50px" }, 1000, function () {
+                    alert("animate is done"); //chaining of the functions
+                }).html("<h2>Ammar Yaser</h2>").slideUp(1000).slideDown(1000); //close in top direction then open in bottom direction
             });
 
             $("#service").click(function () {
-                $("#service > ul").slideToggle();
-
+                $("#service > ul").slideToggle(); //show/hide
             });
 
         });
 
     </script>
     <style>
-        .container{
+        .container {
             /*display:none;*/
         }
 
-        .alert{
-            display:none;
-            position:relative;
-            top:-300px;
-        }
-        ul#main{
-            list-style-type:none;
-            display:flex;
-            background:#f97b7b;
+        .alert {
+            display: none;
+            position: relative;
+            top: -300px;
         }
 
-        #service{
-            position:relative;
+        ul#main {
+            list-style-type: none;
+            display: flex;
+            background: #f97b7b;
         }
+
+        #service {
+            position: relative;
+        }
+
             #service > ul {
                 position: absolute;
                 padding: 0;
@@ -51,37 +49,35 @@
                 top: 40px;
                 border: 2px solid red;
                 background: #f97b7b;
-                display:none;
+                display: none;
             }
 
-        ul li{
-            padding:10px;
-            font-size:22px;
-            width:200px;
-            list-style:none;
+        ul li {
+            padding: 10px;
+            font-size: 22px;
+            width: 200px;
+            list-style: none;
         }
     </style>
 </head>
 <body>
-<div class="container">
-<input type="button" value="Begin" class="btn btn-success"/>
-    <div class="alert alert-warning">
+    <div class="container">
+        <input type="button" value="Begin" class="btn btn-success" />
 
-        HTML CSS JAVASCRIPT
+        <div class="alert alert-warning">
+            HTML CSS JAVASCRIPT
+        </div>
 
+        <ul id="main">
+            <li>Home</li>
+            <li id="service">
+                Service
+                <ul>
+                    <li>service 1</li>
+                    <li>service 2</li>
+                </ul>
+            </li>
+        </ul>
     </div>
-    <ul id="main">
-        <li>Home</li>
-        <li id="service">Service
-            <ul>
-                <li>service 1</li>
-                <li>service 2</li>
-            </ul>
-        </li>
-    </ul>
-
-
-</div>
-
 </body>
 </html>

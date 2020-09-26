@@ -66,8 +66,9 @@ Day4_JavaScript
 
 Day5_JavaScript
 -siblings
+-access elements by relation
 -chaining
-
+-slide control
 
 
 

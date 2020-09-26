@@ -10,51 +10,48 @@
     <link href="css/custom.css" rel="stylesheet" />
     <script>
         $(function () {
-            $("input[type=buttonx]").click(function () {
-                //$("ul").next().css("background", "orange");
-                //$("ul").nextAll().css("background", "yellow");
-                //$("ul").nextUntil("p").css("background", "green");
-                //$("li").parent().css("border", "2px solid red");
-                //$("li").parents().css("border", "2px solid orange");
-                //$("li").parentsUntil("div").css("border", "2px solid green");
+            $("input[type=button]").click(function () {
+                //$("ul").next().css("background", "orange"); //next element after <ul> 'equal order'
+                //$("ul").nextAll().css("background", "yellow"); //all next elements after <ul> 'equal order'
+                //$("ul").nextUntil("p").css("background", "green"); //all next elements after <ul> except <p> 'equal order'
+                
                 //$("p").prev().css("color", "red");
                 //$("p").prevAll().css("color", "orange");
                 //$("p").prevUntil("ul").css("color", "#0094ff");
-               // $("body").children().css("color", "#8e32df");
-                //$("section").find("h2").css("color", "blue");
 
+                //$("li").parent().css("border", "2px solid red"); //first parent
+                //$("li").parents().css("border", "2px solid orange"); //all parents including grand parents
+                //$("li").parentsUntil("div").css("border", "2px solid green");
+                
+                //$("body").children().css("color", "#8e32df"); //all childs
 
-
+                //$("section").find("h2").css("color", "blue"); //all <h2> inside
             });
+
             $("#btnaffect").click(function () {
-
-                //$("table tr").first().css("border", "2px solid red");
-                //$("table tr td").first().css("background", "yellow");
+                //$("table tr").first().css("border", "2px solid red"); //first <tr> in DOM
+                //$("table tr td").first().css("background", "yellow"); //first <td> in DOM
                 //$("table tr td").last().css("background", "yellow");
-               // $("table tr:nth-child(2)").first().css("background", "green");
-                //$("table tr:nth-child(3) td").eq(1).css("background", "orange");
-                //$("div").filter(".alert-success").empty();
-                //$("div").filter(".alert-success").remove();
-                $("div").not(".alert-success").remove();
 
+                //$("table tr:nth-child(2)").first().css("background", "green");
+                //$("table tr:nth-child(3) td").eq(1).css("background", "orange"); // second <td> on third <tr>
 
+                //$("div").filter(".alert-success").empty(); //delete inner html in all elements with class '.alert-success'
+                //$("div").filter(".alert-success").remove(); //delete all elements with class '.alert-success'
+
+                //$("div").not(".alert-success").remove(); //delete all <div> elements which have no '.alert-success' class
             });
-
-
 
             $("nav a").click(function () {
-                $(this).siblings().removeClass();
                 $(this).addClass("active");
+                $(this).siblings().removeClass(); //remove classes from all except this <a>
             });
 
-        });// main
-
-
+        });
     </script>
     <style>
         body{
             margin:100px;
-           
         }
     </style>
 </head>
@@ -64,10 +61,12 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
     </nav>
-    <input type="button" value="find" class="btn btn-primary" />
-    <input type="button" id="btnaffect" value="click" class="btn btn-success" />
-    <div class="container">
 
+    <input type="button" value="find" class="btn btn-primary" />
+
+    <input type="button" id="btnaffect" value="click" class="btn btn-success" />
+
+    <div class="container">
         main div
         <ul>
             <li><span>Home</span></li>
@@ -78,10 +77,14 @@
         <h2>Yaser</h2>
         <p>Front end developer</p>
     </div>
+
     <section>
         section container
-        <h2>Section headline</h2>
+        <div>
+            <h2>Section headline</h2>
+        </div>
     </section>
+
     <table class="table">
         <tr>
             <th>ID</th>
@@ -123,9 +126,7 @@
             <td>lubna</td>
             <td>bdyya</td>
         </tr>
-
     </table>
-
 
     <div class="alert alert-success">
         success
@@ -134,7 +135,7 @@
         success
     </div>
     <div class="alert alert-warning">
-        success
+        warning
     </div>
 
 </body>
