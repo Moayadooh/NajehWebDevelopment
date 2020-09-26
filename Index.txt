@@ -47,17 +47,26 @@ Day3_Bootstrap
 
 Day1_JavaScript
 -inroduction to JavaScript
+-function
+-try catch
 
 Day2_JavaScript
 -inroduction to jQuery
+-events
+-fade
+-pop up messages
 
 Day3_JavaScript
--
+-regular expression
+-CSS classes
+-animation
 
+Day4_JavaScript
+-AJAX
 
-
-
-
+Day5_JavaScript
+-siblings
+-chaining
 
 
 
