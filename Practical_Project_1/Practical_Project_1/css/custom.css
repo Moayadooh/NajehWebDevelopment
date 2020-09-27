@@ -1,2 +1,45 @@
 ﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserra';
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+
+
+
+/*________________________________________________________________________________________________________________________________________*/
+/*Header*/
+header {
+    min-height: 825px;
+    background-image: url('../images/header background.png');
+    /*background-position: center;
+    background-size: cover;*/
+    padding: 53px 0 80px;
+}
+
+    header .express-delivery {
+        font-family: Montserra;
+        font-weight: bolder;
+        font-size: 16.667px;
+        color: rgb(61, 37, 20);
+    }
+
+nav a {
+    font-size: 21px;
+    font-family: BebasNeue;
+    color: rgb(61, 37, 20);
+    text-transform: uppercase;
 }
