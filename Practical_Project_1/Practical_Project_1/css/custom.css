@@ -13,6 +13,11 @@
 }
 
 @font-face {
+    font-family: 'MontserraBold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
     font-family: 'BebasNeue';
     src: url(../fonts/BebasNeue-Regular.ttf);
 }
@@ -27,19 +32,73 @@ header {
     background-image: url('../images/header background.png');
     /*background-position: center;
     background-size: cover;*/
-    padding: 53px 0 80px;
+    padding: 53px 57px 80px;
 }
 
-    header .express-delivery {
-        font-family: Montserra;
-        font-weight: bolder;
-        font-size: 16.667px;
-        color: rgb(61, 37, 20);
+    header div.row:first-child > div:first-child figure:nth-child(2), header div.row:first-child > div:first-child figure:last-child {
+        display: none;
     }
 
-nav a {
-    font-size: 21px;
-    font-family: BebasNeue;
-    color: rgb(61, 37, 20);
-    text-transform: uppercase;
+    header .express-delivery {
+        font-family: MontserraBold;
+        font-size: 16.667px;
+        color: rgb(61, 37, 20);
+        display: inline-flex;
+        align-items: center;
+    }
+
+        header .express-delivery p {
+            margin: 0 0 0 10px;
+        }
+
+
+nav {
+    margin-top: 28px;
+}
+
+    nav a {
+        font-size: 21px;
+        font-family: BebasNeue;
+        color: rgb(61, 37, 20);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 4px;
+    }
+
+        nav a.space {
+            margin-right: 58px;
+        }
+
+@media screen and (max-width:991.5px) {
+    header div.row:first-child > div {
+        text-align: center;
+        /*justify-content: center;
+        align-items: center;*/
+    }
+}
+
+@media screen and (max-width:682px) {
+    header div.row:first-child > div:first-child figure:first-child {
+        display: none;
+    }
+
+    header div.row:first-child > div:first-child figure:nth-child(2), header div.row:first-child > div:first-child figure:last-child {
+        display: block;
+    }
+
+    header .express-delivery {
+        display: block;
+    }
+
+        header .express-delivery p {
+            margin: 0;
+        }
+
+    nav a {
+        display: block;
+    }
+
+        nav a.space {
+            margin: 0 0 10px 0;
+        }
 }
