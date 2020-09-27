@@ -22,6 +22,11 @@
     src: url(../fonts/BebasNeue-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'AlfaSlabOne';
+    src: url(../fonts/AlfaSlabOne-Regular.ttf);
+}
+
 
 
 
@@ -30,6 +35,7 @@
 header {
     min-height: 825px;
     background-image: url('../images/header background.png');
+    background-attachment: fixed;
     /*background-position: center;
     background-size: cover;*/
     padding: 53px 57px 80px;
@@ -62,7 +68,7 @@ nav {
         color: rgb(61, 37, 20);
         text-transform: uppercase;
         text-decoration: none;
-        letter-spacing: 4px;
+        letter-spacing: 5px;
     }
 
         nav a.space {
@@ -72,8 +78,10 @@ nav {
 @media screen and (max-width:991.5px) {
     header div.row:first-child > div {
         text-align: center;
-        /*justify-content: center;
-        align-items: center;*/
+    }
+
+    nav a.space {
+        margin-right: 48px;
     }
 }
 
@@ -102,3 +110,42 @@ nav {
             margin: 0 0 10px 0;
         }
 }
+
+header p.good-time {
+    font-size: 25px;
+    font-family: BebasNeue;
+    color: rgb(61, 37, 20);
+    border: 3px dashed #3d2514;
+    margin: 0;
+    max-width: 404px;
+    text-align: center;
+}
+
+header p.burger-text {
+    font-size: 115px;
+    font-family: AlfaSlabOne;
+    color: rgb(61, 37, 20);
+    text-transform: uppercase;
+    text-shadow: 6px 5px #fee8bc;
+    margin: 0;
+    height: 130px;
+    word-break: break-word;
+}
+
+header p.week {
+    font-size: 60px;
+    font-family: AlfaSlabOne;
+    color: rgb(61, 37, 20);
+    text-transform: uppercase;
+    text-shadow: 6px 5px #fee8bc;
+    margin: 0;
+    height: 60px;
+}
+
+header div.burger-image {
+    /*position: relative;*/
+}
+
+/*header div.burger-image figure {
+    position: absolute;
+}*/
