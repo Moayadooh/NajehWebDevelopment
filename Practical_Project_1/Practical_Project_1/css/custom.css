@@ -67,18 +67,35 @@ nav {
         font-family: BebasNeue;
         color: rgb(61, 37, 20);
         text-transform: uppercase;
-        text-decoration: none;
         letter-spacing: 5px;
     }
+
+        nav a:hover {
+            color: rgb(61, 37, 20);
+        }
+
+        nav a:active {
+            color: white;
+        }
 
         nav a.space {
             margin-right: 58px;
         }
 
-@media screen and (max-width:991.5px) {
-    header div.row:first-child > div {
-        text-align: center;
+@media screen and (max-width:1200px) {
+    nav a.space {
+        margin-right: 20px;
     }
+}
+
+@media screen and (max-width:991.5px) {
+    header {
+        padding: 53px 0 80px;
+    }
+
+        header div.row:first-child > div {
+            text-align: center;
+        }
 
     nav a.space {
         margin-right: 48px;
@@ -121,16 +138,14 @@ header p.good-time {
     text-align: center;
 }
 
-header p.burger-text {
-    font-size: 115px;
-    font-family: AlfaSlabOne;
-    color: rgb(61, 37, 20);
-    text-transform: uppercase;
-    text-shadow: 6px 5px #fee8bc;
-    margin: 0;
-    height: 130px;
-    word-break: break-word;
+header figure.burger-title {
+    max-width: 100%;
+    line-height: 160px;
 }
+
+    header figure.burger-title img {
+        max-width: 100%;
+    }
 
 header p.week {
     font-size: 60px;
@@ -139,13 +154,35 @@ header p.week {
     text-transform: uppercase;
     text-shadow: 6px 5px #fee8bc;
     margin: 0;
-    height: 60px;
+    line-height: 50px;
 }
 
-header div.burger-image {
-    /*position: relative;*/
+header div.second-row {
+    display: flex;
+    align-items: center;
 }
 
-/*header div.burger-image figure {
-    position: absolute;
-}*/
+    header div.second-row figure.burger-image {
+        position: relative;
+        max-width: 700px;
+    }
+
+        header div.second-row figure.burger-image img {
+            max-width: 100%;
+        }
+
+@media screen and (max-width:991.5px) {
+    header div.second-row {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header p.good-time {
+        margin: auto;
+    }
+
+    header p.good-time {
+        margin-top: 50px;
+    }
+}
