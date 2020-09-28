@@ -208,7 +208,7 @@ header div.second-row {
 
 #best-burger figure.fun, #best-burger figure.fresh {
     max-width: 596px;
-    margin: 9px;
+    margin: 12px;
 }
 
     #best-burger figure.fun img, #best-burger figure.fresh img {
@@ -239,4 +239,83 @@ header div.second-row {
     #best-burger figure.fun {
         margin-top: 36px;
     }
+}
+
+
+
+
+/*________________________________________________________________________________________________________________________________________*/
+/*Choose Burger*/
+#choose-burger div.title {
+    color: #3d2514;
+    font-size: 25px;
+    font-family: BebasNeue;
+    background-color: #ffc045;
+    width: 218px;
+    margin: 59px auto 40px;
+}
+
+    #choose-burger div.title p {
+        padding: 5px 0;
+        margin: 0;
+    }
+
+#choose-burger h2 {
+    font-size: 50px;
+    font-family: AlfaSlabOne;
+    color: rgb(61, 37, 20);
+    text-transform: uppercase;
+}
+
+#choose-burger p.body-text {
+    color: #3d2514;
+    font-family: Montserra;
+    font-size: 16.667px;
+}
+
+#choose-burger div.container-fluid div.row {
+    margin-top: 70px;
+}
+
+    #choose-burger div.container-fluid div.row figure.burger2 {
+        margin-top: 35px;
+    }
+
+@media screen and (max-width:1024px) {
+    #choose-burger div.container-fluid div.row figure.burger2 {
+        margin-top: 25px;
+    }
+}
+
+#choose-burger div.container-fluid div.row img {
+    margin: auto;
+}
+
+#choose-burger div.container-fluid div.row h3 {
+    font-size: 37.5px;
+    font-family: BebasNeue;
+    color: rgb(61, 37, 20);
+    text-transform: uppercase;
+}
+
+#choose-burger div.container-fluid div.row p {
+    font-size: 16.667px;
+    font-family: Montserra;
+    color: rgb(61, 37, 20);
+    max-width: 340px;
+    margin: auto;
+}
+
+#choose-burger div.container-fluid div.row input[type=button] {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    background-image: url('../images/button background.png');
+    font-size: 16.667px;
+    font-family: AlfaSlabOne;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    margin-top: 37px;
+    margin-bottom: 70px;
 }
