@@ -1,6 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 * {
@@ -184,5 +185,69 @@ header div.second-row {
 
     header p.good-time {
         margin-top: 50px;
+    }
+}
+
+
+
+
+/*________________________________________________________________________________________________________________________________________*/
+/*Best Burger*/
+#best-burger div.row {
+    margin-top: 78px;
+}
+
+#best-burger figure.popular {
+    max-width: 596px;
+    margin-right: 12px;
+    /*margin-left: auto;*/
+}
+
+    #best-burger figure.popular img {
+        max-width: 100%;
+    }
+
+/*#best-burger figure.fun-fresh {
+    max-width: 596px;
+}
+
+    #best-burger figure.fun-fresh img {
+        max-width: 100%;
+    }*/
+
+
+
+#best-burger figure.fun, #best-burger figure.fresh {
+    max-width: 596px;
+    /*margin-bottom: 35px;*/
+}
+
+    #best-burger figure.fun img, #best-burger figure.fresh img {
+        max-width: 100%;
+    }
+
+#best-burger figure.fun {
+    margin-bottom: 36px;
+}
+
+@media screen and (max-width:991.5px) {
+    #best-burger figure.popular {
+        margin-right: auto;
+        /*height: auto;*/
+    }
+
+    #best-burger figure.fun, #best-burger figure.fresh {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /*#best-burger figure.fun-fresh {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 35px;
+    }*/
+
+    #best-burger figure.fun {
+        margin-top: 36px;
     }
 }
