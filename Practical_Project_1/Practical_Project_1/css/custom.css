@@ -163,14 +163,9 @@ header div.second-row {
     align-items: center;
 }
 
-    header div.second-row figure.burger-image {
-        position: relative;
-        max-width: 700px;
+    header div.second-row div:last-child {
+        margin-left: auto;
     }
-
-        header div.second-row figure.burger-image img {
-            max-width: 100%;
-        }
 
 @media screen and (max-width:991.5px) {
     header div.second-row {
@@ -181,9 +176,6 @@ header div.second-row {
 
     header p.good-time {
         margin: auto;
-    }
-
-    header p.good-time {
         margin-top: 50px;
     }
 }
@@ -199,29 +191,20 @@ header div.second-row {
 
 #best-burger figure.popular {
     max-width: 596px;
-    margin: 12px;
+    margin-left: auto;
 }
-
-    #best-burger figure.popular img {
-        max-width: 100%;
-    }
 
 #best-burger figure.fun, #best-burger figure.fresh {
     max-width: 596px;
-    margin: 12px;
 }
 
-    #best-burger figure.fun img, #best-burger figure.fresh img {
-        max-width: 100%;
-    }
-
 #best-burger figure.fun {
-    margin-bottom: 31px;
+    margin-bottom: 35px;
 }
 
 @media screen and (max-width:1199.5px) {
     #best-burger figure.fun {
-        margin-bottom: 26px;
+        margin-bottom: 30px;
     }
 }
 
@@ -273,18 +256,13 @@ header div.second-row {
     font-size: 16.667px;
 }
 
-#choose-burger div.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+#choose-burger div.container-fluid div.row {
+    margin-top: 70px;
 }
 
-    #choose-burger div.container-fluid div.row {
-        margin-top: 70px;
+    #choose-burger div.container-fluid div.row figure.burger2 {
+        margin-top: 35px;
     }
-
-        #choose-burger div.container-fluid div.row figure.burger2 {
-            margin-top: 35px;
-        }
 
 @media screen and (max-width:1024px) {
     #choose-burger div.container-fluid div.row figure.burger2 {
@@ -330,59 +308,71 @@ header div.second-row {
 
 /*________________________________________________________________________________________________________________________________________*/
 /*Slider*/
-#slider #carousel-example-generic .carousel-inner .item {
-    max-width: 85%;
-    margin: auto;
-    padding: 27px;
-    box-shadow: 10px 10px 55px #dbdbdb;
-    /*box-shadow: 0 4px 2px -2px #000;*/
+#slider {
+    margin-top: 61px;
 }
 
-    #slider #carousel-example-generic .carousel-inner .item h4 {
-        font-size: 29px;
-        font-family: BebasNeue;
-        color: rgb(61, 61, 61);
-        text-transform: uppercase;
-        margin-top: 36px;
+    #slider #carousel-example-generic .carousel-inner .item {
+        max-width: 86%;
+        margin: auto;
+        padding: 27px 27px 27px 53px;
+        box-shadow: 10px 10px 55px #dbdbdb;
+        /*box-shadow: 0 4px 2px -2px #000;*/
     }
 
-    #slider #carousel-example-generic .carousel-inner .item h2 {
-        font-size: 41.667px;
-        font-family: AlfaSlabOne;
-        color: rgb(61, 37, 20);
-        text-transform: uppercase;
-        word-break: break-word;
-    }
+        #slider #carousel-example-generic .carousel-inner .item h4 {
+            font-size: 29px;
+            font-family: BebasNeue;
+            color: rgb(61, 61, 61);
+            text-transform: uppercase;
+            margin-top: 36px;
+        }
 
-    #slider #carousel-example-generic .carousel-inner .item p {
-        font-size: 21px;
-        font-family: Montserra;
-        color: #3d3d3d;
-        line-height: 1.6;
-    }
+        #slider #carousel-example-generic .carousel-inner .item h2 {
+            font-size: 41.667px;
+            font-family: AlfaSlabOne;
+            color: rgb(61, 37, 20);
+            text-transform: uppercase;
+            word-break: break-word;
+        }
+
+        #slider #carousel-example-generic .carousel-inner .item p {
+            font-size: 21px;
+            font-family: Montserra;
+            color: #3d3d3d;
+            line-height: 1.6;
+        }
 
 .carousel-indicators {
     text-align: left;
     bottom: 10px;
-    left: 39.5%;
+    left: 41%;
+}
+
+@media screen and (max-width:1374.5px) {
+    .carousel-indicators {
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width:1228.5px) {
     .carousel-indicators {
-        margin-left: 8%;
+        text-align: center;
+        left: 50%;
     }
 }
 
 @media screen and (max-width:1024.5px) and (min-width:991.5px) {
     #slider #carousel-example-generic .carousel-inner .item img {
-        margin-top: 50%;
+        margin-top: 60%;
         transform: translateY(-50%);
     }
 }
 
 @media screen and (max-width:991.5px) {
     .carousel-indicators {
-        margin-left: 6%;
+        text-align: center;
+        left: 50%;
         top: 22px;
     }
 }
