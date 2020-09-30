@@ -74,6 +74,7 @@
     <Content Include="css\signin.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\bicycle.png" />
+    <Content Include="images\Bottle.png" />
     <Content Include="images\BURGER HOUSE.png" />
     <Content Include="images\BURGER LOGO.png" />
     <Content Include="images\burger1.png" />
@@ -86,6 +87,8 @@
     <Content Include="images\LOGO.png" />
     <Content Include="images\popular burger.png" />
     <Content Include="images\price.png" />
+    <Content Include="images\reservation burger1.png" />
+    <Content Include="images\reservation burger2.png" />
     <Content Include="images\slider burger.png" />
     <Content Include="images\title.png" />
     <Content Include="js\bootstrap.js" />

@@ -400,10 +400,9 @@ header div.second-row {
     height: 65px;
 }
 
-@media screen and (max-width:1440.5px) {
+@media screen and (max-width:1750.5px) {
     #reservation input {
         width: 379px;
-        height: 65px;
     }
 }
 
@@ -422,10 +421,6 @@ header div.second-row {
 #reservation input[type=button] {
     text-transform: uppercase;
     outline: none;
-}
-
-#reservation .container form.row {
-    /*margin: auto;*/
 }
 
     #reservation .container form.row > div:first-child input {
@@ -455,5 +450,85 @@ header div.second-row {
     #reservation input {
         max-width: 280px;
         max-height: 45px;
+    }
+}
+
+#reservation div.bottle-burger {
+    display: flex;
+    position: relative;
+}
+
+    #reservation div.bottle-burger figure:last-child {
+        display: flex;
+        position: absolute;
+        left: 7%;
+        top: 230px;
+    }
+
+#reservation {
+    position: relative;
+}
+
+    #reservation div.food-images {
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0px;
+        z-index: -1;
+    }
+
+    #reservation div.burger-dish {
+        position: relative;
+        top: -227px;
+    }
+
+@media screen and (max-width:1310.5px) {
+    #reservation div.bottle-burger > figure {
+        width: 15%;
+    }
+
+    #reservation div.burger-dish > figure {
+        width: 40%;
+    }
+
+    #reservation div.burger-dish {
+        top: 120px;
+    }
+
+    #reservation div.bottle-burger {
+        top: 150px;
+    }
+
+        #reservation div.bottle-burger figure:last-child {
+            left: 0%;
+            top: 150px;
+        }
+}
+
+@media screen and (max-width:991.5px) {
+    #reservation div.bottle-burger > figure {
+        width: 25%;
+    }
+
+    #reservation div.burger-dish > figure {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:645.5px) {
+    #reservation div.food-images {
+        top: 470px;
+    }
+
+    #reservation div.burger-dish {
+        top: -50px;
+    }
+
+    #reservation div.bottle-burger > figure {
+        width: 50%;
+    }
+
+    #reservation div.burger-dish > figure {
+        width: 80%;
     }
 }
