@@ -34,17 +34,10 @@
 /*________________________________________________________________________________________________________________________________________*/
 /*Header*/
 header {
-    min-height: 825px;
     background-image: url('../images/header background.png');
     background-attachment: fixed;
-    /*background-position: center;
-    background-size: cover;*/
-    padding: 53px 57px 80px;
+    padding: 53px 0 0 57px;
 }
-
-    header div.row:first-child > div:first-child figure:nth-child(2), header div.row:first-child > div:first-child figure:last-child {
-        display: none;
-    }
 
     header .express-delivery {
         font-family: MontserraBold;
@@ -52,6 +45,7 @@ header {
         color: rgb(61, 37, 20);
         display: inline-flex;
         align-items: center;
+        margin-right: 57px;
     }
 
         header .express-delivery p {
@@ -61,6 +55,7 @@ header {
 
 nav {
     margin-top: 28px;
+    margin-right: 57px;
 }
 
     nav a {
@@ -91,7 +86,7 @@ nav {
 
 @media screen and (max-width:991.5px) {
     header {
-        padding: 53px 0 80px;
+        padding: 53px 0 0;
     }
 
         header div.row:first-child > div {
@@ -104,14 +99,6 @@ nav {
 }
 
 @media screen and (max-width:682px) {
-    header div.row:first-child > div:first-child figure:first-child {
-        display: none;
-    }
-
-    header div.row:first-child > div:first-child figure:nth-child(2), header div.row:first-child > div:first-child figure:last-child {
-        display: block;
-    }
-
     header .express-delivery {
         display: block;
     }
@@ -290,15 +277,13 @@ header div.second-row {
 }
 
 #choose-burger div.container-fluid div.row input[type=button] {
-    background: none;
-    border: none;
+    border-radius: 0;
     outline: none;
-    color: #ffffff;
-    background-image: url('../images/button background.png');
     font-size: 16.667px;
     font-family: AlfaSlabOne;
     text-transform: uppercase;
-    padding: 20px 40px;
+    width: 195px;
+    height: 57px;
     margin-top: 37px;
     margin-bottom: 70px;
 }
@@ -412,6 +397,9 @@ header div.second-row {
 
 #reservation input[type=text], #reservation input[type=email] {
     text-indent: 22px;
+    font-size: 21px;
+    font-family: BebasNeue;
+    color: rgb(61, 61, 61);
 }
 
 #reservation input::placeholder {
@@ -421,15 +409,17 @@ header div.second-row {
 #reservation input[type=button] {
     text-transform: uppercase;
     outline: none;
+    font-size: 21px;
+    font-family: AlfaSlabOne;
 }
 
-    #reservation .container form.row > div:first-child input {
-        margin-left: auto;
-    }
+#reservation .container form.row > div:first-child input {
+    margin-left: auto;
+}
 
-    #reservation .container form.row > div:last-child input[type=text], #reservation .container form.row > div:last-child input[type=email] {
-        margin-right: auto;
-    }
+#reservation .container form.row > div:last-child input[type=text], #reservation .container form.row > div:last-child input[type=email] {
+    margin-right: auto;
+}
 
 @media screen and (max-width:991.5px) {
     #reservation input {
@@ -530,5 +520,158 @@ header div.second-row {
 
     #reservation div.burger-dish > figure {
         width: 80%;
+    }
+}
+
+
+
+
+/*________________________________________________________________________________________________________________________________________*/
+/*Footer*/
+footer {
+    margin: 150px 57px 66px;
+    padding-left: 43px;
+    padding-right: 30px;
+    background-image: url('../images/footer background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 525px;
+}
+
+@media screen and (max-width:644.5px) {
+    footer {
+        margin-top: 550px;
+    }
+}
+
+@media screen and (max-width:524.5px) {
+    footer {
+        margin: 450px 0 0;
+    }
+}
+
+@media screen and (max-width:410.5px) {
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.fab {
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+i.fab {
+    margin-right: 12px;
+}
+
+i.fa-instagram {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+i.fa-facebook-f {
+    padding-right: 9px;
+    padding-left: 9px;
+}
+
+i.fa-whatsapp {
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+footer div.row:nth-child(2) > div:first-child p {
+    font-size: 16.667px;
+    font-family: Montserra;
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+}
+
+footer div.row:nth-child(2) div:last-child p {
+    font-size: 21px;
+    font-family: BebasNeue;
+    color: rgb(255, 255, 255);
+    line-height: 1.8;
+}
+
+    footer div.row:nth-child(2) div:last-child p:last-child {
+        margin-right: 65px;
+    }
+
+footer div.row span {
+    margin-right: 36px;
+}
+
+@media screen and (max-width:367.5px) {
+    footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+        footer div.row:nth-child(2) div:last-child p {
+            text-align: left;
+        }
+
+            footer div.row:nth-child(2) div:last-child p:last-child {
+                margin-right: 0px;
+            }
+
+        footer div.row span {
+            margin-right: 16px;
+        }
+}
+
+footer div.row:last-child p {
+    font-size: 16.667px;
+    font-family: BebasNeue;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+footer div.row:first-child {
+    margin-top: 84px;
+    margin-bottom: 48px;
+}
+
+footer div.row:nth-child(2) {
+    margin-bottom: 140px;
+}
+
+@media screen and (max-width:1242.5px) {
+    footer div.row:nth-child(2) {
+        margin-bottom: 115px;
+    }
+}
+
+@media screen and (max-width:1076.5px) {
+    footer div.row:nth-child(2) {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width:991.5px) {
+    footer .info {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    footer div.row:last-child p {
+        text-align: center;
+    }
+
+    footer .icons {
+        text-align: center;
+    }
+
+    footer div.row:nth-child(2) {
+        margin-bottom: 30px;
+    }
+
+    footer div.row:last-child {
+        margin-bottom: 30px;
     }
 }
