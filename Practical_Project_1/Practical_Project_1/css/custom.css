@@ -363,13 +363,12 @@ header div.second-row div:last-child {
 /*________________________________________________________________________________________________________________________________________*/
 /*Slider*/
 #slider #carousel-example-generic .carousel-inner {
-    padding-top: 61px;
-    padding-bottom: 132px;
+    min-height: 492px;
 }
 
     #slider #carousel-example-generic .carousel-inner .item {
         max-width: 86%;
-        margin: auto;
+        margin: 61px auto 132px;
         padding: 27px 27px 27px 53px;
         box-shadow: 30px 30px 55px #dbdbdb;
     }
