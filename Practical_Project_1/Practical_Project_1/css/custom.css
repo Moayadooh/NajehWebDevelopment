@@ -37,6 +37,7 @@ header {
     background-image: url('../images/header background.png');
     background-attachment: fixed;
     padding: 53px 0 0 57px;
+    max-height: 755px;
 }
 
     header .express-delivery {
@@ -46,6 +47,8 @@ header {
         display: inline-flex;
         align-items: center;
         margin-right: 57px;
+        position: relative;
+        z-index: 1;
     }
 
         header .express-delivery p {
@@ -56,6 +59,8 @@ header {
 nav {
     margin-top: 28px;
     margin-right: 57px;
+    position: relative;
+    z-index: 1;
 }
 
     nav a {
@@ -67,11 +72,18 @@ nav {
     }
 
         nav a:hover {
-            color: rgb(61, 37, 20);
+            color: #ffffff;
+            text-decoration: none;
         }
 
         nav a:active {
-            color: white;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav a:focus {
+            color: #ffffff;
+            text-decoration: none;
         }
 
         nav a.space {
@@ -148,11 +160,19 @@ header p.week {
 header div.second-row {
     display: flex;
     align-items: center;
+    position: relative;
+    top: -180px;
 }
 
-    header div.second-row div:last-child {
-        margin-left: auto;
+@media screen and (max-width:1300px) {
+    header div.second-row {
+        top: -80px;
     }
+}
+
+header div.second-row div:last-child {
+    margin-left: auto;
+}
 
 @media screen and (max-width:991.5px) {
     header div.second-row {
@@ -164,6 +184,22 @@ header div.second-row {
     header p.good-time {
         margin: auto;
         margin-top: 50px;
+    }
+
+    header {
+        max-height: 1250px;
+    }
+
+        header div.second-row {
+            position: unset;
+        }
+
+        header .express-delivery {
+            margin-right: 0;
+        }
+
+    nav {
+        margin-right: 0;
     }
 }
 
@@ -207,7 +243,8 @@ header div.second-row {
     }
 
     #best-burger figure.fun {
-        margin-top: 39px;
+        margin-bottom: 5px;
+        margin-top: 5px;
     }
 }
 
@@ -521,6 +558,10 @@ header div.second-row {
     #reservation div.burger-dish > figure {
         width: 80%;
     }
+
+    #reservation h2.h2-custom {
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -529,7 +570,7 @@ header div.second-row {
 /*________________________________________________________________________________________________________________________________________*/
 /*Footer*/
 footer {
-    margin: 150px 57px 66px;
+    margin: 160px 57px 66px;
     padding-left: 43px;
     padding-right: 30px;
     background-image: url('../images/footer background.png');
@@ -541,11 +582,17 @@ footer {
 
 @media screen and (max-width:644.5px) {
     footer {
-        margin-top: 550px;
+        margin-top: 650px;
     }
 }
 
 @media screen and (max-width:524.5px) {
+    footer {
+        margin: 570px 0 0;
+    }
+}
+
+@media screen and (max-width:426.5px) {
     footer {
         margin: 450px 0 0;
     }
@@ -563,7 +610,13 @@ footer {
     font-size: 20px;
     border-radius: 50%;
     padding: 6px;
+    color: #000000;
+    transition: all 1s ease;
 }
+
+    .fab:hover {
+        transform: scaleX(-1);
+    }
 
 i.fab {
     margin-right: 12px;
@@ -599,12 +652,20 @@ footer div.row:nth-child(2) div:last-child p {
 }
 
     footer div.row:nth-child(2) div:last-child p:last-child {
-        margin-right: 65px;
+        margin-right: 68px;
     }
 
 footer div.row span {
     margin-right: 36px;
 }
+
+    footer div.row span img {
+        transition: all 1s ease;
+    }
+
+        footer div.row span img:hover {
+            transform: scaleX(-1);
+        }
 
 @media screen and (max-width:367.5px) {
     footer {
@@ -641,9 +702,20 @@ footer div.row:nth-child(2) {
     margin-bottom: 140px;
 }
 
+footer div.info {
+    margin-right: 96px;
+    margin-top: 10px;
+}
+
 @media screen and (max-width:1242.5px) {
     footer div.row:nth-child(2) {
         margin-bottom: 115px;
+    }
+}
+
+@media screen and (max-width:1150.5px) {
+    footer div.info {
+        margin-right: 0;
     }
 }
 
@@ -654,9 +726,21 @@ footer div.row:nth-child(2) {
 }
 
 @media screen and (max-width:991.5px) {
-    footer .info {
+    footer div.row:nth-child(2) > div:first-child p {
+        text-align: center;
+    }
+
+    footer div.row:nth-child(2) div:last-child p {
+        text-align: center;
+    }
+
+    footer div.info {
         text-align: center;
         margin-top: 30px;
+    }
+
+    footer div.row:nth-child(2) div:last-child p:last-child {
+        margin-right: 0;
     }
 
     footer div.row:last-child p {
