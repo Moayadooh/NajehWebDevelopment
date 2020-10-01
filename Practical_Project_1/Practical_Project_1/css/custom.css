@@ -141,6 +141,8 @@ header p.good-time {
 header figure.burger-title {
     max-width: 100%;
     line-height: 160px;
+    position: relative;
+    z-index: 2;
 }
 
     header figure.burger-title img {
@@ -155,6 +157,8 @@ header p.week {
     text-shadow: 6px 5px #fee8bc;
     margin: 0;
     line-height: 50px;
+    position: relative;
+    z-index: 2;
 }
 
 header div.second-row {
@@ -194,12 +198,40 @@ header div.second-row div:last-child {
             position: unset;
         }
 
+        header figure.burger-image {
+            position: relative;
+            top: -100px;
+            z-index: 1;
+        }
+
+        header figure.burger-title {
+            position: relative;
+            z-index: 2;
+        }
+
+        header p.week {
+            position: relative;
+            z-index: 2;
+        }
+
         header .express-delivery {
             margin-right: 0;
         }
 
     nav {
         margin-right: 0;
+    }
+}
+
+@media screen and (max-width:630.5px) {
+    header figure.burger-image {
+        top: -60px;
+    }
+}
+
+@media screen and (max-width:400.5px) {
+    header figure.burger-image {
+        top: -30px;
     }
 }
 
@@ -384,15 +416,31 @@ header div.second-row div:last-child {
 
 @media screen and (max-width:1228.5px) {
     .carousel-indicators {
-        text-align: center;
-        left: 50%;
+        left: 41%;
     }
 }
 
-@media screen and (max-width:1024.5px) and (min-width:991.5px) {
-    #slider #carousel-example-generic .carousel-inner .item img {
-        margin-top: 60%;
-        transform: translateY(-50%);
+@media screen and (max-width:1160.5px) {
+    .carousel-indicators {
+        left: 42%;
+    }
+}
+
+#slider #carousel-example-generic .carousel-inner .item img {
+    width: 100%;
+}
+
+#slider .titles-top {
+    display: none;
+}
+
+@media screen and (max-width:1375.5px) and (min-width:991.5px) {
+    #slider .titles-top {
+        display: block;
+    }
+
+    #slider .titles-left {
+        display: none;
     }
 }
 
@@ -401,6 +449,20 @@ header div.second-row div:last-child {
         text-align: center;
         left: 50%;
         top: 90px;
+    }
+
+    #slider .item p, #slider .item h2, #slider .item h4 {
+        text-align: center;
+    }
+
+    #slider #carousel-example-generic .carousel-inner .item {
+        padding: 27px 27px 27px 27px;
+    }
+}
+
+@media screen and (max-width:600.5px) {
+    #slider .item p, #slider .item h2, #slider .item h4 {
+        text-align: center;
     }
 }
 
@@ -659,13 +721,13 @@ footer div.row span {
     margin-right: 36px;
 }
 
-    footer div.row span img {
+/*footer div.row span img {
         transition: all 1s ease;
     }
 
         footer div.row span img:hover {
             transform: scaleX(-1);
-        }
+        }*/
 
 @media screen and (max-width:367.5px) {
     footer {
@@ -726,6 +788,10 @@ footer div.info {
 }
 
 @media screen and (max-width:991.5px) {
+    footer div.row figure.footer-logo img {
+        margin: auto;
+    }
+
     footer div.row:nth-child(2) > div:first-child p {
         text-align: center;
     }

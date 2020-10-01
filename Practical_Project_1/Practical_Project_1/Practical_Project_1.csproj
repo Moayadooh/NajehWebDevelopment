@@ -76,6 +76,8 @@
     <Content Include="images\footer logo.png" />
     <Content Include="images\header burger.png" />
     <Content Include="images\Location Icon.png" />
+    <Content Include="images\slider burger1.jpg" />
+    <Content Include="images\slider burger2.jpg" />
     <Content Include="js\custom.js" />
     <Content Include="css\signin.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
