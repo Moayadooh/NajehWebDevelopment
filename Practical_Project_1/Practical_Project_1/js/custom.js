@@ -11,7 +11,7 @@ $(function () {
             $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
             $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
         }
-        if ($(window).scrollTop() >= 1800) {
+        if ($(window).scrollTop() >= 2450) {
             $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
         }
     });

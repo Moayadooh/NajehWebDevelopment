@@ -399,6 +399,10 @@ header figure.burger-image {
         transform: scale(1.2);
     }
 
+    #choose-burger figure.left-burger:active, #choose-burger figure.mid-burger:active, #choose-burger figure.right-burger:active {
+        transform: scale(2);
+    }
+
 
 
 
