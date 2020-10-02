@@ -1,6 +1,23 @@
 ﻿
 
 $(function () {
+    $("#login").click(function () {
+        $("header .sign-in-form").animate({ opacity: 1, width: "auto" }, 0);
+    });
+
+    $(".form-signin .glyphicon-remove").click(function () {
+        $("header .sign-in-form").animate({ opacity: 0, width: "0px" }, 300, function () {
+            $(".modal").modal('hide');
+        });
+
+        //$("body").removeClass("modal-open");
+        //$("header div .modal").removeClass("in");
+        //$("header div .modal").css("display", "none");
+        
+        //$("div").filter(".modal-backdrop").remove();
+        //$("body").css("all", "unset");
+    });
+
     $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
 
     $(window).scroll(function () {

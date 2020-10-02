@@ -7,13 +7,33 @@ body {
 }
 
 .form-signin {
-    max-width: 330px;
+    /*max-width: 330px;*/
+    min-width: 40%;
     padding: 15px;
     margin: 0 auto;
+    background-image: url('../images/header background.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+}
+
+header .modal-content {
+    border-right: 0;
+}
+
+@media (min-width: 768px) {
+    header .modal-sm {
+        /*width: 300px;*/
+        min-width: 40%;
+    }
+
+    header .modal-content {
+        border-bottom: 0;
+    }
 }
 
 .form-signin, .form-signin {
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
     .form-signin .form-control {
@@ -40,4 +60,32 @@ body {
         margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+
+    .form-signin figure img {
+        margin: 0 auto 20px;
+        max-width: 75%;
+    }
+
+    .form-signin input[type="email"], .form-signin input[type="password"] {
+        text-indent: 15px;
+        font-size: 18px;
+        color: rgb(61, 61, 61);
+    }
+
+    .form-signin input::placeholder {
+        font-family: BebasNeue;
+    }
+
+    .form-signin button[type=submit] {
+        text-transform: uppercase;
+        outline: none;
+        font-size: 18px;
+        font-family: AlfaSlabOne;
+        margin-bottom: 10px;
+    }
+
+    .form-signin div a {
+        font-size: 18px;
+        font-family: BebasNeue;
     }

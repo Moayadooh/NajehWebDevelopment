@@ -542,12 +542,11 @@ header figure.burger-image {
 #reservation input[type=text], #reservation input[type=email] {
     text-indent: 22px;
     font-size: 21px;
-    font-family: BebasNeue;
     color: rgb(61, 61, 61);
 }
 
 #reservation input::placeholder {
-    text-transform: uppercase;
+    font-family: BebasNeue;
 }
 
 #reservation input[type=button] {
