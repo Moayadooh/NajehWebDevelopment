@@ -89,3 +89,12 @@ header .modal-content {
         font-size: 18px;
         font-family: BebasNeue;
     }
+
+    .form-signin .glyphicon-remove {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+        .form-signin .glyphicon-remove:hover {
+            color: rgb(255, 255, 255);
+        }

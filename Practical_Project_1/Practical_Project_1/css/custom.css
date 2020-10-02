@@ -59,7 +59,7 @@ header {
 
 nav {
     margin-top: 28px;
-    margin-right: 57px;
+    margin-right: 53px;
     position: relative;
     z-index: 1;
 }
@@ -75,16 +75,7 @@ nav {
         nav a:hover {
             color: #ffffff;
             text-decoration: none;
-        }
-
-        nav a:active {
-            color: rgb(61, 37, 20);
-            text-decoration: none;
-        }
-
-        nav a:focus {
-            color: #ffffff;
-            text-decoration: none;
+            cursor: pointer;
         }
 
         nav a.space {
