@@ -16,6 +16,9 @@ $(function () {
 
     //Login Form
     $("#login").click(function () {
+        //$("header .sign-in-form").animate({ opacity: 0, position: "relative", left: "900%" }, 0, function () {
+        //    $(this).animate({ opacity: 1, position: "relative", left: 0, top: 0 }, 500);
+        //});
         $("header .sign-in-form").animate({ opacity: 1, position: "relative", left: 0 }, 0);
     });
     $(".form-signin .glyphicon-remove").click(function () {
@@ -25,46 +28,145 @@ $(function () {
     });
 
     $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
+
+    function LaptopNavigation() {
+        $("header nav").css({
+            position: "fixed",
+            left: "0",
+            top: -22,
+            backgroundColor: "black",
+            opacity: 0.5,
+            padding: "7px",
+            width: "100%",
+            zIndex: 99999
+        });
+    }
+    function MobileNavigation() {
+        $("header nav").css({
+            width: "auto",
+            background: "none",
+            opacity: 1,
+            marginTop: "21px",
+            marginRight: 0,
+            position: "relative",
+            left: 0,
+            top: 15,
+            zIndex: 99999
+        });
+    }
+    function RemoveNavBackgroundAndButton() {
+        //$("header .navbar-inverse").css({
+        //    background: "none",
+        //    border: "none"
+        //});
+        //$("header .navbar-header").css({
+        //    display: "none"
+        //});
+    }
+    function DisplayNavBackgroundAndButton() {
+        //$("header .navbar-inverse").css({
+        //    position: "fixed",
+        //    left: 0,
+        //    top: "-5px",
+        //    backgroundColor: "black",
+        //    width: "100%",
+        //    zIndex: 99
+        //});
+        //$("header .navbar-header").css({
+        //    display: "block"
+        //});
+    }
+
+    //if ($(window).width() <= 767) {
+    //    $(".navigation").addClass("navbar-fixed-top");
+    //    MobileNavigation();
+    //    DisplayNavBackgroundAndButton();
+    //}
+    //else {
+    //    //var marRight = "46px";
+    //    $(".navigation").removeClass("navbar-fixed-top");
+    //    LaptopNavigation();
+    //    RemoveNavBackgroundAndButton();
+    //}
+
+    var isMobile = false;
+    if ($(window).width() <= 767) {
+        $(".navigation").addClass("navbar-fixed-top");
+        isMobile = true;
+        //MobileNavigation();
+        //DisplayNavBackgroundAndButton();
+    }
+    else {
+        //var marRight = "46px";
+        $(".navigation").removeClass("navbar-fixed-top");
+        isMobile = false;
+        //LaptopNavigation();
+        //RemoveNavBackgroundAndButton();
+    }
+    $(window).resize(function () {
+        if ($(window).width() <= 767) {
+            $(".navigation").addClass("navbar-fixed-top");
+            isMobile = true;
+            //MobileNavigation();
+            //DisplayNavBackgroundAndButton();
+        }
+        else {
+            //var marRight = "46px";
+            $(".navigation").removeClass("navbar-fixed-top");
+            isMobile = false;
+            //LaptopNavigation();
+            //RemoveNavBackgroundAndButton();
+        }
+    });
+
+    //if (isMobile) {
+    //    $("header nav").css({
+    //        backgroundColor: "black",
+    //        opacity: 0.5
+    //    });
+    //}
+
     $(window).scroll(function () {
         //Control Navigation Bar
-        if ($(window).scrollTop() >= 5) {
-            $("header nav").css({
-                position: "fixed",
-                left: "0",
-                top: -22,
-                backgroundColor: "gray",
-                opacity: 0.6,
-                padding: "7px",
-                width: "100%"
-            });
-            $("header nav a").css({ color: "#ffffff" });
-            $("header nav a").mouseenter(function () {
-                $(this).css({ color: "rgb(61, 37, 20)" });
-            });
-            $("header nav a").mouseleave(function () {
-                $(this).css({ color: "#ffffff" });
-            });
-        }
-        else if ($(window).scrollTop() < 5) {
-            $("header nav").css({
-                width: "auto",
-                background: "none",
-                opacity: 1,
-                marginTop: "21px",
-                marginRight: "46px",
-                position: "relative",
-                left: 0,
-                top: 0,
-                zIndex: 3
-            });
-            $("header nav a").css({ color: "rgb(61, 37, 20)" });
-
-            $("header nav a").mouseenter(function () {
-                $(this).css({ color: "#ffffff" });
-            });
-            $("header nav a").mouseleave(function () {
-                $(this).css({ color: "rgb(61, 37, 20)" });
-            });
+        if (isMobile == false) {
+            if ($(window).scrollTop() >= 5) {
+                $("header nav").css({
+                    position: "fixed",
+                    left: "0",
+                    top: -22,
+                    backgroundColor: "black",
+                    opacity: 0.5,
+                    padding: "7px",
+                    width: "100%",
+                    zIndex: 3
+                });
+                $("header nav a").css({ color: "#ffffff" });
+                $("header nav a").mouseenter(function () {
+                    $(this).css({ color: "rgb(61, 37, 20)" });
+                });
+                $("header nav a").mouseleave(function () {
+                    $(this).css({ color: "#ffffff" });
+                });
+            }
+            else if ($(window).scrollTop() < 5) {
+                $("header nav").css({
+                    width: "auto",
+                    background: "none",
+                    opacity: 1,
+                    marginTop: "21px",
+                    marginRight: "46px",
+                    position: "relative",
+                    left: 0,
+                    top: 0
+                });
+                $("header nav a").css({ color: "rgb(61, 37, 20)" });
+                $("header nav a").mouseenter(function () {
+                    $(this).css({ color: "#ffffff" });
+                });
+                $("header nav a").mouseleave(function () {
+                    $(this).css({ color: "rgb(61, 37, 20)" });
+                });
+            }
         }
 
         //Images Animation

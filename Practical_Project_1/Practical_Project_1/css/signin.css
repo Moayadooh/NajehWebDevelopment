@@ -17,6 +17,11 @@ body {
     border-radius: 6px;
 }
 
+/*header .sign-in-form {
+    position: relative;
+    left: 100%;
+}*/
+
 header .modal-content {
     border-right: 0;
 }
