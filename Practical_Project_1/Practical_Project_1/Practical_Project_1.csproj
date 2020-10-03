@@ -78,7 +78,6 @@
     <Content Include="images\Location Icon.png" />
     <Content Include="images\slider burger1.jpg" />
     <Content Include="images\slider burger2.jpg" />
-    <Content Include="css\login.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\bicycle.png" />
     <Content Include="images\Bottle.png" />
