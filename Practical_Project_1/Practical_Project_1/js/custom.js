@@ -1,17 +1,41 @@
 ﻿
 $(function () {
-    //Menu Locations
+    //Menus Locations
     $("#home").click(function () {
         $("html,body").animate({ scrollTop: "0" }, 1000);
     });
     $("#menu").click(function () {
-        $("html,body").animate({ scrollTop: "770" }, 1000);
+        if (isLaptop) {
+            $("html,body").animate({ scrollTop: "770" }, 1000);
+        }
+        else if (isTablet) {
+            $("html,body").animate({ scrollTop: "1210" }, 1000);
+        }
+        else {
+            $("html,body").animate({ scrollTop: "950" }, 1000);
+        }
     });
     $("#reservation").click(function () {
-        $("html,body").animate({ scrollTop: "2800" }, 1000);
+        if (isLaptop) {
+            $("html,body").animate({ scrollTop: "2800" }, 1000);
+        }
+        else if (isTablet) {
+            $("html,body").animate({ scrollTop: "5250" }, 1000);
+        }
+        else {
+            $("html,body").animate({ scrollTop: "4900" }, 1000);
+        }
     });
     $("#about-us").click(function () {
-        $("html,body").animate({ scrollTop: "3300" }, 1000);
+        if (isLaptop) {
+            $("html,body").animate({ scrollTop: "3500" }, 1000);
+        }
+        else if (isTablet) {
+            $("html,body").animate({ scrollTop: "6000" }, 1000);
+        }
+        else {
+            $("html,body").animate({ scrollTop: "6100" }, 1000);
+        }
     });
 
     //Login Form
@@ -68,7 +92,7 @@ $(function () {
         if ($(window).width() < 768) {
             isMobile = true;
         }
-        if ($(window).width() >= 768 && $(window).width() <= 991) {
+        else if ($(window).width() >= 768 && $(window).width() <= 991) {
             isTablet = true;
         }
         else {
@@ -84,13 +108,11 @@ $(function () {
         else if (isTablet) {
             $(".navigation").removeClass("navbar-fixed-top");
             FixNavbar();
-            WhiteHover2();
         }
         else {
             $(".navigation").removeClass("navbar-fixed-top");
             if ($(window).scrollTop() >= 5) {
                 FixNavbar();
-                WhiteHover2();
             }
         }
     }
@@ -120,7 +142,7 @@ $(function () {
             left: 0,
             top: 0
         });
-        WhiteHover2();
+        WhiteHover();
     }
 
     CheckDeviceWidth();
@@ -131,11 +153,13 @@ $(function () {
         if (isLaptop) {
             if ($(window).scrollTop() < 5) {
                 FreeNavbar();
-                WhiteHover();
             }
         }
     });
 
+    if (isLaptop) {
+        $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
+    }
     $(window).scroll(function () {
         if (isLaptop) {
             if ($(window).scrollTop() >= 5) {
@@ -144,20 +168,32 @@ $(function () {
             else if ($(window).scrollTop() < 5) {
                 FreeNavbar();
             }
+            //Images Animation
+            if ($(window).scrollTop() >= 200) {
+                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
+            }
+            if ($(window).scrollTop() >= 800) {
+                $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
+                $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
+            }
+            if ($(window).scrollTop() >= 2450) {
+                $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
+            }
         }
-
-        //Images Animation
-        if ($(window).scrollTop() >= 200) {
-            $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
-        }
-        if ($(window).scrollTop() >= 800) {
+        else if (isTablet) {
+            //Images Animation
+            if ($(window).scrollTop() >= 100) {
+                $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
+            }
+            if ($(window).scrollTop() >= 300) {
+                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
+            }
             $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
             $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
-        }
-        if ($(window).scrollTop() >= 2450) {
-            $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
+            if ($(window).scrollTop() >= 4800) {
+                $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
+            }
         }
     });
-    $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
     
 });

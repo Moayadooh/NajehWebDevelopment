@@ -257,9 +257,13 @@ header figure.burger-image {
     }
 }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle {
+    background-color: #ffc74d;
+}
+
 @media screen and (max-width:767.5px) {
     header nav {
-        background-color: #000000 !important;
+        background-color: #a25e08 !important;
         opacity: 1 !important;
         margin: 0 !important;
         top: 0 !important;
@@ -273,16 +277,16 @@ header figure.burger-image {
     }
 
     header .navbar-header {
-        background-color: #000000;
+        background-color: #a25e08;
     }
 
     nav {
         margin-top: 0;
     }
 
-    nav a {
-        border-bottom: 1px solid #ffffff;
-    }
+        nav a {
+            border-bottom: 1px solid #ffffff;
+        }
 
     header p.good-time {
         margin-top: 25px;
