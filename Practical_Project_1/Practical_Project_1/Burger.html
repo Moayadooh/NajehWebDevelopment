@@ -16,7 +16,7 @@
     <title>Burger</title>
     <link href="css/all.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/signin.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
 </head>
 <body>
@@ -45,7 +45,7 @@
                         </div>
                         <nav id="navbar" class="collapse navbar-collapse">
                             <a id="home" class="space">home</a>
-                            <a id="login" class="space" data-toggle="modal" data-target=".sign-in-form">login</a>
+                            <a id="login" class="space">login</a>
                             <a id="menu" class="space">menu</a>
                             <a id="reservation" class="space">reservation</a>
                             <a id="about-us">about us</a>
@@ -67,26 +67,20 @@
                     </figure>
                 </div>
             </div>
-            <div class="modal fade sign-in-form" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
-                    <div class="modal-content">
-                        <form class="form-signin">
-                            <div class="glyphicon glyphicon-remove pull-right"></div>
-                            <figure>
-                                <img src="images/LOGO.png" class="img-responsive" />
-                            </figure>
-                            <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                            <label for="inputPassword" class="sr-only">Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-                            <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
-                            <div class="form-group text-center">
-                                <a href="#">Forget Password?</a>
-                            </div>
-                        </form>
-                    </div>
+            <form class="form-login">
+                <div class="glyphicon glyphicon-remove pull-right"></div>
+                <figure>
+                    <img src="images/LOGO.png" class="img-responsive" />
+                </figure>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <button class="btn btn-lg btn-danger btn-block" type="submit">Login</button>
+                <div class="form-group text-center">
+                    <a href="#">Forget Password?</a>
                 </div>
-            </div>
+            </form>
         </div>
     </header>
     <!--________________________________________________________________________________________________________________________________________-->

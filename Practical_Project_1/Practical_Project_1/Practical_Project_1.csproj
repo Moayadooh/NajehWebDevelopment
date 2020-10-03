@@ -76,12 +76,9 @@
     <Content Include="images\footer logo.png" />
     <Content Include="images\header burger.png" />
     <Content Include="images\Location Icon.png" />
-    <Content Include="images\login logo.png" />
-    <Content Include="images\login logo2.png" />
-    <Content Include="images\login logo1.png" />
     <Content Include="images\slider burger1.jpg" />
     <Content Include="images\slider burger2.jpg" />
-    <Content Include="css\signin.css" />
+    <Content Include="css\login.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\bicycle.png" />
     <Content Include="images\Bottle.png" />

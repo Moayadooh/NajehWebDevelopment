@@ -37,8 +37,12 @@ header .modal-content {
     }
 }
 
-.form-signin, .form-signin {
-    /*margin-bottom: 10px;*/
+.form-signin {
+    position: fixed;
+    max-width: 100%;
+    left: 200%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
     .form-signin .form-control {
