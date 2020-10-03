@@ -27,82 +27,122 @@ $(function () {
         });
     });
 
-    $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
-
-    //Control Navigation Bar
+    //Navigation Bar
     function WhiteHover() {
         $("header nav a").css({ color: "rgb(61, 37, 20)" });
-        //$("header nav a").mouseenter(function () {
-        //    $(this).css({ color: "#ffffff" });
-        //});
-        //$("header nav a").mouseleave(function () {
-        //    $(this).css({ color: "rgb(61, 37, 20)" });
-        //});
+        $("header nav a").mouseenter(function () {
+            $(this).css({ color: "#ffffff" });
+        });
+        $("header nav a").mouseleave(function () {
+            $(this).css({ color: "rgb(61, 37, 20)" });
+        });
     }
-    function Hover() {
+
+    function WhiteHover2() {
+        $("header nav a").css({ color: "#000000" });
+        $("header nav a").mouseenter(function () {
+            $(this).css({ color: "#ffffff" });
+        });
+        $("header nav a").mouseleave(function () {
+            $(this).css({ color: "#000000" });
+        });
+    }
+
+    function GrayHover() {
         $("header nav a").css({ color: "#ffffff" });
-        //$("header nav a").mouseenter(function () {
-        //    $(this).css({ color: "rgb(61, 37, 20)" });
-        //});
-        //$("header nav a").mouseleave(function () {
-        //    $(this).css({ color: "#ffffff" });
-        //});
+        $("header nav a").mouseenter(function () {
+            $(this).css({ color: "darkgray" });
+        });
+        $("header nav a").mouseleave(function () {
+            $(this).css({ color: "#ffffff" });
+        });
     }
+
     var isMobile = false;
-    if ($(window).width() <= 767) {
-        $(".navigation").addClass("navbar-fixed-top");
-        isMobile = true;
-        Hover();
-    }
-    else {
-        $(".navigation").removeClass("navbar-fixed-top");
+    var isTablet = false;
+    var isLaptop = false;
+    function CheckDeviceWidth() {
         isMobile = false;
-        WhiteHover();
-    }
-    $(window).resize(function () {
-        if ($(window).width() <= 767) {
-            $(".navigation").addClass("navbar-fixed-top");
+        isTablet = false;
+        isLaptop = false;
+        if ($(window).width() < 768) {
             isMobile = true;
-            Hover();
+        }
+        if ($(window).width() >= 768 && $(window).width() <= 991) {
+            isTablet = true;
+        }
+        else {
+            isLaptop = true;
+        }
+    }
+
+    function NavbarFormat() {
+        if (isMobile) {
+            $(".navigation").addClass("navbar-fixed-top");
+            GrayHover();
+        }
+        else if (isTablet) {
+            $(".navigation").removeClass("navbar-fixed-top");
+            FixNavbar();
+            WhiteHover2();
         }
         else {
             $(".navigation").removeClass("navbar-fixed-top");
-            isMobile = false;
-            if ($(window).scrollTop() >= 5)
-                Hover();
-            else if ($(window).scrollTop() < 5)
+            if ($(window).scrollTop() >= 5) {
+                FixNavbar();
+                WhiteHover2();
+            }
+        }
+    }
+
+    function FixNavbar() {
+        $("header nav").css({
+            position: "fixed",
+            left: 0,
+            top: -22,
+            backgroundColor: "darkgray",
+            opacity: 0.5,
+            padding: "7px",
+            width: "100%",
+            zIndex: 3
+        });
+        WhiteHover2();
+    }
+
+    function FreeNavbar() {
+        $("header nav").css({
+            width: "auto",
+            background: "none",
+            opacity: 1,
+            marginTop: "21px",
+            marginRight: "46px",
+            position: "relative",
+            left: 0,
+            top: 0
+        });
+        WhiteHover2();
+    }
+
+    CheckDeviceWidth();
+    NavbarFormat();
+    $(window).resize(function () {
+        CheckDeviceWidth();
+        NavbarFormat();
+        if (isLaptop) {
+            if ($(window).scrollTop() < 5) {
+                FreeNavbar();
                 WhiteHover();
+            }
         }
     });
 
     $(window).scroll(function () {
-        //Navigation Bar Position
-        if (!isMobile) {
+        if (isLaptop) {
             if ($(window).scrollTop() >= 5) {
-                $("header nav").css({
-                    position: "fixed",
-                    left: "0",
-                    top: -22,
-                    backgroundColor: "black",
-                    opacity: 0.5,
-                    padding: "7px",
-                    width: "100%",
-                    zIndex: 3
-                });
-                Hover();
+                FixNavbar();
             }
             else if ($(window).scrollTop() < 5) {
-                $("header nav").css({
-                    width: "auto",
-                    background: "none",
-                    opacity: 1,
-                    marginTop: "21px",
-                    marginRight: "46px",
-                    position: "relative",
-                    left: 0,
-                    top: 0
-                });
-                WhiteHover();
+                FreeNavbar();
             }
         }
 
@@ -118,5 +158,6 @@ $(function () {
             $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
         }
     });
+    $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
     
 });

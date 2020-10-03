@@ -58,7 +58,7 @@ header {
 
 
 nav {
-    margin-top: 28px;
+    margin-top: 21px;
     margin-right: 38px;
     position: relative;
     z-index: 1;
@@ -259,13 +259,12 @@ header figure.burger-image {
 
 @media screen and (max-width:767.5px) {
     header nav {
-        background-color: black !important;
-        opacity: 0.5 !important;
+        background-color: #000000 !important;
+        opacity: 1 !important;
         margin: 0 !important;
         top: 0 !important;
         position: unset !important;
         padding: 7px;
-        /*z-index: 999;*/
     }
 
     header .navbar-inverse {
@@ -274,7 +273,7 @@ header figure.burger-image {
     }
 
     header .navbar-header {
-        background-color: black;
+        background-color: #000000;
     }
 
     nav {
@@ -282,7 +281,25 @@ header figure.burger-image {
     }
 
     nav a {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    header p.good-time {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width:767.5px) and (max-width:991.5px) {
+    nav {
+        margin-right: 0 !important;
+    }
+
+    header p.good-time {
+        margin-top: 0;
+    }
+
+    header div.row:first-child > div {
+        height: 60px;
     }
 }
 
