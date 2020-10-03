@@ -255,52 +255,35 @@ header figure.burger-image {
         background: none;
         border: none;
     }
-
-    /*header nav {
-        position: fixed;
-        left: 0;
-        top: -22px;
-        background-color: black;
-        opacity: 0.5;
-        padding: 7px;
-        width: 100%;
-        z-index: 99999;
-    }*/
 }
 
 @media screen and (max-width:767.5px) {
-    /*header .navbar-inverse {
-        position: fixed;
-        left: 0;
-        top: -5px;
-        background-color: black;
-        width: 100%;
-        z-index: 99;
-    }*/
-
-    header #navbar {
-        /*position: fixed;
-        left: 0;
-        top: 15px;*/
-        background-color: black;
-        opacity: 0.5;
-        z-index: 3;
-        /*padding: 7px;
-        width: 100%;
-        z-index: 99999;*/
+    header nav {
+        background-color: black !important;
+        opacity: 0.5 !important;
+        margin: 0 !important;
+        top: 0 !important;
+        position: unset !important;
+        padding: 7px;
+        /*z-index: 999;*/
     }
 
-    /*$("header nav").css({
-            width: "auto",
-            background: "none",
-            opacity: 1,
-            marginTop: "21px",
-            marginRight: 0,
-            position: "relative",
-            left: 0,
-            top: 15,
-            zIndex: 99999
-        });*/
+    header .navbar-inverse {
+        background: none;
+        border: none;
+    }
+
+    header .navbar-header {
+        background-color: black;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    nav a {
+        border-bottom: 1px solid white;
+    }
 }
 
 
