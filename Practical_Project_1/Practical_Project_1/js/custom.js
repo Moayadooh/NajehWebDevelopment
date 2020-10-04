@@ -65,8 +65,9 @@ $(function () {
         }
     });
 
-    if (isLaptop) {
-        $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
+    if (isLaptop || isMobile) {
+        $("header figure.burger-image img").css("display", "block");
+        $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
     }
     $(window).scroll(function () {
         if (isLaptop) {
@@ -78,9 +79,11 @@ $(function () {
             }
             //Images Animation (Laptop)
             if ($(window).scrollTop() >= 200) {
+                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
             }
             if ($(window).scrollTop() >= 800) {
+                $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
                 $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
                 $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
             }
@@ -91,11 +94,14 @@ $(function () {
         else if (isTablet) {
             //Images Animation (Tablet)
             if ($(window).scrollTop() >= 100) {
-                $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
+                $("header figure.burger-image img").css("display", "block");
+                $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
             }
             if ($(window).scrollTop() >= 300) {
+                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
             }
+            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
             $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
             $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
             if ($(window).scrollTop() >= 4800) {
@@ -104,12 +110,11 @@ $(function () {
         }
         else {
             //Images Animation (Mobile)
-            if ($(window).scrollTop() >= 80) {
-                $("header figure.burger-image").animate({ left: "0%", opacity: 1 }, 300);
-            }
             if ($(window).scrollTop() >= 300) {
+                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
             }
+            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
             $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
             $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
             if ($(window).scrollTop() >= 4800) {

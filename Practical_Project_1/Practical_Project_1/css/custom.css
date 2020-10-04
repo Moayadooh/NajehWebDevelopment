@@ -36,7 +36,7 @@
 /*Login Form*/
 .form-login {
     min-width: 40%;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     margin: 0 auto;
     background-image: url('../images/header background.png');
     background-position: center;
@@ -44,8 +44,8 @@
     border-radius: 6px;
     position: fixed;
     left: 200%;
-    top: 100px;
     transform: translateX(-50%);
+    top: 10px;
     z-index: 99999;
 }
 
@@ -127,6 +127,7 @@ header {
     background-image: url('../images/header background.png');
     background-attachment: fixed;
     padding: 53px 0 0 57px;
+    min-height: 600px;
     max-height: 755px;
 }
 
@@ -213,14 +214,6 @@ nav {
         header .express-delivery p {
             margin: 0;
         }
-
-    /*nav a {
-        display: block;
-    }*/
-
-    /*nav a.space {
-            margin: 0 0 10px 0;
-        }*/
 }
 
 header p.good-time {
@@ -329,10 +322,11 @@ header div.second-row div:last-child {
     }
 }
 
-header figure.burger-image {
+header figure.burger-image img {
     position: relative;
     left: 100%;
     opacity: 0;
+    display: none;
 }
 
 @media screen and (min-width:767.5px) {
@@ -357,7 +351,7 @@ header .navbar-inverse {
         margin: 0 !important;
         top: 0 !important;
         position: unset !important;
-        padding: 7px;
+        height: 200px;
     }
 
     header .navbar-header {
@@ -440,12 +434,14 @@ header .navbar-inverse {
     position: relative;
     left: -100%;
     opacity: 0;
+    display: none;
 }
 
 #best-burger figure.fun, #best-burger figure.fresh {
     position: relative;
     left: 100%;
     opacity: 0;
+    display: none;
 }
 
 
@@ -529,6 +525,7 @@ header .navbar-inverse {
     position: relative;
     left: 200%;
     opacity: 0;
+    display: none;
 }
 
 #choose-burger figure.mid-burger {
@@ -539,6 +536,7 @@ header .navbar-inverse {
     position: relative;
     left: -200%;
     opacity: 0;
+    display: none;
 }
 
 #choose-burger figure.left-burger, #choose-burger figure.mid-burger, #choose-burger figure.right-burger {
