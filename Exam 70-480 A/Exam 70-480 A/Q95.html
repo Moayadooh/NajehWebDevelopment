@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        /*first child is <h1>*/
+        /*section article:first-child {
+            background-color: red;
+        }*/
+
+        article:first-of-type {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <section id="news">
+        <h1>World News</h1>
+        <article id="news1">...</article>
+        <article id="news2">...</article>
+        <article id="news3">...</article>
+    </section>
+    <section id="sports">
+        <h1>Sports</h1>
+        <article id="sports1">...</article>
+        <article id="sports2">...</article>
+        <article id="sports3">...</article>
+    </section>
+</body>
+</html>

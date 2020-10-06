@@ -323,10 +323,15 @@ header div.second-row div:last-child {
 }
 
 header figure.burger-image img {
-    position: relative;
-    left: 100%;
     opacity: 0;
-    display: none;
+}
+
+@media screen and (min-width:991.5px) {
+    header figure.burger-image img {
+        position: relative;
+        left: 100%;
+        display: none;
+    }
 }
 
 @media screen and (min-width:767.5px) {
@@ -431,17 +436,25 @@ header .navbar-inverse {
 }
 
 #best-burger figure.popular {
-    position: relative;
-    left: -100%;
     opacity: 0;
-    display: none;
 }
 
 #best-burger figure.fun, #best-burger figure.fresh {
-    position: relative;
-    left: 100%;
     opacity: 0;
-    display: none;
+}
+
+@media screen and (min-width:991.5px) {
+    #best-burger figure.popular {
+        position: relative;
+        left: -100%;
+        display: none;
+    }
+
+    #best-burger figure.fun, #best-burger figure.fresh {
+        position: relative;
+        left: 100%;
+        display: none;
+    }
 }
 
 
@@ -522,10 +535,7 @@ header .navbar-inverse {
 }
 
 #choose-burger figure.left-burger {
-    position: relative;
-    left: 200%;
     opacity: 0;
-    display: none;
 }
 
 #choose-burger figure.mid-burger {
@@ -533,10 +543,21 @@ header .navbar-inverse {
 }
 
 #choose-burger figure.right-burger {
-    position: relative;
-    left: -200%;
     opacity: 0;
-    display: none;
+}
+
+@media screen and (min-width:991.5px) {
+    #choose-burger figure.left-burger {
+        position: relative;
+        left: 200%;
+        display: none;
+    }
+
+    #choose-burger figure.right-burger {
+        position: relative;
+        left: -200%;
+        display: none;
+    }
 }
 
 #choose-burger figure.left-burger, #choose-burger figure.mid-burger, #choose-burger figure.right-burger {

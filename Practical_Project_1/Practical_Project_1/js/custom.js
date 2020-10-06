@@ -43,7 +43,6 @@ $(function () {
         $("header .form-login").modal('show');
         $("header .form-login").animate({ opacity: 1, left: "50%" }, 350);
     });
-
     $("header .form-login .glyphicon-remove").click(function () {
         $("header .form-login").animate({ opacity: 0, left: "-50%" }, 350, function () {
             $(this).animate({ opacity: 0, left: "200%" }, 0, function () {
@@ -62,10 +61,12 @@ $(function () {
             if ($(window).scrollTop() < 5) {
                 FreeNavbar();
             }
+            $("header figure.burger-image img").css("display", "block");
+            $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
         }
     });
 
-    if (isLaptop || isMobile) {
+    if (isLaptop) {
         $("header figure.burger-image img").css("display", "block");
         $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
     }
@@ -78,45 +79,31 @@ $(function () {
                 FreeNavbar();
             }
             //Images Animation (Laptop)
+            $("header figure.burger-image img").css("display", "block");
+            $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
             if ($(window).scrollTop() >= 200) {
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
             }
             if ($(window).scrollTop() >= 800) {
                 $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
-                $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
-                $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
+                $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 800, function () {
+                    $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 500);
+                });
             }
             if ($(window).scrollTop() >= 2450) {
                 $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
             }
         }
-        else if (isTablet) {
-            //Images Animation (Tablet)
+        else {
+            //Images Animation (Mobile & Tablet)
             if ($(window).scrollTop() >= 100) {
-                $("header figure.burger-image img").css("display", "block");
                 $("header figure.burger-image img").animate({ left: "0%", opacity: 1 }, 300);
             }
             if ($(window).scrollTop() >= 300) {
-                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
                 $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
             }
-            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
-            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
-            $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
-            if ($(window).scrollTop() >= 4800) {
-                $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
-            }
-        }
-        else {
-            //Images Animation (Mobile)
-            if ($(window).scrollTop() >= 300) {
-                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").css("display", "block");
-                $("#best-burger figure.popular, #best-burger figure.fun, #best-burger figure.fresh").animate({ left: "0%", opacity: 1 }, 1000);
-            }
-            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").css("display", "block");
-            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger").animate({ left: "0%", opacity: 1 }, 1000);
-            $("#choose-burger figure.mid-burger").animate({ opacity: 1 }, 1000);
+            $("#choose-burger figure.left-burger, #choose-burger figure.right-burger, #choose-burger figure.mid-burger").animate({ left: "0%", opacity: 1 }, 1000);
             if ($(window).scrollTop() >= 4800) {
                 $("#reservation div.food-images").animate({ opacity: 1 }, 1000);
             }
