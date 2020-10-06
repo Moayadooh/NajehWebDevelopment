@@ -183,6 +183,7 @@ header .container {
     border: 1px solid #dddddd;
     text-indent: 9px;
     margin-left: 0px;
+    outline: none;
 }
 
 .search-bar input::placeholder {
@@ -202,6 +203,8 @@ header .container {
     font-size: 12px;
     font-family: Georgia;
     padding: 0;
+    outline: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width:600px) {
@@ -746,6 +749,8 @@ footer {
             background: #957964;
             border: none;
             margin-bottom: 20px;
+            outline: none;
+            cursor: pointer;
         }
 
         footer div.newsletter p:nth-of-type(4), footer div.newsletter p:nth-of-type(5) {

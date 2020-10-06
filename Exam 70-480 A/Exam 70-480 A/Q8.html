@@ -9,9 +9,14 @@
             alert("Hi there!");
         }
 
+        function Consultant() { }
         Consultant.prototype.PayEmployee = function () {
             alert("Pay Consultant");
         }
+
+        Consultant.prototype = Object.create(Employee.prototype);
+        Consultant.prototype.constructor = Consultant;
+        Consultant.PayEmployee;
     </script>
 </head>
 <body>
