@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var canvas;
+        var context;
+        window.onload = function initialize() {
+            canvas = document.getElementById("clickCanvas");
+            context = canvas.getContext("2d");
+            drawBox();
+            canvas.onclick = clickReporter;
+        }
+        function clickReporter(e) {
+            alert("clicked");
+        }
+        function drawBox() {
+            context.fillStyle = "black";
+            context.strokeRect(20, 20, canvas.width - 20, canvas.height - 20);
+        }
+    </script>
+</head>
+<body>
+    <canvas id="clickCanvas" width="300" height="300">Your browser does not support the HTML5 canvas</canvas>
+</body>
+</html>
