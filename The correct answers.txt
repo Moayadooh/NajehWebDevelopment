@@ -8,6 +8,7 @@ Q 163 (answer is C)
 Q 153 (answer is D)
 Q 48 (answer is C)
 Q 147 (answer is B)
+Q 16 (answer is D) https://www.w3schools.com/js/js_errors.asp
 
 
 Exam B:
