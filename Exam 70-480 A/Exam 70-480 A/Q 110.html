@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var myApplication = {};
+        //var myApplication = myApplication || {};
+        myApplication.Vehicle = function (displayControl, color, seatCount, tranType, wheelCount) {
+            this.Color = color;
+            this.NumberOfSeats = seatCount;
+            this.TransmissionType = tranType;
+            this.NumberOfWheels = wheelCount;
+            this.showVehicle = document.getElementById(displayControl);
+        };
+
+        myApplication.Vehicle.prototype = {
+            Describe: function () {
+                var valuesToDisplay = '';
+                for (var property in this) {
+                    if (typeof (this[property]) === 'string') {
+                        valuesToDisplay += 'Vehicle ' + property + ' is ' + this[property] + '<br />';
+                    }
+                    else if (typeof (this[property]) === 'number') {
+                        if (this[property] < 4) {
+                            valuesToDisplay += 'Stay safe!' + '<br />';
+                        }
+                        else if (this[property] >= 10) {
+                            valuesToDisplay += 'Big machine!' + '<br />';
+                        }
+                    }
+                }
+                this.showVehicle.innerHTML = valuesToDisplay;
+            }
+        };
+
+        function ShowOutput() {
+            //var myBigRig = new myApplication.Vehicle('display', 'silver', 2, 'manual', 16);
+            //myBigRig.Describe();
+            var myMotorhome = new myApplication.Vehicle('display', 'silver', 3, 'manual', 10);
+            myMotorhome.Describe();
+        }
+    </script>
+</head>
+<body onload="ShowOutput()">
+    <div id="display"></div>
+</body>
+</html>
