@@ -4,6 +4,8 @@ Q 64 (answer is C)
 Q 165 (answer is D)
 Q 61 (answer is A & D)
 Q 181 (answer is B)
+Q 163 (answer is C)
+Q 153 (answer is D)
 
 
 Exam B:
