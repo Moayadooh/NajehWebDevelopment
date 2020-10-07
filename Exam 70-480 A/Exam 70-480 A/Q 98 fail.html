@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function DisplayImage() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/img1.jpg', true);
+            var img = document.createElement('img');
+
+            xhr.responseType = 'blob';
+            xhr.onload = function (e) {
+                if (this.status == 200) {
+                    img.src = window.URL.createObjectURL(this.response);
+                    document.body.appendChild(img);
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+<body onload="DisplayImage()">
+
+</body>
+</html>

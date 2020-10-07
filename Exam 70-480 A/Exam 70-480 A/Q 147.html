@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function NewOrder(orderId, orderDate) {
+            this.orderId = orderId;
+            this.orderDate = orderDate;
+        }
+        function Display() {
+            var order = new NewOrder(9, "10/7/2020");
+            NewOrder.prototype.newProperty = "NEW PROPERTY";
+            //this.NewOrder.newProperty = "NEW PROPERTY";
+            alert(order.orderId + "\n" + order.orderDate + "\n" + order.newProperty + "\n");
+        }
+    </script>
+</head>
+<body onload="Display()">
+
+</body>
+</html>
