@@ -5,7 +5,7 @@ a:link { /*change properties of links only 'href'*/
     font-size: 30px;
 }
 
-a:visited { /*after click the link the design will be changed 'visited'*/
+a:visited { /*after click the link will be 'visited'*/
     background: #ffd800;
     padding: 10px;
     display: block;

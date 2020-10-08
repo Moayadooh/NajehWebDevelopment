@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Customer() {
+            this.Show = function () {
+                alert("@@@@@@@@@@@@");
+            }
+        }
+        
+        function Run() {
+            Customer.prototype.GetCommission = function () {
+                alert("Comission");
+            }
+
+            var customer = new Customer();
+            customer.Show();
+            customer.GetCommission();
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

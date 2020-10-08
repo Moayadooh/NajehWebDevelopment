@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var product = 'car';
+        function displayGlobalProduct() {
+            'use strict';
+            var product = 'boat';
+            alert(eval('product'));
+            //alert(window.eval('product'));
+        }
+    </script>
+</head>
+<body onload="displayGlobalProduct()">
+
+</body>
+</html>

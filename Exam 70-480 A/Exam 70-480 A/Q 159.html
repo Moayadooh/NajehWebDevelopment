@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Contact() {
+            alert("Contact() function is called!");
+        }
+        function Run() {
+            var button = document.getElementById("Contact");
+            button.addEventListener("click", Contact);
+
+            //THERE IS NO METHOD CALLED "attachEvent"
+            //var button = document.getElementById("Contact");
+            //button.attachEvent("onclick", Contact);
+        }
+    </script>
+</head>
+<body onload="Run()">
+    <input type="button" id="Contact" value="Contact" />
+</body>
+</html>
