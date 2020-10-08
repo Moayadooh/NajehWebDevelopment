@@ -8,8 +8,8 @@ Q 163 (answer is C)
 Q 153 (answer is D)
 Q 48 (answer is C)
 Q 147 (answer is B)
-Q 159 done (answer is only C)
-
+Q 159 (answer is only C)
+Q 97 (answer is D)
 
 Exam B:
 

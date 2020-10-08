@@ -85,6 +85,7 @@
     <Content Include="Q 163.html" />
     <Content Include="Q 167.html" />
     <Content Include="Q 181.html" />
+    <Content Include="Q 183.html" />
     <Content Include="Q 184.html" />
     <Content Include="Q 187.html" />
     <Content Include="Q 19 fail.html" />
@@ -96,6 +97,7 @@
     <Content Include="Q 29.html" />
     <Content Include="Q 3 fail.html" />
     <Content Include="Q 5.html" />
+    <Content Include="Q 62 fail.html" />
     <Content Include="Q 64.html" />
     <Content Include="Q 73.html" />
     <Content Include="Q 74.html" />
@@ -105,6 +107,7 @@
     <Content Include="Q 93.html" />
     <Content Include="Q 95.html" />
     <Content Include="data.xml" />
+    <Content Include="Q 97.html" />
     <Content Include="Q 98 fail.html" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />

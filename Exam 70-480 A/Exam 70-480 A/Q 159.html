@@ -8,12 +8,12 @@
             alert("Contact() function is called!");
         }
         function Run() {
-            var button = document.getElementById("Contact");
-            button.addEventListener("click", Contact);
-
-            //THERE IS NO METHOD CALLED "attachEvent"
             //var button = document.getElementById("Contact");
-            //button.attachEvent("onclick", Contact);
+            //button.addEventListener("click", Contact);
+
+            //THERE IS NO METHOD NAMED "attachEvent"
+            var button = document.getElementById("Contact");
+            button.attachEvent("onclick", Contact);
         }
     </script>
 </head>
