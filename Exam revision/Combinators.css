@@ -16,10 +16,10 @@ p:only-child { /* Selects each <p>, but only if it is the only child of its pare
 div p:only-of-type { /*if there is only one <p> element as child for the parent*/
 }
 
-div p:first-of-type { /*first <p> element*/
+div p:first-of-type { /*first <p> element in the parent*/
 }
 
-div p:last-of-type { /*last <p> element*/
+div p:last-of-type { /*last <p> element in the parent*/
 }
 
 div p:nth-child(even) { /*2, 4, 6 ..*/

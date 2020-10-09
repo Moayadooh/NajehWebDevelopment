@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function square(side) {
+            this.side = side;
+            this.area = calcArea(side);
+        }
+        function calcArea(side) {
+            this.side = side;
+            return this.side * this.side;
+        }
+        function Run() {
+            var s = new square(3);
+            alert("Side = " + s.side + "\n Area = " + s.area);
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

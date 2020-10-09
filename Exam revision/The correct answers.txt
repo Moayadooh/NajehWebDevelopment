@@ -10,6 +10,8 @@ Q 147 (answer is B)
 Q 159 (answer is only C)
 Q 97 (answer is D)
 Q 130 (answer is C)
+Q 70 (answer is D)
+Q 180 (answer is A)
 
 Exam B:
 
