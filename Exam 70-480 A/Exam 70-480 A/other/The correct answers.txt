@@ -12,6 +12,7 @@ Q 97 (answer is D)
 Q 130 (answer is C)
 Q 70 (answer is D)
 Q 180 (answer is A)
+Q 148 (answer is D)
 
 Exam B:
 

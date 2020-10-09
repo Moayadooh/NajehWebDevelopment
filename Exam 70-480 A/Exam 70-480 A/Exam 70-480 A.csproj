@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css1.css" />
+    <Content Include="other\Animation.css" />
+    <Content Include="other\Combinators.css" />
+    <Content Include="other\Input Types.css" />
+    <Content Include="other\Mouse Events.css" />
+    <Content Include="other\Paragraphs.css" />
+    <Content Include="other\The correct answers.txt" />
     <Content Include="Q 180.html" />
     <Content Include="img1.jpg" />
     <Content Include="jquery-3.5.1.min.js" />
@@ -92,6 +98,7 @@
     <Content Include="Q 187.html" />
     <Content Include="Q 19 fail.html" />
     <Content Include="Q 165.html" />
+    <Content Include="Q 190.html" />
     <Content Include="Q 191.html" />
     <Content Include="Q 200.html" />
     <Content Include="Q 21.html" />
