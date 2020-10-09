@@ -1,0 +1,11 @@
+a:hover {
+}
+
+a:active { /*when hold the element by mouse*/
+}
+
+a:link { /*unvisited link*/
+}
+
+a:visited { /*after click the link will be 'visited'*/
+}

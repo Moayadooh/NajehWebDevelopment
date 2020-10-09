@@ -1,0 +1,29 @@
+input[type=text]:enabled {
+}
+
+input[type=text]:disabled {
+}
+
+input[type=text]:required {
+}
+
+input[type=email]:valid {
+}
+
+input[type=email]:invalid {
+}
+
+input[type=text]:read-only {
+}
+
+input[type=text]:read-write {
+}
+
+input[type=checkbox]:checked {
+}
+
+input[type=number]:in-range {
+}
+
+input[type=number]:out-of-range {
+}

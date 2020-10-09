@@ -1,0 +1,44 @@
+div p {
+}
+
+div > p {
+}
+
+section + a {
+}
+
+section ~ a { /*call all <a> tags which are siblings(outside) and below <section>*/
+}
+
+p:only-child { /* Selects each <p>, but only if it is the only child of its parent */
+}
+
+div p:only-of-type { /*if there is only one <p> element as child for the parent*/
+}
+
+div p:first-of-type { /*first <p> element*/
+}
+
+div p:last-of-type { /*last <p> element*/
+}
+
+div p:nth-child(even) { /*2, 4, 6 ..*/
+}
+
+div p:nth-child(odd) { /*1, 3, 5 ..*/
+}
+
+div[class^=container] { /* css will apply on div class begin with 'container'*/
+}
+
+div[class$=ox] { /*css will apply on div class end with 'ox'*/
+}
+
+[class*=box] { /*css will apply on div class contains with 'box'*/        /*left, mid or right*/
+}
+
+div[class~=ammar-yas] { /*css will apply on div class equals 'ammar-yas'*/
+}
+
+div[id|=div] { /*css will apply on div id start with or equal 'div' (with or without - before)*/
+}

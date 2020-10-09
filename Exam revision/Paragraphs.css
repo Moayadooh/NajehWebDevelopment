@@ -1,0 +1,19 @@
+#p1:target { /*https://localhost:44316/Register.html#p2*/
+}
+
+#p1 b::after {
+    content: 'Moayad AL-Falahi';
+}
+
+#p1 b::before {
+    content: 'here';
+}
+
+#p1:first-letter { /*first letter of the paragraph*/
+}
+
+#p1:first-line { /*first line of the paragraph*/
+}
+
+#p2::selection { /*when you higlight the text*/
+}
