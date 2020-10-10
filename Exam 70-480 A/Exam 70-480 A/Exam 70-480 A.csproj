@@ -75,13 +75,14 @@
     <Content Include="other\Paragraphs.css" />
     <Content Include="other\The correct answers.txt" />
     <Content Include="Q 100.html" />
+    <Content Include="Q 101.html" />
     <Content Include="Q 114.html" />
     <Content Include="Q 152.html" />
     <Content Include="Q 180.html" />
     <Content Include="img1.jpg" />
     <Content Include="jquery-3.5.1.min.js" />
     <Content Include="Q 10.html" />
-    <Content Include="Q 102 fail.html" />
+    <Content Include="Q 102.html" />
     <Content Include="Q 103.html" />
     <Content Include="Q 110.html" />
     <Content Include="Q 123.html" />
@@ -127,7 +128,8 @@
     <Content Include="data.xml" />
     <Content Include="Q 96.html" />
     <Content Include="Q 97.html" />
-    <Content Include="Q 98 fail.html" />
+    <Content Include="Q 98.html" />
+    <Content Include="test.html" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />
   </ItemGroup>

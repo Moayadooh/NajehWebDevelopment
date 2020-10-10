@@ -6,8 +6,8 @@
     <script>
         function Person() { }
         function Device() { }
-        function MyFun(testObj) {
-            if (testObj.isPrototypeOf(Person))
+        function MyFun(obj) {
+            if (Person.prototype.isPrototypeOf(obj))
                 alert("YES!");
             else
                 alert("NO!");

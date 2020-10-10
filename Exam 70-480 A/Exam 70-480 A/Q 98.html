@@ -6,7 +6,7 @@
     <script>
         function DisplayImage() {
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/img1.jpg', true);
+            xhr.open('GET', '/img1.jpg', true); //POST is not working
             var img = document.createElement('img');
 
             xhr.responseType = 'blob';

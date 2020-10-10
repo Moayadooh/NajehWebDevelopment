@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var obj = {};
+        obj.myfun = function (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        obj.myfun.prototype = {
+            Decribe: function () {
+                for (var i in this) {
+                    if (typeof (this[i]) === 'string')
+                        console.log("Person's" + i, "is", this[i]);
+                    else
+                        console.log("Person's" + i, "is", this[i]);
+                }
+            }
+        }
+        function Run() {
+            var fun = new obj.myfun("Moayad", "22");
+            fun.Decribe();
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>
