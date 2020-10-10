@@ -5,16 +5,15 @@
     <title></title>
     <script>
         function someEvent() {
-            alert('someEventFired!!!!')
+            alert('someEventFired!!!!');
         }
 
         function stopPropagation(event) {
             event = event || window.event;
             if (event.stopPropagation) {
                 event.stopPropagation();
-
             } else {
-                even.cancelBubble = true
+                event.cancelBubble = true;
             }
         }
     </script>
