@@ -74,6 +74,7 @@
     <Content Include="other\Mouse Events.css" />
     <Content Include="other\Paragraphs.css" />
     <Content Include="other\The correct answers.txt" />
+    <Content Include="Q 100.html" />
     <Content Include="Q 114.html" />
     <Content Include="Q 152.html" />
     <Content Include="Q 180.html" />
@@ -120,6 +121,7 @@
     <Content Include="Q 83.html" />
     <Content Include="Q 84 fail.html" />
     <Content Include="Q 86.html" />
+    <Content Include="Q 91.html" />
     <Content Include="Q 93.html" />
     <Content Include="Q 95.html" />
     <Content Include="data.xml" />
