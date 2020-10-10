@@ -9,23 +9,27 @@
             this.lastName = lastName;
             this.address = "";
         }
-
+        
         Customer.prototype.parseAddress = function (data) {
             this.address = data.address;
-        }
+        };
 
-        var that = this;
+        //Customer.prototype.value = "value";
         Customer.prototype.loadAddress = function () {
+            //alert(this.value);
+            var that = this; //this refer to the current instance
             $.get('data.xml', function (data) {
                 that.parseAddress(data);
             });
+        };
+        
+        function Run() {
+            var customer = new Customer();
+            customer.loadAddress();
         }
-
-        alert(Customer.address);
-
     </script>
 </head>
-<body>
+<body onload="Run()">
 
 </body>
 </html>
