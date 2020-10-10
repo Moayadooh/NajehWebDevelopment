@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var x = "Outside";
+        function Show() {
+            var x = "Inside";
+            console.log("The value of x in the function is " + x);
+            console.log("The value of x outside the function is " + window.x);
+        }
+        function Run() {
+            var wdt = window.innerWidth;
+            var hgt = window.innerHeight;
+            console.log("Screen width is " + wdt);
+            console.log("Screen height is " + hgt);
+            Show();
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

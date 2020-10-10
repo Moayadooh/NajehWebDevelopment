@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        class User {
+            constructor(name, email) {
+                this.name = name;
+                this.email = email;
+                this.score = 0;
+            }
+            Login() {
+                console.log(this.name, "you are now logged in");
+                return this;
+            }
+            Logout() {
+                console.log(this.name, "you are now logged out");
+                return this;
+            }
+            UpdateScore() {
+                this.score++;
+                console.log(this.name + "'s", "score is", this.score);
+                return this; //to apply methods chaining (return the current instance)
+            }
+        }
+        class Admin extends User { //Inheritance
+            DeleteUser(user) {
+                console.log(user.name + "'s accound has been deleted!");
+            }
+        }
+        function Run() {
+            var userOne = new User("Moayad", "moayad@email.com");
+            var userTwo = new User("Eyad", "eyad@email.com");
+
+            userOne.Login();
+            console.log(userOne.name);
+            console.log(userOne.email);
+
+            userTwo.Login().UpdateScore().UpdateScore().UpdateScore().Logout(); //methods chaining
+
+            var admin = new Admin("Mohanned", "mohanned@email.com");
+            admin.DeleteUser(userOne);
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

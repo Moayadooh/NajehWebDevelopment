@@ -9,15 +9,29 @@
             alert("Hi there!");
         }
 
-        function Consultant() { }
-        Consultant.prototype.PayEmployee = function () {
-            alert("Pay Consultant");
+        function Consultant() {
+            //Employee.call(this);
+            alert("s");
+        }
+        Consultant.prototype = new Employee();
+        Consultant.prototype.constructor = Consultant;
+
+        //Consultant.prototype.PayEmployee = function () {
+        //    alert("Pay Consultant");
+        //}
+
+        function Run() {
+            //var e = new Employee();
+            //e.PayEmployee();
+
+            var c = new Consultant();
+            c.constructor();
         }
 
-        Consultant.prototype = Object.create(Employee.prototype);
+        //https://www.w3schools.com/js/js_function_call.asp
     </script>
 </head>
-<body>
+<body onload="Run()">
 
 </body>
 </html>
