@@ -7,14 +7,14 @@
         function Person() { }
         function Device() { }
         function MyFun(obj) {
-            if (Person.prototype.isPrototypeOf(obj))
+            if (obj.isPrototypeOf(Person))
                 alert("YES!");
             else
                 alert("NO!");
         }
         function Run() {
             var obj = new Person();
-            var fun = new MyFun(obj);
+            new MyFun(obj);
         }
     </script>
 </head>
