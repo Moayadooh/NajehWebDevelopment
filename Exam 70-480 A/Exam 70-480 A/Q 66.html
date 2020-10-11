@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function CustomError(code) {
+            this.errorCode = code;
+        }
+        //CustomError.prototype = Error.prototype;
+
+        function Run() {
+            var code = 1; //send();
+            if (code != 0)
+                throw new CustomError(code);
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

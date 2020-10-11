@@ -1,0 +1,12 @@
+﻿
+
+Internet Explorer prefix --> -ms-
+Microsoft Edge prefix -----> -ms-
+
+Chrome prefix -------------> -webkit-
+Safari prefix -------------> -webkit-
+
+Opera prefix  -------------> -webkit-
+old versions of Opera -----> -o-
+
+Firefox prefix ------------> -moz-

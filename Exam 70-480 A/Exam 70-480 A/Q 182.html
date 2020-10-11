@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        //B Not Working
+        function getImage() {
+            console.log("d");
+            $.get({
+                url: "/img1.jpg",
+                dataType: "PlainObject",
+                success: function (result) {
+                    var urlCreator = window.URL || window.webkitURL;
+                    var imageUrl = urlCreator.createObjectURL(result);
+                    document.querySelector("#image").src = imageUrl;
+                }
+            });
+        }
+
+        //C Working
+        //function getImage() {
+        //    var xhttp = new XMLHttpRequest();
+        //    xhttp.open("GET", "img1.jpg", true);
+        //    xhttp.responseType = "arraybuffer";
+        //    xhttp.onload = function (e) {
+        //        var blob = new Blob([xhttp.response], { type: "application/octet-stream" });
+        //        var urlCreator = window.URL || window.webkitURL;
+        //        var imageUrl = urlCreator.createObjectURL(blob);
+        //        document.querySelector("#image").src = imageUrl;
+        //    }
+        //    xhttp.send();
+        //}
+
+        //A Not Working
+        //function getImage() {
+        //    var xhttp = new XMLHttpRequest();
+        //    xhttp.open("GET", "img1.jpg", true);
+        //    xhttp.responseType = "blob";
+        //    xhttp.onload = function (e) {
+        //        var blob = event.response;
+        //        var urlCreator = window.URL || window.webkitURL;
+        //        var imageUrl = urlCreator.createObjectURL(blob);
+        //        document.querySelector("#image").src = imageUrl;
+        //    }
+        //    xhttp.send();
+        //}
+    </script>
+</head>
+<body>
+    <button type="button" onclick="getImage()">Get Image</button>
+    <br />
+    <img id="image" />
+</body>
+</html>

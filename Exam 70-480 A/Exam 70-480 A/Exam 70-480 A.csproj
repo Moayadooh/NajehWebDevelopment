@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="css1.css" />
     <Content Include="other\Animation.css" />
+    <Content Include="other\Browsers.txt" />
     <Content Include="other\Combinators.css" />
     <Content Include="other\Input Types.css" />
     <Content Include="other\Mouse Events.css" />
@@ -101,6 +102,7 @@
     <Content Include="Q 163.html" />
     <Content Include="Q 167.html" />
     <Content Include="Q 181.html" />
+    <Content Include="Q 182.html" />
     <Content Include="Q 183.html" />
     <Content Include="Q 184.html" />
     <Content Include="Q 187.html" />
@@ -121,6 +123,7 @@
     <Content Include="Q 5.html" />
     <Content Include="Q 62 fail.html" />
     <Content Include="Q 64.html" />
+    <Content Include="Q 66.html" />
     <Content Include="Q 68.html" />
     <Content Include="Q 7.html" />
     <Content Include="Q 70.html" />
