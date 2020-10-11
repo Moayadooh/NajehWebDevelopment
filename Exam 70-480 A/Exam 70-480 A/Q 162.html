@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function removeInvalid(input) {
+            if (!/^[A-Za-z0-9_]+$/.test(input.value))
+                input.value = "Invalid";
+        }
+    </script>
+</head>
+<body>
+    Given Name: <input type="text" id="GivenName" onblur="removeInvalid(this);" />
+    Surname: <input type="text" id="Surname" onblur="removeInvalid(this);" />
+</body>
+</html>

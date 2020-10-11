@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        function Loader() {
+            this.status = "ready";
+            this.temp = 50;
+            this.updateStatus = function (newStatus) {
+                this.status = newStatus;
+            };
+        }
+        var loader = new Loader();
+        $(function () {
+            $("#loadTemp").click(function (eventData) {
+                loader.temp = Math.random(); //loadTemp();
+                loader.updateStatus("done");
+                console.log("temperature is", loader.temp, "\nstatus is", loader.status);
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="loadTemp" value="DO NOT CLICK PLEASE!!!" />
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function ValidationException(number, message) {
+            this.message = message;
+            this.name = "myLibrary Validation Exception";
+            this.number = number;
+        }
+        function LogicException(number, message) {
+            this.message = message;
+            this.name = "myLibrary Logic Exception";
+            this.number = number;
+        }
+        function myFunction(dayOfWeek) {
+            if (dayOfWeek > 7)
+                throw new ValidationException(123, "Day of week must be less than 7");
+        }
+        function doWork(value) {
+            try {
+                myFunction(value)
+            }
+            catch (e) {
+                if (e instanceof ValidationException)
+                    console.log(e.message + "\n" + e.name + "\n" + e.number + "\n");
+                else if (e instanceof LogicException)
+                    console.log(e.message + "\n" + e.name + "\n" + e.number + "\n");
+                else
+                    throw e;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onblur="doWork(this.value)" />
+</body>
+</html>

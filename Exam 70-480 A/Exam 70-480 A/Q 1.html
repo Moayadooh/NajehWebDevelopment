@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        function validate() {
+            var value = $("#txtValue").val();
+            var regex = /^[\d]*$/; // /^[\d\,\.]*$/ This pattern will accept the point '.'
+            if (!regex.test(value) || value == "")
+                alert("please enter valid value");
+            return;
+        }
+    </script>
+</head>
+<body>
+    <input id="txtValue" type="text" onblur="validate()" />
+</body>
+</html>

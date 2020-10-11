@@ -74,10 +74,14 @@
     <Content Include="other\Mouse Events.css" />
     <Content Include="other\Paragraphs.css" />
     <Content Include="other\The correct answers.txt" />
+    <Content Include="Q 1.html" />
     <Content Include="Q 100.html" />
     <Content Include="Q 101.html" />
     <Content Include="Q 114.html" />
+    <Content Include="Q 136.html" />
     <Content Include="Q 152.html" />
+    <Content Include="Q 157.html" />
+    <Content Include="Q 162.html" />
     <Content Include="Q 180.html" />
     <Content Include="img1.jpg" />
     <Content Include="jquery-3.5.1.min.js" />
@@ -105,6 +109,8 @@
     <Content Include="Q 190.html" />
     <Content Include="Q 191.html" />
     <Content Include="Q 193.html" />
+    <Content Include="Q 194.html" />
+    <Content Include="Q 198.html" />
     <Content Include="Q 200.html" />
     <Content Include="Q 21.html" />
     <Content Include="Q 22.html" />
@@ -115,10 +121,13 @@
     <Content Include="Q 5.html" />
     <Content Include="Q 62 fail.html" />
     <Content Include="Q 64.html" />
+    <Content Include="Q 68.html" />
+    <Content Include="Q 7.html" />
     <Content Include="Q 70.html" />
     <Content Include="Q 73.html" />
     <Content Include="Q 74.html" />
     <Content Include="Q 8.html" />
+    <Content Include="Q 81.html" />
     <Content Include="Q 83.html" />
     <Content Include="Q 84 fail.html" />
     <Content Include="Q 86.html" />

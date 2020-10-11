@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <ul>
+            <li>
+                <ul>
+                    <li>Child List Item</li>
+                </ul>
+            </li>
+            <li>Second List Item</li>
+            <li>Third List Item</li>
+            <li>Fourth List Item</li>
+        </ul>
+        <p>Some interesting information that we need to display.</p>
+        <p>More information that is important to this page.</p>
+    </div>
+    <script>
+        $("div#container > ul").css("border", "1px solid black");
+    </script>
+</body>
+</html>
