@@ -18,17 +18,20 @@
             if (dayOfWeek > 7)
                 throw new ValidationException(123, "Day of week must be less than 7");
         }
+
+        //var instance = new ValidationException(0, 0);
+
         function doWork(value) {
             try {
-                myFunction(value)
+                myFunction(value);
             }
-            catch (e) {
-                if (e instanceof ValidationException)
-                    console.log(e.message + "\n" + e.name + "\n" + e.number + "\n");
-                else if (e instanceof LogicException)
-                    console.log(e.message + "\n" + e.name + "\n" + e.number + "\n");
+            catch (error) {
+                if (error instanceof ValidationException)
+                    console.log(error.message + "\n" + error.name + "\n" + error.number + "\n");
+                else if (error instanceof LogicException)
+                    console.log(error.message + "\n" + error.name + "\n" + error.number + "\n");
                 else
-                    throw e;
+                    throw error;
             }
         }
     </script>

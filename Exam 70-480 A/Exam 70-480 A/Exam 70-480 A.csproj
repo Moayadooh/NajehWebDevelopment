@@ -141,6 +141,7 @@
     <Content Include="Q 96.html" />
     <Content Include="Q 97.html" />
     <Content Include="Q 98.html" />
+    <Content Include="Question 8.html" />
     <Content Include="test.html" />
     <Content Include="video.mp4" />
     <Content Include="Web.config" />

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Employee() {
+            this.name = "Ammar";
+            //this.PayEmployee = function () {
+            //    console.log("This is PayEmployee method");
+            //}
+        }
+        Employee.prototype.PayEmployee = function () {
+            console.log("This is PayEmployee method");
+        };
+
+        function Consultant() {
+            Employee.call(this); //inheritance
+        }
+        Consultant.prototype = new Employee();
+
+        //function fun1() {
+        //    Employee.prototype.PayEmployee = function () {
+        //        console.log("This is PayEmployee method");
+        //    };
+        //}
+
+        //function fun2() {
+
+        //}
+
+        function Run() {
+            var obj = new Consultant();
+            //console.log(obj.name);
+            obj.PayEmployee();
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

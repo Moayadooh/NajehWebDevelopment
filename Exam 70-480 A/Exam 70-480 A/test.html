@@ -3,29 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
     <script>
-        var obj = {};
-        obj.myfun = function (name, age) {
-            this.name = name;
-            this.age = age;
-        }
-        obj.myfun.prototype = {
-            Decribe: function () {
-                for (var i in this) {
-                    if (typeof (this[i]) === 'string')
-                        console.log("Person's" + i, "is", this[i]);
-                    else
-                        console.log("Person's" + i, "is", this[i]);
-                }
-            }
-        }
-        function Run() {
-            var fun = new obj.myfun("Moayad", "22");
-            fun.Decribe();
-        }
+        $(function () {
+            $("#footer").html("All right reserved.");
+        });
+        //var obj = {};
+        //obj.myfun = function (name, age) {
+        //    this.name = name;
+        //    this.age = age;
+        //}
+        //obj.myfun.prototype = {
+        //    Decribe: function () {
+        //        for (var i in this) {
+        //            if (typeof (this[i]) === 'string')
+        //                console.log("Person's" + i, "is", this[i]);
+        //            else
+        //                console.log("Person's" + i, "is", this[i]);
+        //        }
+        //    }
+        //}
+        //function Run() {
+        //    var fun = new obj.myfun("Moayad", "22");
+        //    fun.Decribe();
+        //}
     </script>
 </head>
 <body onload="Run()">
-
+    <div id="footer"></div>
 </body>
 </html>
