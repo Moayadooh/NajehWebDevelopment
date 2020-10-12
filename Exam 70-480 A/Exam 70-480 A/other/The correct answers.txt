@@ -16,7 +16,7 @@ Q 148 (answer is D)
 Q 91 (answer in D)
 Q 156 (answer in D)
 Q 198 (answer is C)
-Q 194 done (answer is only D)
+Q 194 (answer is only D)
 
 Exam B:
 
