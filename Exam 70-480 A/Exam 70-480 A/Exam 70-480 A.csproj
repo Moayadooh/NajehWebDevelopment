@@ -74,7 +74,7 @@
     <Content Include="other\Input Types.css" />
     <Content Include="other\Mouse Events.css" />
     <Content Include="other\Paragraphs.css" />
-    <Content Include="other\The correct answers.txt" />
+    <Content Include="other\Corrected Answers.txt" />
     <Content Include="Q 1.html" />
     <Content Include="Q 100.html" />
     <Content Include="Q 101.html" />
