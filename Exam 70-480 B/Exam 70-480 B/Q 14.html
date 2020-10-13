@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .yellow {
+            background-color: yellow;
+        }
+        .yellowborder {
+            border-color: yellow;
+        }
+        .border {
+            border: dashed;
+        }
+    </style>
+</head>
+<body>
+    <div id="yellowDiv" class="yellow"> My Yellow content</div>
+    <script>
+        document.getElementById("yellowDiv").className += " border";
+    </script>
+</body>
+</html>

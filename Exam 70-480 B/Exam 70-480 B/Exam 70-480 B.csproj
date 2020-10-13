@@ -69,6 +69,10 @@
   <ItemGroup>
     <Content Include="jquery-3.5.1.min.js" />
     <Content Include="Q 1.html" />
+    <Content Include="Q 11.html" />
+    <Content Include="Q 12.html" />
+    <Content Include="Q 14.html" />
+    <Content Include="Q 16.html" />
     <Content Include="Q 5.html" />
     <Content Include="Q 6.html" />
     <Content Include="Q 7.html" />

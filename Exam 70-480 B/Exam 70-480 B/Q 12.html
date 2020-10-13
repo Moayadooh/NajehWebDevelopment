@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function newOrder(orderId, orderShip, callback) {
+            document.write("New order being processed");
+            callback();
+        }
+        function Run() {
+            newOrder("333", "EXPRESS", function () {
+                return "Order details";
+            });
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>
