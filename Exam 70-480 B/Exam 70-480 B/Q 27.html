@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #main {
+            /*width: 225px;*/
+            width: 180px;
+            height: 150px;
+            border: 1px solid black;
+            display: flex;
+            /*flex-flow: wrap-reverse column;*/ /*is shortcut for flex-wrap and flex-direction*/
+            flex-wrap: wrap-reverse;
+            flex-direction: column;
+        }
+
+            #main div {
+                flex-basis: 75px;
+            }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div style="background-color: aqua;">A</div>
+        <div style="background-color: orange;">B</div>
+        <div style="background-color: yellow;">C</div>
+        <div style="background-color: pink;">D</div>
+        <div style="background-color: beige;">E</div>
+        <div style="background-color: violet;">F</div>
+    </div>
+</body>
+</html>
