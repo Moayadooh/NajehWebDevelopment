@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <form>
+        <input type="text" name="email" />
+        <input type="text" name="name" />
+        <input type="text" name="age" />
+        <!--<input type="submit" value="Submit" />-->
+        <input type="button" value="Display" id="btn" />
+    </form>
+    <div id="info"></div>
+    <script>
+        //$("form").submit(function () {
+        //    var str;
+        //    str = $("form").serialize();
+        //    str = decodeURIComponent(str);
+        //    $("#info").text(str);
+        //    //return true;
+        //});
+        $("#btn").click(function () {
+            var str;
+            str = $("form").serialize();
+            str = decodeURIComponent(str);
+            $("#info").text(str);
+            //return true;
+        });
+    </script>
+</body>
+</html>

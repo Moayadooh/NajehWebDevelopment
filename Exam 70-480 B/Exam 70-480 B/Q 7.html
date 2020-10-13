@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .transition_style {
+            font-size: 15px;
+            font-weight: normal;
+            width: 50px;
+            height: 40px;
+            background: orange;
+            color: #ffffff;
+            padding: 10px;
+            /*margin-left: 1000px;*/
+            margin-left: auto; /*will not move gradually because it is 'auto'*/
+            border-radius: 5px;
+            /*transition-property: width, height, transform, background, font-size, opacity;
+            transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;*/
+            transition: all 10s linear; /*after test the animation is lock slower with 'linear'*/
+        }
+
+            .transition_style:hover {
+                font-size: 30px;
+                font-weight: bolder;
+                width: 100px;
+                height: 80px;
+                margin-left: 0px;
+                transform: rotateX(360deg);
+                background: red;
+            }
+    </style>
+</head>
+<body>
+    <div class="transition_style">HELLO</div>
+</body>
+</html>
