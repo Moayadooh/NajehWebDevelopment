@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $("#userName").click(function (event) {
+            event.stopPropagation();
+        });
+        function Validate1() {
+            console.log("Validate1() is called");
+        }
+        function Validate2() {
+            console.log("Validate2() is called");
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3" onclick="Validate1()">
+                <label id="userNameLabel">User Name:</label> <!-- for="userName"-->
+                <input type="text" id="userName" onclick="Validate2()">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

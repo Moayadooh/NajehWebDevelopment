@@ -3,12 +3,29 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <form>
+    <form id="personForm">
         First Name: <input type="text" name="firstName" value="Ben" /><br />
-        First Name: <input type="text" name="score" value="Smith" /><br />
-        First Name: <input type="text" name="firstName" value="Ben" /><br />
+        Last Name: <input type="text" name="lastName" value="Smith" /><br />
+        Score: <input type="text" name="score" value="10" /><br />
     </form>
+    <button id="submitPersonForm">Submit Serialized Form</button>
+    <script>
+        $(document).ready(function () {
+            $("#submitPersonForm").click(function () {
+                var personFormData = $("#personForm").serialize();
+                console.log(personFormData);
+                $.post(
+                    "/api/person",
+                    personFormData,
+                    function (responseData) {
+                        console.log(responseData);
+                    }
+                );
+            });
+        });
+    </script>
 </body>
 </html>

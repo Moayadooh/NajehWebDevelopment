@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function validateForm() {
+            var inputValue = document.getElementById("txt");
+            var value = parseInt(inputValue.value, 10);
+            if (isNaN(value)) {// || value.toString() !== inputValue.value
+                console.log("Number must be an integer!");
+                return false;
+            }
+            return true;
+        };
+    </script>
+</head>
+<body>
+    <input type="text" onblur="validateForm()" id="txt" />
+</body>
+</html>

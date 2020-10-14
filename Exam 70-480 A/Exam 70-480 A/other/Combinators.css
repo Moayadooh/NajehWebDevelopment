@@ -10,6 +10,9 @@ section + a {
 section ~ a { /*call all <a> tags which are siblings(outside) and below <section>*/
 }
 
+section ~ a:not(section a:left-child) { /*call all <a> tags which are siblings(outside) and below <section> "except last <a> tag"*/
+}
+
 p:only-child { /* Selects each <p>, but only if it is the only child of its parent */
 }
 
