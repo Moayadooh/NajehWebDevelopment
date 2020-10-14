@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        document.getElementById("numberBtn").onclick = ValidateNumberInput;
+        function ValidateNumberInput() {
+            var currentNumberValue = document.getElementById("numberValue").value;
+            if (typeof (currentNumberValue) != 'number');
+            alert("Please Enter a Number");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="name" value="" id="numberValue" />
+    <input type="button" name="name" value="" id="numberBtn" />
+</body>
+</html>
