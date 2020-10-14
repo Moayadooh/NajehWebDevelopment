@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function validateSSN(userInput) {
+            console.clear();
+            var ssnPattern = /^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/; ///^[0-9]{3}\^?[0-9]{2}\^?[0-9]{4}$/
+            if (ssnPattern.test(userInput))
+                console.log("SSN is valid");
+            else
+                console.log("SSN is invalid");
+        }
+        function validateEmail(userInput) {
+            console.clear();
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
+            if (emailPattern.test(userInput))
+                console.log("Email is valid");
+            else
+                console.log("Email is invalid");
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>SSN:</td>
+            <td><input type="text" onblur="validateSSN(this.value)" /></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" onblur="validateEmail(this.value)" /></td>
+        </tr>
+    </table>
+</body>
+</html>
