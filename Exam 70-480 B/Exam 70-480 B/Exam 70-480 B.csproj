@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jquery-3.5.1.min.js" />
+    <Content Include="message.xml" />
     <Content Include="other\Corrected Answers.txt" />
     <Content Include="Q 1.html" />
     <Content Include="Q 105.html" />
@@ -94,7 +95,12 @@
     <Content Include="Q 52.html" />
     <Content Include="Q 6.html" />
     <Content Include="Q 65.html" />
+    <Content Include="Q 67.html" />
     <Content Include="Q 7.html" />
+    <Content Include="Q 73.html" />
+    <Content Include="Q 74.html" />
+    <Content Include="Q 77.html" />
+    <Content Include="Q 83.html" />
     <Content Include="Q 98 fail.html" />
     <Content Include="test.html" />
     <Content Include="Web.config" />

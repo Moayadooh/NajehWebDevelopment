@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Run() {
+            var languages = [];
+            var items = document.getElementsByTagName("li");
+            for (var i = 0; i < items.length; i++) { //var i = 0, l = items.length; i < l; i++
+                languages.push(items[i].innerHTML);
+            }
+            languages.sort();
+            for (var i = 0; i < items.length; i++) {
+                items[i].innerHTML = languages[i];
+            }
+        }
+    </script>
+</head>
+<body onload="Run()">
+    <ul id="languages">
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>Classic ASP</li>
+        <li>ASP.Net</li>
+    </ul>
+</body>
+</html>

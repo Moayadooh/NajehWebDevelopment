@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Run() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET", "message.xml", false);
+            xmlhttp.send();
+            xmlDoc = xmlhttp.responeXML;
+        }
+    </script>
+</head>
+<body onload="Run()">
+    <div id="to"></div>
+    <div id="from"></div>
+    <div id="message"></div>
+</body>
+</html>
