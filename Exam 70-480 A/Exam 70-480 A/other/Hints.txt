@@ -1,0 +1,9 @@
+﻿User important - Author important - Author normal - User normal - User agent
+
+id+tag - id - class+tag - class + tag ...
+
+link - visited - hover - active
+
+undefined variable can not be null
+
+The onclick in the HTML tag will get executed first and then the code in the jquery click handler
