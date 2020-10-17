@@ -7,8 +7,8 @@
         document.getElementById("numberBtn").onclick = ValidateNumberInput;
         function ValidateNumberInput() {
             var currentNumberValue = document.getElementById("numberValue").value;
-            if (typeof (currentNumberValue) != 'number');
-            alert("Please Enter a Number");
+            if (isNaN(currentNumberValue))
+                alert("Please Enter a Number");
         }
     </script>
 </head>
