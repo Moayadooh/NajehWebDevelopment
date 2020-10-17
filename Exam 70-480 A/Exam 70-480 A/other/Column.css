@@ -1,0 +1,5 @@
+﻿p {
+    column-count: 9; /*number of columns*/
+    column-gap: 5px; /*gaps between the columns*/
+    column-rule: 2px solid red; /*middle of the gap*/
+}

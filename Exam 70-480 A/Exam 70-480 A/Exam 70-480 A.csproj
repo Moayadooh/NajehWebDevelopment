@@ -70,10 +70,12 @@
     <Content Include="css1.css" />
     <Content Include="other\Animation.css" />
     <Content Include="other\Browsers.txt" />
+    <Content Include="other\Column.css" />
     <Content Include="other\Combinators.css" />
     <Content Include="other\Hints.txt" />
     <Content Include="other\Input Types.css" />
     <Content Include="other\Mouse Events.css" />
+    <Content Include="other\New Words.txt" />
     <Content Include="other\Paragraphs.css" />
     <Content Include="other\Corrected Answers.txt" />
     <Content Include="Q 1.html" />
