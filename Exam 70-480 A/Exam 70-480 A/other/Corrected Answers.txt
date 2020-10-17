@@ -19,7 +19,7 @@ Q 194 (answer is only D)
 Q 198 (answer is C)
 
 Exam B:
-Q 3 (mouseover)
+Q 2 (mouseover)
 Q 14 (Target3 is " border")
 Q 25 (black - white - black- white)
 Q 32 (must be getElementById)
