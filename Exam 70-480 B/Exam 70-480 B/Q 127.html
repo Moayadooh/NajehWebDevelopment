@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-        document.getElementById("numberBtn").onclick = ValidateNumberInput;
+        function Run() {
+            document.getElementById("numberBtn").onclick = ValidateNumberInput;
+        }
         function ValidateNumberInput() {
             var currentNumberValue = document.getElementById("numberValue").value;
             if (isNaN(currentNumberValue))
@@ -12,7 +14,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="Run()">
     <input type="text" name="name" value="" id="numberValue" />
     <input type="button" name="name" value="" id="numberBtn" />
 </body>
