@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a img").each(function () {
+                $(this).parent().attr("target", "_blank");
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="https://www.microsoft.com">
+        <img src="Microsoft.jpg" height="200" />
+    </a>
+    <a href="https://www.google.com">Google</a>
+</body>
+</html>

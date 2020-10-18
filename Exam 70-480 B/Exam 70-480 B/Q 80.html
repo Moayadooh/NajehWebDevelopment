@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var customer = function () {
+            var name = "Contoso";
+            return {
+                getName: function () {
+                    return name;
+                },
+                setName: function (newName) {
+                    name = newName;
+                }
+            };
+        }();
+        alert(customer.name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
