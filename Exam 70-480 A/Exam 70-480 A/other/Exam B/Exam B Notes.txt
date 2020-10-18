@@ -1,0 +1,7 @@
+Q 37 (ws://)
+Q 61 (addEvenetListener)
+Q 69 (create element - set alt & src - return)
+Q 78 (onReady=function - open+send)
+Q 91 (cache true - addEvenet showOrder - dispatchEvent)
+Q 92 (setData - getData)
+Q 131 (httpRequest.response - this)

@@ -1,0 +1,10 @@
+Q 27 (-ms-wrap-flow:both; to put an image in the center of the text)
+Q 64 (canvas.onclick = fun;)
+Q 89 (long-run - animation)
+Q 91 column-width
+Q 105 (<iframe src="index.htm" sandbox></iframe>, "sandbox" to prevent malicious software)
+Q 128 (web page -> terminate() - web worker -> close())
+Q 137 (contact() method merge two arrays)
+Q 144 (a[href^="https://"])
+Q 160 ("WebSocket ", socket.send(messageTxt))
+Q 172 (hierarchical structure -> Live DOM)

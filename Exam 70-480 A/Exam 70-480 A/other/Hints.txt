@@ -4,6 +4,10 @@ id+tag - id - class+tag - class + tag ...
 
 link - visited - hover - active
 
+readyState = 4, status = 200
+
 undefined variable can not be null
 
 The onclick in the HTML tag will get executed first and then the code in the jquery click handler
+
+"maxlength" property will limit the number of character in the text box
