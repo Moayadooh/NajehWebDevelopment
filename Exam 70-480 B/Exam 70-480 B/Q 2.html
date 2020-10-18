@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Run() {
+            var img = document.getElementById("img");
+            var div = document.getElementById("div");
+            img.addEventListener("mousemove", function (e) {
+                div.innerHTML = "x: " + e.x + "<br/>y: " + e.y + "<br/>";
+            });
+        }
+    </script>
+</head>
+<body onload="Run()">
+    <img src="Microsoft.jpg" id="img" width="300" />
+    <div id="div"></div>
+</body>
+</html>
