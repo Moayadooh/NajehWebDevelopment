@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function madeSelection(element, message) {
+            if (element.value === "Please Choose") {
+                alert(message);
+                element.focus();
+                return false; //To prevent form submission
+            }
+            else {
+                return true; //To allow form submission
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="city">City:</label>
+        <select id="city">
+            <option>Please Choose</option>
+            <option>Moscow</option>
+            <option>London</option>
+            <option>Paris</option>
+        </select>
+        <input type="button" id="submit" value="Submit" onclick="madeSelection(document.getElementById('city'), 'Please Select a City')" />
+    </form>
+</body>
+</html>
