@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        import { speed } from "jquery";
+        var squareShape;
+        var myTimer;
+        function startAnimation() {
+            squareShape = document.getElementById("mySquare");
+            squareShape.currentTheta = 0;
+            myTimer = myTimer.interval(speed.value);
+            animateImage();
+        }
+        function animateImage() {
+            squareShape.setAttribute("transform", "angle(" + squareShape.currentTheta + ")");
+            squareShape.currentTheta += 0.1;
+        }
+    </script>
+</head>
+<body>
+    <svg width="200px" height="200px">
+        <g transform="translate(400, 400)" id="myImage">
+            <rect id="mySquare" x="-10" y="-10" width="20" height="20" color="blue"></rect>
+        </g>
+    </svg>
+    <input id="speed" type="text" value="10" />
+    <button id="zoom" onclick="startAnimation()">Start</button>
+</body>
+</html>
