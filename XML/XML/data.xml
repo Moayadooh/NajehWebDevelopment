@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <laptops>
+    <laptop id="1">ASUS</laptop>
+    <laptop id="2">HP</laptop>
+    <laptop id="3">LENOVO</laptop>
+    <laptop id="4">DELL</laptop>
+    <laptop id="5">MAC</laptop>
+  </laptops>
+  <languages>
+    <language owner="Oracle">Java</language>
+    <language owner="Microsoft">C#</language>
+    <language owner="Guido van Rossum">Python</language>
+    <language owner="Brendan Eich">JavaScript</language>
+    <language owner="Bjarne Stroustrup">C++</language>
+    <language owner="Rasmus Lerdorf">PHP</language>
+  </languages>
+</root>

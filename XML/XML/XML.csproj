@@ -67,9 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data.xml" />
+    <Content Include="Home.html" />
+    <Content Include="index.html" />
     <Content Include="read-xml.html" />
     <Content Include="Web.config" />
     <Content Include="read.xml" />
+    <Content Include="xhr.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
