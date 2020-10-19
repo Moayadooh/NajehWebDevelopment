@@ -4,28 +4,53 @@
     <meta charset="utf-8" />
     <title></title>
     <style>
-        div#grid {
+        #grid {
             display: -ms-grid;
             -ms-grid-columns: 100px 250px 100px 250px 100px;
             -ms-grid-rows: auto;
         }
+
+            #grid #div1 {
+                -ms-grid-column: 1;
+                -ms-grid-row: auto;
+            }
+
+            #grid #div2 {
+                -ms-grid-column: 2;
+                -ms-grid-row: auto;
+            }
+
+            #grid #div3 {
+                -ms-grid-column: 3;
+                -ms-grid-row: auto;
+            }
+
+            #grid #div4 {
+                -ms-grid-column: 4;
+                -ms-grid-row: auto;
+            }
+
+            #grid #div5 {
+                -ms-grid-column: 5;
+                -ms-grid-row: auto;
+            }
     </style>
 </head>
 <body>
     <div id="grid">
-        <div style="background:red; padding:20px;">
+        <div id="div1" style="background:red; padding:20px;">
             1
         </div>
-        <div style="background:yellow; padding:20px;">
+        <div id="div2" style="background:yellow; padding:20px;">
             2
         </div>
-        <div style="background:red; padding:20px;">
+        <div id="div3" style="background:red; padding:20px;">
             3
         </div>
-        <div style="background:yellow; padding:20px;">
+        <div id="div4" style="background:yellow; padding:20px;">
             4
         </div>
-        <div style="background:red; padding:20px;">
+        <div id="div5" style="background:red; padding:20px;">
             5
         </div>
     </div>

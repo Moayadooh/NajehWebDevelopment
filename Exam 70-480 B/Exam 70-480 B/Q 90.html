@@ -11,22 +11,21 @@
         function startAnimation() {
             squareShape = document.getElementById("mySquare");
             squareShape.currentTheta = 0;
-            myTimer = myTimer.setInterval(speed.value);
-            animateImage();
+            myTimer = setInterval(animateImage, document.getElementById("speed"));
         }
         function animateImage() {
-            squareShape.setAttribute("transform", "angle(" + squareShape.currentTheta + ")");
+            squareShape.setAttribute("transform", "rotate(" + squareShape.currentTheta + ")");
             squareShape.currentTheta += 0.1;
         }
     </script>
 </head>
 <body>
-    <svg width="200px" height="200px">
-        <g transform="translate(400, 400)" id="myImage">
+    <svg width="200px" height="200px" style="background-color: red;">
+        <g transform="translate(100, 100)" id="myImage">
             <rect id="mySquare" x="-10" y="-10" width="20" height="20" color="blue"></rect>
         </g>
     </svg>
-    <input id="speed" type="text" value="10" />
+    <input id="speed" type="text" value="100" />
     <button id="zoom" onclick="startAnimation()">Start</button>
 </body>
 </html>

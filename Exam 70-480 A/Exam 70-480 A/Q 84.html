@@ -3,17 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <script>
-        function Run() {
-            var canvas = document.getElementById("mycanvas");
-            //canvas.style.transform = "rotate(90deg)"; This only will work
-            var context = canvas.getContext("2d");
-            context.rotate(20 * Math.PI / 180);
-            context.fillRect(50, 20, 100, 50);
-        }
-    </script>
 </head>
-<body onload="Run()">
-    <canvas id="mycanvas" width="300" height="150" style="background: black;"></canvas>
+<body>
+    <canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.rotate(20 * Math.PI / 180);
+        context.fillRect(50, 20, 100, 50);
+    </script>
 </body>
 </html>
