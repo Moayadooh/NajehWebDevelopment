@@ -6,25 +6,24 @@
     <style>
         .container {
             display: -ms-grid;
-            /*grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;*/
             -ms-grid-columns: 1fr 1fr 1fr;
             -ms-grid-rows: 1fr 1fr 1fr;
         }
 
         .blueBox {
-            -ms-grid-row: 2;
-            -ms-grid-column: 2;
+            -ms-grid-row: 2; /*cell position*/
+            -ms-grid-column: 2; /*cell position*/
             -ms-wrap-flow: auto;
             float: none;
             background-color: blue;
         }
 
         .text {
-            -ms-grid-row: 1;
-            -ms-grid-column: 1;
-            -ms-grid-column-span: 3;
-            -ms-grid-row-span: 3;
+            -ms-grid-row: 1; /*cell position*/
+            -ms-grid-column: 1; /*cell position*/
+            -ms-grid-column-span: 3; /*content will take 3 column more*/
+            -ms-grid-row-span: 3; /*content will take 3 row more*/
+            /*background-color: red;*/
         }
     </style>
 </head>

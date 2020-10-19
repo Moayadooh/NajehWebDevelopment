@@ -4,14 +4,28 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-        function newOrder(orderId, orderShip, callback) {
-            document.write("New order being processed");
+        //function newOrder(orderId, orderShip, callback) {
+        //    //document.write("New order being processed");
+        //    callback();
+        //    console.log(orderId);
+        //    console.log(orderShip);
+        //    console.log(callback());
+        //}
+        //function Run() {
+        //    newOrder("333", "EXPRESS", function () {
+        //        return "Order details";
+        //    });
+        //}
+
+        function DisplayName(callback) {
+            console.log("Moayad");
             callback();
         }
+        function DisplayAge() {
+            console.log(23);
+        }
         function Run() {
-            newOrder("333", "EXPRESS", function () {
-                return "Order details";
-            });
+            DisplayName(DisplayAge);
         }
     </script>
 </head>

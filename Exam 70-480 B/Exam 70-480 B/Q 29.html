@@ -18,7 +18,7 @@
                 var personFormData = $("#personForm").serialize();
                 console.log(personFormData);
                 $.post(
-                    "/api/person",
+                    "/api/person", //Must be real API
                     personFormData,
                     function (responseData) {
                         console.log(responseData);

@@ -8,11 +8,12 @@
             var canvas = document.getElementById("mycanvas");
             //canvas.style.transform = "rotate(90deg)"; This only will work
             var context = canvas.getContext("2d");
-            context.rotate(90);
+            context.rotate(20 * Math.PI / 180);
+            context.fillRect(50, 20, 100, 50);
         }
     </script>
 </head>
 <body onload="Run()">
-    <canvas id="mycanvas" style="background: black;"></canvas>
+    <canvas id="mycanvas" width="300" height="150" style="background: black;"></canvas>
 </body>
 </html>

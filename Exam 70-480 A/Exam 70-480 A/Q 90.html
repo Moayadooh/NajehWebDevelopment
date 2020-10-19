@@ -5,14 +5,13 @@
     <title></title>
     <script>
         function zoomIN() {
-            'use strict';
-            var cir = document.getElementById("cir");
-            cir.r = cir.r * 1.5;
+            var myGraphic = document.getElementById("myGraphic");
+            myGraphic.setAttribute("currentScale", 1.5);
         }
     </script>
 </head>
 <body>
-    <svg width="100" height="100">
+    <svg width="100" height="100" id="myGraphic">
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" id="cir" />
     </svg>
     <button id="zoom" onclick="zoomIN();">zoom in</button>

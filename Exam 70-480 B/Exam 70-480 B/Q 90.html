@@ -5,13 +5,13 @@
     <title></title>
     <script src="jquery-3.5.1.min.js"></script>
     <script>
-        import { speed } from "jquery";
+        //import { speed } from "jquery";
         var squareShape;
         var myTimer;
         function startAnimation() {
             squareShape = document.getElementById("mySquare");
             squareShape.currentTheta = 0;
-            myTimer = myTimer.interval(speed.value);
+            myTimer = myTimer.setInterval(speed.value);
             animateImage();
         }
         function animateImage() {

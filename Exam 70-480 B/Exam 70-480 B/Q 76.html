@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function getFormatter() {
+            var _private = function (data) {
+                return data + " Moayad";
+            };
+            this.parseValue = function (input) {
+                return _private(input);
+            };
+        }
+        function Run() {
+            //console.log(new getFormatter()._private("I'm"));
+            console.log(new getFormatter().parseValue("I'm"));
+        }
+    </script>
+</head>
+<body onload="Run()">
+
+</body>
+</html>

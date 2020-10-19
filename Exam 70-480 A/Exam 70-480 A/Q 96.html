@@ -11,17 +11,9 @@
         function calcArea() {
             return this.side * this.side;
         }
-        //function square(side) {
-        //    this.side = side;
-        //    this.area = calcArea(side);
-        //}
-        //function calcArea(side) {
-        //    this.side = side;
-        //    return this.side * this.side;
-        //}
         function Run() {
             var s = new square(3);
-            console.log("Side = " + s.side + "\nArea = " + s.area);
+            console.log("Side = " + s.side + "\nArea = " + s.area());
         }
     </script>
 </head>

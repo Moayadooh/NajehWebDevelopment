@@ -4,28 +4,16 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-        //function square(side) {
-        //    this.side = side;
-        //    this.perimeter = perimeter(this);
-        //}
-        //function perimeter(that) {
-        //    return 4 * that.side;
-        //}
-        //function Run() {
-        //    var sqr = new square(2);
-        //    console.log("Square side is " + sqr.side, "\nSquare perimeter is " + sqr.perimeter);
-        //}
-
         function square(side) {
             this.side = side;
             this.perimeter = perimeter;
         }
-        function perimeter(side) {
-            return 4 * side;
+        function perimeter() {
+            return 4 * this.side;
         }
         function Run() {
             var sqr = new square(2);
-            console.log("Square side is " + sqr.side, "\nSquare perimeter is " + sqr.perimeter(sqr.side));
+            console.log("Square side is " + sqr.side, "\nSquare perimeter is " + sqr.perimeter());
         }
     </script>
 </head>

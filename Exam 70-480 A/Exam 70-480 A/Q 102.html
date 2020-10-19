@@ -7,7 +7,7 @@
         function Person() { }
         function Device() { }
         function MyFun(obj) {
-            if (obj.isPrototypeOf(Person))
+            if (Person.prototype.isPrototypeOf(obj))
                 alert("YES!");
             else
                 alert("NO!");
