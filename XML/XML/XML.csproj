@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data.xml" />
+    <Content Include="Grid.html" />
     <Content Include="Home.html" />
     <Content Include="index.html" />
     <Content Include="read-xml.html" />
