@@ -32,6 +32,7 @@ Q 32 (must be getElementById)
 Q 38 (color --> red - background-color --> aqua)
 Q 40 (ssnPattern = /^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/)
 Q 47 (str = decodeURIComponent(str);)
+Q 69 https://www.briefmenow.org/microsoft/which-three-actions-should-you-perform-in-sequence-to-complete-the-implementation/
 Q 73 (text-shadow: blue 1px 1px 1px;)
 Q 84 (second decription answer is yes)
 Q 90 (document.getElementById("mySquare")) (squareShape.setAttribute("transform", "rotate(" + squareShape.currentTheta + ")");)
