@@ -10,6 +10,7 @@ gradually ------------------> step by step (slowly)
 rect -----------------------> مستطيل
 corporate branded ----------> العلامة التجارية للشركة
 transparency ---------------> شفاف
+semi-transparent -----------> شبه شفاف
 offset value ---------------> قيمة تعويض
 payroll --------------------> جدول الرواتب
 latitude -------------------> خط العرض
