@@ -26,7 +26,6 @@ Exam B:
 Q 14 (Target3 is " border")
 Q 16 (option.appendChild(newOption);)
 Q 25 (white - black - white - black)
-Q 27 (flex-flow: wrap-reverse column;)
 Q 29 (();)
 Q 32 (must be getElementById)
 Q 38 (color --> red - background-color --> aqua)
