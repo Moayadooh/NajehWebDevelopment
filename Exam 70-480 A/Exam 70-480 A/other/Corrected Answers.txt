@@ -10,7 +10,6 @@ Q 89 https://www.briefmenow.org/microsoft/which-two-tasks-can-you-move-to-achiev
 Q 90 (answer in B)
 Q 91 (answer in D)
 Q 97 (answer is D)
-Q 99 (answer is B & D)
 Q 102 (answer is D)
 Q 130 (answer is C)
 Q 147 (answer is B)
