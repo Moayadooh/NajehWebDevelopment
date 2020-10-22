@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            color: #ffffff;
+            text-align: center;
+        }
+        #contenet div {
+            background-color: aqua;
+            padding: 30px;
+        }
+        #contenet div:nth-child(even) {
+            background-color: gray;
+        }
+
+        #contenet {
+            display: grid;
+            /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+            /*grid-template-columns: 1fr 2fr 1fr;*/
+            grid-template-columns: repeat(3, 1fr);
+
+            /*grid-auto-rows: 200px;*/ /*height is 200px*/
+            /*grid-auto-rows: minmax(100px, auto);*/ /*minimum height 100px and maximum height autu*/
+            grid-template-rows: repeat(3, minmax(100px, auto));
+            /*grid-template-rows: 200px 300px 400px 200px;*/ /*Set 4 rows '4th row is empty'*/
+
+            /*grid-column-gap: 10px;
+            grid-row-gap: 10px;*/
+            grid-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenet">
+        <div>1</div>
+        <div>2</div>
+        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
