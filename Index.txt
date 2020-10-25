@@ -68,3 +68,6 @@ Day5_JavaScript
 -access elements by relation
 -chaining
 -slide control
+
+Day1_Csharp
+-fundamental of C#

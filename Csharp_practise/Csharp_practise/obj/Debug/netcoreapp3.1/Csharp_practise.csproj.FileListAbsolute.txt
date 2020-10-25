@@ -1,0 +1,12 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\bin\Debug\netcoreapp3.1\Csharp_practise.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.genruntimeconfig.cache
