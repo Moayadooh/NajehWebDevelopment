@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .flex-container {
+            background-color: azure;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            height: 100px;
+            /*width: 320px;*/
+            min-width: 200px;
+            flex-grow: 1;
+        }
+        .one {
+            background-color: red;
+            /*flex-shrink: 1;*/ /*when resize the screen*/
+        }
+        .two {
+            background-color: blue;
+            /*flex-shrink: 2;*/
+        }
+        .three {
+            background-color: green;
+            /*flex-shrink: 3;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+        </div>
+    </div>
+</body>
+</html>
