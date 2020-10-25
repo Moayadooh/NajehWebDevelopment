@@ -10,3 +10,4 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj
 C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.pdb
 C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.genruntimeconfig.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Csharp_practise\Csharp_practise\obj\Debug\netcoreapp3.1\Csharp_practise.csprojAssemblyReference.cache

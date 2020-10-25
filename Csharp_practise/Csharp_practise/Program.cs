@@ -8,6 +8,7 @@ namespace Csharp_practise
         {
             //new StringFormat().Run();
             //new Arrays().Run();
+            new ArrayOfObject().Run();
         }
     }
 }
