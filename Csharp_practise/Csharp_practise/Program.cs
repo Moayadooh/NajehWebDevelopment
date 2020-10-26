@@ -8,7 +8,13 @@ namespace Csharp_practise
         {
             //new StringFormat().Run();
             //new Arrays().Run();
-            new ArrayOfObject().Run();
+            //new ArrayOfObject().Run();
+            //new DateAndTime().Run();
+            //new IfConditional().Run();
+            //new Nullable().Run();
+            //new PassByValueReference().Run();
+            //new AddNamespace().Run();
+            new Structure().Run();
         }
     }
 }

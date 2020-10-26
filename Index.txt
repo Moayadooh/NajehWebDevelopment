@@ -70,4 +70,7 @@ Day5_JavaScript
 -slide control
 
 Day1_Csharp
--fundamental of C#
+-overview in C# part1
+
+Day2_Csharp
+-overview in C# part2
