@@ -16,8 +16,11 @@
         .box {
             height: 100px;
             /*width: 320px;*/
-            min-width: 200px;
-            flex-grow: 1;
+            /*min-width: 200px;*/
+            /*flex-grow: 1;*/
+            /*min-width: 500px;*/
+            /*flex-basis: 500px;*/ /*Similar to min-width but when the screen size is less will fit the screen*/
+            flex: 1 0 200px; /*grow - shrink - basis*/
         }
         .one {
             background-color: red;
