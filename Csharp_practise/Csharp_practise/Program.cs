@@ -16,7 +16,10 @@ namespace Csharp_practise
             //new PassByValueReference().Run();
             //new AddNamespace().Run();
             //new Structure().Run();
-            new SetterGetter().Run();
+            //new SetterGetter().Run();
+            //new EnumClass().Run();
+            //new StudentRecord().Run();
+            new ListClass().Run();
         }
     }
 }
