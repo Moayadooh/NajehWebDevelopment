@@ -1,4 +1,5 @@
 ﻿using System;
+using Csharp_practise.OOP;
 
 namespace Csharp_practise
 {
@@ -14,7 +15,8 @@ namespace Csharp_practise
             //new Nullable().Run();
             //new PassByValueReference().Run();
             //new AddNamespace().Run();
-            new Structure().Run();
+            //new Structure().Run();
+            new SetterGetter().Run();
         }
     }
 }
