@@ -19,7 +19,9 @@ namespace Csharp_practise
             //new SetterGetter().Run();
             //new EnumClass().Run();
             //new StudentRecord().Run();
-            new ListClass().Run();
+            //new ListClass().Run();
+            //new Constructor_Overriding_Inheritance().Run();
+            new Abstract().Run();
         }
     }
 }

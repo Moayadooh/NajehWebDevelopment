@@ -1,0 +1,13 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\bin\Debug\netcoreapp3.1\Day4_Csharp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day4_Csharp\Day4_Csharp\obj\Debug\netcoreapp3.1\Day4_Csharp.genruntimeconfig.cache
