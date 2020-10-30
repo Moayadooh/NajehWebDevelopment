@@ -9,13 +9,15 @@ namespace Csharp_practise.OOP
         public void Run()
         {
             Student student = new Student();
-            var obj = student.course();
-            //Console.WriteLine(student.course().ID);
-            //Console.WriteLine("Student id: " + obj.ID);
-            //Console.WriteLine("Student name: " + obj.Name);
-            //Console.WriteLine("Student age: " + obj.Age);
-            //Console.WriteLine("Graduation status: " + obj.status);
-
+            var obj = student.GetCourses();
+            foreach (var item in obj)
+            {
+                Console.Write("Student id: " + item.ID + "\t");
+                Console.Write("Student name: " + item.Name + "\t");
+                Console.Write("Student age: " + item.Age + "\t");
+                Console.Write("Graduation status: " + item.status + "\n");
+            }
+            #region by using for loop
             //for (int i = 0; i < student.GetCourses().Count; i++)
             //{
             //    Console.Write("Student id: " + student.GetCourses()[i].ID + "\t");
@@ -23,14 +25,7 @@ namespace Csharp_practise.OOP
             //    Console.Write("Student age: " + student.GetCourses()[i].Age + "\t");
             //    Console.Write("Graduation status: " + student.GetCourses()[i].status + "\n");
             //}
-
-            foreach (var item in student.GetCourses())
-            {
-                Console.Write("Student id: " + item.ID + "\t");
-                Console.Write("Student name: " + item.Name + "\t");
-                Console.Write("Student age: " + item.Age + "\t");
-                Console.Write("Graduation status: " + item.status + "\n");
-            }
+            #endregion
         }
     }
     class Student
@@ -41,8 +36,10 @@ namespace Csharp_practise.OOP
         }
         public List<Course> GetCourses()
         {
+            //return new List<Course>
             return new List<Course>()
             {
+                //new Course{ID = 1, Name = "Moayad", Age = 23, status = Status.Graduate},
                 new Course(){ID = 1, Name = "Moayad", Age = 23, status = Status.Graduate},
                 new Course(){ID = 1, Name = "Mohanned", Age = 21, status = Status.NonGraduate},
                 new Course(){ID = 1, Name = "Mohammed", Age = 19, status = Status.NonGraduate}

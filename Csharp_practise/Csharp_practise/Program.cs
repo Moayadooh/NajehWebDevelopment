@@ -21,7 +21,8 @@ namespace Csharp_practise
             //new StudentRecord().Run();
             //new ListClass().Run();
             //new Constructor_Overriding_Inheritance().Run();
-            new Abstract().Run();
+            //new Abstract().Run();
+            new Interface().Run();
         }
     }
 }
