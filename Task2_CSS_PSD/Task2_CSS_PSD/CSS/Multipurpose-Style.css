@@ -288,7 +288,7 @@ nav {
 
 
 
-/* Contenet Title */
+/* Main Title */
 /* _______________________________________________________________________________________________________________________________________________ */
 article section:first-child p {
     font-family: Georgia;
@@ -319,71 +319,43 @@ article section:first-child p {
 
 
 
-/* Middle Images */
+/* Images */
 /* _______________________________________________________________________________________________________________________________________________ */
 section.images {
     display: flex;
-    /*flex-wrap: wrap;
-    flex-direction: column-reverse;*/
 }
 
     section.images figure {
         margin: 0;
     }
 
-/*article section:nth-child(2) div:first-child figure.image {
-        margin: 0 20px 0 0;
+div.big-img {
+    max-width: 568px;
+    margin: 0 20px 0 0;
+}
+
+    div.big-img figure {
+        max-width: 568px;
+        max-height: 460px;
     }
 
-        article section:nth-child(2) div:first-child figure.image img {
+        div.big-img figure img {
             width: 568px;
             height: 460px;
             padding: 4px;
             border: 1px solid #dddddd;
         }
 
-    article section:nth-child(2) div:last-child figure {
-        width: 372px;
-        height: 152px;
-        margin: 0 0 1px 0;
-    }
-
-        article section:nth-child(2) div:last-child figure img {
-            width: 372px;
-            height: 152px;
-        }*/
-
-div.big-img {
-    /*flex-basis: 568px;*/
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-auto-rows: minmax(auto, 464px);
-    grid-auto-columns: minmax(auto, 568px);
-    /*grid-column-gap: 20px;*/
-    margin: 0 20px 0 0;
-}
-
-    div.big-img figure img {
-        width: 568px;
-        height: 460px;
-        padding: 4px;
-        border: 1px solid #dddddd;
-    }
-
 div.small-img {
-    /*flex-basis: 372px;*/
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(auto, 152px);
-    grid-auto-columns: minmax(auto, 372px);
+    max-width: 372px;
     grid-row-gap: 2px;
 }
 
     div.small-img figure {
-        width: 372px;
-        height: 152px;
+        max-width: 372px;
+        max-height: 152px;
     }
 
         div.small-img figure img {
@@ -391,63 +363,60 @@ div.small-img {
             height: 152px;
         }
 
-/*Mobile*/
-/*@media screen and (max-width:600px) {
-    article section:nth-child(2) {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-        article section:nth-child(2) div:last-child {
-            display: flex;
-        }
-
-            article section:nth-child(2) div:last-child figure {
-                width: auto;
-                height: auto;
-                margin-right: 1px;
-            }
-
-        article section:nth-child(2) div:first-child figure.image {
-            margin: 0;
-        }
-
-            article section:nth-child(2) div:first-child figure.image img {
-                max-width: 100%;
-                height: auto;
-            }
-
-        article section:nth-child(2) div:last-child figure img {
-            max-width: 100%;
-            height: 100%;
-        }
-}*/
-
 /*Tablet*/
-/*@media screen and (max-width:768px) {
-    article section:nth-child(2) {
-        flex-wrap: nowrap;
+@media screen and (max-width:991.5px) {
+    div.big-img figure, div.big-img figure img {
+        max-width: 100%;
+        height: 310px;
     }
-}*/
 
-
-
-
-/* Content Information */
-/* _______________________________________________________________________________________________________________________________________________ */
-article section:last-child {
-    display: flex;
-    flex-wrap: wrap;
+    div.small-img figure, div.small-img figure img {
+        max-width: 100%;
+        height: 102px;
+    }
 }
 
-    article section:last-child > div {
+/*Mobile*/
+@media screen and (max-width:600px) {
+    section.images {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    div.big-img {
+        margin: 0;
+    }
+
+        div.big-img figure {
+            height: auto;
+        }
+
+    div.small-img {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 100%;
+        grid-column-gap: 2px;
+    }
+
+        div.small-img figure {
+            height: auto;
+        }
+}
+
+
+
+
+/* Titles */
+/* _______________________________________________________________________________________________________________________________________________ */
+section.titles {
+    display: flex;
+}
+
+    section.titles > div {
         width: 470px;
     }
 
-    article section:last-child div:first-of-type {
+    section.titles div:first-of-type {
         margin-right: 20px;
     }
 
@@ -564,15 +533,63 @@ article section:last-child {
         color: #ffffff;
     }
 
+/*Tablet*/
+@media screen and (max-width:991.5px) {
+    section.titles {
+        flex-wrap: wrap;
+    }
+
+        section.titles > div {
+            width: 100%;
+        }
+
+        section.titles div:first-of-type {
+            margin-right: 0;
+        }
+
+    .first-part div.line, .second-part div.line {
+        width: 100%;
+    }
+
+        .first-part div.line p, .second-part div.line p {
+            left: 50%;
+            transform: translateX(-50%);
+            top: -22px;
+        }
+
+    .first-part div div.container figure {
+        margin: 33px 0 0 0;
+        flex: 25%;
+        text-align: center;
+    }
+
+    .first-part div div.container div {
+        flex: 75%;
+    }
+
+    .second-part div.container {
+        justify-content: center;
+    }
+
+        .second-part div.container > div:first-of-type {
+            margin-right: 10px;
+        }
+
+        .second-part div.container > div:last-of-type {
+            margin-left: 10px;
+        }
+}
+
+/*Mobile*/
 @media screen and (max-width:600px) {
-    article section:last-child, .second-part div.container, .first-part div.container {
+    section.titles, .second-part div.container, .first-part div.container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
-        article section:last-child > div {
+        section.titles > div {
             max-width: 100%;
         }
 
@@ -580,17 +597,9 @@ article section:last-child {
             max-width: 100%;
         }
 
-    .first-part div.line, .second-part div.line {
-        max-width: 100%;
-    }
-
-        .first-part div.line p, .second-part div.line p {
-            left: 30%;
+        section.titles div:first-of-type {
+            margin: 31px 0 10px 0;
         }
-
-    article section:last-child div:first-of-type {
-        margin: 0 0 10px 0;
-    }
 
     .first-part div div.container figure {
         margin: 33px 0 0 0;
@@ -601,53 +610,15 @@ article section:last-child {
         flex: 70%;
         margin-top: 15px;
     }
-}
 
-/*Mobile*/
-@media screen and (max-width:600px) {
-    .first-part div.line p, .second-part div.line p {
-        left: 32%;
-    }
-}
-
-@media screen and (max-width:426px) {
-    .first-part div.line p, .second-part div.line p {
-        left: 29%;
-    }
-}
-
-@media screen and (max-width:376px) {
-    .first-part div.line p, .second-part div.line p {
-        left: 26%;
-    }
-}
-
-@media screen and (max-width:320px) {
-    .first-part div.line p, .second-part div.line p {
-        left: 22%;
-    }
-}
-
-/*Tablet*/
-/*@media screen and (max-width:768px) {
-    section div.first-part {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 100%;
+    .second-part div.container > div:first-of-type {
+        margin-right: 0;
     }
 
-        section div.first-part div.line {
-            flex: 80%;
-        }
-
-        section div.first-part div.first-article {
-            flex: 30%;
-        }
-
-        section div.first-part div.second-article {
-            flex: 30%;
-        }
-}*/
+    .second-part div.container > div:last-of-type {
+        margin-left: 0;
+    }
+}
 
 
 
