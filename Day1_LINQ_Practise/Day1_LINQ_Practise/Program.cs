@@ -6,7 +6,7 @@ namespace Day1_LINQ_Practise
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            new LinqSelectWhere().Run();
         }
     }
 }
