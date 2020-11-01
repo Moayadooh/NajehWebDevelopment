@@ -1,6 +1,13 @@
 ﻿body {
-    margin: 0;
+    width: 1000px;
+    margin: auto;
     padding: 0;
+}
+
+@media screen and (max-width:1000px) {
+    body {
+        width: auto;
+    }
 }
 
 * {
@@ -8,20 +15,7 @@
 }
 
 main {
-    width: 1000px;
-    margin: 0 auto;
-    /*margin: auto 248px;*/
-}
-
-@media screen and (max-width:1000px) {
-    main {
-        margin: 0;
-        width: auto;
-    }
-}
-
-.main-content {
-    padding: 40px 20px 0;
+    padding: 40px 20px 50px;
 }
 
 
@@ -226,7 +220,7 @@ header .container {
 
 
 
-/* Menu */
+/* Navigation */
 /* _______________________________________________________________________________________________________________________________________________ */
 nav {
     background: #3c2520;
@@ -238,23 +232,23 @@ nav {
         padding: 0;
         margin: 0;
         display: flex;
-        flex-wrap: wrap;
         text-align: center;
     }
 
         nav ul li {
             list-style: none;
-            display: inline-block;
             border-right: 1px solid #e9e9e9;
-            padding-top: 22px;
             height: 65px;
             cursor: pointer;
             flex-grow: 1;
         }
 
+            nav ul li:last-of-type {
+                border: none;
+            }
+
             nav ul li:hover {
                 background: #957964;
-                border-radius: 6px;
             }
 
             nav ul li a {
@@ -262,13 +256,23 @@ nav {
                 color: #ffffff;
                 font-size: 16px;
                 font-family: Georgia;
+                vertical-align: middle;
+                line-height: 65px;
             }
 
-            nav ul li:last-of-type {
-                border: none;
-            }
+@media screen and (min-width:768px) {
+    nav ul li:hover:first-of-type {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
 
-@media screen and (max-width:600px) {
+    nav ul li:hover:last-of-type {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+
+@media screen and (max-width:767.5px) {
     nav ul {
         flex-direction: column;
     }
@@ -276,9 +280,18 @@ nav {
         nav ul li {
             display: block;
             border: none;
-            border-radius: 6px;
             border-bottom: 1px solid #e9e9e9;
         }
+
+            nav ul li:hover:first-of-type {
+                border-top-right-radius: 6px;
+                border-top-left-radius: 6px;
+            }
+
+            nav ul li:hover:last-of-type {
+                border-bottom-right-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
 
             nav ul li a {
                 margin: 0;
@@ -288,20 +301,20 @@ nav {
 
 
 
-/* Main Title */
+/* Headline */
 /* _______________________________________________________________________________________________________________________________________________ */
-article section:first-child p {
+section.headline p {
     font-family: Georgia;
     text-align: center;
 }
 
-    article section:first-child p:first-child {
+    section.headline p:first-child {
         font-size: 36px;
         color: #957964;
         margin-bottom: 0;
     }
 
-    article section:first-child p:last-child {
+    section.headline p:last-child {
         font-size: 18px;
         color: #999999;
         width: 590px;
@@ -309,7 +322,7 @@ article section:first-child p {
     }
 
 @media screen and (max-width:600px) {
-    article section:first-child p:last-child {
+    section.headline p:last-child {
         margin: 0 0 20px 0;
         text-align: center;
         width: 100%;
@@ -626,7 +639,6 @@ section.titles {
 /* Footer */
 /* _______________________________________________________________________________________________________________________________________________ */
 footer {
-    margin-top: 50px;
     background: #efefef;
     border-top: 5px solid #dddddd;
     display: flex;
