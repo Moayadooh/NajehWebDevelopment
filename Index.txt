@@ -6,10 +6,13 @@ Day2_HTML:
 Day3_HTML:
 -input types
 -most used HTML tags
+-Regular expression patterns (links)
 
 Day1_CSS:
 -basic CSS
 -selector types
+-Sliders (links)
+-Generate CSS gradient colors, Online image editor, Convert design into code (links)
 
 Day2_CSS:
 -navigation bar (ul)
@@ -59,6 +62,7 @@ Day3_JavaScript
 -regular expression
 -CSS classes
 -animation
+-Animate (link)
 
 Day4_JavaScript
 -AJAX
@@ -76,4 +80,10 @@ Day2_Csharp
 -overview in C# part2
 
 Day3_Csharp
--OOP
+-OOP part1
+
+Day4_Csharp
+-OOP part2
+
+Day1_LINQ
+-
