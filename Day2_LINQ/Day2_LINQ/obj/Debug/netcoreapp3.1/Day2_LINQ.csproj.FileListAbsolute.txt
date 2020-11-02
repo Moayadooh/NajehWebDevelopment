@@ -1,0 +1,13 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\bin\Debug\netcoreapp3.1\Day2_LINQ.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ\Day2_LINQ\obj\Debug\netcoreapp3.1\Day2_LINQ.genruntimeconfig.cache

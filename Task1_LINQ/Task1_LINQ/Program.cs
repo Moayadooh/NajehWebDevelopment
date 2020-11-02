@@ -40,7 +40,17 @@ namespace Task1_LINQ
             //}
 
             //Best Algorithm
-
+			Console.WriteLine("Enter page size");
+            int pagesize = int.Parse(Console.ReadLine());
+            for (int i = 0; i < User.GetUsers().Count; i += pagesize)
+            {
+                var model = User.GetUsers().Skip(i).Take(pagesize).ToList();
+                foreach (var item in model)
+                {
+                    Console.WriteLine($"{item.ID},{item.Email} , {item.Address} ,{item.Phone}");
+                }
+                Console.WriteLine("======================================================");
+            }
         }
     }
 }
