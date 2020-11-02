@@ -86,4 +86,7 @@ Day4_Csharp
 -OOP part2
 
 Day1_LINQ
--
+-LINQ part1
+
+Day2_LINQ
+-LINQ part2

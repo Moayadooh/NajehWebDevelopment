@@ -1,14 +1,7 @@
 ﻿body {
-    /*width: 1000px;
-    width: 100%;*/
+    max-width: 1000px;
     margin: auto;
     padding: 0;
-}
-
-@media screen and (max-width:1000px) {
-    body {
-        width: 100%;
-    }
 }
 
 * {
@@ -337,6 +330,7 @@ section.headline p {
 /* _______________________________________________________________________________________________________________________________________________ */
 section.images {
     display: flex;
+    justify-content: center;
 }
 
     section.images figure {
@@ -424,6 +418,7 @@ div.small-img {
 /* _______________________________________________________________________________________________________________________________________________ */
 section.titles {
     display: flex;
+    justify-content: center;
 }
 
     section.titles > div {
