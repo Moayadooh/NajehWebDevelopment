@@ -32,10 +32,6 @@ namespace Day1_LINQ
             {
                 Console.WriteLine(item);
             }
-
-
-
         }
     }
-
 }

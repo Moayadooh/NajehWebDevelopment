@@ -36,5 +36,21 @@ namespace Day1_LINQ_Practise
                 new User { ID= 24, Email="lubna",Address="alazaiba",Password="1233", Phone=85895  }
             };
         }
+
+        public static void Display(List<User> list)
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine($"{item.ID}\t{item.Email}\t{item.Password}\t{item.Address}\t{item.Phone}");
+            }
+        }
+
+        public static void Display(List<int> list)
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
