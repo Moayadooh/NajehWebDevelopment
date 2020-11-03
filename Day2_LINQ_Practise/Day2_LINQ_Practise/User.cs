@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Day2_LINQ
+namespace Day2_LINQ_Practise
 {
     class User
     {
@@ -41,30 +39,19 @@ namespace Day2_LINQ
             };
         }
 
-        public static void Show(List<User> userparam)
-        {
-            Console.WriteLine("ID \t Email \t Address \t Phone \t ");
-            Console.WriteLine("--------------------------------------------------------");
-            foreach (var item in userparam)
-            {
-                Console.WriteLine($"{item.ID} \t {item.Email} \t {item.Address} \t {item.Phone}");
-                Console.WriteLine("--------------------------------------------------------");
-            }
-        }
-
         public string getSalaryGroup()
         {
             if (Salary >= 5000)
             {
-                return "Exellent";
+                return "High";
             }
             else if (Salary > 1000)
             {
-                return "very good";
+                return "Medium";
             }
             else
             {
-                return "good";
+                return "Low";
             }
         }
     }

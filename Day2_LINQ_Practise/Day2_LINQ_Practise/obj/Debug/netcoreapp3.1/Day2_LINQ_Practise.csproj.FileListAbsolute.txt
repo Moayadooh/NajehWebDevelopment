@@ -1,0 +1,13 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\bin\Debug\netcoreapp3.1\Day2_LINQ_Practise.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_LINQ_Practise\Day2_LINQ_Practise\obj\Debug\netcoreapp3.1\Day2_LINQ_Practise.genruntimeconfig.cache
