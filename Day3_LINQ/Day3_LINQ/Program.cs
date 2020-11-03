@@ -10,13 +10,12 @@ namespace Day3_LINQ
     {
         static void Main(string[] args)
         {
-            Student st = new Student();
-
             Console.WriteLine("Enter Email");
             var email = Console.ReadLine();
-
             Console.WriteLine("Enter Password");
             var password = Console.ReadLine();
+
+            Student st = new Student();
             var recordStudent = st.Login(email, password);
             if (recordStudent != null)
             {
@@ -33,14 +32,11 @@ namespace Day3_LINQ
                 Console.WriteLine($" Address {recordStudent.Profile.Address }");
                 Console.WriteLine($" Image {recordStudent.Profile.Image }");
                 Console.WriteLine($" Age {recordStudent.Profile.Age }");
-
             }
             else
             {
                 Console.WriteLine("Please verify Email or Password!");
             }
-
-
         }
     }
 }

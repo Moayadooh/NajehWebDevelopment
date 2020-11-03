@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day3_LINQ
 {
-    class Trainer :Person
+    class Trainer : Person
     {
         public string FieldTitle { get; set; }
         public double Salary { get; set; }
@@ -14,13 +14,11 @@ namespace Day3_LINQ
 
         public List<Trainer> GetTrainers()
         {
-
             return new List<Trainer>
             {
                 new Trainer {ID=567987, FieldTitle="Programming",FirstName="Mohammad",LastName="Zaher",Salary=3453},
                 new Trainer {ID=5967987, FieldTitle="Graphic Design",FirstName="Muayyad",LastName="Alfalahi",Salary=4453}
             };
         }
-
     }
 }

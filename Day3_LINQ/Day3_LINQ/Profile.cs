@@ -8,16 +8,11 @@ namespace Day3_LINQ
 {
     class Profile
     {
-        
         public int ID { get; set; }
-
         public string Address { get; set; }
-
         public string Image { get; set; }
-
         public int Age { get; set; }
-
-        public  Student Student { get; set; } // One Student To One Profile
+        public Student Student { get; set; } // One Student To One Profile
         public Trainer Trainer { get; set; } // One Trainer To One Profile
 
         public List<Profile> GetProfiles()
@@ -31,7 +26,6 @@ namespace Day3_LINQ
                 new Profile { ID=104,Address="waad",Age=22,Image="nbbn.jpg"},
                 new Profile { ID=567987,Address="Mohammad",Age=22,Image="nbbn.jpg"},
             };
-
         }
     }
 }

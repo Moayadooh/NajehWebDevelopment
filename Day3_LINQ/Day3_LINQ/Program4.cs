@@ -14,7 +14,6 @@ namespace Day3_LINQ
             Student st = new Student();
 
             var modelcourses = crs.GetCourses().Where(x => x.Junctions.Any(y => y.StudentID == 100)).ToList();
-
             var modelstudent = st.GetStudents().Where(x => x.Junctions.Any(j => j.CourseID == 10)).ToList();
         }
     }
