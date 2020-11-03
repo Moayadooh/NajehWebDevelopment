@@ -90,3 +90,6 @@ Day1_LINQ
 
 Day2_LINQ
 -LINQ part2
+
+Day3_LINQ
+-Entity Relation
