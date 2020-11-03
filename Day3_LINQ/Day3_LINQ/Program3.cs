@@ -15,16 +15,16 @@ namespace Day3_LINQ
 
             Course crs = new Course();
             var newlist = crs.GetCourses();
-            var model = crs.GetCourses().Where(x => x.Name == name);
+            var model = crs.GetCourses().Where(x => x.Name == name); //check if course is already exist
             if (model.Count() == 0)
             {
                 newlist.Add(new Course { ID = 105, Name = name, price = 660, Hours = 60 });
                 foreach (var item in newlist)
                 {
-                    Console.WriteLine("Course ID" + item.ID);
-                    Console.WriteLine("Course Name" + item.Name);
-                    Console.WriteLine("Course Price" + item.price);
-                    Console.WriteLine("Course Hour" + item.Hours);
+                    Console.WriteLine("Course ID: " + item.ID);
+                    Console.WriteLine("Course Name: " + item.Name);
+                    Console.WriteLine("Course Price: " + item.price);
+                    Console.WriteLine("Course Hour: " + item.Hours);
                 }
             }
             else

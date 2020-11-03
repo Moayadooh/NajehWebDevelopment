@@ -18,14 +18,14 @@ namespace Day3_LINQ
                 {
                     foreach (var detials in item)
                     {
-                        Console.WriteLine("Email" + detials.Email);
-                        Console.WriteLine("First Name" + detials.FirstName);
+                        Console.WriteLine("Email: " + detials.Email);
+                        Console.WriteLine("First Name: " + detials.FirstName);
                     }
                 }
             }
             else
             {
-                Console.WriteLine("check model");
+                //Console.WriteLine("check model");
             }
 
         }

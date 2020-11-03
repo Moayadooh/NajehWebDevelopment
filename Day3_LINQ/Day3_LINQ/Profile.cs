@@ -19,12 +19,12 @@ namespace Day3_LINQ
         {
             return new List<Profile>
             {
-                new Profile { ID=100,Address="ammar",Age=37,Image="sdsdf.jpg"},
-                new Profile { ID=101,Address="ali",Age=25,Image="sffff.jpg"},
-                new Profile { ID=102,Address="zaqi",Age=30,Image="vnnnn.jpg"},
-                new Profile { ID=103,Address="saad",Age=20,Image="tyyt.jpg"},
-                new Profile { ID=104,Address="waad",Age=22,Image="nbbn.jpg"},
-                new Profile { ID=567987,Address="Mohammad",Age=22,Image="nbbn.jpg"},
+                //new Profile { ID=100,Address="ammar",Age=37,Image="sdsdf.jpg"},
+                //new Profile { ID=101,Address="ali",Age=25,Image="sffff.jpg"},
+                //new Profile { ID=102,Address="zaqi",Age=30,Image="vnnnn.jpg"},
+                //new Profile { ID=103,Address="saad",Age=20,Image="tyyt.jpg"},
+                //new Profile { ID=104,Address="waad",Age=22,Image="nbbn.jpg"},
+                //new Profile { ID=567987,Address="Mohammad",Age=22,Image="nbbn.jpg"}
             };
         }
     }

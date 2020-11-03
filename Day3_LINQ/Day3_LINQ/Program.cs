@@ -20,18 +20,16 @@ namespace Day3_LINQ
             if (recordStudent != null)
             {
                 Console.WriteLine("Hello," + recordStudent.Email);
-                Console.WriteLine("---------------------------------------------------");
-                Console.WriteLine("Person Information :");
                 Console.WriteLine("========================================================");
-                Console.WriteLine($" First Name {recordStudent.FirstName }");
-                Console.WriteLine($" Last Name {recordStudent.LastName }");
-                Console.WriteLine($" Full Name {recordStudent.FullName() }");
-                Console.WriteLine($"  {recordStudent.FullName() }");
-                Console.WriteLine("Profile Information :");
+                Console.WriteLine("Person Information:");
+                Console.WriteLine($"First Name {recordStudent.FirstName }");
+                Console.WriteLine($"Last Name {recordStudent.LastName }");
+                Console.WriteLine($"Full Name {recordStudent.FullName() }");
                 Console.WriteLine("========================================================");
-                Console.WriteLine($" Address {recordStudent.Profile.Address }");
-                Console.WriteLine($" Image {recordStudent.Profile.Image }");
-                Console.WriteLine($" Age {recordStudent.Profile.Age }");
+                Console.WriteLine("Profile Information:");
+                Console.WriteLine($"Address {recordStudent.Profile.Address }");
+                Console.WriteLine($"Image {recordStudent.Profile.Image }");
+                Console.WriteLine($"Age {recordStudent.Profile.Age }");
             }
             else
             {

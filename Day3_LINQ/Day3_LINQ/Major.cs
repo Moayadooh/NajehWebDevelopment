@@ -27,6 +27,7 @@ namespace Day3_LINQ
             };
         }
 
+        //Nested lists
         public List<List<Student>> GetStudentsByMajorID(long majorid)
         {
             var model = GetMajors().Where(x => x.ID == majorid).Select(x => x.Students).ToList();
