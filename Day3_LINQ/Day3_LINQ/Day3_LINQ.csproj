@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>Day3_LINQ.Program3</StartupObject>
+    <StartupObject>Day3_LINQ.Program2</StartupObject>
   </PropertyGroup>
 
 </Project>
