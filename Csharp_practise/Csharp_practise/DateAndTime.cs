@@ -8,9 +8,12 @@ namespace Csharp_practise
     {
         public void Run()
         {
-            //DateTime dateTime = new DateTime();
-            //Console.WriteLine("Date: " + dateTime.Date);
-            Console.WriteLine("Current date: " + DateTime.Now);
+            DateTime dateTime = DateTime.Parse("04/11/2020");
+            Console.WriteLine("Date: " + dateTime.Date);
+            //Console.WriteLine("Day: " + dateTime.Day);
+            //Console.WriteLine("Month: " + dateTime.Month);
+            //Console.WriteLine("Year: " + dateTime.Year);
+            //Console.WriteLine("Current date and time: " + DateTime.Now);
         }
     }
 }

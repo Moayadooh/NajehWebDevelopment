@@ -10,7 +10,7 @@ namespace Csharp_practise
             //new StringFormat().Run();
             //new Arrays().Run();
             //new ArrayOfObject().Run();
-            //new DateAndTime().Run();
+            new DateAndTime().Run();
             //new IfConditional().Run();
             //new Nullable().Run();
             //new PassByValueReference().Run();
@@ -22,7 +22,7 @@ namespace Csharp_practise
             //new ListClass().Run();
             //new Constructor_Overriding_Inheritance().Run();
             //new Abstract().Run();
-            new Interface().Run();
+            //new Interface().Run();
         }
     }
 }
