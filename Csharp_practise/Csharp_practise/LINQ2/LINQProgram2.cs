@@ -2,13 +2,13 @@
 
 namespace Day2_LINQ_Practise
 {
-    class Program
+    class LINQProgram2
     {
         static void Main(string[] args)
         {
             //new GroupByExpression().Run();
             //new AllAnyToLookup().Run();
-            new JoinClause().Run();
+            //new JoinClause().Run();
             //new LambdaFunctions().Run();
         }
     }

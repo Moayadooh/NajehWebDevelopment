@@ -2,7 +2,7 @@
 
 namespace Day1_LINQ_Practise
 {
-    class Program
+    class LINQProgram1
     {
         static void Main(string[] args)
         {
@@ -10,7 +10,7 @@ namespace Day1_LINQ_Practise
             //new LinqSingleFirst().Run();
             //new LinqContainsStartsEnds().Run();
             //new SkipTakeOrderThen().Run();
-            new ExcludeDataFromList().Run();
+            //new ExcludeDataFromList().Run();
         }
     }
 }
