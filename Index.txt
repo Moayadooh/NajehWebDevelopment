@@ -48,12 +48,12 @@ Day3_Bootstrap
 -PSD template part 2
 
 Day1_JavaScript
--inroduction to JavaScript
+-introduction to JavaScript
 -function
 -try catch
 
 Day2_JavaScript
--inroduction to jQuery
+-introduction to jQuery
 -events
 -fade
 -pop up messages
@@ -93,3 +93,10 @@ Day2_LINQ
 
 Day3_LINQ
 -Entity Relation
+
+-SQLScript1
+-Queries
+-Table Design
+-ER Diagram
+-1 to 1, 1 to *
+
