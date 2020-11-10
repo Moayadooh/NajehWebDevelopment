@@ -95,9 +95,13 @@ Day3_LINQ
 -Entity Relation
 
 -SQLScript1
--Table Design
--ER Diagram
--1 to 1, 1 to *
+-Tables Design
+-Database Diagrams
+-1 to 1
+-1 to *
 
 -SQLScript2
+-View
+-Backup
 -* to *
+-JOIN
