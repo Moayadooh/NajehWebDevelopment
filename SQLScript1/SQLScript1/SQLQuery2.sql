@@ -39,21 +39,21 @@ select Sum(salary) as MaxSalary from Users
 select COUNT(*) as MaxSalary from Users 
 GO
 ------------------------------------------------------------------
-select count(id) as numberOfpeople,address from users group by address order by address DEsc
+select count(id) as numberOfpeople,address from users group by address 
+order by address DEsc
 GO
 ------------------------------------------------------------------
-select Sum(Salary) as Total,Address from users group by address order by address
+select Sum(Salary) as Total,Address from users group by address 
+order by address
 Go
 ------------------------------------------------------------------
-select Sum(Salary) as Total,Address from users group by address   
-having count(ID) > = 3
+select Sum(Salary) as Total,Address from users group by address having count(ID) > = 3
 order by address
-----
+------------------------------------------------------------------
 select * from users
 Go
 -----------------------------------------------------------------------------
-select Count(Id) as Nums,Address from users group by address   
-having avg(Salary) > = 3000
+select Count(Id) as Nums,Address from users group by address having avg(Salary) > = 3000
 order by address
 -----------------------------------------------------------------------------
 --retrieve Drop Down List
