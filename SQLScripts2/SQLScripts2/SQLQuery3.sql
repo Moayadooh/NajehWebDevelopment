@@ -1,12 +1,14 @@
+USe Tsql
+
 --ANSI SQL-89
 select c.companyname, o.orderdate 
 from Sales.Customers as c, Sales.orders as o 
-where c.custid = o.cust.id
+where c.custid = o.custid
 
 --ANSI SQL-92
 select c.companyname, o.orderdate 
 from Sales.Customers as c inner join Sales.orders as o 
-ON c.custid = o.cust.id
+ON c.custid = o.custid
 ----------------------------------------------------------------
 select c.categoryid, c.categoryname, p.productid, p.productname 
 from Production.Categories as c 
