@@ -1,3 +1,5 @@
+Use Tsql
+
 select orderid,custid,empid,orderdate
 from sales.orders
 order by orderdate, orderid
@@ -8,5 +10,3 @@ select orderid,custid,empid,orderdate
 from sales.orders
 order by orderdate, orderid
 OFFSET 50 rows FETCH FIRST 50 rows only
-
-

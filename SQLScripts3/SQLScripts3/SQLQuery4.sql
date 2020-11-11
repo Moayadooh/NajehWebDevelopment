@@ -18,18 +18,10 @@ select convert(date,SYSDATETIME())
 -- 20.10.2020
 select convert(datetime, '20080809',102) as [birth date] -- ansi STYLE
 select convert(CHAR(12), CURRENT_TIMESTAMP,111) as [birth date] -- ansi STYLE
--------------------------------------------------------------------------------
--- 
--- https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
+------------------------------------------------------------------------------
+--https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
 
 select parse('11/24/2020' as smalldatetime using 'en-US') as nowdate
 select parse('23/11/2020' as date using 'en-GB') as nowdate
 ----------------------------------------------------------------
 select TRY_PARSE('ammar yaser' as datetime)
-
-
-
-
-
-
-

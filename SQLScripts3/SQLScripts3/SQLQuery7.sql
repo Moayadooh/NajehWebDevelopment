@@ -12,4 +12,3 @@ insert into Sales.Customers
 [fax]
 )
 select * from [dbo].[PotentialCustomers]
-

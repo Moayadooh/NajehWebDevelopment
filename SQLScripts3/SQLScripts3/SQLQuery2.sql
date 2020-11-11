@@ -1,3 +1,5 @@
+Use Tsql
+
 select orderid,custid,year(orderdate) as orderyear
 from sales.Orders
 where Year(orderdate) = '2006'
@@ -30,10 +32,3 @@ select orderid,orderdate
 from sales.Orders
 where orderdate between '20070101' and '20071231'
 -----------------------------------------------------------------------
-
-
-
-
-
-
-

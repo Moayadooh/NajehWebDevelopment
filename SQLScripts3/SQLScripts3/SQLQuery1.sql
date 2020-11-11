@@ -10,13 +10,3 @@ select hiredate,firstname,lastname
 from hr.Employees
 order by hiredate desc, lastname desc 
 -------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
