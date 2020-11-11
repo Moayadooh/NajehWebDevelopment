@@ -3,19 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # SQL Server Management Studio Solution File, Format Version 18.00
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQLScript1", "SQLScript1\SQLScript1.ssmssqlproj", "{6D4E39F6-3288-46E2-9CD3-160012FB3B64}"
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQLScripts1", "SQLScripts1\SQLScripts1.ssmssqlproj", "{5044BDA9-9376-45C8-BBAD-C55697125491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6D4E39F6-3288-46E2-9CD3-160012FB3B64}.Default|Default.ActiveCfg = Default
+		{5044BDA9-9376-45C8-BBAD-C55697125491}.Default|Default.ActiveCfg = Default
+		{2D60A835-0C97-4A9A-91BB-F16AC99FBB1F}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {743CD8AD-5AA0-426D-A2FF-58821949AF66}
+		SolutionGuid = {FC31F0BE-80C7-4208-B8F8-B66B35B07FB0}
 	EndGlobalSection
 EndGlobal
