@@ -94,14 +94,21 @@ Day2_LINQ
 Day3_LINQ
 -Entity Relation
 
--SQLScript1
+-SQLScripts1
 -Tables Design
 -Database Diagrams
 -1 to 1
 -1 to *
 
--SQLScript2
+-SQLScripts2
 -View
 -Backup
 -* to *
 -JOIN
+
+-SQLScripts3
+-N
+-cast, convert, parse
+-string
+-date and time
+-Offset Rank, Merge
