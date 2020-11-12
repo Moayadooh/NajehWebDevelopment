@@ -16,7 +16,7 @@ select convert(date,SYSDATETIME())
 -- 20 oct 2020
 -- oct 20 2020
 -- 20.10.2020
-select convert(datetime, '20080809',102) as [birth date] -- ansi STYLE
+--select convert(datetime, '20080809',102) as [birth date] -- ansi STYLE
 select convert(CHAR(12), CURRENT_TIMESTAMP,111) as [birth date] -- ansi STYLE
 ------------------------------------------------------------------------------
 --https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
