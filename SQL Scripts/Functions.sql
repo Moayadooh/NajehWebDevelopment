@@ -12,3 +12,5 @@ Declare
   select COALESCE(@v1 , @v2 , @v3)
   
 NullIF(col1,col2) -- if both are equal return null else return col2 value
+
+where id <> 3 -- exclude number 3
