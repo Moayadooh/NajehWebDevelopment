@@ -45,19 +45,3 @@ where orderdate =
  Sales.Orders as innerorders
  where outerorders.custid = innerorders.custid
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

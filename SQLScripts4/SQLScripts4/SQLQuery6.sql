@@ -23,14 +23,3 @@ group by p.productid
 having count(*) < 10
 order by  [count order details] desc
 ---------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-

@@ -20,5 +20,3 @@ group by productid
 -- Show total of orders for cutomers if the orders greater than 10
 select custid, COUNT(orderid) as NumOfOrders from Sales.Orders 
 group by custid having COUNT(orderid) > 10
-
--- Show total of order details average of quantity per product category 
