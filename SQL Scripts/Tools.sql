@@ -9,6 +9,11 @@ declare @mysearch nvarchar(60);
 set @mysearch =  (select ('microsoft sql server'))
 select @mysearch
 
+Declare
+  @v1 as int = NULL,
+  @v2 as int = 50,
+  @v3 as int = 100
+
 -- OFFSET "start from 51"
 select orderid,custid,empid,orderdate
 from sales.orders

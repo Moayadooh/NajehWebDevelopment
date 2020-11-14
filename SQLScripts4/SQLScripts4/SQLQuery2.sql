@@ -9,6 +9,3 @@ group by empid, year(orderdate)
 select * from sales.Orders where empid=5 and year(orderdate) = 2006
 -- check custid : 87
 -------------------------------------------------------------------------
-
-
-

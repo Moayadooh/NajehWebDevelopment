@@ -41,13 +41,3 @@ insert into dbo.employees_goals values
 go
 select emp_id, NullIF(actual,goal) as actual_if_different
 from dbo.employees_goals;
-
-
-
-
-
-
-
-
-
-
