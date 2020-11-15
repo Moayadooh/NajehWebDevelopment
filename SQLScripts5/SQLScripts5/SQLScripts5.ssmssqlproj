@@ -38,22 +38,10 @@
           <FullPath>SQLQuery11.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery12.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery12.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery13.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery13.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery14.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery14.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery2.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
