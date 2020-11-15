@@ -31,6 +31,12 @@
           <AssociatedConnUserName />
           <FullPath>Group by.sql</FullPath>
         </FileNode>
+        <FileNode Name="Join.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Join.sql</FullPath>
+        </FileNode>
         <FileNode Name="Null Column.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>

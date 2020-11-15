@@ -24,7 +24,6 @@ where empid =2
 -- Note: you can't return from another field in Subquery returned more than 1 value
 -------------------------------------------------------------------------
 -- return order info for customers in GErmany
-
 select custid, orderid 
 from sales.Orders
 where custid in 
