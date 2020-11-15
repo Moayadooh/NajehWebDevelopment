@@ -1,19 +1,24 @@
+-- Cross Apply
+-- Show 3 most recent order for customers with orderid and orderdate
+-- Show customer has an orders
+select c.custid, toporder.orderid, toporder.orderdate
+from Sales.Customers as c
+cross apply
+(select top(3) o.orderid, o.orderdate 
+from sales.Orders as o
+where o.custid = c.custid
+order by o.orderdate desc) as toporder
 
-alter FUNCTION fn_Getloginuser(@companyname nvarchar(50) ,@contactname nvarchar(50))
-RETURNS int
-AS
-BEGIN
-	-- Declare the return variable here
-	DECLARE @result int  = 0
+-- Show customers with no orders
+select c.custid, toporder.orderid, toporder.orderdate
+from Sales.Customers as c
+outer apply
+(select top(3) o.orderid, o.orderdate 
+from sales.Orders as o
+where o.custid = c.custid
+order by o.orderdate desc, orderid desc) as toporder
 
-	-- Add the T-SQL statements to compute the return value here
-	set @result  =  (select count(*) from Sales.Customers 
-	where companyname=@companyname and contactname=@contactname)
-
-	-- Return the result of the function
-	RETURN @Result
-
-END
-GO
-
-select dbo.fn_Getloginuser('Customer KBUDE', 'Peoples, John');
+select  o.orderid, o.orderdate 
+from sales.Orders as o
+where o.custid = 1
+order by orderdate desc

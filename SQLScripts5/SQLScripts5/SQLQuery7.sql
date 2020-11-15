@@ -1,9 +1,8 @@
-select * from dbo.GetNums(10,20)
------------------------------------------------------
+select * from dbo.GetNums(15,20)
 
+GO
 CREATE FUNCTION sales.fn_LineTotal(@orderid int)
-
-RETURNS TABLE 
+RETURNS TABLE -- Table-valued Functions
 AS
 RETURN 
 (
@@ -14,10 +13,5 @@ RETURN
 	  where orderid = @orderid
 )
 GO
---------------------------------------------------------
 
 select * from Sales.fn_LineTotal(10260)
-
-
-
-

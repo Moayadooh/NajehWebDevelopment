@@ -1,6 +1,6 @@
 
-alter FUNCTION fn_Getloginuser(@companyname nvarchar(50) ,@contactname nvarchar(50))
-RETURNS int
+create FUNCTION fn_Getloginuser(@companyname nvarchar(50) ,@contactname nvarchar(50))
+RETURNS int -- Scalar-valued Functions
 AS
 BEGIN
 	-- Declare the return variable here
@@ -12,7 +12,6 @@ BEGIN
 
 	-- Return the result of the function
 	RETURN @Result
-
 END
 GO
 

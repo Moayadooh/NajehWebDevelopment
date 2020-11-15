@@ -38,8 +38,8 @@ select orderyear, count(distinct custid) as cust_count
 -----------------------------------------------------------
 with cte_year as 
 (
-	select year(orderdate) as orderyear , custid
+	select year(orderdate) as orderyear, custid
 	from Sales.Orders
 )
-select orderyear,COUNT(distinct custid) as cust_count
-from cte_year
+select orderyear, COUNT(distinct custid) as cust_count
+from cte_year group by orderyear

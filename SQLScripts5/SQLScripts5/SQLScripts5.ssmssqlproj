@@ -26,14 +26,14 @@
           <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery10.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery10.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery11.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery11.sql</FullPath>
         </FileNode>
@@ -74,32 +74,32 @@
           <FullPath>SQLQuery4.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery5.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery5.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery6.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery6.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery7.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery7.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery8.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery8.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuery9.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-JTH0GMJI:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-JTH0GMJI</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery9.sql</FullPath>
         </FileNode>
