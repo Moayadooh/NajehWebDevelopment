@@ -35,7 +35,7 @@ select orderyear, count(distinct custid) as cust_count
 				from Sales.Orders) as derived_year1
 	group by orderyear
 	having COUNT(distinct custid) > 80
------------------------------------------------------------
+--------------------------------------------------------------------
 with cte_year as 
 (
 	select year(orderdate) as orderyear, custid

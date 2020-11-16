@@ -118,4 +118,9 @@ Day3_LINQ
 -questions
 
 -SQLScripts5
--
+-EXISTS, WITH
+-derived table, derived results
+-create view, drop view
+-union, union all, intersect, except
+-Table-valued Functions, Scalar-valued Functions
+-cross apply, outer apply
