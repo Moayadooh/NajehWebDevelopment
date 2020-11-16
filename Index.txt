@@ -124,3 +124,10 @@ Day3_LINQ
 -union, union all, intersect, except
 -Table-valued Functions, Scalar-valued Functions
 -cross apply, outer apply
+
+-SQLScripts6
+-RANK, PARTITION, ROW_NUMBER
+-PIVOT, UNPIVOT
+-GROUPING SETS, CUBE, ROLLUP
+-PROCEDURE, PROC, output
+-sys
