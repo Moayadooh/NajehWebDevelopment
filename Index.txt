@@ -95,39 +95,39 @@ Day3_LINQ
 -Entity Relation
 
 -SQLScripts1
--Tables Design
--Database Diagrams
 -1 to 1
 -1 to *
 
 -SQLScripts2
--View
--Backup
 -* to *
+-Switch Case
 -JOIN
 
 -SQLScripts3
 -N
 -cast, convert, parse
--string
--date and time
--Offset Rank, Merge
+-strings
+-date & time
+-OFFSET, MERGE
 
 -SQLScripts4
--more functions
--questions
+-ISNUMERIC
+-ISNULL, COALESCE
+-IIF, NUllIF
+-Subquery
 
 -SQLScripts5
 -EXISTS, WITH
 -derived table, derived results
--create view, drop view
--union, union all, intersect, except
+-VIEW
+-UNION, UNION ALL, INTERSECT, EXCEPT
 -Table-valued Functions, Scalar-valued Functions
--cross apply, outer apply
+-CROSS APPLY, OUTER APPLY
 
 -SQLScripts6
 -RANK, PARTITION, ROW_NUMBER
 -PIVOT, UNPIVOT
 -GROUPING SETS, CUBE, ROLLUP
--PROCEDURE, PROC, output
--sys
+-PROCEDURE, PROC
+-SET NOCOUNT ON, OUTPUT
+-sys.sp_executesql

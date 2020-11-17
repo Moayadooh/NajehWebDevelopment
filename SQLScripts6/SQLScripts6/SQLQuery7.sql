@@ -1,9 +1,15 @@
-Exec dbo.sp_crudCategory @action='select' 
+create proc Production.sp_GetbySuppliers
+@supplierid as int,
+@numrows as bigint
+as
+select top(@numrows) Productid, 
+productname,
+Categoryid,
+unitprice,
+discontinued
+from Production.Products
+where supplierid=@supplierid
+order by productid
+Go
 
-Exec dbo.sp_crudCategory @action='insert', @catname='testcat22', @desc='desc22'
-
-Exec dbo.sp_crudCategory @action='update', @catname='testcat33', @desc='desc33', @catid=11
-
-Exec dbo.sp_crudCategory @action='delete', @catid=11
-
-Exec dbo.sp_crudCategory @action='byone', @catid=2
+Exec Production.sp_GetbySuppliers @supplierid=1, @numrows=2

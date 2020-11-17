@@ -1,15 +1,12 @@
-create proc Production.sp_GetbySuppliers
-@supplierid as int,
-@numrows as bigint
-as
-select top(@numrows) Productid, 
-productname,
-Categoryid,
-unitprice,
-discontinued
-from Production.Products
-where supplierid=@supplierid
-order by productid
-Go
+CREATE PROCEDURE sales.sp_GetCustPhone
+	@custid int,
+	@phone nvarchar(30) output
+AS
+BEGIN
+select @phone = phone from Sales.Customers where custid = @custid
+END
+GO
 
-Exec Production.sp_GetbySuppliers @supplierid=1, @numrows=2
+declare @customerid int = 5, @phonenum nvarchar(30);
+Exec sales.sp_GetCustPhone @custid = @customerid, @phone = @phonenum output;
+select @phonenum as phone, @customerid as customerID 

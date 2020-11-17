@@ -39,5 +39,5 @@ insert into dbo.employees_goals values
 (2,90,90),
 (3,100,80)
 go
-select emp_id, NullIF(actual,goal) as actual_if_different
+select emp_id, NUllIF(actual,goal) as actual_if_different
 from dbo.employees_goals;
