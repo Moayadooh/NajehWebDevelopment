@@ -8,7 +8,7 @@ NEWID() -- Generate UNIQUEIDENTIFIER
 UniqueColumn UNIQUEIDENTIFIER DEFAULT NEWID(),
 
 -- Variable Declaration
-DECLARE @mysearch NVARCHAR(60);
+DECLARE @mysearch NVARCHAR(60)
 SET @mysearch =  (SELECT ('microsoft sql server'))
 SELECT @mysearch
 
