@@ -108,7 +108,7 @@ Day3_LINQ
 -cast, convert, parse
 -strings
 -date & time
--OFFSET, MERGE
+-FETCH, MERGE
 
 -SQLScripts4
 -ISNUMERIC

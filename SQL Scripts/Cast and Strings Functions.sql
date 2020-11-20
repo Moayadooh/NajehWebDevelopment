@@ -1,33 +1,33 @@
 
 -- Casting
-select 1 + '2'
-CAST(1 as varchar(10))
-CAST(SYSDATETIME() as date)
+SELECT 1 + '2'
+CAST(1 AS VARCHAR(10))
+CAST(SYSDATETIME() AS DATE)
 
 -- Convering
-CONVERT(date,SYSDATETIME())
+CONVERT(DATE,SYSDATETIME())
 CONVERT(CHAR(12), CURRENT_TIMESTAMP,111) --ansi STYLE
---Date and time styles:
+--Date & time styles:
 --https://docs.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver15
 
 -- Parse
-parse('11/24/2020' as smalldatetime using 'en-US')
-parse('23/11/2020' as date using 'en-GB')
-TRY_PARSE('ammar yaser' as datetime) --return null or 
+PARSE('11/24/2020' AS smalldatetime USING 'en-US')
+PARSE('23/11/2020' AS DATE USING 'en-GB')
+TRY_PARSE('ammar yaser' AS DATETIME) --return null or 
 
 -- Concatenation
-select firstname + ' ' + lastname as fullname from HR.Employees
+SELECT firstname + ' ' + lastname AS fullname FROM HR.Employees
 CONCAT('ammar' ,' ','yaser')
 
-select lastname from HR.Employees where lastname Collate Latin1_General_CS_AS = N'Funk' 
+SELECT lastname FROM HR.Employees WHERE lastname COLLATE Latin1_General_CS_AS = N'Funk' 
 
 -- Strings
-select SUBSTRING('Microsoft SQL Server',11,3)
-select LEFT('Microsoft SQL Server',3)
-select right('Microsoft SQL Server',3)
-select LEN('Microsoft SQL Server        ')
-select DataLength('Microsoft SQL Server        ')
-select UPPER('microsoft sql server')
-select lower('MICROSOFT SQL SERVER')
-select CHARINDEX('sql','microsoft sql server')
-select REPLACE('microsoft sql server','server','SERVER2019')
+SELECT SUBSTRING('Microsoft SQL Server',11,3)
+SELECT LEFT('Microsoft SQL Server',3)
+SELECT RIGHT('Microsoft SQL Server',3)
+SELECT LEN('Microsoft SQL Server        ')
+SELECT DATALENGTH('Microsoft SQL Server        ')
+SELECT UPPER('microsoft sql server')
+SELECT LOWER('MICROSOFT SQL SERVER')
+SELECT CHARINDEX('sql','microsoft sql server')
+SELECT REPLACE('microsoft sql server','server','SERVER2019')

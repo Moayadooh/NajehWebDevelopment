@@ -22,5 +22,8 @@ ISDATE('20190229') --return false
 ISDATE('20190329') --return true
 
 -- Different between dates
-DATEDIFF(MONTH,'20181010', getdate())
+DATEDIFF(MONTH,'20181010', GETDATE())
 DATEDIFF(MILLISECOND,GETDATE() ,SYSDATETIME())
+
+-- Date after 3 months
+DATEADD(MONTH,3,SYSDATETIME())
