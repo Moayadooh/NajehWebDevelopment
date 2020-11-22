@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            background-color: azure;
+            display: flex;
+            flex-wrap: wrap;
+            /*flex-flow: column;*/ /*flex-direction + flex-wrap*/
+            /*justify-content: flex-end;*/ /*if flex-flow: column-reverse; will be flex-start*/
+            /*height: 800px;*/
+            flex-flow: row;
+            height: 600px;
+            align-items: flex-end; /*X axis*/
+            justify-content: center; /*Y axis*/
+        }
+
+        .box {
+            height: 100px;
+            flex: 0 0 100px; /*grow - shrink - basis*/
+        }
+
+        .one {
+            background-color: red;
+        }
+
+        .two {
+            background-color: blue;
+        }
+
+        .three {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex-container">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+        </div>
+    </div>
+</body>
+</html>
