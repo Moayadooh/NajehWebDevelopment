@@ -1,0 +1,13 @@
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.exe
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.deps.json
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.runtimeconfig.json
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.runtimeconfig.dev.json
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.dll
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\bin\Debug\netcoreapp3.1\Task2_Csharp_Assignment.pdb
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.AssemblyInfo.cs
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.dll
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.pdb
+C:\Users\moaya\Documents\PrivateRepos\Task2_Csharp_Assignment\Task2_Csharp_Assignment\obj\Debug\netcoreapp3.1\Task2_Csharp_Assignment.genruntimeconfig.cache
