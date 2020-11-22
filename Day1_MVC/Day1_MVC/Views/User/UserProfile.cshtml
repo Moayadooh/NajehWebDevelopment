@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "UserProfile";
+}
+
+<h2>UserProfile</h2>
+
+<ul class="list-group">
+    <li class="list-group-item">Name is @ViewBag.Name</li>
+    <li class="list-group-item">Age is @ViewBag.Age</li>
+
+    @if (ViewBag.Im != null)
+    {
+        <li class="list-group-item">@ViewBag.Im</li>
+    }
+    else
+    {
+        <li class="list-group-item">Not Found</li>
+    }
+</ul>

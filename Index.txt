@@ -142,3 +142,8 @@ Day3_LINQ
 -TRANSACTION, TRAN
 -ROLLBACK, COMMIT, SAVE
 -STATISTICS
+
+-Day1_MVC
+-project structure
+-shared layout
+-ViewBag
