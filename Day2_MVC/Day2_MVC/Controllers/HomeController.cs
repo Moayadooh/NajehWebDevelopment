@@ -12,8 +12,24 @@ namespace Day2_MVC.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            var obj = new Human();
+            ViewData["Name"] = obj.Name = "Eyad";
+            ViewData["Age"] = obj.Age = 1;
+
             var human = Human.GetHumen();
+            ViewBag.hm = human;
+            ViewData["hm"] = human;
             return View(human);
+        }
+
+        public ActionResult DisplayList()
+        {
+            return View(Day2_MVC.Models.Human.GetHumen());
+        }
+
+        public ActionResult DisplayDetails()
+        {
+            return View(Day2_MVC.Models.Human.GetHumen().FirstOrDefault());
         }
     }
 }

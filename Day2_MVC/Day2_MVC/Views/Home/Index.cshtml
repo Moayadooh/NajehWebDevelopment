@@ -1,4 +1,4 @@
-﻿@*@model IEnumerable<Day2_MVC.Models.Human>*@
+﻿@*model IEnumerable<Day2_MVC.Models.Human>*@
 
 @{
     ViewBag.Title = "Index";
@@ -15,7 +15,33 @@
     {
         <tr>
             <td>@item.Name</td>
+        </tr>
+        <tr>
             <td>@item.Age</td>
         </tr>
     }
+    @*@foreach (var item in ViewBag.hm)
+        {
+            <tr>
+                <td>@item.Name</td>
+            </tr>
+            <tr>
+                <td>@item.Age</td>
+            </tr>
+        }
+        @using Day2_MVC.Models;
+        @foreach (var item in ViewData["hm"] as List<Human>)
+        {
+            <tr>
+                <td>@item.Name</td>
+            </tr>
+            <tr>
+                <td>@item.Age</td>
+            </tr>
+        }*@
 </table>
+
+<ul>
+    <li>@ViewData["Name"]</li>
+    <li>@ViewData["age"]</li>
+</ul>

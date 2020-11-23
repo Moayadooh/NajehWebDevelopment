@@ -1,0 +1,41 @@
+﻿@*model IEnumerable<Day2_MVC.Models.Human>*@
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+
+@Html.Partial("GetNames")
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var item in Model.Humen)
+    {
+        <tr>
+            <td>@item.Name</td>
+        </tr>
+        <tr>
+            <td>@item.Age</td>
+        </tr>
+    }
+</table>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    @foreach (var item in Model.Cars)
+    {
+        <tr>
+            <td>@item.Name</td>
+        </tr>
+        <tr>
+            <td>@item.Year</td>
+        </tr>
+    }
+</table>

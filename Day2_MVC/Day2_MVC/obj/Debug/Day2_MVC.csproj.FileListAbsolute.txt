@@ -69,3 +69,4 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Day2_MVC\Day2_MVC\obj\Debug\Day2_MV
 C:\Users\moaya\Documents\NajehWebDevelopment\Day2_MVC\Day2_MVC\obj\Debug\Day2_MVC.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Day2_MVC\Day2_MVC\obj\Debug\Day2_MVC.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\Day2_MVC\Day2_MVC\obj\Debug\Day2_MVC.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day2_MVC\Day2_MVC\obj\Debug\Day2_MVC.csprojAssemblyReference.cache

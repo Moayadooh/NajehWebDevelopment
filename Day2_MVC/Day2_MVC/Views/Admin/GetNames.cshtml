@@ -1,0 +1,11 @@
+﻿
+@{
+    var n = Day2_MVC.Models.Human.GetHumen();
+
+    <ul class="list-group">
+        @foreach (var item in n)
+        {
+            <li class="list-group-item">@item.Name</li>
+        }
+    </ul>
+}

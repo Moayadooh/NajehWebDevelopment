@@ -144,8 +144,13 @@ Day3_LINQ
 -STATISTICS
 
 -Day1_MVC
--project structure
 -controller
 -view
 -shared layout
 -ViewBag
+
+-Day2_MVC
+-model
+-ViewData
+-PartialView
+-MVVM
