@@ -145,5 +145,7 @@ Day3_LINQ
 
 -Day1_MVC
 -project structure
+-controller
+-view
 -shared layout
 -ViewBag
