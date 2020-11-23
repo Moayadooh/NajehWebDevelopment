@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Day2_MVC.ViewModel;
+using Day2_MVC.ViewModel;  //To access classes in the ViewModel
 using Day2_MVC.Models;
 
 namespace Day2_MVC.Controllers
@@ -13,10 +13,10 @@ namespace Day2_MVC.Controllers
         // GET: Admin
         public ActionResult Admin()
         {
-            var obj = new Humen_Cars();
-            obj.Humen = Human.GetHumen();
-            obj.Cars = Car.GetCars();
-            return View(obj);
+            var model = new Humen_Cars();
+            model.Humen = Human.GetHumen();
+            model.Cars = Car.GetCars();
+            return View(model);
         }
 
         public ActionResult GetNames()
