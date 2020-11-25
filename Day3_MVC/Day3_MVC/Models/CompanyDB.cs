@@ -13,5 +13,6 @@ namespace Day3_MVC.Models
 
         //Create Tables
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Manager> Managers { get; set; }
     }
 }

@@ -21,12 +21,18 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Main", "Index", "Home") </li>
+                    <li>@Html.ActionLink("Search", "Search", "Home") </li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home") </li>
+                    <li>@Html.ActionLink("Employee", "Index", "Employees") </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="container body-content">
+        <!--Path-->
+        <b> @ViewBag.controller / @ViewBag.Action / @ViewBag.id </b>
         @RenderBody()
         <hr />
         <footer>
@@ -36,5 +42,6 @@
 
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/custom.css" rel="stylesheet" />
 </body>
 </html>

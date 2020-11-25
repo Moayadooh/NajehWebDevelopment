@@ -154,3 +154,10 @@ Day3_LINQ
 -ViewData
 -PartialView
 -MVVM
+
+-Day3_MVC
+-Code First
+-DB Connection, Create DB and Tables, Read from Table
+-Path
+-Search
+-Custom CSS

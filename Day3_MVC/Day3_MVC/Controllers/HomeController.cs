@@ -12,8 +12,31 @@ namespace Day3_MVC.Controllers
         CompanyDB companyDB = new CompanyDB();
         public ActionResult Index()
         {
+            GetMapPath();
             var model = companyDB.Employees.ToList();
             return View(model);
+        }
+
+        public ActionResult Search(string fname)
+        {
+            GetMapPath();
+            var model = companyDB.Employees.ToList();
+            if (!string.IsNullOrEmpty(fname))
+                model = model.Where(x => x.Name.ToLower().Contains(fname.ToLower())).ToList();
+            return View(model);
+        }
+
+        public ActionResult Contact()
+        {
+            GetMapPath();
+            return View();
+        }
+
+        public void GetMapPath()
+        {
+            ViewBag.controller = RouteData.Values["Controller"];
+            ViewBag.action = RouteData.Values["Action"];
+            ViewBag.id = RouteData.Values["id"];
         }
     }
 }
