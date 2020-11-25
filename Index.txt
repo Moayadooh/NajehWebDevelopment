@@ -158,6 +158,7 @@ Day3_LINQ
 -Day3_MVC
 -Code First
 -DB Connection, Create DB and Tables, Read from Table
+-Migrations
 -Path
 -Search
 -Custom CSS
