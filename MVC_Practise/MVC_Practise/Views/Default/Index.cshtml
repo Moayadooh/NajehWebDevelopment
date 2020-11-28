@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVC_Practise.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Birth</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Score</td>
+            <td>@item.Birth</td>
+        </tr>
+    }
+</table>
