@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Day4_MVC.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@*<input type="text" name="brand" value="" class="form-control" placeholder="enter car brand"/>*@
+@*<select name="country" class="form-control">
+        <option>-select country-</option>
+        <option>Oman</option>
+        <option>India</option>
+    </select>*@
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>Brand</label>
+        @Html.TextBox("brand", null, new { @class = "form-control", placeholder = "Enter car brand" })
+    </div>
+    <div class="form-group">
+        <label>Country</label>
+        @Html.DropDownList("country", null, "-select country-", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Release Date</label>
+        @Html.TextBox("DateRelease", null, new { @class = "form-control", type = "date" })
+    </div>
+    <div>
+        <input type="submit" value="Search" class="btn btn-success" />
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateRelease)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRelease)
+            </td>
+            <td style="background:@item.Color;width:50px;">
+                @*@Html.DisplayFor(modelItem => item.Color)*@
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
