@@ -169,4 +169,9 @@ Day3_LINQ
 -Drop Down List
 
 -Day5_MVC
--
+-ValidationSummary
+-Register, Login
+-HttpGet, HttpPost
+-Add
+-TextBox, TextBoxFor
+-Session
