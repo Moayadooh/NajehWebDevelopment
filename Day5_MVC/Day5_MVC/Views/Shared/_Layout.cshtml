@@ -27,10 +27,19 @@
                         <li>@Html.ActionLink("Sign in", "Login", "User")</li>
                     }
                 </ul>
+
+                @using Day5_MVC.Models
                 <ul class="nav navbar-nav navbar-right">
                     @if (Session["info"] != null)
                     {
-                        <li>@Html.ActionLink("Welcome, " + Session["info"], "Welcome", "User")</li>
+                        if (((User)Session["info"]).Account != null)
+                        {
+                            <li>@Html.ActionLink("Welcome, " + ((User)Session["info"]).Account.FullNmae, "Welcome", "User")</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Welcome, " + ((User)Session["info"]).Email, "Welcome", "User")</li>
+                        }
                         <li>@Html.ActionLink("Sign out", "Logout", "User")</li>
                     }
                 </ul>

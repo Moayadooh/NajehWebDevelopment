@@ -11,5 +11,6 @@ namespace Day5_MVC.Models
         public NajehDB() : base("constr") { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }

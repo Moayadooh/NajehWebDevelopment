@@ -64,24 +64,22 @@ namespace Day5_MVC.Controllers
         [HttpPost]
         public ActionResult Login(User user)
         {
-            //if (ModelState.IsValidField("Email") && ModelState.IsValidField("Password"))
-            //{
+            if (ModelState.IsValidField("Email") && ModelState.IsValidField("Password"))
+            {
                 var model = DB.Users.SingleOrDefault(x => x.Email == user.Email && x.Password == user.Password);
                 if (model == null)
                     ViewBag.errmsg = "Please Verify Email and Password";
                 else
                 {
-                    Session["info"] = user.Email;
-                    return RedirectToAction("Welcome");
+                    Session["info"] = model;
+                    return RedirectToAction("Details","Account", new { id = model.ID });
                 }
-            //}
+            }
             return View();
         }
 
         public ActionResult Welcome()
         {
-            //if (Session["info"] == null)
-            //    return RedirectToAction("Login");
             return View();
         }
 

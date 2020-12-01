@@ -170,8 +170,10 @@ Day3_LINQ
 
 -Day5_MVC
 -ValidationSummary
--Register, Login
+-Register, Login, Account
 -HttpGet, HttpPost
 -Add
 -TextBox, TextBoxFor
 -Session
+-Relationship
+-Image Upload

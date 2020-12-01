@@ -29,5 +29,7 @@ namespace Day5_MVC.Models
         [DataType(DataType.Password)]
         [Compare("Password")] // refer to the Password field
         public string Confirm { get; set; }
+
+        public virtual Account Account { get; set; }
     }
 }
