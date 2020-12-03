@@ -12,5 +12,6 @@ namespace Day5_MVC.Models
 
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
+        public DbSet<Major> Majors { get; set; }
     }
 }

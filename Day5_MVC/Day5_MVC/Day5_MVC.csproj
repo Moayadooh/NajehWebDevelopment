@@ -111,7 +111,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\169586f9-e1fb-413d-b42c-ce6dec22ccec.png" />
+    <Content Include="Images\62fadef4-41fb-481a-afdb-a75fdf1966fd.JPG" />
+    <Content Include="Images\75456c00-8fee-4c60-8afe-f1d04b06b75c.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -129,11 +130,18 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012030646035_InitialCreate.cs" />
+    <Compile Include="Migrations\202012030646035_InitialCreate.designer.cs">
+      <DependentUpon>202012030646035_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Major.cs" />
     <Compile Include="Models\NajehDB.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +158,12 @@
     <Content Include="Views\User\Welcome.cshtml" />
     <Content Include="Views\Account\Create.cshtml" />
     <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Majors\Create.cshtml" />
+    <Content Include="Views\Majors\Delete.cshtml" />
+    <Content Include="Views\Majors\Details.cshtml" />
+    <Content Include="Views\Majors\Edit.cshtml" />
+    <Content Include="Views\Majors\Index.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -159,6 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012030646035_InitialCreate.resx">
+      <DependentUpon>202012030646035_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

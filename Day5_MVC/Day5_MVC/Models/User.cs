@@ -31,5 +31,9 @@ namespace Day5_MVC.Models
         public string Confirm { get; set; }
 
         public virtual Account Account { get; set; }
+
+        public int? MajorID { get; set; }
+
+        public virtual Major Major { get; set; } // one to many
     }
 }

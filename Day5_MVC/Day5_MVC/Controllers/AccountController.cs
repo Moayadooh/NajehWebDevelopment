@@ -39,7 +39,7 @@ namespace Day5_MVC.Controllers
 
         // POST: Account/Create
         [HttpPost]
-        public ActionResult Create(HttpPostedFileBase image,Account account)
+        public ActionResult Create(HttpPostedFileBase image,Account account) // URL - Form body
         {
             try
             {
@@ -74,18 +74,31 @@ namespace Day5_MVC.Controllers
         // GET: Account/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var model = DB.Accounts.Find(id);
+            return View(model);
         }
 
         // POST: Account/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(HttpPostedFileBase image, Account account)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    if (image != null)
+                    {
+                        string extension = Path.GetExtension(image.FileName);
+                        var gg = Guid.NewGuid();
+                        image.SaveAs(Server.MapPath("/Images/" + gg + extension)); // save to images folder
+                        account.Image = gg + extension; // save image name to DB
+                    }
+                    DB.Entry(account).State = System.Data.Entity.EntityState.Modified;
+                    DB.SaveChanges();
+                    Session["info"] = DB.Users.Find(account.ID);
+                }
+                
+                return RedirectToAction("Details", new { id = account.ID });
             }
             catch
             {

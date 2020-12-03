@@ -28,6 +28,6 @@ namespace Day5_MVC.Models
 
         public string Image { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual User User { get; set; } // one to one
     }
 }

@@ -74,3 +74,5 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MV
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.Migrations.InitialCreate.resources
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csproj.GenerateResource.cache
