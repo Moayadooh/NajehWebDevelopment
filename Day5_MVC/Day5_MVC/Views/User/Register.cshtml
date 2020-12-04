@@ -6,11 +6,23 @@
 
 <h2>Register</h2>
 
+<link rel="stylesheet" href="../src/passtrength.css" media="screen" title="no title">
+<script src="~/Scripts/jquery-3.4.1.min.js"></script> @*Replace online "js" link*@
+<script type="text/javascript" src="../src/jquery.passtrength.js"></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#Password').passtrength({ // Modified
+            minChars: 3,
+            passwordToggle: true,
+            tooltip: true
+        });
+    });
+</script>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>User</h4>
         <hr />

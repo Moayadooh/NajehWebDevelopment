@@ -69,7 +69,6 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.We
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Helpers.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Mvc.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csprojAssemblyReference.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.dll

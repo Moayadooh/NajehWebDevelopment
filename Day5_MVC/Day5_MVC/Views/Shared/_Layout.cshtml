@@ -26,6 +26,11 @@
                         <li>@Html.ActionLink("Sign up", "Register", "User")</li>
                         <li>@Html.ActionLink("Sign in", "Login", "User")</li>
                     }
+                    else
+                    {
+                        <li>@Html.ActionLink("My Account", "details", "Account", new { id = ((User)Session["info"]).ID }, null)</li>
+                        <li>@Html.ActionLink("My Major", "Assign", "Student")</li>
+                    }
                 </ul>
 
                 @using Day5_MVC.Models

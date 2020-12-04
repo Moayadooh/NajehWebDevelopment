@@ -107,20 +107,24 @@ namespace Day5_MVC.Controllers
         }
 
         // GET: Account/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete()
         {
-            return View();
+            var model = DB.Accounts.Find(((User)Session["info"]).ID);
+            return View(model);
         }
 
         // POST: Account/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [ActionName("Delete")] // prevent calling the method unless the action name is "Delete"
+        public ActionResult Delete(int? x) // to fulfill the overload
         {
             try
             {
-                // TODO: Add delete logic here
+                var model = DB.Accounts.Find(((User)Session["info"]).ID);
+                DB.Accounts.Remove(model);
+                DB.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Details",new { ((User)Session["info"]).ID });
             }
             catch
             {

@@ -165,15 +165,15 @@ Day3_LINQ
 
 -Day4_MVC
 -Validations
--BeginForm
 -Drop Down List
 
 -Day5_MVC
--ValidationSummary
 -Register, Login, Account
--HttpGet, HttpPost
--Add
--TextBox, TextBoxFor
+-Create, Edit, Delete, Details
+-BeginForm, TextBox, TextBoxFor, DropDownList Hidden, ValidationSummary
+-HttpGet, HttpPost, Actions
 -Session
--Relationship
--Image Upload
+-file upload, file format, file encription
+-one to one, one to many
+-filter
+-Plugin
