@@ -21,15 +21,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Index", "Index", "Default")</li>
-                    <li>@Html.ActionLink("Search", "Search", "Default")</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="container body-content">
-        <b> @ViewBag.controller / @ViewBag.Action / @ViewBag.id </b>
         @RenderBody()
         <hr />
         <footer>

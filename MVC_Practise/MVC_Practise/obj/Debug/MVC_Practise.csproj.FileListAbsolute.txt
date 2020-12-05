@@ -50,8 +50,6 @@ C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\rosly
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\roslyn\vbc.rsp
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\roslyn\VBCSCompiler.exe
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.dll
-C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.SqlServer.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\System.Web.Helpers.dll
@@ -67,8 +65,13 @@ C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\Syste
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\System.Web.Helpers.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\System.Web.Mvc.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.csprojAssemblyReference.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.SqlServer.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\bin\EntityFramework.SqlServer.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.Migrations.InitialCreate.resources
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Practise\MVC_Practise\obj\Debug\MVC_Practise.csproj.GenerateResource.cache
