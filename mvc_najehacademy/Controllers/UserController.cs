@@ -71,6 +71,9 @@ namespace mvc_najehacademy.Controllers
             {
                 return RedirectToAction("Welcome");
             }
+
+            ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "RoleName");
+
             return View();
         }
 

@@ -13,5 +13,8 @@ namespace mvc_najehacademy.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Major> Majors { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Junction> Junctions { get; set; }
+        public DbSet<Role> Roles { get; set; }
     }
 }

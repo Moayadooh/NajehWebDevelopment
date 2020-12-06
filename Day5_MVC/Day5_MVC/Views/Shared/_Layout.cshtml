@@ -39,7 +39,7 @@
                     {
                         if (((User)Session["info"]).Account != null)
                         {
-                            <li>@Html.ActionLink("Welcome, " + ((User)Session["info"]).Account.FullNmae, "Welcome", "User")</li>
+                            <li>@Html.ActionLink("Welcome, " + ((User)Session["info"]).Account.FullName, "Welcome", "User")</li>
                         }
                         else
                         {

@@ -13,7 +13,7 @@ namespace Day5_MVC.Models
         public int ID { get; set; }
 
         [Required]
-        public string FullNmae { get; set; }
+        public string FullName { get; set; }
 
         [Required]
         public string Address { get; set; }

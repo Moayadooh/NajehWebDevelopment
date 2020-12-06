@@ -36,5 +36,10 @@ namespace mvc_najehacademy.Models
         public int? MajorID { get; set; } // FK 
         public virtual Major Major { get; set; } // Connect relationship as 1 to many
 
+        public virtual List<Junction> Junctions { get; set; }
+
+        public Guid? RoleRoleID { get; set; }
+
+        public virtual Role Role { get; set; } 
     }
 }

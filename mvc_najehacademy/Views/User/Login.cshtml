@@ -18,9 +18,25 @@
     </div>
     <div class="form-group">
         <label>Password</label>
-        @Html.Password("Password", null, new { @class = "form-control", placeholder = "Enter your Password",id="pwd" })
+        @Html.Password("Password", null, new { @class = "form-control", placeholder = "Enter your Password", id = "pwd" })
         @Html.ValidationMessageFor(x => x.Password, null, new { @class = "text-danger" })
     </div>
+
+    <div class="form-group">
+        <label>Roles</label>
+        @foreach (var item in ViewBag.RoleID)
+        {
+            <div class="checkbox">
+                @Html.RadioButtonFor(x => x.RoleRoleID, ((SelectListItem)item).Value)
+                @Html.Label("Rolename", ((SelectListItem)item).Text)
+            </div>
+        }
+
+
+    </div>
+
+
+
     <div class="form-group">
         <button class="btn btn-success">
             <i class="glyphicon glyphicon-user"></i>

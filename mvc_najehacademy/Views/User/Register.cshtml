@@ -6,18 +6,24 @@
 
 <h2>Register</h2>
 <link rel="stylesheet" href="~/src/passtrength.css" media="screen" title="no title">
-
-
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="~/src/jquery.passtrength.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" hidden>
     $(document).ready(function ($) {
         $('#Password').passtrength({
             minChars: 4,
             passwordToggle: true,
             tooltip: true
+            
         });
+        
+            
+        
+
+
     });
+    
+
 </script>
 
 

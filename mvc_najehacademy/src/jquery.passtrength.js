@@ -1,4 +1,7 @@
-;(function($, window, document, undefined) {
+
+
+
+; (function ($, window, document, undefined) {
 
   var pluginName = "passtrength",
       defaults = {
@@ -97,7 +100,7 @@
       if(percentage >= 25){
         meter.attr("class", "passtrengthMeter");
         status = "weak";
-        text = this.options.textWeak;
+          text = this.options.textWeak;
       }
       if(percentage >= 50){
         meter.attr("class", "passtrengthMeter");

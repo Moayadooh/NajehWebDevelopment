@@ -30,10 +30,14 @@ namespace Day5_MVC.Models
         [Compare("Password")] // refer to the Password field
         public string Confirm { get; set; }
 
-        public virtual Account Account { get; set; }
-
         public int? MajorID { get; set; }
 
+        public Guid? RoleRoleID { get; set; }
+
+        public virtual Account Account { get; set; } // one to one
         public virtual Major Major { get; set; } // one to many
+        public virtual Role Role { get; set; }
+
+        public List<Junction> Junctions { get; set; } // many to many
     }
 }
