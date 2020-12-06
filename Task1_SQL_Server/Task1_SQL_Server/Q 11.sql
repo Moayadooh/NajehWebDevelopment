@@ -1,0 +1,7 @@
+USE HealthMinister
+GO
+
+IF SCHEMA_ID('dbo') IS NULL
+	PRINT 0
+ELSE
+	PRINT 1

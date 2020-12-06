@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Task1_SQL_Server">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local):sa">
+          <Created>2020-12-06T08:36:28.3242302+04:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="DB and Tables Creation.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>DB and Tables Creation.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 10.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 10.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 11.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 11.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 12.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 12.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 13.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 13.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 14.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 14.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 15.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 15.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 16.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 16.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 17.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 17.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 18.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 18.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 19.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 19.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 20.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 20.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 21.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 21.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 22.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 22.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 23.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 23.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 24.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 24.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 25.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 25.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 26.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 26.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 27.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 27.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 28.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 28.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 29.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 29.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 30.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 30.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 31.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 31.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 32.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 32.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 33.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 33.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 34.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 34.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 35.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 35.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 36.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 36.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 37.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 37.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 38.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 38.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 39.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 39.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 7.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Q 7.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 8.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 8.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Q 9.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Q 9.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
