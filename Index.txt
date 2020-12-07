@@ -168,12 +168,13 @@ Day3_LINQ
 -Drop Down List
 
 -Day5_MVC
--Register, Login, Account
+-Register, Login, Account, Admin, Roles...
 -Create, Edit, Delete, Details
 -BeginForm, TextBox, TextBoxFor, DropDownList Hidden, ValidationSummary
 -HttpGet, HttpPost, Actions
 -Session
 -file upload, file format, file encription
--one to one, one to many
+-one to one, one to many, many to many
 -filter
 -Plugin
+-API

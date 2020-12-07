@@ -76,3 +76,11 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MV
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.Migrations.InitialCreate.resources
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csproj.GenerateResource.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\obj\Debug\Day5_MVC.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\Newtonsoft.Json.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Net.Http.Formatting.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Http.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Http.WebHost.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\Newtonsoft.Json.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Net.Http.Formatting.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Http.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Day5_MVC\Day5_MVC\bin\System.Web.Http.WebHost.xml

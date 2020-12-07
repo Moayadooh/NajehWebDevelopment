@@ -9,8 +9,28 @@ namespace Day5_MVC.Controllers
 {
     public class StudentController : Controller
     {
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            if (Session["info"] == null)
+            {
+                Response.Redirect("~/user/login");
+            }
+            else
+            {
+                if (((User)Session["info"]).Role.RoleName != "Student")
+                {
+                    Response.Redirect("~/user/login");
+                }
+            }
+        }
+
         NajehDB db = new NajehDB();
 
+        public ActionResult Index()
+        {
+            return View();
+
+        }
         // will be [HttpGet] and [HttpPost]
         public ActionResult Assign(int? DDLMajors)
         {

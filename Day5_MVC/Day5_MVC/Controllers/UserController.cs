@@ -72,7 +72,8 @@ namespace Day5_MVC.Controllers
                 else
                 {
                     Session["info"] = model;
-                    return RedirectToAction("Details","Account", new { id = model.ID });
+                    //return RedirectToAction("Details","Account", new { id = model.ID });
+                    return RedirectToAction("index", model.Role.RoleName); // model.Role.RoleName is folder name in views
                 }
             }
             return View();

@@ -29,7 +29,14 @@
                     else
                     {
                         <li>@Html.ActionLink("My Account", "details", "Account", new { id = ((User)Session["info"]).ID }, null)</li>
-                        <li>@Html.ActionLink("My Major", "Assign", "Student")</li>
+                        if (((User)Session["info"]).Role.RoleName == "Student")
+                        {
+                            <li>@Html.ActionLink("My Major", "Assign", "Student")</li>
+                        }
+                        if (((User)Session["info"]).Role.RoleName == "Admin")
+                        {
+                            <li>@Html.ActionLink("Admin Panel", "Index", "Admin")</li>
+                        }
                     }
                 </ul>
 
