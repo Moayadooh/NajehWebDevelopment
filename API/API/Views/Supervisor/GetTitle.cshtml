@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "GetTitle";
+}
+
+<h2>GetTitle</h2>
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<form class="jumbotron">
+    <label>Search By Title</label>
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags" class="form-control">
+    </div>
+</form>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: "/api/GetTitleTeam/",
+            type: "get",
+            contentType: "application/json ; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $("#tags").autocomplete({
+                    source: data
+                });
+            }
+        }); // end of ajax
+    });
+
+</script>

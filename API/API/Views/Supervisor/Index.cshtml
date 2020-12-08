@@ -1,0 +1,217 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<style>
+    .linkSort {
+        text-shadow: 5px 5px 10px #ff6a00;
+        font-weight: bolder;
+    }
+
+    .linkEdit {
+        text-shadow: 5px 5px 6px #5f7ced;
+        font-weight: bolder;
+    }
+</style>
+<script>
+    $(function () {
+        $("#btnAdd").click(function () {
+            // {'id' : '34', 'name':'ammar' }
+            var formdata = {
+                Title: $("#txtTitle").val(),
+                Details: $("#txtDetails").val(),
+                Rate: $("#txtRate").val()
+            }
+            $.ajax({
+                url: "/api/ads",
+                type: "post",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(formdata),
+                success: function (data) {
+                    var list = "<ul class='list-group'>";
+                    list += "<li class='list-group-item'>" + data.ID + "</li>";
+                    list += "<li class='list-group-item'>" + data.Title + "</li>";
+                    list += "<li class='list-group-item'>" + data.Details + "</li>";
+                    list += "<li class='list-group-item'>" + data.Rate + "</li></ul>";
+
+                    $("#output").html(list);
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }); //end  btnAdd
+
+        $("#btnGetAll").click(function () {
+            GetAll();
+        }); // end btnGetAll
+
+        function GetAll() {
+            $.ajax({
+                url: "/api/ads",
+                type: "get",
+                contentType: "application/json ; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var table = "<table class='table'>";
+                    table += "<tr><th><button type=button class='btn btn-link linkSort'>ID</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Title</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Details</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Rate</button> </th>";
+                    table += "<th></th><th></th></tr>";
+                    for (var i = 0; i < data.length; i++) {
+                        table += "<tr>";
+                        table += "<td>" + data[i].ID + "</td>";
+                        table += "<td>" + data[i].Title + "</td>";
+                        table += "<td>" + data[i].Details + "</td>";
+                        table += "<td>" + data[i].Rate + "</td>";
+                        table += "<td><button type=button class='btn btn-link linkEdit' value=" + data[i].ID + " >Edit </button></td>";
+                        table += "<td> <i style='color:red;font-size:19px'  class='glyphicon glyphicon-remove' value=" + data[i].ID + " ></i></td></tr>";
+                    }
+                    $("#output").html(table);
+                }
+            });
+        }
+
+        $("#btnEdit").click(function () {
+            // {'id' : '34', 'name':'ammar' }
+            var formdata = {
+                ID: $("#txtID").val(),
+                Title: $("#txtTitle").val(),
+                Details: $("#txtDetails").val(),
+                Rate: $("#txtRate").val(),
+            }
+            $.ajax({
+                url: "/api/ads/" + $("#txtID").val(),
+                type: "put",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(formdata),
+                success: function (data) {
+                    var list = "<ul class='list-group'>";
+                    list += "<li class='list-group-item'>" + data.ID + "</li>";
+                    list += "<li class='list-group-item'>" + data.Title + "</li>";
+                    list += "<li class='list-group-item'>" + data.Details + "</li>";
+                    list += "<li class='list-group-item'>" + data.Rate + "</li></ul>"
+                    $("#output").html(list);
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }); //end  btnEdit
+
+        $(document).on("click", ".glyphicon.glyphicon-remove", function () {
+            var conf = confirm("Really , Are you Sure !!");
+            if (conf) {
+                $.ajax({
+                    url: "/api/ads/" + $(this).attr("value"),
+                    type: "delete",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+                        //var list = "<ul class='list-group'>";
+                        //list += "<li class='list-group-item'>" + data.ID + "</li>";
+                        //list += "<li class='list-group-item'>" + data.Title + "</li>";
+                        //list += "<li class='list-group-item'>" + data.Details + "</li>";
+                        //list += "<li class='list-group-item'>" + data.Ontime + "</li></ul>";
+                        //$("#output").html(list);
+                        GetAll();
+                    },
+                    error: function (e) {
+                        alert(e.responseText);
+                    }
+                });
+            }
+        }); //end  btn click remove
+
+        $(document).on("click", ".btn.btn-link.linkEdit", function () {
+            $.ajax({
+                url: "/api/ads/" + $(this).val(),
+                type: "get",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#txtID").val(data.ID);
+                    $("#txtTitle").val(data.Title);
+                    $("#txtDetails").val(data.Details);
+                    $("#txtRate").val(data.Rate);
+                },
+                error: function (e) {
+                    alert("error:" + e.responseText);
+                }
+            });
+        });// document click
+        $(document).on("click", ".btn.btn-link.linkSort", function () {
+            $.ajax({
+                url: "/api/GetSort/" + $(this).text(),
+                type: "get",
+                contentType: "application/json ; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    var table = "<table class='table'>";
+                    table += "<tr><th><button type=button class='btn btn-link linkSort'>ID</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Title</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Details</button> </th>";
+                    table += "<th><button type=button class='btn btn-link linkSort'>Rate</button> </th>";
+                    table += "<th></th><th></th></tr>";
+                    for (var i = 0; i < data.length; i++) {
+                        table += "<tr>";
+                        table += "<td>" + data[i].ID + "</td>";
+                        table += "<td>" + data[i].Title + "</td>";
+                        table += "<td>" + data[i].Details + "</td>";
+                        table += "<td>" + data[i].Rate + "</td>";
+                        table += "<td><button type=button class='btn btn-link linkEdit' value=" + data[i].ID + " >Edit </button></td>";
+                        table += "<td> <i style='color:red;font-size:19px'  class='glyphicon glyphicon-remove' value=" + data[i].ID + " ></i></td></tr>";
+                    }
+                    $("#output").html(table);
+                } // success
+
+            }); // ajax sort
+
+        }); // link sort
+
+    }); // Main
+
+</script>
+<style>
+    .glyphicon.glyphicon-remove:hover {
+        cursor: pointer;
+    }
+</style>
+
+<form>
+    <div class="jumbotron">
+        <div class="form-group">
+            <input type="text" class="form-control" id="txtID" placeholder="Enter ads ID" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="txtTitle" placeholder="Enter ads Title" />
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="txtDetails" placeholder="Enter ads Details" />
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" id="txtRate" placeholder="Enter ads Rate" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" id="btnAdd" type="button">
+                <i class="glyphicon glyphicon-plus"></i> Add
+            </button>
+            <button class="btn btn-primary" id="btnGetAll" type="button">
+                <i class="glyphicon glyphicon-list"></i> Get All News
+            </button>
+            <button class="btn btn-warning" id="btnEdit" type="button">
+                <i class="glyphicon glyphicon-pencil"></i> Save News
+            </button>
+        </div>
+    </div>
+    <div id="output">
+
+    </div>
+</form>

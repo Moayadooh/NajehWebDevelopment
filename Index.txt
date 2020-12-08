@@ -178,3 +178,9 @@ Day3_LINQ
 -filter
 -Plugin
 -API (Create, Edit, Delete, Details, lazy loading issue, eager loading)
+
+-API
+-Custom API
+-Route
+-jquery ui
+-chart js
