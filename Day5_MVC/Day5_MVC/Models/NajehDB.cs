@@ -10,6 +10,11 @@ namespace Day5_MVC.Models
     {
         public NajehDB() : base("constr") { }
 
+        public NajehDB(string x) : base("constr")
+        {
+            this.Configuration.LazyLoadingEnabled = false; // this statement to turn api on
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Major> Majors { get; set; }

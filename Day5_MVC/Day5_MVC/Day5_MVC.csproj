@@ -147,6 +147,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\Majors1Controller.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
     <Compile Include="Controllers\ModeratorController.cs" />
     <Compile Include="Controllers\NewsController.cs" />

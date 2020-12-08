@@ -177,4 +177,4 @@ Day3_LINQ
 -one to one, one to many, many to many
 -filter
 -Plugin
--API (Create, Edit, Delete, Details,lazy loading issue)
+-API (Create, Edit, Delete, Details, lazy loading issue, eager loading)
