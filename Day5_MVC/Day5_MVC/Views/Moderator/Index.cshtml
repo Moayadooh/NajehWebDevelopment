@@ -21,7 +21,7 @@
                 type: "post",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                data: JSON.stringify(formdata),
+                data: JSON.stringify(formdata), // Convert JSON data to string format
                 success: function (data) {
                     var list = "<ul class='list-group'>";
                     list += "<li class='list-group-item'>" + data.ID + "</li>";
@@ -54,7 +54,8 @@
                     table += "<th>Details</th>";
                     table += "<th>OnTime</th>";
                     table += "<th></th><th></th></tr>";
-                    for (var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < data.length; i++)
+                    {
                         table += "<tr>";
                         table += "<td>" + data[i].ID + "</td>";
                         table += "<td>" + data[i].Title + "</td>";
@@ -63,6 +64,7 @@
                         table += "<td><button type=button class='btn btn-link' value=" + data[i].ID + " >Edit </button></td>";
                         table += "<td> <i style='color:red;font-size:19px'  class='glyphicon glyphicon-remove' value=" + data[i].ID + " ></i></td></tr>";
                     }
+                    table += "</table>";
                     $("#output").html(table);
                 }
             });
@@ -94,7 +96,7 @@
                     alert(e.responseText);
                 }
             });
-        }); //end  btnEdit
+        }); //end  btnEdit (Save News)
 
         $(document).on("click", ".glyphicon.glyphicon-remove", function () {
 
@@ -132,14 +134,14 @@
                     $("#txtID").val(data.ID);
                     $("#txtTitle").val(data.Title);
                     $("#txtDetails").val(data.Details);
-                    $("#txtOntime").attr("type", "text");
+                    $("#txtOntime").attr("type", "text"); // Convert input type date to text
                     $("#txtOntime").val(data.Ontime);
                 }
             });
         }); // document click
 
         $("#txtOntime").click(function () {
-            $("#txtOntime").attr("type", "date");
+            $("#txtOntime").attr("type", "date"); // Convert input type text to date
         });
 
     }); // Main
