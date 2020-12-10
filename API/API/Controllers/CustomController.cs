@@ -57,8 +57,14 @@ namespace API.Controllers
         [Route("api/GetRate/")]
         public List<ads> getrate()
         {
-            //  return db.ads.Select(x => new ads { Title = x.Title , Rate=x.Rate }).ToList();
             return db.ads.ToList();
+        }
+
+        [Route("api/GetRate2/")]
+        public object getrate2()
+        {
+            var model = db.ads.Select(x => new { x.Title, x.Rate });
+            return model;
         }
     }
 }

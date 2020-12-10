@@ -69,7 +69,6 @@ C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Web.Webpages.Raz
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Web.Helpers.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Web.Mvc.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csprojAssemblyReference.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.dll
