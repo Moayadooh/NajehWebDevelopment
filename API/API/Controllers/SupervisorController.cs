@@ -28,5 +28,15 @@ namespace API.Controllers
         {
             return View();
         }
+
+        public ActionResult GetStackoverflow()
+        {
+            return View();
+        }
+
+        public ActionResult GetAPIStackoverflow()
+        {
+            return View();
+        }
     }
 }

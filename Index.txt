@@ -181,6 +181,12 @@ Day3_LINQ
 
 -API
 -Custom API
--Route
+-Route(API path)
 -jquery ui
 -chart js
+-online API
+-datatables js
+-Partial View
+-Angular js
+-Language
+-Cookies

@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "GetStackoverflow";
+}
+
+<h2>GetStackoverflow</h2>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    var obj = {
+        "items": [
+            { // items[0]
+                "tags": [
+                    "java",
+                    "arrays",
+                    "csv"
+                ],
+                "owner": {
+                    "reputation": 1,
+                    "user_id": 14805385,
+                    "user_type": "registered",
+                    "profile_image": "https://lh5.googleusercontent.com/-1KCgbtve8_s/AAAAAAAAAAI/AAAAAAAABDI/AMZuuckWCZ5STqy5Prto4vV_38RZ2oFNFQ/s96-c/photo.jpg?sz=128",
+                    "display_name": "Jonathan Gracias",
+                    "link": "https://stackoverflow.com/users/14805385/jonathan-gracias"
+                },
+                "is_answered": false,
+                "view_count": 10,
+                "answer_count": 1,
+                "score": 0,
+                "last_activity_date": 1607662659,
+                "creation_date": 1607661319,
+                "question_id": 65245841,
+                "content_license": "CC BY-SA 4.0",
+                "link": "https://stackoverflow.com/questions/65245841/a-method-that-can-take-an-array-of-integer-in-string-format-and-return-the-avera",
+                "title": "A method that can take an array of integer in String format and return the average of those numbers"
+            },
+            { // items[1]
+                "me": "Moayad"
+            }
+        ],
+        "has_more": true,
+        "quota_max": 10000,
+        "quota_remaining": 9995
+    }
+
+    //var result = obj.items[0].tags[1];
+    var result = obj.items[1].me;
+    //var result = obj.items[0].view_count;
+    //var result = obj.quota_max;
+    var userimage = obj.items[0].owner.profile_image;
+
+    console.log(result);
+    $(function () {
+        $("img").attr("src", userimage);
+    });
+</script>
+
+<form>
+    <img src="#" />
+</form>

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "GetAPIStackoverflow";
+}
+
+<h2>GetAPIStackoverflow</h2>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+
+        $("button").click(function () {
+            $.ajax({
+                url: "https://api.stackexchange.com/2.2/questions?pagesize=10&order=desc&sort=activity&site=stackoverflow",
+                type: "get",
+                contentType: "application/jsonp; charset=utf-8",
+                dataType: "jsonp", // json padding
+                headers: {
+                    'Access-Control-Allow-Origin': '*' // To access API through localhost
+                },
+                success: function (obj) {
+                    var table = "<table class='table'>";
+                    table += "<tr>";
+                    table += "<th>Tags</th>";
+                    table += "<th>Owner</th>";
+                    table += "<th>Image</th>";
+                    table += "<th>QuataMax</th></tr>";
+                    for (var i = 0; i < 10; i++) // 10 is pagesize
+                    {
+                        table += "<tr>";
+                        table += "<td>" + obj.items[i].tags[0] + "</td>";
+                        table += "<td>" + obj.items[i].owner.display_name + "</td>";
+                        table += "<td><img src=" + obj.items[i].owner.profile_image + "/></td>";
+                        table += "<td>" + obj.quota_max + "</td>";
+                        table += "</tr>";
+                    }
+                    table += "</table>";
+                    $("#output").html(table);
+                }
+            });
+        });
+
+    });
+</script>
+
+<button class="btn btn-primary">
+    <i class="glyphicon glyphicon-list"></i>
+    Load Stackoverflow data
+</button>
+
+<div id="output">
+
+</div>

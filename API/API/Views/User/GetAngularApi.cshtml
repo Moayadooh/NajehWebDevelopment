@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "GetAngularApi";
+}
+
+<h2>GetAngularApi</h2>
+
+<script src="~/Scripts/angular.js"></script>
+<script>
+    var app = angular.module("myapp", []); // create an app
+
+    // create controller
+    app.controller("MyController", function ($scope, $http) {
+        $http.get("/api/ads").then(function (result) {
+            $scope.myads = result.data;
+        });
+
+        $scope.getOrderBy = function (x) {
+            $scope.currentorder = x;
+        }
+    });
+</script>
+
+<div class="jumbotron" ng-app="myapp">
+    <label>Title</label>
+    <div class="form-group">
+        <input class="form-control" type="text" ng-model="teamname" placeholder="Enter Title" />
+    </div>
+    {{ teamname }} <!--Written text in text box will appear here-->
+
+    <table ng-controller="MyController" class="table">
+        <tr>
+            <th ng-click="getOrderBy('ID')">ID</th>
+            <th ng-click="getOrderBy('Title')">Title</th>
+            <th ng-click="getOrderBy('Details')">Details</th>
+            <th ng-click="getOrderBy('Rate')">Rate</th>
+        </tr>
+        <tr ng-repeat="t in myads | filter : teamname | orderBy : currentorder">
+            <td>{{ t.ID }}</td>
+            <td>{{ t.Title }}</td>
+            <td>{{ t.Details }}</td>
+            <td>{{ t.Rate }}</td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    th:hover {
+        cursor: pointer;
+        text-shadow: 4px 4px 7px #000000;
+    }
+</style>

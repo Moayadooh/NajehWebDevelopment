@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "UserPartials";
+}
+
+<h2>UserPartials</h2>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "/User/Create",
+            type: "get",
+            contentType: "application/html ; charset=utf-8",
+            dataType: "html",
+            success: function (data) {
+                $("#CreateList").html(data);
+            }
+
+        });// end ajax create
+
+        $.ajax({
+
+            url: "/User/Display",
+            type: "get",
+            contentType: "application/html ; charset=utf-8",
+            dataType: "html",
+            success: function (data) {
+                $("#ShowList").html(data);
+            }
+
+        });// end ajax create
+
+    });
+</script>
+
+<div class="row">
+    <div id="CreateList" class="col-md-6">
+
+    </div>
+    <div id="ShowList" class="col-md-6">
+
+    </div>
+</div>
