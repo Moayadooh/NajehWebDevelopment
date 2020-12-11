@@ -190,3 +190,8 @@ Day3_LINQ
 -Angular js
 -Language
 -Cookies
+
+-MVC_DB_First
+-ADO.NET Entity Data Model
+-Use Template
+-Hashing

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<!-- contact -->
+<div class="contact wthree all_pad">
+    <div class="container">
+        <h3 class="title">Login<span></span></h3>
+        <div class="login-page">
+            <div class="col-md-6 profile-left1">
+                @using (Html.BeginForm())
+                {
+                    <div class="login">
+                        <input type="text" name="Email" placeholder="Email">
+                        @Html.ValidationMessage("Email", new { @class = "text-danger" })
+                        <input type="password" name="Password" placeholder="Password">
+                        @Html.ValidationMessage("Password", new { @class = "text-danger" })
+                        <p class="no-marg"><a href="#">Forgot Password?</a></p>
+                    </div>
+                    <input type="submit" value="Signin">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                }
+                <p>Don't have an Account? <a href="@Url.Action("index","Home")">Register Here</a></p>
+            </div>
+            <div class="col-md-6 profile-middle1">
+                <div class="profile-img">
+                    <h2>Want to connect with social networks..</h2>
+                    <div class="footer-bottom">
+                        <a href="#"><span>Twitter</span></a>
+                        <a href="#"><span>Facebook</span></a>
+                        <a href="#"><span>Google+ </span></a>
+                        <a href="#"><span>Dribbble</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<!-- //contact -->
