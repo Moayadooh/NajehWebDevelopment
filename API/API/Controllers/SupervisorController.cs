@@ -38,5 +38,10 @@ namespace API.Controllers
         {
             return View();
         }
+
+        public ActionResult Language()
+        {
+            return View();
+        }
     }
 }

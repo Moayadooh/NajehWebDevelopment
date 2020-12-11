@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Language";
+}
+
+<h2>Language</h2>
+
+<ul class="list-group-item">
+    <li class="list-group-item">
+        @Html.ActionLink("English", "SaveLanguageToCookies", "Home", new { lang = "en-US" }, null)
+    </li>
+    <li class="list-group-item">
+        @Html.ActionLink("عربي", "SaveLanguageToCookies", "Home", new { lang = "ar-OM" }, null)
+    </li>
+</ul>

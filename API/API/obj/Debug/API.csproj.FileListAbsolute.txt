@@ -81,4 +81,8 @@ C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\Newtonsoft.Json.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Net.Http.Formatting.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Web.Http.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\System.Web.Http.WebHost.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\bin\ar\API.resources.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.App_LocalResources.Resource.resources
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.App_LocalResources.Resource.ar.resources
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csproj.GenerateResource.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\ar\API.resources.dll
