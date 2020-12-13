@@ -1,0 +1,4 @@
+﻿@model Exam_70_486.Models.LogModel
+
+@(Convert.ToInt32(Model.Time.TotalMinutes / Model.Distance)) Min
+@(Convert.ToInt32(Model.Time.TotalSeconds % 60 / Model.Distance)) Seconds

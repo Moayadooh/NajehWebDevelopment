@@ -70,3 +70,15 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\obj\Debug\E
 C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\obj\Debug\Exam 70-486.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\obj\Debug\Exam 70-486.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\obj\Debug\Exam 70-486.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\EntityFramework.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\EntityFramework.SqlServer.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\EntityFramework.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\EntityFramework.SqlServer.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\Newtonsoft.Json.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Net.Http.Formatting.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Web.Http.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Web.Http.WebHost.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\Newtonsoft.Json.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Net.Http.Formatting.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Web.Http.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Exam 70-486\Exam 70-486\bin\System.Web.Http.WebHost.xml

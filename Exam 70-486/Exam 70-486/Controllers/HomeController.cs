@@ -12,7 +12,6 @@ namespace Exam_70_486.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            ViewBag.Data = new DateAndTime().ShortDate;
             return View();
         }
     }

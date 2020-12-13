@@ -1,4 +1,4 @@
-﻿@model Exam_70_486.Models.DateAndTime
+﻿
 
 @{
     ViewBag.Title = "Index";
@@ -6,4 +6,53 @@
 
 <h2>Index</h2>
 
-<strong>@ViewBag.Data</strong>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            contentType: "application/json;charset=utf-8",
+            url: "/api/LogModels1/2",
+            success: function (data) {
+                var table = "<table class='table'>";
+                table += "<tr><th>ID</th>";
+                table += "<th>RunDate</th>";
+                table += "<th>Distance</th>";
+                table += "<th>Time</th>";
+                table += "<th></th><th></th></tr>";
+                table += "<tr>";
+                table += "<td>" + data.ID + "</td>";
+                table += "<td>" + data.RunDate + "</td>";
+                table += "<td>" + data.Distance + "</td>";
+                table += "<td>" + data.Time + "</td></tr>";
+                table += "</table>";
+                $("#output").html(table);
+            }
+        });
+
+        $.getJSON("/api/LogModels1",
+            //function (data) {
+            //    var table = "<table class='table'>";
+            //    table += "<tr><th>ID</th>";
+            //    table += "<th>RunDate</th>";
+            //    table += "<th>Distance</th>";
+            //    table += "<th>Time</th>";
+            //    table += "<th></th><th></th></tr>";
+            //    for (var i = 0; i < data.length; i++) {
+            //        table += "<tr>";
+            //        table += "<td>" + data[i].ID + "</td>";
+            //        table += "<td>" + data[i].RunDate + "</td>";
+            //        table += "<td>" + data[i].Distance + "</td>";
+            //        table += "<td>" + data[i].Time + "</td></tr>";
+            //    }
+            //    table += "</table>";
+            //    $("#output").html(table);
+            //}
+        );
+    });
+</script>
+
+<div id="output">
+
+</div>
