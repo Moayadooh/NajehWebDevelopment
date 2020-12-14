@@ -3,101 +3,105 @@
     ViewBag.Title = "Gallery";
 }
 
+
 <!-- contact -->
 <div class="contact wthree all_pad">
+
+    <!--Code snippet-->
+
+    @if (Session["info"] != null)
+    {
+        <div class="explore agile all_pad ">
+            <div class="container">
+                <h3 class="title">Explore properties in your area<span></span></h3>
+                <div class="explore-grids">
+                    <div class="col-md-4 explore-left wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                        <div class="main">
+                            @using (Html.BeginForm("Gallery", "Properties", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <h4>Add a Property</h4>
+                                <div Class="section-top">
+
+                                </div>
+                                <div Class="section-single">
+                                    <div Class="section_room" style="border:none">
+                                        <h4> Type</h4>
+                                        <!--DDL Type From ViewBag-->
+                                        @Html.DropDownList("Typeid", null, "-select Type-", new { @Class = "frm-field required" })
+                                    </div>
+                                    <div Class="section_room" style="border:none">
+                                        <h4> Location</h4>
+                                        <select name="Location" onchange="change_country(this.value)" Class="frm-field required">
+                                            <option value="null"> Any Location</option>
+                                            <option value="Australia"> Australia</option>
+                                            <option value="Sweden"> Sweden</option>
+                                            <option value="Netherlands"> Netherlands</option>
+                                            <option value="Bangkok"> Bangkok</option>
+                                        </select>
+                                    </div>
+                                    <div Class="clearfix"></div>
+                                </div>
+                                <div Class="bath">
+                                    <h4> Bed rooms</h4>
+                                    <input type="number" name="Bed" Class="text_box" value="3" min="1">
+                                </div>
+                                <div Class="bath">
+                                    <h4> Bath rooms</h4>
+                                    <input type="number" name="Bath" Class="text_box" value="4" min="1">
+                                </div>
+                                <div Class="clearfix"></div>
+                                <div Class="range-slider">
+                                    <h4> Price</h4>
+                                    <input type="text" id="amount" name="Price" style="border: 0; color: #ffffff; font-weight: normal;" />
+                                </div>
+                                <div Class="range-slider">
+                                    <h4> Upload Images</h4>
+                                    <input type="file" name="ImageName" Class="form-control" multiple />
+                                </div>
+                                <input type="submit" value="Save Property">
+                            }
+                        </div>
+                    </div>
+                    <div Class="col-md-8 explore-right wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                    </div>
+                    <div Class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    }
+    <!--end code -->
+
+    @model IEnumerable<MVC_DB_First.Models.Image>
     <div class="container">
         <h2 class="title">Properties<span></span></h2>
         <div class="gallery-grids">
-            <div class="col-sm-6 gallery-grids-left">
-                <div class="gallery-grid">
-                    <a href="images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g1.jpg" alt=" ">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 gallery-grids-left pro-top">
+                    <div class="gallery-grid">
+                        <a href="~/Properties/GetImage/@item.ImageID" class="b-link-stripe b-animate-go  swipebox">
+                            <div class="port-7 effect-3">
+                                <div class="image-box">
+                                    <img src="~/Properties/GetImage/@item.ImageID" alt=" ">
+                                </div>
+                                <div class="gal-desc">
+                                    <h4>  @item.Property.Location </h4>
+                                    <h3>Owner: @item.Property.User.Name  </h3>
+                                    <p>
+                                        <ul>
+                                            <li>Price: @item.Property.Price  </li>
+                                            <li>Status: @item.Property.Status  </li>
+                                            <li>Bed: @item.Property.Bed  </li>
+                                            <li>Bath: @item.Property.Bath  </li>
+                                            <li>Type: @item.Property.Type.Name  </li>
+                                        </ul>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6 gallery-grids-left">
-                <div class="gallery-grid">
-                    <a href="images/g3.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g3.jpg" alt=" ">
-                            </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 gallery-grids-left pro-top">
-                <div class="gallery-grid">
-                    <a href="images/g4.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g4.jpg" alt=" ">
-                            </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 gallery-grids-left pro-top">
-                <div class="gallery-grid">
-                    <a href="images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g2.jpg" alt=" ">
-                            </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 gallery-grids-left pro-top">
-                <div class="gallery-grid">
-                    <a href="images/g5.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g5.jpg" alt=" ">
-                            </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 gallery-grids-left pro-top">
-                <div class="gallery-grid">
-                    <a href="images/g6.jpg" class="b-link-stripe b-animate-go  swipebox">
-                        <div class="port-7 effect-3">
-                            <div class="image-box">
-                                <img src="~/images/g6.jpg" alt=" ">
-                            </div>
-                            <div class="gal-desc">
-                                <h4>Real Site</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            }
             <div class="clearfix"></div>
         </div>
     </div>

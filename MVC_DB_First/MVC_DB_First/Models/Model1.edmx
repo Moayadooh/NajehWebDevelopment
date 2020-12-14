@@ -25,6 +25,7 @@
           <Property Name="Bed" Type="int" />
           <Property Name="Bath" Type="int" />
           <Property Name="Typeid" Type="int" />
+          <Property Name="UserID" Type="int" />
         </EntityType>
         <EntityType Name="Types">
           <Key>
@@ -67,6 +68,22 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Properties_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Properties">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_GetProperty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="minprice" Type="money" Mode="In" />
+          <Parameter Name="maxprice" Type="money" Mode="In" />
+        </Function>
         <Function Name="sp_InsertProperty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PropertyID" Type="uniqueidentifier" Mode="In" />
           <Parameter Name="Location" Type="nvarchar" Mode="In" />
@@ -98,6 +115,10 @@
             <End Role="Types" EntitySet="Types" />
             <End Role="Properties" EntitySet="Properties" />
           </AssociationSet>
+          <AssociationSet Name="FK_Properties_Users" Association="Self.FK_Properties_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Properties" EntitySet="Properties" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -126,6 +147,8 @@
           <Property Name="Typeid" Type="Int32" />
           <NavigationProperty Name="Images" Relationship="Self.FK_Images_Images" FromRole="Properties" ToRole="Images" />
           <NavigationProperty Name="Type" Relationship="Self.FK_Properties_Properties" FromRole="Properties" ToRole="Types" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="restatedbModel.FK_Properties_Users" FromRole="Property" ToRole="User" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
@@ -144,6 +167,7 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RetypePassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Properties" Relationship="restatedbModel.FK_Properties_Users" FromRole="User" ToRole="Property" />
         </EntityType>
         <Association Name="FK_Images_Images">
           <End Role="Properties" Type="Self.Property" Multiplicity="0..1" />
@@ -200,12 +224,42 @@
             <Parameter Name="Email" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
+          <AssociationSet Name="FK_Properties_Users" Association="restatedbModel.FK_Properties_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Property" EntitySet="Properties" />
+          </AssociationSet>
+          <FunctionImport Name="sp_GetProperty" ReturnType="Collection(restatedbModel.sp_GetProperty_Result)">
+            <Parameter Name="minprice" Mode="In" Type="Decimal" />
+            <Parameter Name="maxprice" Mode="In" Type="Decimal" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_Loginuser_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <Association Name="FK_Properties_Users">
+          <End Type="restatedbModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="restatedbModel.Property" Role="Property" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Property">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_GetProperty_Result">
+          <Property Type="Guid" Name="PropertyID" Nullable="false" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Status" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="Bed" Nullable="true" />
+          <Property Type="Int32" Name="Bath" Nullable="true" />
+          <Property Type="Int32" Name="Typeid" Nullable="true" />
+          <Property Type="Int32" Name="UserID" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -226,6 +280,7 @@
           <EntitySetMapping Name="Properties">
             <EntityTypeMapping TypeName="restatedbModel.Property">
               <MappingFragment StoreEntitySet="Properties">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
@@ -264,6 +319,20 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_GetProperty" FunctionName="restatedbModel.Store.sp_GetProperty">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="restatedbModel.sp_GetProperty_Result">
+                <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Bed" ColumnName="Bed" />
+                <ScalarProperty Name="Bath" ColumnName="Bath" />
+                <ScalarProperty Name="Typeid" ColumnName="Typeid" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

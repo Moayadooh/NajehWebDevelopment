@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "GetInfoAsync";
+}
+
+<h2>GetInfoAsync</h2>
+
+@*@using (Html.BeginForm("Getinfo", "SyncAsync"))
+{
+    <div class="form-group">
+        <button class="btn btn-success">  Get Info </button>
+        <p> @ViewBag.watchTimest1 with SYNC - Normal Type</p>
+    </div>
+}
+<hr />*@
+
+@using (Html.BeginForm("GetInfoAsync", "SyncAsync"))
+{
+    <div class="form-group">
+        <button class="btn btn-primary">  Get Info Async </button>
+        <p> @ViewBag.watchTimest2 with ASYNC </p>
+    </div>
+}

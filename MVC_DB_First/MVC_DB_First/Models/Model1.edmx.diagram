@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="restatedbModel.User" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="restatedbModel.FK_Images_Images" ManuallyRouted="false" />
         <AssociationConnector Association="restatedbModel.FK_Properties_Properties" ManuallyRouted="false" />
+        <AssociationConnector Association="restatedbModel.FK_Properties_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

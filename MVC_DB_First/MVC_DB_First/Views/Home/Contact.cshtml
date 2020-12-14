@@ -9,17 +9,28 @@
         <h3 class="title">contact<span></span></h3>
         <div class="contact-form">
             <div class="col-md-6 contact-grid">
-                <form action="#" method="post">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
                     <p class="your-para">Name:</p>
-                    <input type="text" value="Type Here" name="Type Here" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Type Here';}">
+                    <input type="text" placeholder="Type Here" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type Here';}" name="UserName">
+                    @Html.ValidationMessage("UserName", new { @class = "text-danger" })
+
                     <p class="your-para">Email:</p>
-                    <input type="email" value="Type Here" name="Type Here" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Type Here';}">
+                    <input type="email" placeholder="Type Here" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type Here';}" name="UserEmail">
+                    @Html.ValidationMessage("UserEmail", new { @class = "text-danger" })
+
                     <p class="your-para">Message:</p>
-                    <textarea name="Type Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type Here';}" required="">Type Here</textarea>
+                    <textarea name="UserMessage" placeholder="Type your message" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type your message';}"></textarea>
+                    @Html.ValidationMessage("UserMessage", new { @class = "text-danger" })
+
                     <div class="send">
                         <input type="submit" value="Send">
                     </div>
-                </form>
+                }
             </div>
             <div class="col-md-6 contact-in">
                 <h2> Sed ut perspiciatis unde omnis.</h2>

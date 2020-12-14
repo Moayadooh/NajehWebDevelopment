@@ -3,6 +3,8 @@ using MVC_DB_First.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 
@@ -59,6 +61,43 @@ namespace MVC_DB_First.Controllers
         }
 
         public ActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(ContactViewModel contactVM)
+        {
+            if (ModelState.IsValid)
+            {
+                var body = "<p> Email From : {0} - ({1})</p><p>Message:</p><p>{2}</p> ";
+                var message = new MailMessage();
+                message.To.Add(new MailAddress("moayadsalim97@gmail.com")); //info@yourdomain
+                message.From = new MailAddress("moayad.soft@outlook.com");
+                message.Subject = "Test Suject";
+                message.Body = string.Format(body, contactVM.UserEmail, contactVM.UserName, contactVM.UserMessage);
+                message.IsBodyHtml = true;
+
+                using (var smtp = new SmtpClient())
+                {
+                    var crd = new NetworkCredential()
+                    {
+                        UserName = "moayad.soft@outlook.com",
+                        Password = ""
+                    };
+                    smtp.Credentials = crd;
+                    smtp.Host = "smtp-mail.outlook.com";
+                    smtp.Port = 587;
+                    smtp.EnableSsl = true;
+                    smtp.Send(message);
+                    return RedirectToAction("Sent");
+                }
+            }
+            return View();
+        }
+
+        public ActionResult Sent()
         {
             return View();
         }

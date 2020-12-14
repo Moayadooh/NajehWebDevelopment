@@ -27,9 +27,11 @@ namespace MVC_DB_First.Models
         public Nullable<int> Bed { get; set; }
         public Nullable<int> Bath { get; set; }
         public Nullable<int> Typeid { get; set; }
+        public Nullable<int> UserID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Image> Images { get; set; }
         public virtual Type Type { get; set; }
+        public virtual User User { get; set; }
     }
 }

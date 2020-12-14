@@ -94,5 +94,18 @@ namespace MVC_DB_First.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Loginuser_Result>("sp_Loginuser", emailParameter, passwordParameter);
         }
+    
+        public virtual ObjectResult<sp_GetProperty_Result> sp_GetProperty(Nullable<decimal> minprice, Nullable<decimal> maxprice)
+        {
+            var minpriceParameter = minprice.HasValue ?
+                new ObjectParameter("minprice", minprice) :
+                new ObjectParameter("minprice", typeof(decimal));
+    
+            var maxpriceParameter = maxprice.HasValue ?
+                new ObjectParameter("maxprice", maxprice) :
+                new ObjectParameter("maxprice", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_GetProperty_Result>("sp_GetProperty", minpriceParameter, maxpriceParameter);
+        }
     }
 }

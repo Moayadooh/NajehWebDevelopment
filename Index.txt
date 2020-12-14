@@ -195,3 +195,7 @@ Day3_LINQ
 -ADO.NET Entity Data Model
 -Use Template
 -Hashing
+-Store image to DB as binary
+-Email Sending
+-Report
+-Sync, Async
