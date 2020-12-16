@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "ManagerRole";
+}
+
+<h2>ManagerRole</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>Role Name</label>
+        @Html.DropDownList("RoleID", null, "-select role-", new { @class = "form-control" })@*onchange = "this.form.submit()"*@
+    </div>
+    <div class="form-group">
+        <label>User Name</label>
+        @Html.DropDownList("UserID", null, "-select User-", new { @class = "form-control" })
+    </div>
+    <input type="submit" name="btnAssignRole" class="btn btn-success" value="Add Role" />
+}
+@*<table class="table">
+    <tr>
+        <th>User Email</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Email
+            </td>
+        </tr>
+    }
+</table>*@
