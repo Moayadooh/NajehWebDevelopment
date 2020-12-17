@@ -54,9 +54,9 @@ namespace ASP_Identity_Inegrated_DB
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "210364233981535",
+               appSecret: "269370086ead77e7f29593e948844311");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
