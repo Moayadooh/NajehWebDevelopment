@@ -73,7 +73,7 @@ namespace MVC_DB_First.Controllers
             {
                 var body = "<p> Email From : {0} - ({1})</p><p>Message:</p><p>{2}</p> ";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("moayadsalim97@gmail.com")); //info@yourdomain
+                message.To.Add(new MailAddress("moayad@gmail.com")); //info@yourdomain
                 message.From = new MailAddress("moayad.soft@outlook.com");
                 message.Subject = "Test Suject";
                 message.Body = string.Format(body, contactVM.UserEmail, contactVM.UserName, contactVM.UserMessage);
