@@ -199,3 +199,12 @@ Day3_LINQ
 -Email Sending
 -Report
 -Sync, Async
+
+-MVC_ASP_Identity
+-Windows Authentication
+-Individual User Accounts
+-Inegrated DB
+-Integration Facebook Login
+
+-MVC_Repository_Pattern
+-
