@@ -70,3 +70,9 @@ C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\obj\Debug\M
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\obj\Debug\MVC_Payment.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\obj\Debug\MVC_Payment.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\obj\Debug\MVC_Payment.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\EntityFramework.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\EntityFramework.SqlServer.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\RestSharp.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\EntityFramework.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\EntityFramework.SqlServer.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Payment\MVC_Payment\bin\RestSharp.xml
