@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SendNotify";
+}
+
+<h2>SendNotify</h2>
+
+<form class="container">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" id="txtTitle" />
+    </div>
+    <div class="form-group">
+        <label>Message</label>
+        <input type="text" class="form-control" id="txtMessage" />
+    </div>
+    <div class="form-group">
+        <lable>Alert Type</lable>
+        <select class="form-control" id="txtAlertType">
+            <option value="null">-Select Type -</option>
+            <option value="success">Success </option>
+            <option value="info">Information </option>
+            <option value="warning">Warning </option>
+            <option value="danger">Danger </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="button" id="btnSend" class="btn btn-primary" value="Send Alert" />
+    </div>
+</form>
+
+@section Scripts{
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {
+            window.notifyApp.hubConnector.done(function () {
+                $("#btnSend").click(function () {
+                    var title = $("#txtTitle").val();
+                    var message = $("#txtMessage").val();
+                    var alerttype = $("#txtAlertType").val();
+                    $.connection.notificationHub.server.notifyAll(title, message, alerttype);
+                }); // click send
+            }); // done
+        }); // main
+    </script>
+}

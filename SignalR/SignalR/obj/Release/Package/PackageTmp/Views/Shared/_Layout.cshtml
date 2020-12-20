@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            $.connection.notificationHub.client.displayNotification = function (title, message, alerttype) {
+                var alertHTML = "<div class='alert alert-" + alerttype + " alert-dismissible fade in' role='alert'>";
+                alertHTML += "<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>×</span></button>";
+                alertHTML += "<h4>" + title + "</h4>";
+                alertHTML += "<p>" + message + "</p>";
+                alertHTML += "</div>";
+                $(alertHTML).hide().appendTo("#output-alert").fadeIn(800);
+            }
+            window.notifyApp = {
+                hubConnector: $.connection.hub.start()
+            }
+        }); // main
+    </script>
+    <style>
+        #output-alert {
+            position: absolute;
+            width: 30%;
+            height: 100px;
+            right: 10px; /*position start from right*/
+            top: 50px; /*position start from top*/
+            z-index: 999999;
+        }
+    </style>
+    <div id="output-alert">
+
+    </div>
+
+    @RenderSection("scripts");
+    @*@RenderSection("scripts", required: false);*@
+</body>
+</html>

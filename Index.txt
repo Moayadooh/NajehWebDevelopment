@@ -208,5 +208,9 @@ Day3_LINQ
 
 -MVC_Repository_Pattern
 
--Payment
--
+-MVC_Payment
+
+-MVC_SignalR
+-chat
+-notification
+-multiple layouts
