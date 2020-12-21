@@ -188,10 +188,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/SignalR.dll">
-      <publishTime>12/20/2020 20:42:08</publishTime>
+      <publishTime>12/21/2020 13:47:38</publishTime>
     </File>
     <File Include="bin/SignalR.pdb">
-      <publishTime>12/20/2020 20:42:08</publishTime>
+      <publishTime>12/21/2020 13:47:38</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/28/2018 13:04:24</publishTime>
@@ -296,7 +296,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/20/2020 19:41:26</publishTime>
     </File>
     <File Include="Views/Home/Chat.cshtml">
-      <publishTime>12/20/2020 19:52:22</publishTime>
+      <publishTime>12/20/2020 20:53:37</publishTime>
     </File>
     <File Include="Views/Home/Employee.cshtml">
       <publishTime>12/20/2020 20:27:56</publishTime>
@@ -305,10 +305,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/20/2020 20:28:14</publishTime>
     </File>
     <File Include="Views/Home/SendNotify.cshtml">
-      <publishTime>12/20/2020 20:11:49</publishTime>
+      <publishTime>12/20/2020 20:51:52</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/20/2020 20:39:35</publishTime>
+      <publishTime>12/20/2020 20:51:52</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutEmployee.cshtml">
       <publishTime>12/20/2020 20:26:49</publishTime>
@@ -323,7 +323,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/20/2020 19:41:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/20/2020 20:36:35</publishTime>
+      <publishTime>12/21/2020 13:47:39</publishTime>
     </File>
   </ItemGroup>
 </Project>
