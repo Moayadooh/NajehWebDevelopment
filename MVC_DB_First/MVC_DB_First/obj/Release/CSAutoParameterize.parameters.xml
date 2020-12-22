@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="restatedbEntities-Web.config Connection String" description="restatedbEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=restatedb;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC_DB_First\\MVC_DB_First\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='restatedbEntities']/@connectionString" />
+  </parameter>
+  <parameter name="restatedbConnectionString-Web.config Connection String" description="restatedbConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=.;Initial Catalog=restatedb;User ID=sa;Password=123;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC_DB_First\\MVC_DB_First\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='restatedbConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

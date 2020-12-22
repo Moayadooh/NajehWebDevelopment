@@ -52,7 +52,7 @@ namespace Day5_MVC.Controllers
                         //{
                             string extension = Path.GetExtension(image.FileName);
                             var gg = Guid.NewGuid();
-                            image.SaveAs(Server.MapPath("/Images/" + gg + extension)); // save to images folder
+                            image.SaveAs(Server.MapPath("~/Images/" + gg + extension)); // save to images folder
                             account.Image = gg + extension; // save image name to DB
                             DB.Accounts.Add(account);
                             DB.SaveChanges();
@@ -67,7 +67,8 @@ namespace Day5_MVC.Controllers
             }
             catch
             {
-                return View();
+                throw;
+                //return View();
             }
         }
 
@@ -90,7 +91,7 @@ namespace Day5_MVC.Controllers
                     {
                         string extension = Path.GetExtension(image.FileName);
                         var gg = Guid.NewGuid();
-                        image.SaveAs(Server.MapPath("/Images/" + gg + extension)); // save to images folder
+                        image.SaveAs(Server.MapPath("~/Images/" + gg + extension)); // save to images folder
                         account.Image = gg + extension; // save image name to DB
                     }
                     DB.Entry(account).State = System.Data.Entity.EntityState.Modified;

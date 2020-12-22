@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<!-- contact -->
+<div class="contact wthree all_pad">
+    <div class="container">
+        <h3 class="title">contact<span></span></h3>
+        <div class="contact-form">
+            <div class="col-md-6 contact-grid">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <p class="your-para">Name:</p>
+                    <input type="text" placeholder="Type Here" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type Here';}" name="UserName">
+                    @Html.ValidationMessage("UserName", new { @class = "text-danger" })
+
+                    <p class="your-para">Email:</p>
+                    <input type="email" placeholder="Type Here" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type Here';}" name="UserEmail">
+                    @Html.ValidationMessage("UserEmail", new { @class = "text-danger" })
+
+                    <p class="your-para">Message:</p>
+                    <textarea name="UserMessage" placeholder="Type your message" onfocus="this.placeholder='';" onblur="if (this.value == '') {this.placeholder = 'Type your message';}"></textarea>
+                    @Html.ValidationMessage("UserMessage", new { @class = "text-danger" })
+
+                    <div class="send">
+                        <input type="submit" value="Send">
+                    </div>
+                }
+            </div>
+            <div class="col-md-6 contact-in">
+                <h2> Sed ut perspiciatis unde omnis.</h2>
+                <p class="para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="more-address">
+                    <div class="address-more">
+                        <p>My company name,</p>
+                        <p>Lorem ipsum dolor,</p>
+                        <p>Jasmin Dr 40 Fe 72. </p>
+                    </div>
+                    <div class="address-left">
+                        <p>Tel:1115550001</p>
+                        <p>Fax:190-4509-494</p>
+                        <p><a href="mailto:info@example.com">mail@example.com</a></p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<!-- //contact -->

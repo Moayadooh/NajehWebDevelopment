@@ -126,6 +126,7 @@
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Images\b6bf8657-d5f7-45ff-8bc6-75f5b9622952.JPG" />
     <Content Include="Images\c81731f0-f16f-460e-8a22-c1308e9d6996.png" />
     <Content Include="Images\dfd156d9-3a2b-49a3-bfdb-79bfa5a92ac5.png" />
     <Content Include="img\eye.svg" />

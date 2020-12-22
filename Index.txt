@@ -214,3 +214,4 @@ Day3_LINQ
 -chat
 -notification
 -multiple layouts
+-custom errors
