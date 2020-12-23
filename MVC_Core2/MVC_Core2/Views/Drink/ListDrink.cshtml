@@ -1,0 +1,25 @@
+﻿@*@model IEnumerable<MVC_Core2.Models.Drink>*@
+@model MVC_Core2.ViewModels.DrinkViewModel
+
+@*<h1> @ViewBag.currentCategory drink</h1>*@
+<h1> @Model.CategoryName </h1>
+
+<style>
+    img {
+        height: 300px !important;
+        width: 500px !important;
+    }
+</style>
+@foreach (var item in Model.GetDrinks)
+{
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="/@item.ImageUrl" />
+        </div>
+        <div class="caption">
+            <h3 class="pull-left">@item.Name </h3>
+            <h3>@item.Price.ToString("c") </h3>
+            <p>@item.Category.CategoryName / @item.Description</p>
+        </div>
+    </div>
+}
