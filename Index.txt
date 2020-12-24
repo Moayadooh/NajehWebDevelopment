@@ -219,9 +219,9 @@ Day3_LINQ
 -MVC_Core1
 -pipeline
 -Routing
+-endpoints
 
 -MVC_Core2
--endpoints
 -dependency injection
 -lazy loading
 -partial views
