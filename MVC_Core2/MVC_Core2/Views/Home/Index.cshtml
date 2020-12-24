@@ -1,2 +1,12 @@
 ﻿
-<h1>Index</h1>
+<style>
+    .thumbnail > img {
+        height: 300px !important;
+    }
+</style>
+
+<partial name="_Carousel" />
+@foreach (var item in Model)
+{
+    <partial model="item" name="_DrinkPartial" />
+}

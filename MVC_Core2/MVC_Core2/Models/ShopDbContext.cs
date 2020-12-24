@@ -14,6 +14,7 @@ namespace MVC_Core2.Models
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Drink> Drinks { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

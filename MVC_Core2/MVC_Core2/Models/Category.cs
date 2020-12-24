@@ -10,6 +10,6 @@ namespace MVC_Core2.Models
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
 
-        public List<Drink> Drinks { get; set; }
+        public virtual List<Drink> Drinks { get; set; }
     }
 }

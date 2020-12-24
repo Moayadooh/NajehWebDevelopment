@@ -1,6 +1,5 @@
-﻿@*@model IEnumerable<MVC_Core2.Models.Drink>*@
-@model MVC_Core2.ViewModels.DrinkViewModel
-
+﻿@*@model MVC_Core2.ViewModels.DrinkViewModel*@
+@model DrinkViewModel
 @*<h1> @ViewBag.currentCategory drink</h1>*@
 <h1> @Model.CategoryName </h1>
 
@@ -10,7 +9,7 @@
         width: 500px !important;
     }
 </style>
-@foreach (var item in Model.GetDrinks)
+@*@foreach (var item in Model.GetDrinks)
 {
     <div class="col-md-4">
         <div class="thumbnail">
@@ -22,4 +21,8 @@
             <p>@item.Category.CategoryName / @item.Description</p>
         </div>
     </div>
+}*@
+@foreach (var item in Model.GetDrinks)
+{
+    <partial model="item" name="_DrinkPartial" />
 }

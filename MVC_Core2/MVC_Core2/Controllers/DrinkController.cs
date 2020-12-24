@@ -22,12 +22,22 @@ namespace MVC_Core2.Controllers
         public IActionResult ListDrink()
         {
             DrinkViewModel drinkVM = new DrinkViewModel(); // SingleObject
-            drinkVM.GetDrinks = _drinkRepo.AllDrinks; // through dependency injection "services.AddScoped<IDrinkRepository, DrinkRepo>();"
+            drinkVM.GetDrinks = _drinkRepo.AllDrinks;
             drinkVM.CategoryName = "Soft and Hot";
-            // ViewBag.currentCategory = "soft";
+            //ViewBag.currentCategory = "soft";
 
             //return View(_drinkRepo.AllDrinks); // _drinkRepo.AllDrinks --> here the constructor will be called
             return View(drinkVM);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var drink = _drinkRepo.GetDrinkByID(id);
+            if (drink == null)
+            {
+                return NotFound();
+            }
+            return View(drink);
         }
     }
 }

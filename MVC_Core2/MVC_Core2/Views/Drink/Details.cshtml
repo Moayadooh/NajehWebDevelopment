@@ -1,0 +1,11 @@
+﻿@model Drink
+<div class="col-md-4">
+    <div class="thumbnail">
+        <img src="/@Model.ImageUrl" />
+        <div class="caption">
+            <h3 class="pull-left">@Model.Name</h3>
+            <h3>@Model.Price.ToString("c") </h3>
+            <p>@Model.Category.CategoryName / @Model.Description</p>
+        </div>
+    </div>
+</div>

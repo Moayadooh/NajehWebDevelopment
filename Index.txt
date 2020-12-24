@@ -215,3 +215,15 @@ Day3_LINQ
 -notification
 -multiple layouts
 -custom errors
+
+-MVC_Core1
+-pipeline
+-Routing
+
+-MVC_Core2
+-endpoints
+-dependency injection
+-lazy loading
+-partial views
+-view imports
+-tag helpers

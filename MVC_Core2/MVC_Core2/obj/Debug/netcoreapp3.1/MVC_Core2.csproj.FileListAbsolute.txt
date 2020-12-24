@@ -75,3 +75,9 @@ C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\bin\Debug\netco
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\MVC_Core2.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\MVC_Core2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DrinkPartial.cshtml.g.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\MVC_Core2\MVC_Core2\obj\Debug\netcoreapp3.1\Razor\Views\Drink\Details.cshtml.g.cs
