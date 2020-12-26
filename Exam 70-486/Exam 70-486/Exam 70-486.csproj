@@ -142,6 +142,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Other\Correction.txt" />
+    <Content Include="Other\info.txt" />
     <Content Include="Part1\Q 1.html" />
     <Content Include="Part1\Q 11.html" />
     <Content Include="Part3\Q 11.html" />
