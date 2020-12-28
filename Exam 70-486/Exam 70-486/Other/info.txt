@@ -15,3 +15,13 @@ persisted --> ثابته ومستمره
 emits --> يسبب
 diagnostic --> analyze
 reservation --> حجز
+exhibit --> show
+
+
+what is application state?
+revice part 5 corrections (Q 43)
+
+3 done 14 Qs
+4 done 7 Qs
+5 done 43 Qs
+6 
