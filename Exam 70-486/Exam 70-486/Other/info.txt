@@ -16,12 +16,13 @@ emits --> يسبب
 diagnostic --> analyze
 reservation --> حجز
 exhibit --> show
+provision --> توفير
 
 
-what is application state?
-revice part 5 corrections (Q 43)
+Part 6:
+Q 33 https://www.briefmenow.org/microsoft/70-486-you-develop-an-asp-net-mvc-application-the-application-has-several-razor-views/
+Q 81 
 
-3 done 14 Qs
-4 done 7 Qs
-5 done 43 Qs
-6 
+
+-what is application state?
+-revice part 5 corrections (Q 43)
