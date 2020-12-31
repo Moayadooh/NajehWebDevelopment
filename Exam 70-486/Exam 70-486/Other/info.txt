@@ -8,21 +8,29 @@ Session-State Modes:
 https://docs.microsoft.com/en-us/previous-versions/aspnet/ms178586(v=vs.100)
 
 
+what is application state?
+all users share the same data in single application
+
+
+
+
 
 New Words:
 credential --> معتمد
 persisted --> ثابته ومستمره
 emits --> يسبب
 diagnostic --> analyze
-reservation --> حجز
 exhibit --> show
 provision --> توفير
 
 
-Part 6:
-Q 33 https://www.briefmenow.org/microsoft/70-486-you-develop-an-asp-net-mvc-application-the-application-has-several-razor-views/
-Q 81 
 
 
--what is application state?
--revice part 5 corrections (Q 43)
+
+Part1 16 Qs
+Part2 18 Qs
+Part3 14 Qs
+Part4 7 Qs
+Part5 43 Qs
+Part6 141 Qs
+Part7 86 Qs
