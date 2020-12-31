@@ -22,6 +22,7 @@ Q 79 ans is A
 Q 85 ans is B and D https://www.examtopics.com/discussions/microsoft/view/20575-exam-70-486-topic-1-question-161-discussion/
 Q 98 ans is B
 Q 102 ans is D https://www.examtopics.com/discussions/microsoft/view/9664-exam-70-486-topic-1-question-119-discussion/
+Q 107 ans is B https://www.examtopics.com/discussions/microsoft/view/11202-exam-70-486-topic-1-question-125-discussion/
 Q 123 ans is B and C
 Q 128 ans is A
 Q 131 ans is A and D https://www.examtopics.com/discussions/microsoft/view/4495-exam-70-486-topic-1-question-174-discussion/
@@ -31,11 +32,12 @@ Q 141 ans is B
 
 Part 7:
 Q 19 ans is MapRoute, IgnoreRoute, MapRoute https://www.examtopics.com/discussions/microsoft/view/282-exam-70-486-topic-1-question-55-discussion/#:~:text=The%20GetBagel%20action%20is%20the,the%20controller%20must%20be%20suppressed.
-Q 22 WebExtendedBase https://www.briefmenow.org/microsoft/how-should-you-complete-the-relevant-code-210/
-Q 34 RunLog/(action)
+Q 22 ans is WebExtendedBase, Raise  https://www.briefmenow.org/microsoft/how-should-you-complete-the-relevant-code-210/
+Q 34 ans is routse.MapRoute(), RunLog/{action}
 Q 45 ans is select, create, add, build, run https://www.examtopics.com/exams/microsoft/70-486/view/19/
 Q 55 ans is UseDefaultFiles, UseStaticFiles, UseStaticFiles https://www.examtopics.com/discussions/microsoft/view/4427-exam-70-486-topic-1-question-179-discussion/
 Q 59 ans is FileConfigurationSource, FileConfigurationProvider https://andrewlock.net/creating-a-custom-iconfigurationprovider-in-asp-net-core-to-parse-yaml/
+Q 63 ans is TestServer, WebHostBuilder https://www.examtopics.com/discussions/microsoft/view/11932-exam-70-486-topic-1-question-139-discussion/
 Q 64 ans is Custom VHD, Formula https://www.examtopics.com/discussions/microsoft/view/13266-exam-70-486-topic-1-question-181-discussion/
 Q 67 ans is W, S, F, A https://stackoverflow.com/questions/15568167/signalr-client-default-fallback-transport
 Q 69 ans is https://andrewlock.net/creating-a-custom-iconfigurationprovider-in-asp-net-core-to-parse-yaml/
