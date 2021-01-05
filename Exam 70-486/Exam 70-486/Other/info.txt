@@ -7,11 +7,8 @@ Session-State Modes:
 -Off mode, which disables session state.
 https://docs.microsoft.com/en-us/previous-versions/aspnet/ms178586(v=vs.100)
 
-
 what is application state?
 all users share the same data in single application
-
-
 
 
 
@@ -22,15 +19,3 @@ emits --> يسبب
 diagnostic --> analyze
 exhibit --> show
 provision --> توفير
-
-
-
-
-
-Part1 16 Qs
-Part2 18 Qs
-Part3 14 Qs
-Part4 7 Qs
-Part5 43 Qs
-Part6 141 Qs
-Part7 86 Qs   Part567 --> Screenshot (1931) onward

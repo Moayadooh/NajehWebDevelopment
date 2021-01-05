@@ -11,7 +11,7 @@ Q 43 ans is A https://docs.microsoft.com/en-us/dotnet/api/system.web.eventhandle
 
 Part 6:
 Q 2 ans is A and B
-Q 6 ans is B
+Q 6 ans is C NOT B https://www.examtopics.com/discussions/microsoft/view/9481-exam-70-486-topic-1-question-78-discussion/ https://www.briefmenow.org/microsoft/you-need-to-improve-the-performance-of-the-application-5/
 Q 15 ans is C
 Q 35 ans is A and D https://www.examtopics.com/discussions/microsoft/view/3412-exam-70-486-topic-1-question-1-discussion/
 Q 37 currentGold must be declared
@@ -34,10 +34,14 @@ Q 141 ans is B
 Part 7:
 Q 19 ans is MapRoute, IgnoreRoute, MapRoute https://www.examtopics.com/discussions/microsoft/view/282-exam-70-486-topic-1-question-55-discussion/#:~:text=The%20GetBagel%20action%20is%20the,the%20controller%20must%20be%20suppressed.
 Q 22 ans is WebExtendedBase, Raise  https://www.briefmenow.org/microsoft/how-should-you-complete-the-relevant-code-210/
+Q 27 ans is GetOrders, ExternalOrder, External https://www.briefmenow.org/microsoft/which-markup-segments-should-you-include-in-target-1-target-2-and-target-3-to-complete-the-markup-3/
 Q 34 ans is routse.MapRoute(), RunLog/{action}
+Q 37 ans is $.hubconnection();, con.createHubProxy('MyHub');, hub.on('hello', function(message)) { https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/hubs-api-guide-javascript-client#code-try-2
+Q 38 ans is @Model.Name, @foreach (var item in Model.Friends), @item.Name https://www.briefmenow.org/microsoft/how-should-you-complete-the-relevant-code-284/
 Q 45 ans is select, create, add, build, run https://www.examtopics.com/exams/microsoft/70-486/view/19/
 Q 55 ans is UseDefaultFiles, UseStaticFiles, UseStaticFiles https://www.examtopics.com/discussions/microsoft/view/4427-exam-70-486-topic-1-question-179-discussion/
 Q 59 ans is FileConfigurationSource, FileConfigurationProvider https://andrewlock.net/creating-a-custom-iconfigurationprovider-in-asp-net-core-to-parse-yaml/
+Q 61 ans is FROM, WORKDIR, EXPOSE, COPY, ENTRYPOINT https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-5.0
 Q 63 ans is TestServer, WebHostBuilder https://www.examtopics.com/discussions/microsoft/view/11932-exam-70-486-topic-1-question-139-discussion/
 Q 64 ans is Custom VHD, Formula https://www.examtopics.com/discussions/microsoft/view/13266-exam-70-486-topic-1-question-181-discussion/
 Q 67 ans is W, S, F, A https://stackoverflow.com/questions/15568167/signalr-client-default-fallback-transport
