@@ -153,6 +153,7 @@ Day3_LINQ
 -model
 -ViewData
 -PartialView
+-Html helpers
 -MVVM
 
 -Day3_MVC
@@ -222,6 +223,7 @@ Day3_LINQ
 -endpoints
 
 -MVC_Core2
+-Repository Pattern
 -dependency injection
 -lazy loading
 -partial views
