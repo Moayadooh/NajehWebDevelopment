@@ -10,10 +10,10 @@ namespace PhotographyWebApp.Models
     public class UserInfo
     {
         [Key]
-        public String ID { get; set; }
+        public string ID { get; set; }
         [Required]
         public string FirstName { get; set; }
-        [Required]
+        //[Required]
         public string LastName { get; set; }
         [Required]
         [EmailAddress]
@@ -26,12 +26,12 @@ namespace PhotographyWebApp.Models
         public string Phone { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [StringLength(100, ErrorMessage = "Length should be between 6 and 20", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Length should be between 6 and 100", MinimumLength = 6)]
         public string Password { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [Compare("Password")]
-        [StringLength(100, ErrorMessage = "Length should be between 6 and 20", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Length should be between 6 and 100", MinimumLength = 6)]
         public string Confirm { get; set; }
 
         //-------------------------------------------------------------

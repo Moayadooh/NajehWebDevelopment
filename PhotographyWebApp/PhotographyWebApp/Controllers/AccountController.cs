@@ -369,8 +369,7 @@ namespace PhotographyWebApp.Controllers
                     return View("ExternalLoginFailure");
                 }
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                //user.UserInfo = new UserInfo { ID = user.Id, FirstName = model.FirstName, LastName = model.LastName, Email = user.Email, Phone = model.Phone, Password = model.Password, Confirm = model.ConfirmPassword };
-                //user.UserInfo = new UserInfo { ID = user.Id, FirstName = user.UserName, Email = user.Email, Phone = user.PhoneNumber, Password = user.PasswordHash };
+                //user.UserInfo = new UserInfo { ID = user.Id, FirstName = user.UserName, Email = user.Email, Phone = user.PhoneNumber, Password = user.PasswordHash, Confirm = user.PasswordHash };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
