@@ -105,3 +105,4 @@ C:\Users\moaya\Documents\NajehWebDevelopment\PhotographyWebApp\PhotographyWebApp
 C:\Users\moaya\Documents\NajehWebDevelopment\PhotographyWebApp\PhotographyWebApp\obj\Debug\PhotographyWebApp.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\PhotographyWebApp\PhotographyWebApp\obj\Debug\PhotographyWebApp.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\PhotographyWebApp\PhotographyWebApp\obj\Debug\PhotographyWebApp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\PhotographyWebApp\PhotographyWebApp\obj\Debug\PhotographyWebApp.csprojAssemblyReference.cache

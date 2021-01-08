@@ -36,7 +36,7 @@ namespace PhotographyWebApp.Models
         public virtual DbSet<OurWork> OurWorks { get; set; }
         public virtual DbSet<OurClient> OurClients { get; set; }
         public virtual DbSet<DropDown_Service> DropDown_Services { get; set; }
-        public virtual DbSet<DropDown_Branch> DropDown_Branchs { get; set; }
+        //public virtual DbSet<DropDown_Branch> DropDown_Branchs { get; set; }
     }
 
     //public class MyEntity
