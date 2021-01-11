@@ -58,11 +58,11 @@ namespace ASP_Identity_Inegrated_DB
                appId: "210364233981535",
                appSecret: "269370086ead77e7f29593e948844311");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "542884463807-rt467rkcdguho1fuqdkqbnnm40f0guqn.apps.googleusercontent.com",
+                ClientSecret = "yD-XPNYLbfq7oWMy5uG_4BbJ"
+            });
         }
     }
 }
