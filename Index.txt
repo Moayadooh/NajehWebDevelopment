@@ -152,7 +152,7 @@ Day3_LINQ
 -Day2_MVC
 -model
 -ViewData
--PartialView
+-Partial View
 -Html helpers
 -MVVM
 
@@ -160,7 +160,7 @@ Day3_LINQ
 -Code First
 -DB Connection, Create DB and Tables, Read from Table
 -Migrations
--Path
+-Get Map Path
 -Search
 -Custom CSS
 
@@ -171,10 +171,10 @@ Day3_LINQ
 -Day5_MVC
 -Register, Login, Account, Admin, Roles...
 -Create, Edit, Delete, Details
--BeginForm, TextBox, TextBoxFor, DropDownList Hidden, ValidationSummary
+-BeginForm, TextBox, TextBoxFor, DropDownList, Hidden, ValidationSummary
 -HttpGet, HttpPost, Actions
 -Session
--file upload, file format, file encription
+-file upload, file format, file encryption
 -one to one, one to many, many to many
 -filter
 -Plugin
