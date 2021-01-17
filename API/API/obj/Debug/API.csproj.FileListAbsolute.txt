@@ -86,3 +86,4 @@ C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.App_LocalReso
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.App_LocalResources.Resource.ar.resources
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csproj.GenerateResource.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\ar\API.resources.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\API\API\obj\Debug\API.csprojAssemblyReference.cache

@@ -124,7 +124,8 @@
                         GetAll();
                     },
                     error: function (e) {
-                        alert(e.responseText);
+                        console.log(e);
+                        //alert(e.responseText);
                     }
                 });
             }
@@ -143,7 +144,8 @@
                     $("#txtRate").val(data.Rate);
                 },
                 error: function (e) {
-                    alert("error:" + e.responseText);
+                    console.log(e.responseText);
+                    //alert("error:" + e.responseText);
                 }
             });
         });// document click
