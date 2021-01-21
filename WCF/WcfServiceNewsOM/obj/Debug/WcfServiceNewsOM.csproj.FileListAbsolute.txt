@@ -1,0 +1,12 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\obj\Debug\WcfServiceNewsOM.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\obj\Debug\WcfServiceNewsOM.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\WcfServiceNewsOM.dll.config
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\WcfServiceNewsOM.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\WcfServiceNewsOM.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\EntityFramework.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\EntityFramework.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\obj\Debug\WcfServiceNewsOM.csproj.CopyComplete
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\obj\Debug\WcfServiceNewsOM.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\WCF\WcfServiceNewsOM\obj\Debug\WcfServiceNewsOM.pdb
