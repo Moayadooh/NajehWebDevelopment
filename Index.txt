@@ -1,3 +1,5 @@
+Phase 1:
+----------------------------------------------
 Day2_HTML:
 -basic HTML
 -meta
@@ -73,6 +75,9 @@ Day5_JavaScript
 -chaining
 -slide control
 
+
+Phase 2:
+----------------------------------------------
 Day1_Csharp
 -overview in C# part1
 
@@ -229,3 +234,13 @@ Day3_LINQ
 -partial views
 -view imports
 -tag helpers
+
+
+Phase 3:
+----------------------------------------------
+-GitHub
+
+-Access API in Csharp
+
+-WCF Service Library
+-WCF Service Web

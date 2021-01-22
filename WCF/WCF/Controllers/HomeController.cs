@@ -7,6 +7,8 @@ using WcfServiceNewsOM;
 
 namespace WCF.Controllers
 {
+    // Access WCF Service Library
+
     public class HomeController : Controller
     {
         Service1 srv = new Service1();
