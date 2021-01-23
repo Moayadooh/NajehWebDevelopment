@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#btnAdd").click(function () {
+            var car = { Name: $("#txtName").val(), Country: $("#txtCountry").val() }
+            //alert(JSON.stringify(carlist));
+            $.ajax({
+                url: "/ServiceCar.svc/AddCars",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(car),
+                success: function (data) {
+                    alert("Car has been added");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        });// btn Add
+
+        $("#btnGetAll").click(function () {
+            $.ajax({
+                url: "/ServiceCar.svc/GetCars",
+                type: "get",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    var table = "<table class='table'>";
+                    table += "<tr><th>ID</th>";
+                    table += "<th>Name</th>";
+                    table += "<th>Country</th></tr>";
+                    for (var i = 0; i < data.d.length; i++) {
+                        table += "<tr><td>" + data.d[i].ID + "</td>";
+                        table += "<td>" + data.d[i].Name + "</td>";
+                        table += "<td>" + data.d[i].Country + "</td></tr>";
+                    }
+                    table += "</table>";
+                    $("#output").html(table);
+                }
+            });
+        }); // get all
+
+        $("#btnUpdate").click(function () {
+            var car = { ID: $("#txtID").val(), Name: $("#txtName").val(), Country: $("#txtCountry").val() }
+            //alert(JSON.stringify(carlist));
+            $.ajax({
+                url: "/ServiceCar.svc/UpdateCars",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(car),
+                success: function (data) {
+                    alert("Car has been Updated");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        });// btn Update
+
+        $("#btnRemove").click(function () {
+            var car = { ID: $("#txtID").val() }
+            //alert(JSON.stringify(carlist));
+            $.ajax({
+                url: "/ServiceCar.svc/RemoveCars",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(car),
+                success: function (data) {
+                    alert("Car has been Removed");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        });// btn Add
+    });
+</script>
+
+<div class="jumbotron">
+    <div class="form-group">
+        <input type="text" id="txtID" class="form-control" placeholder="Enter an ID" />
+    </div>
+    <div class="form-group">
+        <input type="text" id="txtName" class="form-control" placeholder="Enter Car Name" />
+    </div>
+    <div class="form-group">
+        <input type="text" id="txtCountry" class="form-control" placeholder="Enter Country Name" />
+    </div>
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" id="btnAdd" value="Add Car" />
+        <input type="button" class="btn btn-primary" id="btnUpdate" value="Update Car" />
+        <input type="button" class="btn btn-success" id="btnGetOne" value="Get Car" />
+        <input type="button" class="btn btn-warning" id="btnGetAll" value="Get All" />
+        <input type="button" class="btn btn-warning" id="btnRemove" value="Remove car" />
+    </div>
+</div>
+<div id="output">
+
+</div>

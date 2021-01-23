@@ -244,3 +244,4 @@ Phase 3:
 
 -WCF Service Library
 -WCF Service Web
+-WCF Service Ajax
