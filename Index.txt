@@ -238,10 +238,9 @@ Day3_LINQ
 
 Phase 3:
 ----------------------------------------------
--GitHub
-
--Access API in Csharp
-
+WCF
 -WCF Service Library
 -WCF Service Web
+
+WCF_Ajax
 -WCF Service Ajax
