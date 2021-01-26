@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Manage Products";
+}
+<link href="~/css/all.css" rel="stylesheet" />
+<script src="~/js/manageproducts.js"></script>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="active">@ViewBag.Title</li>
+        </ol>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<div class="products">
+    <div class="container">
+        <div class="col-md-4 products-left">
+            <div class="categories">
+                <h2>Categories</h2>
+                <ul class="cate">
+                </ul>
+            </div>
+            <div id="ItemsForm" class="jumbotron">
+                <input type="hidden" id="ID" value="" />
+                <div class="form-group" id="DDL">
+                    @Html.DropDownList("CategoryDDL", null, "-select category-", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtName" placeholder="Enter Item Name" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtPrice" placeholder="Enter Item Price" />
+                </div>
+                <div class="form-group">
+                    <input type="file" id="ImageFile" multiple class="form-control" />
+                    <input type="hidden" id="ImageName" value="" />
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-success" id="btnAdd" type="button">
+                        <i class="fas fa-plus"></i> Add Item
+                    </button>
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-primary" id="btnSave" type="button">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-danger" id="btnCancel" type="button">
+                        <i class="fas fa-ban"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="container" class="col-md-8 products-right">
+            <div class="products-right-grid">
+                <div class="products-right-grids">
+                    <div class="sorting">
+                        <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null">Default sorting</option>
+                            <option value="null">Sort by popularity</option>
+                            <option value="null">Sort by average rating</option>
+                            <option value="null">Sort by price</option>
+                        </select>
+                    </div>
+                    <div class="sorting-left">
+                        <select id="country1" class="frm-field required sect itemsPerPage">
+                            <option value="3">Item on page 3</option>
+                            <option value="6">Item on page 6</option>
+                            <option value="9">Item on page 9</option>
+                            <option value="-1">All</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div id="items">
+
+            </div>
+            <div id="links">
+
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

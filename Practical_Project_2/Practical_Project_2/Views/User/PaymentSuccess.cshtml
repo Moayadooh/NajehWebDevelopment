@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Payment Success";
+}
+<script>
+    $(function () {
+        var jsonObj = [];
+        jsonObj.push({
+            "TotalCart": $(".total-cart").text(),
+            "TotalCount": $(".total-count").text()
+        });
+        $.ajax({
+            type: "POST",
+            url: "/User/Purchase",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify(jsonObj),
+            success: function (data) {
+                shoppingCart.clearCart();
+                displayCart();
+                alert(data);
+                window.location = "https://localhost:44302/User/Index"; // https 44302 - http 8003 - http://moayad.somee.com/User/Index
+            },
+            error: function (data) {
+                alert('Could not save the records!');
+                console.log(data);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="active">@ViewBag.Title</li>
+        </ol>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- register -->
+@Html.Partial("_RegisterPartial")
+<!-- //register -->

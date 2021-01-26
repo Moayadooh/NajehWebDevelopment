@@ -1,0 +1,136 @@
+﻿
+/*Languages*/
+li.lang {
+    list-style: none;
+    display: block;
+}
+
+    li.lang a {
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        font-family: Arial;
+    }
+
+ul.nested-list {
+    text-align: center;
+    padding-left: 0;
+    background-color: gray;
+    display: none;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    z-index: 999;
+}
+
+@media screen and (max-width:768px) {
+    ul.nested-list {
+        left: 30%;
+        transform: translateX(-50%);
+        top: -50px;
+    }
+}
+
+ul.nested-list li {
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    border-bottom: 1px solid white;
+    line-height: 35px;
+    padding: 0px 4px;
+}
+
+    ul.nested-list li:hover {
+        background: #fe9126;
+    }
+
+li.lang {
+    position: relative;
+}
+
+    li.lang:hover ul.nested-list {
+        display: block;
+    }
+
+
+
+/* /Home/Login */
+p.has-error {
+    color: red;
+}
+
+.g-recaptcha {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+.g-signin2 {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+
+
+/* /Admin/Index */
+#icones {
+    display: flex;
+}
+
+#removeIcone {
+    margin-left: auto;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.glyphicon.glyphicon-pencil {
+    cursor: pointer;
+    color: gray;
+    font-size: 19px;
+}
+
+.glyphicon.glyphicon-remove {
+    cursor: pointer;
+    color: red;
+    font-size: 19px;
+}
+
+#ItemsForm {
+    margin-top: 20px;
+}
+
+#btnSave, #btnCancel {
+    display: none;
+}
+
+/* /Admin/Index & /Home/Products */
+#addToCart {
+    background: gray;
+    border: none;
+}
+
+/* /Admin/Index & /User/Index & /Home/Products */
+.categories ul li {
+    border-left: 3px solid #fff;
+}
+
+.selectedCat {
+    border-color: #808080 !important;
+}
+
+
+
+/* /User/ Purchases History */
+#historyTableContainer h3 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#historyTable th:hover, #usersTable th:hover {
+    cursor: pointer;
+    color: #fe9126;
+}
