@@ -17,5 +17,3 @@ Q 43 ans is No, Yes, Yes
 Q 76 ans is Yes, Yes, No
 Q 100 ans is No, No
 Q 114 ans is NO, No, No
-
-Exam C:
