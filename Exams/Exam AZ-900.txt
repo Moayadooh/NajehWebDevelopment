@@ -7,6 +7,7 @@ Q 64 ans is B https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery
 Q 109 ans is A https://azure.microsoft.com/en-us/support/plans/
 Q 116 ans is C https://www.examtopics.com/discussions/microsoft/view/5741-exam-az-900-topic-1-question-131-discussion/ https://azure.microsoft.com/en-us/support/plans/
 Q 127 ans is D https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-rehydration?tabs=azure-portal
+Q 130 ans is C https://www.examtopics.com/discussions/microsoft/view/33447-exam-az-900-topic-2-question-29-discussion/
 Q 131 ans is B and D
 
 Exam B:
