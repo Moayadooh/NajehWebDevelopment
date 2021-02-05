@@ -15,6 +15,8 @@ Q 24 ans is NO, Yes, Yes
 Q 30 ans is NO, No, No https://www.examtopics.com/discussions/microsoft/view/7995-exam-az-900-topic-1-question-109-discussion/
 Q 40 ans is No, No, Yes https://www.javaoops.com/azure/az-900 https://quizlet.com/507676702/az-900-questions-yesno-flash-cards/
 Q 43 ans is No, Yes, Yes
+Q 67 ans is NO, No, No
+Q 74 ans is 4th option
 Q 68 ans is Yes, NO, Yes https://www.azure.cn/en-us/support/sla/active-directory/#:~:text=The%20SLA%20will%20be%20effective,service%2C%20and%20reset%20passwords%3B%20or https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/#:~:text=No%20SLA%20is%20provided%20for%20the%20Free%20tier%20of%20Azure%20Active%20Directory.&text=This%20Service%20Level%20Agreement%20for,(the%20%E2%80%9CAgreement%E2%80%9D). https://pupuweb.com/microsoft-azure-fundamentals-az900-actual-exam-question-answer-dumps/27/#:~:text=Question%20267%3A%20All%20paying%20Azure,Service%20Level%20Agreement%20(SLA). (Question 267)
 Q 76 ans is Yes, Yes, No
 Q 100 ans is No, No
