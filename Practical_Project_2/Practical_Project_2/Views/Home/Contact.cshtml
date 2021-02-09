@@ -2,7 +2,31 @@
 @{
     ViewBag.Title = "Contact";
 }
-
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            var jsonObj = [];
+            jsonObj.push({
+                "UserEmail": $("#input-26").val(),
+                "UserName": $("#input-25").val(),
+                "UserMessage": $("#msg").val()
+            });
+            $.ajax({
+                type: "POST",
+                url: "/Home/SendMail",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(jsonObj),
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -54,8 +78,8 @@
                         <span class="input__label-content input__label-content--ichiro">Your Email</span>
                     </label>
                 </span>
-                <textarea name="Message" placeholder="Your message here..." required=""></textarea>
-                <input type="submit" value="Submit">
+                <textarea id="msg" name="Message" placeholder="Your message here..." required=""></textarea>
+                <input type="button" id="btn" value="Submit">
             </form>
         </div>
         <div class="clearfix"> </div>

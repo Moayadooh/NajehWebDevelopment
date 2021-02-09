@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Services;
@@ -248,6 +249,37 @@ namespace Practical_Project_2.Controllers
         public ActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendMail(List<ContactViewModel> contactList)
+        {
+            if (ModelState.IsValid)
+            {
+                var body = "<p> Email From : {0} - ({1})</p><p>Message:</p><p>{2}</p> ";
+                var message = new MailMessage();
+                message.To.Add(new MailAddress("moayadarss97@gmail.com")); //info@yourdomain
+                message.From = new MailAddress("moayad.soft@outlook.com");
+                message.Subject = "Test Suject";
+                message.Body = string.Format(body, contactList[0].UserEmail, contactList[0].UserName, contactList[0].UserMessage);
+                message.IsBodyHtml = true;
+
+                using (var smtp = new SmtpClient())
+                {
+                    var crd = new NetworkCredential()
+                    {
+                        UserName = "moayad.soft@outlook.com",
+                        Password = ""
+                    };
+                    smtp.Credentials = crd;
+                    smtp.Host = "smtp-mail.outlook.com";
+                    smtp.Port = 587;
+                    smtp.EnableSsl = true;
+                    smtp.Send(message);
+                    return Json("Email sent.");
+                }
+            }
+            return Json("Something went wrong");
         }
 
         public ActionResult FAQ()

@@ -247,6 +247,7 @@
     <Compile Include="Models\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\CaptchaResponse.cs" />
+    <Compile Include="ViewModel\ContactViewModel.cs" />
     <Compile Include="ViewModel\MiscCode.cs" />
     <Compile Include="ViewModel\UserIntegrationLogin.cs" />
     <Compile Include="ViewModel\UserPasswordConfirmation.cs" />
