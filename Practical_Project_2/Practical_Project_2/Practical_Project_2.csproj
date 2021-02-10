@@ -194,7 +194,6 @@
     <Content Include="images\t3.jpg" />
     <Content Include="images\t4.jpg" />
     <Content Include="images\tick.png" />
-    <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\easing.js" />
@@ -249,6 +248,7 @@
     <Compile Include="ViewModel\CaptchaResponse.cs" />
     <Compile Include="ViewModel\ContactViewModel.cs" />
     <Compile Include="ViewModel\MiscCode.cs" />
+    <Compile Include="ViewModel\UserDetails.cs" />
     <Compile Include="ViewModel\UserIntegrationLogin.cs" />
     <Compile Include="ViewModel\UserPasswordConfirmation.cs" />
     <Compile Include="ViewModel\UserPurchaseData.cs" />
