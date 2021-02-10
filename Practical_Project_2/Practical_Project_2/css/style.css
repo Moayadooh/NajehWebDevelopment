@@ -1386,11 +1386,11 @@ ul.faq {
 .products {
     padding: 5em 0;
 }
-.sorting{
+.sorting1 {
 	float:right;
 	width: 35%;
 }
-.sorting-left{
+.sorting-left {
 	float: right;
     margin-right: 2em;
     width: 25%;
@@ -2993,7 +2993,7 @@ p.w3l-ad {
 .w3_footer_grid h3 {
     margin-bottom: 1em;
 }
-.sorting {
+.sorting1 {
     width: 44%;
 }
 .sorting-left {
@@ -3273,7 +3273,7 @@ p.w3l-ad {
     width: 47%;
 	margin-right: 2%;
 }
-.sorting {
+.sorting1 {
     width: 51%;
 }
 .products {

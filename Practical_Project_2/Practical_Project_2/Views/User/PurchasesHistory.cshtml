@@ -1,23 +1,8 @@
-﻿@model string
+﻿@model IEnumerable<Practical_Project_2.Models.UserPurchase>
+@*@model string*@
 @{
     ViewBag.Title = "Purchases History";
 }
-<script>
-    var app = angular.module("myapp", []);
-    app.controller("MyController", function ($scope, $http) {
-        $http.get("/api/Users/@Model").then(function (result) {
-            $scope.myData = result.data;
-        });
-
-        $scope.getOrderBy = function (x) {
-            $scope.currentorder = x;
-        }
-    });
-
-    $(function () {
-        $("th:first-child").trigger("click");
-    });
-</script>
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -29,19 +14,22 @@
 </div>
 <!-- //breadcrumbs -->
 <div class="products">
-    <div id="historyTableContainer" class="container" ng-app="myapp">
+    <div id="historyTableContainer" class="container">
         <h3>Purchases History</h3>
-        <table id="historyTable" class="table table-hover" ng-controller="MyController">
+        <table class="table table-hover">
             <tr>
-                <th ng-click="getOrderBy('NumOfItems')">Number Of Items</th>
-                <th ng-click="getOrderBy('TotalPrice')">Total Price</th>
-                <th ng-click="getOrderBy('Date')">Date and Time</th>
+                <th>Number Of Items</th>
+                <th>Total Price</th>
+                <th>Date and Time</th>
             </tr>
-            <tr ng-repeat="t in myData | filter : teamname | orderBy : currentorder">
-                <td>{{ t.NumOfItems }}</td>
-                <td>{{ t.TotalPrice }}</td>
-                <td>{{ t.Date }}</td>
-            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.NumOfItems</td>
+                    <td>@item.TotalPrice</td>
+                    <td>@item.Date</td>
+                </tr>
+            }
         </table>
     </div>
 </div>

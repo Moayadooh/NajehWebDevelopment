@@ -18,20 +18,6 @@ namespace Practical_Project_2.Controllers
         private ShoppingDB db = new ShoppingDB("");
 
         // (GET request)
-        // get purchased items based on user id
-        [Route("api/Users/{id}")]
-        public IQueryable<UserPurchaseViewModel> GetUsers(string id)
-        {
-            var model = db.UserPurchases.Where(x => x.UserID.ToString() == id);
-            var userPurchaseViewModel = new List<UserPurchaseViewModel>();
-            foreach (var item in model)
-            {
-                userPurchaseViewModel.Add(new UserPurchaseViewModel() { NumOfItems = item.NumOfItems, TotalPrice = item.TotalPrice, Date = item.Date.ToString("MM/dd/yyyy hh:mm tt") });
-            }
-            return userPurchaseViewModel.AsQueryable();
-        }
-
-        // (GET request)
         // get users and purchased items for each user
         [Route("api/GetUsersItemsPurchases")]
         public IQueryable<UsersItemsPurchases> GetUsersItemsPurchases()
@@ -89,25 +75,6 @@ namespace Practical_Project_2.Controllers
             //}
 
         }
-
-        // (GET request)
-        // get number of records 
-        //[Route("api/GetUsersItemsPurchases")]
-        //public int GetNumOfRecords()
-        //{
-        //    int count = 0;
-        //    var list = db.Users.Include(x => x.UserPurchases).Include(y => y.Profile).ToList();
-        //    foreach (var item in list)
-        //    {
-        //        if (item.UserPurchases.Count == 0)
-        //            count++;
-        //        foreach (var userPurchasesItem in item.UserPurchases)
-        //        {
-        //            count++;
-        //        }
-        //    }
-        //    return count;
-        //}
 
         protected override void Dispose(bool disposing)
         {

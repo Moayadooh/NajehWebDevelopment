@@ -252,7 +252,6 @@
     <Compile Include="ViewModel\UserIntegrationLogin.cs" />
     <Compile Include="ViewModel\UserPasswordConfirmation.cs" />
     <Compile Include="ViewModel\UserPurchaseData.cs" />
-    <Compile Include="ViewModel\UserPurchaseViewModel.cs" />
     <Compile Include="ViewModel\UsersItemsPurchases.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>

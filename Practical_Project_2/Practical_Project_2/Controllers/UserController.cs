@@ -26,7 +26,8 @@ namespace Practical_Project_2.Controllers
         public ActionResult PurchasesHistory()
         {
             string UserID = ((User)Session["profile"]).ID.ToString();
-            return View((object)UserID);
+            return View(db.UserPurchases.Where(x => x.UserID.ToString() == UserID));
+            //return View((object)UserID);
         }
 
         [HttpPost]
