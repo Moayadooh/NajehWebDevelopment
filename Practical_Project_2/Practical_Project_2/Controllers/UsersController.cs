@@ -42,7 +42,23 @@ namespace Practical_Project_2.Controllers
             }
             return userDetails.AsQueryable();
         }
-        //NumOfItems = userPurchasesItem.NumOfItems.ToString(), TotalPrice = userPurchasesItem.TotalPrice.ToString(), Date = userPurchasesItem.Date.ToString("MM/dd/yyyy hh:mm tt")
+
+        // (GET request)
+        // get user purchases
+        [Route("api/GetUserPurchases/{id}")]
+        public IQueryable<UserPurchaseViewModel> GetUserPurchases(string id)
+        {
+            db.Users.Include(x => x.UserPurchases).ToList();
+
+            var list = db.UserPurchases.Where(x => x.UserID.ToString() == id).ToList();
+            var userPurchases = new List<UserPurchaseViewModel>();
+            foreach (var item in list)
+            {
+                userPurchases.Add(new UserPurchaseViewModel() { NumOfItems = item.NumOfItems, TotalPrice = item.TotalPrice, Date = item.Date.ToString("MM/dd/yyyy hh:mm tt") });
+            }
+            return userPurchases.AsQueryable();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
