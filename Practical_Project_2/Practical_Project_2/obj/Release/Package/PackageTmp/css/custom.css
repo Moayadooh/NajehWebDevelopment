@@ -130,7 +130,7 @@ p.has-error {
     margin-bottom: 35px;
 }
 
-#historyTable th:hover, #usersTable th:hover {
+#usersTable th:hover {
     cursor: pointer;
     color: #fe9126;
 }

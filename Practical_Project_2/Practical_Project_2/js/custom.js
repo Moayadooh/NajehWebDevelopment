@@ -123,7 +123,7 @@ $("#orderNow").click(function () {
                         email: false,
                         sms: true
                     },
-                    redirect: "https://localhost:44302/User/PaymentSuccess", // https 44302 - http 8003 - http://moayad.somee.com/User/PaymentSuccess
+                    redirect: "http://moayad.somee.com/User/PaymentSuccess", // https 44302 - http 8003 - http://moayad.somee.com/User/PaymentSuccess
                     post: null,
                 }
             }

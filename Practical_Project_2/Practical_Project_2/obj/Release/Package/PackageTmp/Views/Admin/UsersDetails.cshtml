@@ -2,22 +2,7 @@
 @{
     ViewBag.Title = "Users Details";
 }
-<script>
-    var app = angular.module("myapp", []);
-    app.controller("MyController", function ($scope, $http) {
-        $http.get("/api/GetUsersItemsPurchases").then(function (result) {
-            $scope.myData = result.data;
-        });
 
-        $scope.getOrderBy = function (x) {
-            $scope.currentorder = x;
-        }
-    });
-
-    $(function () {
-        $("th:first-child").trigger("click");
-    });
-</script>
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -28,86 +13,100 @@
     </div>
 </div>
 <!-- //breadcrumbs -->
-<div class="products">
-    <div class="container" ng-app="myapp">
-        <div class="row">
-            <div class="col-xs-4">
-                <div class="form-group">
-                    <input type="search" id="txtSearch" placeholder="Search" class="form-control" ng-model="teamname" />
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <table id="usersTable" class="table table-hover" ng-controller="MyController">
-                    <tr>
-                        <th ng-click="getOrderBy('FirstName')">First Name</th>
-                        <th ng-click="getOrderBy('LastName')">Last Name</th>
-                        <th ng-click="getOrderBy('Email')">Email</th>
-                        <th ng-click="getOrderBy('NumOfItems')">Number Of Items</th>
-                        <th ng-click="getOrderBy('TotalPrice')">Total Price</th>
-                        <th ng-click="getOrderBy('Date')">Date and Time</th>
-                    </tr>
-                    <tr ng-repeat="t in myData | filter : teamname | orderBy : currentorder">
-                        <td>{{ t.FirstName }}</td>
-                        <td>{{ t.LastName }}</td>
-                        <td>{{ t.Email }}</td>
-                        <td>{{ t.NumOfItems }}</td>
-                        <td>{{ t.TotalPrice }}</td>
-                        <td>{{ t.Date }}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-
-@*<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />
 <script src="~/js/jquery.dataTables.min.js"></script>
 <script>
     $(function () {
-
         $.ajax({
-            url: "/api/GetUsersItemsPurchases",
+            url: "/api/GetUserDetails",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "JSON",
             success: function (obj) {
-                $('#example').DataTable({
+                $('#table2').css("display", "none");
+                $('#table1').css("display", "block");
+                var table = $('#UsersTable').DataTable({
                     "data": obj,
                     "columns": [
                         { "data": "FirstName" },
                         { "data": "LastName" },
                         { "data": "Email" },
-                        { "data": "NumOfItems" },
-                        { "data": "TotalPrice" },
-                        { "data": "Date" }
+                        { "data": "Role" },
+                        { "defaultContent": "<button>View</button>" }
                     ]
                 });
+
+                $('#UsersTable tbody').on('click', 'button', function () {
+                    var data = table.row($(this).parents('tr')).data();
+                    $('#table1').css("display", "none");
+                    $('#table2').css("display", "block");
+                    $.ajax({
+                        url: "/api/GetUserPurchases/" + data.ID,
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "JSON",
+                        success: function (obj) {
+                            $('#UserPurchasesTable').DataTable({
+                                "data": obj,
+                                "columns": [
+                                    { "data": "NumOfItems" },
+                                    { "data": "TotalPrice" },
+                                    { "data": "Date" }
+                                ]
+                            });
+                        }
+                    });
+                });
+
             }
         });
-
-    });</script>
-<table id="example" class="display" style="max-width:100%">
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>Number Of Purchased Items</th>
-            <th>Tota lPrice</th>
-            <th>Date</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Email</th>
-            <th>NumOfItems</th>
-            <th>TotalPrice</th>
-            <th>Date</th>
-        </tr>
-    </tfoot>
-</table>*@
+    });
+</script>
+<div class="products">
+    <div class="container">
+        <div class="row" id="table1">
+            <div class="col-md-12">
+                <table id="UsersTable" class="display" style="max-width:100%">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row" id="table2">
+            <div class="col-md-12">
+                <table id="UserPurchasesTable" class="display" style="max-width:100%">
+                    <thead>
+                        <tr>
+                            <th>Numer of Items</th>
+                            <th>Total Price</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Numer of Items</th>
+                            <th>Total Price</th>
+                            <th>Date</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
