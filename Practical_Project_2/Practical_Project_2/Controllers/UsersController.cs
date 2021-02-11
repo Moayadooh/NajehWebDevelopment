@@ -65,6 +65,16 @@ namespace Practical_Project_2.Controllers
         [Route("api/users/DeleteUser/{id}")]
         public IHttpActionResult DeleteUser(Guid id)
         {
+            db.Users.Include(x => x.Profile);
+            db.Users.Include(x => x.UserPurchases);
+            Profile profile = db.Profiles.Find(id);
+            var userPurchase = db.UserPurchases.Where(x => x.UserID == id).ToList();
+            if (userPurchase != null)
+            {
+                db.Profiles.Remove(profile);
+                db.UserPurchases.RemoveRange(userPurchase);
+            }
+
             User user = db.Users.Find(id);
             if (user == null)
                 return NotFound();

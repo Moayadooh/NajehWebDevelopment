@@ -65,7 +65,6 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Proje
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\bin\System.Web.Helpers.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\bin\System.Web.Mvc.xml
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.csprojAssemblyReference.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.dll

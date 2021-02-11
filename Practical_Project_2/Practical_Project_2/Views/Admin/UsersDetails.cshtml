@@ -17,8 +17,7 @@
 <script src="~/js/jquery.dataTables.min.js"></script>
 <script>
     $(function () {
-        var table1;
-        var table2;
+        var table1, table2;
         function Display() {
             $.ajax({
                 url: "/api/users/GetUserDetails",
@@ -68,15 +67,16 @@
                     //Delete user
                     $('#UsersTable tbody').on('click', '#btnDelete', function () {
                         var data = table1.row($(this).parents('tr')).data();
+                        table1.destroy();
                         $.ajax({
                             url: "/api/users/DeleteUser/" + data.ID,
                             type: "DELETE",
                             contentType: "application/json; charset=utf-8",
                             dataType: "JSON",
-                            success: function (obj) {
-                                table1.destroy();
+                            success: function () {
                                 Display();
-                            }
+                            },
+                            async: false
                         });
                     });
 
