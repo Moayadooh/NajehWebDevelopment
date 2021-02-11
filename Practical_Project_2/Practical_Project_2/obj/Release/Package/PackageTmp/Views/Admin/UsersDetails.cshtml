@@ -17,48 +17,79 @@
 <script src="~/js/jquery.dataTables.min.js"></script>
 <script>
     $(function () {
-        $.ajax({
-            url: "/api/GetUserDetails",
-            type: "GET",
-            contentType: "application/json; charset=utf-8",
-            dataType: "JSON",
-            success: function (obj) {
-                $('#table2').css("display", "none");
-                $('#table1').css("display", "block");
-                var table = $('#UsersTable').DataTable({
-                    "data": obj,
-                    "columns": [
-                        { "data": "FirstName" },
-                        { "data": "LastName" },
-                        { "data": "Email" },
-                        { "data": "Role" },
-                        { "defaultContent": "<button>View</button>" }
-                    ]
-                });
-
-                $('#UsersTable tbody').on('click', 'button', function () {
-                    var data = table.row($(this).parents('tr')).data();
-                    $('#table1').css("display", "none");
-                    $('#table2').css("display", "block");
-                    $.ajax({
-                        url: "/api/GetUserPurchases/" + data.ID,
-                        type: "GET",
-                        contentType: "application/json; charset=utf-8",
-                        dataType: "JSON",
-                        success: function (obj) {
-                            $('#UserPurchasesTable').DataTable({
-                                "data": obj,
-                                "columns": [
-                                    { "data": "NumOfItems" },
-                                    { "data": "TotalPrice" },
-                                    { "data": "Date" }
-                                ]
-                            });
-                        }
+        var table1, table2;
+        function Display() {
+            $.ajax({
+                url: "/api/users/GetUserDetails",
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "JSON",
+                success: function (obj) {
+                    $('#table2').css("display", "none");
+                    $('#table1').css("display", "block");
+                    table1 = $('#UsersTable').DataTable({
+                        "data": obj,
+                        "columns": [
+                            { "data": "FirstName" },
+                            { "data": "LastName" },
+                            { "data": "Email" },
+                            { "data": "Role" },
+                            { "defaultContent": "<button id='btnView'>View Purchases</button>" },
+                            { "defaultContent": "<button id='btnDelete'>Delete User</button>" }
+                        ]
                     });
-                });
 
-            }
+                    //View user purchases
+                    $('#UsersTable tbody').on('click', '#btnView', function () {
+                        var data = table1.row($(this).parents('tr')).data();
+                        $('#table1').css("display", "none");
+                        $('#table2').css("display", "block");
+                        $.ajax({
+                            url: "/api/users/GetUserPurchases/" + data.ID,
+                            type: "GET",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "JSON",
+                            success: function (obj) {
+                                table2 = $('#UserPurchasesTable').DataTable({
+                                    paging: false,
+                                    searching: false,
+                                    "data": obj,
+                                    "columns": [
+                                        { "data": "NumOfItems" },
+                                        { "data": "TotalPrice" },
+                                        { "data": "Date" }
+                                    ]
+                                });
+                            }
+                        });
+                    });
+
+                    //Delete user
+                    $('#UsersTable tbody').on('click', '#btnDelete', function () {
+                        var data = table1.row($(this).parents('tr')).data();
+                        table1.destroy();
+                        $.ajax({
+                            url: "/api/users/DeleteUser/" + data.ID,
+                            type: "DELETE",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "JSON",
+                            success: function () {
+                                Display();
+                            },
+                            async: false
+                        });
+                    });
+
+                }
+            });
+        }
+        Display();
+
+        //Back to users table
+        $("#btnBack").click(function () {
+            table2.destroy();
+            $('#table2').css("display", "none");
+            $('#table1').css("display", "block");
         });
     });
 </script>
@@ -74,6 +105,7 @@
                             <th>Email</th>
                             <th>Role</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -83,6 +115,7 @@
                             <th>Email</th>
                             <th>Role</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </tfoot>
                 </table>
@@ -90,6 +123,7 @@
         </div>
         <div class="row" id="table2">
             <div class="col-md-12">
+                <button type="button" class="btn btn-link" id="btnBack">Back to Users Table</button>
                 <table id="UserPurchasesTable" class="display" style="max-width:100%">
                     <thead>
                         <tr>

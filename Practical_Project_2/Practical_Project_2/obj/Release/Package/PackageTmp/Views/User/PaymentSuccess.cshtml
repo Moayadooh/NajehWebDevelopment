@@ -19,7 +19,7 @@
                 shoppingCart.clearCart();
                 displayCart();
                 alert(data);
-                window.location = "http://moayad.somee.com/User/Index"; // https 44302 - http 8003 - http://moayad.somee.com/User/Index
+                window.location = '@Url.Action("Index", "User")';
             },
             error: function (data) {
                 alert('Could not save the records!');
