@@ -28,7 +28,7 @@ namespace Practical_Project_2.Controllers
 
         // (GET request)
         // get users details
-        [Route("api/GetUserDetails")]
+        [Route("api/users/GetUserDetails")]
         public IQueryable<UserDetails> GetUserDetails()
         {
             var list = db.Users.Include(x => x.Profile).Include(y => y.UserRoles).ToList();
@@ -45,7 +45,7 @@ namespace Practical_Project_2.Controllers
 
         // (GET request)
         // get user purchases
-        [Route("api/GetUserPurchases/{id}")]
+        [Route("api/users/GetUserPurchases/{id}")]
         public IQueryable<UserPurchaseViewModel> GetUserPurchases(string id)
         {
             db.Users.Include(x => x.UserPurchases).ToList();
@@ -57,6 +57,20 @@ namespace Practical_Project_2.Controllers
                 userPurchases.Add(new UserPurchaseViewModel() { NumOfItems = item.NumOfItems, TotalPrice = item.TotalPrice, Date = item.Date.ToString("MM/dd/yyyy hh:mm tt") });
             }
             return userPurchases.AsQueryable();
+        }
+
+        // (DELETE request)
+        // delete user based on id
+        [ResponseType(typeof(User))]
+        [Route("api/users/DeleteUser/{id}")]
+        public IHttpActionResult DeleteUser(Guid id)
+        {
+            User user = db.Users.Find(id);
+            if (user == null)
+                return NotFound();
+            db.Users.Remove(user);
+            db.SaveChanges();
+            return Ok(user);
         }
 
         protected override void Dispose(bool disposing)
