@@ -1,0 +1,191 @@
+﻿
+<link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/lib/font-awesome/css/all.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<script src="~/lib/jquery/jquery.js"></script>
+<script>
+    $(function () {
+        function Display() {
+            $.ajax({
+                url: "/api/Read",
+                type: "GET",
+                contentType: "application/json ; charset=utf-8",
+                dataType: "JSON",
+                success: function (data) {
+                    var table = "<table class='table' style='background:white;'>";
+                    table += "<tr><th>Course Code</th>";
+                    table += "<th>Course Name</th>";
+                    table += "<th>Date</th>";
+                    table += "<th>Edit</th>";
+                    table += "<th>Delete</th></tr>";
+                    for (var i = 0; i < data.length; i++) {
+                        table += "<tr>";
+                        table += "<td>" + data[i].courseCode + "</td>";
+                        table += "<td>" + data[i].courseName + "</td>";
+                        table += "<td>" + data[i].date + "</td>";
+                        table += "<td><i class='fas fa-edit' value=" + data[i].id + "></i></td>";
+                        table += "<td><i class='fas fa-trash-alt' value=" + data[i].id + "></i>";
+                    }
+                    table += "</table>";
+                    $("#output").html(table);
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                },
+                async: false
+            });
+        }
+
+        //Edit item
+        $(document).on("click", ".fas.fa-edit", function () {
+            $.ajax({
+                url: "/api/GetbyId/" + $(this).attr("value"),
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "JSON",
+                success: function (data) {
+                    $("#ID").val(data.id);
+                    $("#txtCourseCode").val(data.courseCode);
+                    $("#txtCourseName").val(data.courseName);
+                    $("#txtDate").val(data.date);
+                    $("#btnAdd").css("display", "none");
+                    $("#btnSave, #btnCancel").css("display", "block");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                },
+                async: false
+            });
+        });
+
+        //Update item
+        $("#btnSave").click(function () {
+            uploadImage();
+            var data = {
+                id: $("#ID").val(),
+                courseCode: $("#txtCourseCode").val(),
+                courseName: $("#txtCourseName").val(),
+                date: $("#txtDate").val()
+            }
+            $.ajax({
+                url: "/api/Edit/" + $("#ID").val(),
+                type: "PUT",
+                contentType: "application/json; charset=utf-8",
+                dataType: "JSON",
+                data: JSON.stringify(data),
+                success: function () {
+                    Display();
+                    $("#btnCancel").trigger("click");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                },
+                async: false
+            });
+        });
+
+        //cancel update
+        $("#btnCancel").click(function () {
+            $("#btnSave, #btnCancel").css("display", "none");
+            $("#btnAdd").css("display", "block");
+            $("#txtCourseCode").val("");
+            $("#txtCourseName").val("");
+            $("#txtDate").val("");
+        });
+
+        //remove item
+        $(document).on("click", ".fas.fa-trash-alt", function () {
+            var conf = confirm("Are you sure you want to delete this item?");
+            if (conf) {
+                $.ajax({
+                    url: "/api/Delete/" + $(this).attr("value"),
+                    type: "DELETE",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "JSON",
+                    success: function () {
+                        Display();
+                        $("#btnCancel").trigger("click");
+                    },
+                    error: function (e) {
+                        alert(e.responseText);
+                    },
+                    async: false
+                });
+            }
+        });
+
+        Display();
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <h2>Add New Course:</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <input type="hidden" id="ID" value="" />
+            <input type="text" class="form-control" id="txtCourseCode" placeholder="Course Code" />
+        </div>
+        <div class="col-md-4 form-group">
+            <input type="text" class="form-control" id="txtCourseName" placeholder="Course Name" />
+        </div>
+        <div class="col-md-4 form-group">
+            <input type="datetime" class="form-control" id="txtDate" placeholder="Date & Time" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <button class="form-control btn btn-success" id="btnAdd" type="button">
+                    <i class="fas fa-plus"></i> Add Item
+                </button>
+            </div>
+            <div class="form-group">
+                <button class="form-control btn btn-primary" id="btnSave" type="button">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+            <div class="form-group">
+                <button class="form-control btn btn-danger" id="btnCancel" type="button">
+                    <i class="fas fa-ban"></i> Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="output">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<input type="hidden" id="ID" value="" />
+<div class="form-group">
+    <input type="text" class="form-control" id="txtCourseCode" placeholder="Enter Course Code" />
+</div>
+<div class="form-group">
+    <input type="text" class="form-control" id="txtCourseName" placeholder="Enter Course Name" />
+</div>
+<div class="form-group">
+    <input type="datetime" class="form-control" id="txtDate" />
+</div>
+<div class="form-group">
+    <button class="form-control btn btn-success" id="btnAdd" type="button">
+        <i class="fas fa-plus"></i> Add Item
+    </button>
+</div>
+<div class="form-group">
+    <button class="form-control btn btn-primary" id="btnSave" type="button">
+        <i class="fas fa-save"></i> Save Changes
+    </button>
+</div>
+<div class="form-group">
+    <button class="form-control btn btn-danger" id="btnCancel" type="button">
+        <i class="fas fa-ban"></i> Cancel
+    </button>
+</div>*@

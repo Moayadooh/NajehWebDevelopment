@@ -1,0 +1,14 @@
+﻿body {
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+#btnSave, #btnCancel {
+    display: none;
+}
+
+.container {
+    background: #0094ff;
+    border: 3px solid #0026ff;
+}
