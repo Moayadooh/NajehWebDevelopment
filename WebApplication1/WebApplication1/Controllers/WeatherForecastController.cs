@@ -20,7 +20,7 @@ namespace WebApplication1.Controllers
 
             if (!course.isInitialized)
             {
-                course.Initial();
+                course.Initialize();
                 course.isInitialized = true;
             }
             return Ok(course.Read());
@@ -29,6 +29,7 @@ namespace WebApplication1.Controllers
         [HttpGet("{id}")]
         public IActionResult GetbyId(int id)
         {
+            //course.Initialize();
             return Ok(course.GetById(id));
         }
 
@@ -55,17 +56,17 @@ namespace WebApplication1.Controllers
 
 
 
-        [HttpGet]
-        public IActionResult GetName()
-        {
-            return Ok("Moayad");
-        }
+        //[HttpGet]
+        //public IActionResult GetName()
+        //{
+        //    return Ok("Moayad");
+        //}
 
-        [HttpGet("{age}")]
-        public IActionResult GetAge(int age)
-        {
-            return Ok(age);
-        }
+        //[HttpGet("{age}")]
+        //public IActionResult GetAge(int age)
+        //{
+        //    return Ok(age);
+        //}
 
         //private static readonly string[] Summaries = new[]
         //{

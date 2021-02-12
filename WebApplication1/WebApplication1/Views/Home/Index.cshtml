@@ -27,7 +27,7 @@
                         table += "<td><i class='fas fa-trash-alt' value=" + data[i].id + "></i>";
                     }
                     table += "</table>";
-                    $("#output").html(table);
+                    $("#table").html(table);
                 },
                 error: function (e) {
                     alert(e.responseText);
@@ -35,6 +35,30 @@
                 async: false
             });
         }
+
+        //Add item
+        $("#btnAdd").click(function () {
+            //var data = {
+            //    courseCode: $("#txtCourseCode").val(),
+            //    courseName: $("#txtCourseName").val(),
+            //    date: $("#txtDate").val()
+            //}
+            $.ajax({
+                url: "/api/Create/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                dataType: "JSON",
+                //data: JSON.stringify(data),
+                success: function () {
+                    Display();
+                    $("#btnCancel").trigger("click");
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                },
+                async: false
+            });
+        });
 
         //Edit item
         $(document).on("click", ".fas.fa-edit", function () {
@@ -60,19 +84,18 @@
 
         //Update item
         $("#btnSave").click(function () {
-            uploadImage();
-            var data = {
-                id: $("#ID").val(),
-                courseCode: $("#txtCourseCode").val(),
-                courseName: $("#txtCourseName").val(),
-                date: $("#txtDate").val()
-            }
+            //var data = {
+            //    id: $("#ID").val(),
+            //    courseCode: $("#txtCourseCode").val(),
+            //    courseName: $("#txtCourseName").val(),
+            //    date: $("#txtDate").val()
+            //}
             $.ajax({
-                url: "/api/Edit/" + $("#ID").val(),
+                url: "/api/Edit/" + $("#ID").val() + "/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
                 type: "PUT",
                 contentType: "application/json; charset=utf-8",
                 dataType: "JSON",
-                data: JSON.stringify(data),
+                //data: JSON.stringify(data),
                 success: function () {
                     Display();
                     $("#btnCancel").trigger("click");
@@ -119,9 +142,15 @@
 </script>
 
 <div class="container">
-    <div class="row">
+    <div class="row text-center">
         <div class="col-md-4 form-group">
-            <h2>Add New Course:</h2>
+
+        </div>
+        <div class="col-md-4 form-group">
+            <h2>COURSES</h2>
+        </div>
+        <div class="col-md-4 form-group">
+
         </div>
     </div>
     <div class="row">
@@ -133,14 +162,14 @@
             <input type="text" class="form-control" id="txtCourseName" placeholder="Course Name" />
         </div>
         <div class="col-md-4 form-group">
-            <input type="datetime" class="form-control" id="txtDate" placeholder="Date & Time" />
+            <input type="datetime-local" class="form-control" id="txtDate" />
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
                 <button class="form-control btn btn-success" id="btnAdd" type="button">
-                    <i class="fas fa-plus"></i> Add Item
+                    <i class="fas fa-plus"></i> Add New Course
                 </button>
             </div>
             <div class="form-group">
@@ -157,35 +186,9 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div id="output">
+            <div id="table">
 
             </div>
         </div>
     </div>
 </div>
-
-@*<input type="hidden" id="ID" value="" />
-<div class="form-group">
-    <input type="text" class="form-control" id="txtCourseCode" placeholder="Enter Course Code" />
-</div>
-<div class="form-group">
-    <input type="text" class="form-control" id="txtCourseName" placeholder="Enter Course Name" />
-</div>
-<div class="form-group">
-    <input type="datetime" class="form-control" id="txtDate" />
-</div>
-<div class="form-group">
-    <button class="form-control btn btn-success" id="btnAdd" type="button">
-        <i class="fas fa-plus"></i> Add Item
-    </button>
-</div>
-<div class="form-group">
-    <button class="form-control btn btn-primary" id="btnSave" type="button">
-        <i class="fas fa-save"></i> Save Changes
-    </button>
-</div>
-<div class="form-group">
-    <button class="form-control btn btn-danger" id="btnCancel" type="button">
-        <i class="fas fa-ban"></i> Cancel
-    </button>
-</div>*@

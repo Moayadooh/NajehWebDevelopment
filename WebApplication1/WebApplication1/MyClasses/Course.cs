@@ -31,7 +31,7 @@ namespace WebApplication1.MyClasses
             //};
         }
 
-        public void Initial()
+        public void Initialize()
         {
             Courses.Add(new Course { ID = 1, CourseCode = "CS101", CourseName = "Introduction to Computer Science", Date = DateTime.Parse("2021-03-01 15:00:00") });
             Courses.Add(new Course { ID = 2, CourseCode = "CS102", CourseName = "Algorithm I", Date = DateTime.Parse("2021-03-01 08:00:00") });
@@ -45,7 +45,7 @@ namespace WebApplication1.MyClasses
 
         public Course GetById(int id)
         {
-            return Courses.SingleOrDefault(x => x.ID == id);
+            return Courses.Single(x => x.ID == id);
         }
 
         public void Create(string couseCode, string couseName, string date)
