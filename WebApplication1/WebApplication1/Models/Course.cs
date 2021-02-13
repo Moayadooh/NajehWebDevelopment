@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication1.MyClasses
+namespace WebApplication1.Models
 {
     public class Course
     {
@@ -15,51 +15,43 @@ namespace WebApplication1.MyClasses
 
         public DateTime Date { get; set; }
 
-        List<Course> Courses;
-        int i;
-        public bool isInitialized;
-        public Course()
+        public static List<Course> Courses;
+        public static int i;
+        static Course()
         {
             Courses = new List<Course>();
             i = 4;
-            isInitialized = false;
-            //Courses = new List<Course>
-            //{
-            //    new Course { ID = 1, CouseCode = "CS101", CouseName = "Introduction to Computer Science", Date = DateTime.Parse("2021-03-01 15:00:00")},
-            //    new Course { ID = 2, CouseCode = "CS102", CouseName = "Algorithm I", Date = DateTime.Parse("2021-03-01 08:00:00")},
-            //    new Course { ID = 3, CouseCode = "CS201", CouseName = "Introduction To DBMS", Date = DateTime.Parse("2021-03-01 12:30:00")}
-            //};
-        }
-
-        public void Initialize()
-        {
             Courses.Add(new Course { ID = 1, CourseCode = "CS101", CourseName = "Introduction to Computer Science", Date = DateTime.Parse("2021-03-01 15:00:00") });
             Courses.Add(new Course { ID = 2, CourseCode = "CS102", CourseName = "Algorithm I", Date = DateTime.Parse("2021-03-01 08:00:00") });
             Courses.Add(new Course { ID = 3, CourseCode = "CS201", CourseName = "Introduction To DBMS", Date = DateTime.Parse("2021-03-01 12:30:00") });
         }
 
-        public List<Course> Read()
+        public static List<Course> Read()
         {
             return Courses;
         }
 
-        public Course GetById(int id)
+        public static Course GetById(int id)
         {
             return Courses.Single(x => x.ID == id);
         }
 
-        public void Create(string couseCode, string couseName, string date)
+        public static void Create(string couseCode, string couseName, string date)
         {
             Courses.Add(new Course { ID = i++, CourseCode = couseCode, CourseName = couseName, Date = DateTime.Parse(date) });
         }
 
-        public void Edit(int id, string couseCode, string couseName, string date)
+        public static void Edit(int id, string couseCode, string couseName, string date)
         {
-            Courses.Remove(Courses.Single(x => x.ID == id));
-            Courses.Add(new Course { ID = id, CourseCode = couseCode, CourseName = couseName, Date = DateTime.Parse(date) });
+            foreach (var item in Courses.Where(x => x.ID == id))
+            {
+                item.CourseCode = couseCode;
+                item.CourseName = couseName;
+                item.Date = DateTime.Parse(date);
+            }
         }
 
-        public void Delete(int id)
+        public static void Delete(int id)
         {
             Courses.Remove(Courses.Single(x => x.ID == id));
         }

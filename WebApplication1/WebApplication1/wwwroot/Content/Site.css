@@ -12,3 +12,13 @@
     background: #808080;
     border: 3px solid #000000;
 }
+
+.fa-edit {
+    color: #0094ff;
+    cursor: pointer;
+}
+
+.fa-trash-alt {
+    color: #ff0000;
+    cursor: pointer;
+}
