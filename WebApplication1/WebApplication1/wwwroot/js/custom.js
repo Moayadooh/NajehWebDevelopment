@@ -3,7 +3,7 @@
     //Display all records
     function Display() {
         $.ajax({
-            url: "/api/CoursesAPI/Read",
+            url: "/api/CoursesAPI",
             type: "GET",
             contentType: "application/json ; charset=utf-8",
             dataType: "JSON",
@@ -42,7 +42,7 @@
         //    date: $("#txtDate").val()
         //}
         $.ajax({
-            url: "/api/CoursesAPI/Create/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
+            url: "/api/CoursesAPI/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "POST",
             contentType: "application/json; charset=utf-8",
             dataType: "text",
@@ -62,7 +62,7 @@
     //Edit record
     $(document).on("click", ".fas.fa-edit", function () {
         $.ajax({
-            url: "/api/CoursesAPI/GetbyId/" + $(this).attr("value"),
+            url: "/api/CoursesAPI/" + $(this).attr("value"),
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "JSON",
@@ -91,7 +91,7 @@
         //    date: $("#txtDate").val()
         //}
         $.ajax({
-            url: "/api/CoursesAPI/Edit/" + $("#ID").val() + "/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
+            url: "/api/CoursesAPI/" + $("#ID").val() + "/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "PUT",
             contentType: "application/json; charset=utf-8",
             dataType: "text",
@@ -122,7 +122,7 @@
         var conf = confirm("Are you sure you want to delete this item?");
         if (conf) {
             $.ajax({
-                url: "/api/CoursesAPI/Delete/" + $(this).attr("value"),
+                url: "/api/CoursesAPI/" + $(this).attr("value"),
                 type: "DELETE",
                 contentType: "application/json; charset=utf-8",
                 dataType: "text",

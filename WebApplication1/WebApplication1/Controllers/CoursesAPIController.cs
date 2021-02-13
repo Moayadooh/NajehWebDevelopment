@@ -8,41 +8,44 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CoursesAPIController : ControllerBase
     {
+        // GET: api/<ValuesController>
         [HttpGet]
-        public IActionResult Read()
+        public IEnumerable<Course> Read()
         {
-            return Ok(Course.Read());
+            return Course.Read();
         }
 
+        // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public IActionResult GetbyId(int id)
+        public Course GetbyId(int id)
         {
-            return Ok(Course.GetById(id));
+            return Course.GetById(id);
         }
 
+        // POST api/<ValuesController>
         [HttpPost("{courseCode}/{courseName}/{date}")]
-        public IActionResult Create(string courseCode, string courseName, string date)
+        public void Create(string courseCode, string courseName, string date)
         {
             Course.Create(courseCode, courseName, date);
-            return Ok();
         }
 
+        // PUT api/<ValuesController>/5
         [HttpPut("{id}/{courseCode}/{courseName}/{date}")]
-        public IActionResult Edit(int id, string courseCode, string courseName, string date)
+        public void Edit(int id, string courseCode, string courseName, string date)
         {
             Course.Edit(id, courseCode, courseName, date);
-            return Ok();
         }
 
+        // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public void Delete(int id)
         {
             Course.Delete(id);
-            return Ok();
         }
     }
 }
