@@ -11,7 +11,7 @@
                 var table = "<table class='table' style='background:white;'>";
                 table += "<tr><th>Course Code</th>";
                 table += "<th>Course Name</th>";
-                table += "<th>Date</th>";
+                table += "<th>Date & Time</th>";
                 table += "<th>Edit</th>";
                 table += "<th>Delete</th></tr>";
                 for (var i = 0; i < data.length; i++) {
@@ -45,7 +45,7 @@
             url: "/api/CoursesAPI/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            dataType: "text",
+            //dataType: "text",
             //data: JSON.stringify(data),
             success: function () {
                 Display();
@@ -94,7 +94,7 @@
             url: "/api/CoursesAPI/" + $("#ID").val() + "/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "PUT",
             contentType: "application/json; charset=utf-8",
-            dataType: "text",
+            //dataType: "text",
             //data: JSON.stringify(data),
             success: function () {
                 Display();
@@ -119,14 +119,14 @@
 
     //remove record
     $(document).on("click", ".fas.fa-trash-alt", function () {
-        var conf = confirm("Are you sure you want to delete this item?");
+        var conf = confirm("Are you sure you want to delete this record?");
         if (conf) {
             $.ajax({
                 url: "/api/CoursesAPI/" + $(this).attr("value"),
                 type: "DELETE",
                 contentType: "application/json; charset=utf-8",
-                dataType: "text",
-                success: function (data) {
+                //dataType: "text",
+                success: function () {
                     Display();
                     $("#btnCancel").trigger("click");
                 },
