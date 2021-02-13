@@ -13,35 +13,35 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CoursesAPIController : ControllerBase
     {
-        // GET: api/<ValuesController>
+        // GET: api/<CoursesAPIController>
         [HttpGet]
         public IEnumerable<Course> Read()
         {
             return Course.Read();
         }
 
-        // GET api/<ValuesController>/5
+        // GET api/<CoursesAPIController>/5
         [HttpGet("{id}")]
         public Course GetbyId(int id)
         {
             return Course.GetById(id);
         }
 
-        // POST api/<ValuesController>
+        // POST api/<CoursesAPIController>
         [HttpPost("{courseCode}/{courseName}/{date}")]
         public void Create(string courseCode, string courseName, string date)
         {
             Course.Create(courseCode, courseName, date);
         }
 
-        // PUT api/<ValuesController>/5
+        // PUT api/<CoursesAPIController>/5
         [HttpPut("{id}/{courseCode}/{courseName}/{date}")]
         public void Edit(int id, string courseCode, string courseName, string date)
         {
             Course.Edit(id, courseCode, courseName, date);
         }
 
-        // DELETE api/<ValuesController>/5
+        // DELETE api/<CoursesAPIController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
