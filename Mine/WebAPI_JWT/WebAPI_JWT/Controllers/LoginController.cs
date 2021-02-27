@@ -9,6 +9,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using WebAPI_JWT.Models;
 
 namespace WebAPI_JWT.Controllers
 {
@@ -22,18 +23,17 @@ namespace WebAPI_JWT.Controllers
         {
             _config = config;
         }
+
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Login()
+        public IActionResult Login([FromBody] User login)
         {
-            UserModel login = new UserModel();
-            login.Username = "Jignesh";
             IActionResult response = Unauthorized();
-            var user = AuthenticateUser(login);
+            var profile = AuthenticateUser(login);
 
-            if (user != null)
+            if (profile != null)
             {
-                var tokenString = GenerateJSONWebToken(user);
+                var tokenString = GenerateJSONWebToken(login, profile);
                 response = Ok(new { token = tokenString });
             }
 
@@ -54,15 +54,15 @@ namespace WebAPI_JWT.Controllers
         //    return new JwtSecurityTokenHandler().WriteToken(token);
         //}
 
-        private string GenerateJSONWebToken(UserModel userInfo)
+        private string GenerateJSONWebToken(User user, Profile profile)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-            new Claim(JwtRegisteredClaimNames.Sub, userInfo.Username),
-            new Claim(JwtRegisteredClaimNames.Email, userInfo.EmailAddress),
-            new Claim("DateOfJoing", userInfo.DateOfJoing.ToString("yyyy-MM-dd")),
+            new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+            new Claim(JwtRegisteredClaimNames.Email, profile.EmailAddress),
+            new Claim("DateOfJoing", profile.DateOfJoing.ToString("yyyy-MM-dd")),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
@@ -75,17 +75,17 @@ namespace WebAPI_JWT.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private UserModel AuthenticateUser(UserModel login)
+        private Profile AuthenticateUser(User login)
         {
-            UserModel user = null;
+            Profile profile = null;
 
             //Validate the User Credentials    
             //Demo Purpose, I have Passed HardCoded User Information    
-            if (login.Username == "Jignesh")
+            if (login.Username == "Moayad" && login.Password == "123")
             {
-                user = new UserModel { Username = "Jignesh Trivedi", EmailAddress = "test.btest@gmail.com" };
+                profile = new Profile { EmailAddress = "moayad@email.com" };
             }
-            return user;
+            return profile;
         }
 
         [HttpGet]

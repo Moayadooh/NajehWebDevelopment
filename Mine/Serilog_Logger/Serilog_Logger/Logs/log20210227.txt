@@ -1,0 +1,74 @@
+2021-02-27 15:06:46.863 +04:00 [INF] Now listening on: https://localhost:5001
+2021-02-27 15:06:46.943 +04:00 [INF] Now listening on: http://localhost:5000
+2021-02-27 15:06:46.945 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-27 15:06:46.947 +04:00 [INF] Hosting environment: Development
+2021-02-27 15:06:46.949 +04:00 [INF] Content root path: C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Serilog_Logger\Serilog_Logger
+2021-02-27 15:06:47.165 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/weatherforecast  
+2021-02-27 15:06:47.219 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:06:47.271 +04:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Serilog_Logger.WeatherForecast] Get() on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:06:47.276 +04:00 [INF] called weather forecast
+2021-02-27 15:06:47.280 +04:00 [INF] Executing ObjectResult, writing value of type 'Serilog_Logger.WeatherForecast[]'.
+2021-02-27 15:06:47.307 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger) in 24.8911ms
+2021-02-27 15:06:47.311 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:06:47.313 +04:00 [INF] Request finished in 151.9078ms 200 application/json; charset=utf-8
+2021-02-27 15:07:11.794 +04:00 [INF] Application is shutting down...
+2021-02-27 15:20:34.942 +04:00 [INF] Now listening on: https://localhost:5001
+2021-02-27 15:20:35.526 +04:00 [INF] Now listening on: http://localhost:5000
+2021-02-27 15:20:35.540 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-27 15:20:35.551 +04:00 [INF] Hosting environment: Development
+2021-02-27 15:20:35.552 +04:00 [INF] Content root path: C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Serilog_Logger\Serilog_Logger
+2021-02-27 15:20:35.965 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/weatherforecast  
+2021-02-27 15:20:36.005 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:20:36.042 +04:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Serilog_Logger.WeatherForecast] Get() on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:20:36.046 +04:00 [INF] called weather forecast
+2021-02-27 15:20:36.053 +04:00 [INF] Executing ObjectResult, writing value of type 'Serilog_Logger.WeatherForecast[]'.
+2021-02-27 15:20:36.074 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger) in 23.9901ms
+2021-02-27 15:20:36.077 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:20:36.079 +04:00 [INF] Request finished in 117.5379ms 200 application/json; charset=utf-8
+2021-02-27 15:20:36.476 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2021-02-27 15:20:36.480 +04:00 [INF] Request finished in 4.2012ms 404 
+2021-02-27 15:20:51.102 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/weatherforecast/api/error/0  
+2021-02-27 15:20:51.105 +04:00 [INF] Request finished in 2.7872ms 404 
+2021-02-27 15:20:54.090 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/error/0  
+2021-02-27 15:20:54.092 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger)'
+2021-02-27 15:20:54.104 +04:00 [INF] Route matched with {action = "GetError", controller = "WeatherForecast"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetError(Int32) on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:20:54.153 +04:00 [ERR] Error message:id cannot be less than or equal to 0:0
+Error stack trace:   at Serilog_Logger.Controllers.WeatherForecastController.GetError(Int32 id) in C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Serilog_Logger\Serilog_Logger\Controllers\WeatherForecastController.cs:line 52
+
+2021-02-27 15:20:54.156 +04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-02-27 15:20:54.159 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger) in 51.7761ms
+2021-02-27 15:20:54.161 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger)'
+2021-02-27 15:20:54.163 +04:00 [INF] Request finished in 73.1435ms 400 text/plain; charset=utf-8
+2021-02-27 15:21:23.216 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/error/0  
+2021-02-27 15:21:23.220 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger)'
+2021-02-27 15:21:23.223 +04:00 [INF] Route matched with {action = "GetError", controller = "WeatherForecast"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] GetError(Int32) on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:21:23.231 +04:00 [ERR] Error message:id cannot be less than or equal to 0:0
+Error stack trace:   at Serilog_Logger.Controllers.WeatherForecastController.GetError(Int32 id) in C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Serilog_Logger\Serilog_Logger\Controllers\WeatherForecastController.cs:line 52
+
+2021-02-27 15:21:23.233 +04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-02-27 15:21:23.235 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger) in 4.9765ms
+2021-02-27 15:21:23.237 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.GetError (Serilog_Logger)'
+2021-02-27 15:21:23.239 +04:00 [INF] Request finished in 23.1899ms 400 text/plain; charset=utf-8
+2021-02-27 15:21:40.654 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/WeatherForecast  
+2021-02-27 15:21:40.658 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:21:40.663 +04:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Serilog_Logger.WeatherForecast] Get() on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:21:40.667 +04:00 [INF] called weather forecast
+2021-02-27 15:21:40.668 +04:00 [INF] Executing ObjectResult, writing value of type 'Serilog_Logger.WeatherForecast[]'.
+2021-02-27 15:21:40.670 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger) in 3.7284ms
+2021-02-27 15:21:40.672 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:21:40.675 +04:00 [INF] Request finished in 20.4555ms 200 application/json; charset=utf-8
+2021-02-27 15:22:25.185 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/WeatherForecast/api/error/0  
+2021-02-27 15:22:25.189 +04:00 [INF] Request finished in 4.1211ms 404 
+2021-02-27 15:22:48.711 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/WeatherForecast/api/error/0  
+2021-02-27 15:22:48.714 +04:00 [INF] Request finished in 3.1934ms 404 
+2021-02-27 15:22:58.320 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/WeatherForecast/api/error/0  
+2021-02-27 15:22:58.324 +04:00 [INF] Request finished in 3.138ms 404 
+2021-02-27 15:23:13.645 +04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/WeatherForecast  
+2021-02-27 15:23:13.648 +04:00 [INF] Executing endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:23:13.652 +04:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Serilog_Logger.WeatherForecast] Get() on controller Serilog_Logger.Controllers.WeatherForecastController (Serilog_Logger).
+2021-02-27 15:23:13.657 +04:00 [INF] called weather forecast
+2021-02-27 15:23:13.660 +04:00 [INF] Executing ObjectResult, writing value of type 'Serilog_Logger.WeatherForecast[]'.
+2021-02-27 15:23:13.664 +04:00 [INF] Executed action Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger) in 7.8073ms
+2021-02-27 15:23:13.669 +04:00 [INF] Executed endpoint 'Serilog_Logger.Controllers.WeatherForecastController.Get (Serilog_Logger)'
+2021-02-27 15:23:13.671 +04:00 [INF] Request finished in 25.7834ms 200 application/json; charset=utf-8
+2021-02-27 15:23:56.192 +04:00 [INF] Application is shutting down...
