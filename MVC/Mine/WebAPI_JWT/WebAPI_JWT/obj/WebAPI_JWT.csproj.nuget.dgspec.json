@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj": {}
+    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebAPI_JWT\\WebAPI_JWT\\WebAPI_JWT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj": {
+    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebAPI_JWT\\WebAPI_JWT\\WebAPI_JWT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj",
-        "projectName": "MVC_Core2",
-        "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj",
+        "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebAPI_JWT\\WebAPI_JWT\\WebAPI_JWT.csproj",
+        "projectName": "WebAPI_JWT",
+        "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebAPI_JWT\\WebAPI_JWT\\WebAPI_JWT.csproj",
         "packagesPath": "C:\\Users\\moaya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\obj\\",
+        "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebAPI_JWT\\WebAPI_JWT\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,19 +45,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Proxies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[3.1.12, )"
             }
           },
           "imports": [

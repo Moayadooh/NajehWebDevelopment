@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj": {}
+    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\Fluent_API\\Fluent_API\\Fluent_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj": {
+    "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\Fluent_API\\Fluent_API\\Fluent_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj",
-        "projectName": "MVC_Core2",
-        "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\MVC_Core2.csproj",
+        "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\Fluent_API\\Fluent_API\\Fluent_API.csproj",
+        "projectName": "Fluent_API",
+        "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\Fluent_API\\Fluent_API\\Fluent_API.csproj",
         "packagesPath": "C:\\Users\\moaya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\MVC_Core2\\MVC_Core2\\obj\\",
+        "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\Fluent_API\\Fluent_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -47,17 +47,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[5.0.3, )"
             }
           },
           "imports": [
