@@ -1,0 +1,15 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft_JSON.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.csproj.CopyComplete
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\Newtonsoft_JSON\Newtonsoft_JSON\obj\Debug\netcoreapp3.1\Newtonsoft_JSON.genruntimeconfig.cache

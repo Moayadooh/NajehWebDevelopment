@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BgsDiGxh9XYWa8K4CMzN0E+9bzPU9+rMMRZYxa24BWHA1ZlhB/HRjn8t0ciuEvn7eImxwZswP03TAXuWC9m0Tg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\Mine\\Newtonsoft_JSON\\Newtonsoft_JSON\\Newtonsoft_JSON.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moaya\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
