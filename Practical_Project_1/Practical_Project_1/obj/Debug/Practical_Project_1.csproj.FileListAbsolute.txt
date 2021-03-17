@@ -52,7 +52,6 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Proje
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\obj\Debug\Practical_Project_1.csprojAssemblyReference.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\obj\Debug\Practical_Project_1.csproj.CoreCompileInputs.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\obj\Debug\Practical_Project_1.csproj.CopyComplete
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_1\Practical_Project_1\obj\Debug\Practical_Project_1.dll
