@@ -24,7 +24,8 @@
                     table += "<td>" + data[i].StartDate + "</td>";
                     table += "<td>" + data[i].EndDate + "</td>";
                     table += "<td><i class='fas fa-edit' value=" + data[i].ID + "></i></td>";
-                    table += "<td><i class='fas fa-trash-alt' value=" + data[i].ID + "></i>";
+                    table += "<td><i class='fas fa-trash-alt' value=" + data[i].ID + "></i></td>";
+                    table += "</tr>";
                 }
                 table += "</table>";
                 $("#table").html(table);
