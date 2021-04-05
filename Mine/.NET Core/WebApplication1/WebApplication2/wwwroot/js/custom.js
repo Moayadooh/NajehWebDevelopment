@@ -8,7 +8,7 @@
             contentType: "application/json ; charset=utf-8",
             dataType: "JSON",
             success: function (data) {
-                var table = "<table class='table' style='background:white;'>";
+                var table = "<table class='table table-hover' style='background:white;'>";
                 table += "<tr><th>Course Code</th>";
                 table += "<th>Course Name</th>";
                 table += "<th>Date & Time</th>";
@@ -20,13 +20,14 @@
                     table += "<td>" + data[i].courseName + "</td>";
                     table += "<td>" + data[i].date + "</td>";
                     table += "<td><i class='fas fa-edit' value=" + data[i].id + "></i></td>";
-                    table += "<td><i class='fas fa-trash-alt' value=" + data[i].id + "></i>";
+                    table += "<td><i class='fas fa-trash-alt' value=" + data[i].id + "></i></td>";
+                    table += "</tr>";
                 }
                 table += "</table>";
                 $("#table").html(table);
             },
             error: function (e) {
-                alert("error");
+                alert("error in display all records");
                 alert(e.responseText);
             },
             async: false
@@ -45,14 +46,13 @@
             url: "https://localhost:44367/api/CoursesAPI/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            //dataType: "text",
             //data: JSON.stringify(data),
             success: function () {
                 Display();
                 $("#btnCancel").trigger("click");
             },
             error: function (e) {
-                alert("error");
+                alert("error in add record");
                 alert(e.responseText);
             },
             async: false
@@ -75,7 +75,7 @@
                 $("#btnSave, #btnCancel").css("display", "block");
             },
             error: function (e) {
-                alert("error");
+                alert("error in edit record");
                 alert(e.responseText);
             },
             async: false
@@ -94,14 +94,13 @@
             url: "https://localhost:44367/api/CoursesAPI/" + $("#ID").val() + "/" + $("#txtCourseCode").val() + "/" + $("#txtCourseName").val() + "/" + $("#txtDate").val(),
             type: "PUT",
             contentType: "application/json; charset=utf-8",
-            //dataType: "text",
             //data: JSON.stringify(data),
             success: function () {
                 Display();
                 $("#btnCancel").trigger("click");
             },
             error: function (e) {
-                alert("error");
+                alert("error in update record");
                 alert(e.responseText);
             },
             async: false
@@ -125,13 +124,12 @@
                 url: "https://localhost:44367/api/CoursesAPI/" + $(this).attr("value"),
                 type: "DELETE",
                 contentType: "application/json; charset=utf-8",
-                //dataType: "text",
                 success: function () {
                     Display();
                     $("#btnCancel").trigger("click");
                 },
                 error: function (e) {
-                    alert("error");
+                    alert("error in remove record");
                     alert(e.responseText);
                 },
                 async: false

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebApplication1\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\Mine\\.NET Core\\WebApplication1\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebApplication1\\WebApplication2\\WebApplication2.csproj",
+      "projectPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\Mine\\.NET Core\\WebApplication1\\WebApplication2\\WebApplication2.csproj",
       "packagesPath": "C:\\Users\\moaya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\MVC\\Mine\\WebApplication1\\WebApplication2\\obj\\",
+      "outputPath": "C:\\Users\\moaya\\Documents\\NajehWebDevelopment\\Mine\\.NET Core\\WebApplication1\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
