@@ -31,7 +31,7 @@
                 $("#table").html(table);
             },
             error: function (e) {
-                alert("error");
+                alert("error display all majors");
                 alert(e.responseText);
             },
             async: false
