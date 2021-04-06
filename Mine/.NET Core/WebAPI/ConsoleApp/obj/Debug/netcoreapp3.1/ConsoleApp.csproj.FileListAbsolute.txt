@@ -1,0 +1,17 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.deps.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.csproj.CopyComplete
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET Core\WebAPI\ConsoleApp\obj\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache
