@@ -1,0 +1,12 @@
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\obj\Debug\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\obj\Debug\ConsoleApp.csproj.CopyComplete
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\moaya\Documents\NajehWebDevelopment\Mine\.NET\WebAPI\ConsoleApp\obj\Debug\ConsoleApp.pdb
