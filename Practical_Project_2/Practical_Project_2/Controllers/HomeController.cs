@@ -285,8 +285,8 @@ namespace Practical_Project_2.Controllers
             }
             catch (Exception)
             {
-                throw;
-                //return View();
+                //throw;
+                return View();
             }
         }
 

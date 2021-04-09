@@ -175,4 +175,3 @@ C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Proje
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.App_LocalResources.Resource.ar.resources
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.csproj.GenerateResource.cache
 C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\ar\Practical_Project_2.resources.dll
-C:\Users\moaya\Documents\NajehWebDevelopment\Practical_Project_2\Practical_Project_2\obj\Debug\Practical_Project_2.csprojAssemblyReference.cache
