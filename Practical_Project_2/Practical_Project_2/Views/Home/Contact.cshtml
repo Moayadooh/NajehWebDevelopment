@@ -2,31 +2,7 @@
 @{
     ViewBag.Title = "Contact";
 }
-<script>
-    $(function () {
-        $("#btn").click(function () {
-            var jsonObj = [];
-            jsonObj.push({
-                "UserEmail": $("#input-26").val(),
-                "UserName": $("#input-25").val(),
-                "UserMessage": $("#msg").val()
-            });
-            $.ajax({
-                type: "POST",
-                url: "/Home/SendMail",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                data: JSON.stringify(jsonObj),
-                success: function (data) {
-                    alert(data);
-                },
-                error: function (data) {
-                    console.log(data);
-                }
-            });
-        });
-    });
-</script>
+
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -65,22 +41,24 @@
         <div class="col-md-6 w3_agileits_contact_grid_right">
             <h2 class="w3_agile_header">Leave a<span> Message</span></h2>
 
-            <form action="#" method="post">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
                 <span class="input input--ichiro">
-                    <input class="input__field input__field--ichiro" type="text" id="input-25" name="Name" placeholder=" " required="" />
+                    <input class="input__field input__field--ichiro" type="text" id="input-25" name="UserName" placeholder=" " required="" />
                     <label class="input__label input__label--ichiro" for="input-25">
                         <span class="input__label-content input__label-content--ichiro">Your Name</span>
                     </label>
                 </span>
                 <span class="input input--ichiro">
-                    <input class="input__field input__field--ichiro" type="email" id="input-26" name="Email" placeholder=" " required="" />
+                    <input class="input__field input__field--ichiro" type="email" id="input-26" name="UserEmail" placeholder=" " required="" />
                     <label class="input__label input__label--ichiro" for="input-26">
                         <span class="input__label-content input__label-content--ichiro">Your Email</span>
                     </label>
                 </span>
-                <textarea id="msg" name="Message" placeholder="Your message here..." required=""></textarea>
-                <input type="button" id="btn" value="Submit">
-            </form>
+                <textarea name="UserMessage" placeholder="Your message here..." required=""></textarea>
+                <input type="submit" value="Submit">
+            }
         </div>
         <div class="clearfix"> </div>
     </div>

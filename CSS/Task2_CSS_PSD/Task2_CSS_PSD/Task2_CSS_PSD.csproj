@@ -75,7 +75,7 @@
     <Content Include="Images\Personal Photo - white.jpg" />
     <Content Include="Images\pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg" />
     <Content Include="Images\tree-landscape.jpg" />
-    <Content Include="Multipurpose.html" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />

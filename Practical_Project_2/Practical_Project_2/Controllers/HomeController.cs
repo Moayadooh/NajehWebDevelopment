@@ -252,34 +252,47 @@ namespace Practical_Project_2.Controllers
         }
 
         [HttpPost]
-        public ActionResult SendMail(List<ContactViewModel> contactList)
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(ContactViewModel contact)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var body = "<p> Email From : {0} - ({1})</p><p>Message:</p><p>{2}</p> ";
-                var message = new MailMessage();
-                message.To.Add(new MailAddress("moayadarss97@gmail.com")); //info@yourdomain
-                message.From = new MailAddress("moayad.soft@outlook.com");
-                message.Subject = "Test Suject";
-                message.Body = string.Format(body, contactList[0].UserEmail, contactList[0].UserName, contactList[0].UserMessage);
-                message.IsBodyHtml = true;
-
-                using (var smtp = new SmtpClient())
+                if (ModelState.IsValid)
                 {
-                    var crd = new NetworkCredential()
+                    var body = "<p> Email From : {0} - ({1})</p><p>Message:</p><p>{2}</p> ";
+                    var message = new MailMessage();
+                    message.To.Add(new MailAddress("moayadarss97@gmail.com")); //info@yourdomain
+                    message.From = new MailAddress("moayad.soft@outlook.com");
+                    message.Subject = "Test Message";
+                    message.Body = string.Format(body, contact.UserEmail, contact.UserName, contact.UserMessage);
+                    message.IsBodyHtml = true;
+
+                    using (var smtp = new SmtpClient())
                     {
-                        UserName = "moayad.soft@outlook.com",
-                        Password = ""
-                    };
-                    smtp.Credentials = crd;
-                    smtp.Host = "smtp-mail.outlook.com";
-                    smtp.Port = 587;
-                    smtp.EnableSsl = true;
-                    smtp.Send(message);
-                    return Json("Email sent.");
+                        var crd = new NetworkCredential()
+                        {
+                            UserName = "moayad.soft@outlook.com",
+                            Password = ""
+                        };
+                        smtp.Credentials = crd;
+                        smtp.Host = "smtp-mail.outlook.com";
+                        smtp.Port = 587;
+                        smtp.EnableSsl = true;
+                        smtp.Send(message);
+                    }
                 }
+                return RedirectToAction("Sent");
             }
-            return Json("Something went wrong");
+            catch (Exception)
+            {
+                throw;
+                //return View();
+            }
+        }
+
+        public ActionResult Sent()
+        {
+            return View();
         }
 
         public ActionResult FAQ()

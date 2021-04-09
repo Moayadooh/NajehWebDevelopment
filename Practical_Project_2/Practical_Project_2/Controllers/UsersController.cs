@@ -80,7 +80,8 @@ namespace Practical_Project_2.Controllers
                 return NotFound();
             db.Users.Remove(user);
             db.SaveChanges();
-            return Ok(user);
+            //return Ok(user);
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
         protected override void Dispose(bool disposing)

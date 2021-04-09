@@ -18,11 +18,13 @@
 <script>
     $(function () {
         var table1, table2;
+
+        // Display users details
         function Display() {
             $.ajax({
                 url: "/api/users/GetUserDetails",
                 type: "GET",
-                contentType: "application/json; charset=utf-8",
+                //contentType: "application/json; charset=utf-8",
                 dataType: "JSON",
                 success: function (obj) {
                     $('#table2').css("display", "none");
@@ -38,57 +40,62 @@
                             { "defaultContent": "<button id='btnDelete'>Delete</button>" }
                         ]
                     });
-
-                    //View user purchases
-                    $('#UsersTable tbody').on('click', '#btnView', function () {
-                        var data = table1.row($(this).parents('tr')).data();
-                        $('#table1').css("display", "none");
-                        $('#table2').css("display", "block");
-                        $.ajax({
-                            url: "/api/users/GetUserPurchases/" + data.ID,
-                            type: "GET",
-                            contentType: "application/json; charset=utf-8",
-                            dataType: "JSON",
-                            success: function (obj) {
-                                table2 = $('#UserPurchasesTable').DataTable({
-                                    paging: false,
-                                    searching: false,
-                                    "data": obj,
-                                    "columns": [
-                                        { "data": "NumOfItems" },
-                                        { "data": "TotalPrice" },
-                                        { "data": "Date" }
-                                    ]
-                                });
-                            }
-                        });
-                    });
-
-                    //Delete user
-                    $('#UsersTable tbody').on('click', '#btnDelete', function () {
-                        var data = table1.row($(this).parents('tr')).data();
-                        table1.destroy();
-                        $.ajax({
-                            url: "/api/users/DeleteUser/" + data.ID,
-                            type: "DELETE",
-                            contentType: "application/json; charset=utf-8",
-                            dataType: "JSON",
-                            success: function () {
-                                Display();
-                            },
-                            async: false
-                        });
-                    });
-
-                }
+                },
+                async: false
             });
         }
         Display();
 
+        // Display user purchases
+        $('#UsersTable tbody').on('click', '#btnView', function () {
+
+            var data = table1.row($(this).parents('tr')).data();
+
+            $.ajax({
+                url: "/api/users/GetUserPurchases/" + data.ID,
+                type: "GET",
+                //contentType: "application/json; charset=utf-8",
+                dataType: "JSON",
+                success: function (obj) {
+                    table1.destroy();
+
+                    $('#table1').css("display", "none");
+                    table2 = $('#UserPurchasesTable').DataTable({
+                        paging: false,
+                        searching: false,
+                        "data": obj,
+                        "columns": [
+                            { "data": "NumOfItems" },
+                            { "data": "TotalPrice" },
+                            { "data": "Date" }
+                        ]
+                    });
+                    $('#table2').css("display", "block");
+                },
+                async: false
+            });
+        });
+
+        // Delete user & profile & user purchases
+        $('#UsersTable tbody').on('click', '#btnDelete', function () {
+
+            var data = table1.row($(this).parents('tr')).data();
+            table1.destroy();
+
+            $.ajax({
+                url: "/api/users/DeleteUser/" + data.ID,
+                type: "DELETE",
+                success: function () {
+                    Display();
+                },
+                async: false
+            });
+        });
+
         //Back to users table
         $("#btnBack").click(function () {
             table2.destroy();
-            $('#table2').css("display", "none");
+            Display();
             $('#table1').css("display", "block");
         });
     });
