@@ -1,4 +1,8 @@
-﻿<!--
+﻿@using System.Configuration;
+@{
+    string redirectURL = @ConfigurationManager.AppSettings["redirectURL"];
+}
+<!--
 author: W3layouts
 author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
@@ -323,7 +327,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         email: false,
                                         sms: true
                                     },
-                                    redirect: "http://moayad1.somee.com/User/PaymentSuccess",// https 44302 - http 8003 - http://moayad.somee.com/User/PaymentSuccess
+                                    /**/
+                                    redirect: "@redirectURL",// https 44302 - http 8003
+                                    /**/
                                     post: null,
                                 }
                             }

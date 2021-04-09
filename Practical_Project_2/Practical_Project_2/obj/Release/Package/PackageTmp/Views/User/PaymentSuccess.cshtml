@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Payment Success";
 }
+
 <script>
     $(function () {
         var jsonObj = [];
@@ -18,8 +19,8 @@
             success: function (data) {
                 shoppingCart.clearCart();
                 displayCart();
-                alert(data);
-                window.location = '@Url.Action("Index", "User")';
+                $('#msg').text(data);
+                //window.location = '@Url.Action("Index", "User")';
             },
             error: function (data) {
                 alert('Could not save the records!');
@@ -28,3 +29,5 @@
         });
     });
 </script>
+
+<div class="alert alert-success" role="alert"><h2 id="msg"></h2></div>
