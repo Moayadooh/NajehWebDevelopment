@@ -52,6 +52,15 @@ namespace MVC_DB_First.Controllers
             //db.sp_InsertProperty(Guid.NewGuid(), "", 1, 1.2, 3, 4);
             return RedirectToAction("Gallery");
         }
+        //.NET Core
+        //IFormFile FileData
+        //if (FileName != null)
+        //{
+        //    BinaryReader br = new BinaryReader(FileData.OpenReadStream());
+        //    var readerbytes = br.ReadBytes((int)FileData.Length);
+        //    investigatorRequest.FileData = readerbytes;
+        //    investigatorRequest.FileType = FileName.ContentType;
+        //}
 
         public FileContentResult GetImage(int id) //https://localhost:44388/Properties/GetImage/1025
         {
