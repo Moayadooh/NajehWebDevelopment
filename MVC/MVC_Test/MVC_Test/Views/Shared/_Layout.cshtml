@@ -46,12 +46,99 @@
             //    alert($(this).val());
             //});
 
-            $(".datepicker").on("change", function () {
+            $(".datepicker").on("input", function () {
                 var date = $(this).val();
-                var newDate = date.split("/");
-                //console.log(newDate[0]);
-                //console.log(newDate[1]);
-                //console.log(newDate[2]);
+                var oldValue = date.split("/");
+
+                var oldDay = "", newDay = "";
+                if (typeof oldValue[0] === 'undefined')
+                    oldDay = "";
+                else
+                    oldDay = oldValue[0];
+                for (var i = 0; i < oldDay.length; i++) {
+                    if (!isNaN(oldDay[i]))
+                        newDay += oldDay[i];
+
+                    if (isNaN(oldDay))
+                        //newDay = "dd";
+
+                    if (i == 1)
+                        break;
+                }
+
+                var oldMonth = "", newMonth = "";
+                if (typeof oldValue[1] === 'undefined')
+                    oldMonth = "";
+                else
+                    oldMonth = oldValue[1];
+                for (var i = 0; i < oldMonth.length; i++) {
+                    if (!isNaN(oldMonth[i]))
+                        newMonth += oldMonth[i];
+
+                    if (isNaN(oldMonth))
+                        //newMonth = "mm";
+
+                    if (i == 1)
+                        break;
+                }
+
+                var oldYear = "", newYear = "";
+                if (typeof oldValue[2] === 'undefined')
+                    oldYear = "";
+                else
+                    oldYear = oldValue[2];
+                for (var i = 0; i < oldYear.length; i++) {
+                    if (!isNaN(oldYear[i]))
+                        newYear += oldYear[i];
+
+                    if (isNaN(oldYear))
+                        //newYear = "yyyy";
+
+                    if (i == 3)
+                        break;
+                }
+
+                //function Check(oldDate, newDate, len) {
+                //    for (var i = len; i < oldDate.length; i++) {
+
+                //        if (!isNaN(oldDate[i]))
+                //            newDate += oldDate[i];
+
+                //        if (oldDate.length == len && isNaN(oldDate)) {
+                //            if (newDate == "") {
+                //                if (len > 1)
+                //                    newDate = "0000";
+                //                else
+                //                    newDate = "00";
+                //            }
+                //            else
+                //                newDate = 0 + newDate;
+                //        }
+
+                //        if (i == len)
+                //            break;
+
+                //    }
+                //}
+
+                //for (var i = 0; i < oldDay.length; i++) {
+
+                //    if (!isNaN(oldDay[i]))
+                //        newDay += oldDay[i];
+
+                //    if (oldDay.length == 1 && isNaN(oldDay)) {
+                //        if (newDay == "")
+                //            newDay = "00";
+                //        else
+                //            newDay = 0 + newDay;
+                //    }
+
+                //    if (i == 1)
+                //        break;
+
+                //}
+
+                $(this).val(newDay + "/" + newMonth + "/" + newYear);
             });
         });
     </script>
