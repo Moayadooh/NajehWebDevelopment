@@ -38,12 +38,37 @@
     <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/js/bootstrap-datepicker.js"></script>
-    @*<script src="~/locales/bootstrap-datepicker-en-CA.min.js"></script>*@
-    @*<script src="~/locales/bootstrap-datepicker.ar.min.js"></script>*@
     <script>
+        window.onload = function () {
+            var message = document.getElementById('datepicker');
+            // Select a portion of text
+            createSelection(message, 0, 2);
+            // get the selected portion of text
+            var selectedText = message.value.substring(message.selectionStart, message.selectionEnd);
+            //alert(selectedText);
+        };
+
+        function createSelection(field, start, end) {
+            if (field.createTextRange) {
+                var selRange = field.createTextRange();
+                selRange.collapse(true);
+                selRange.moveStart('character', start);
+                selRange.moveEnd('character', end);
+                selRange.select();
+                field.focus();
+            } else if (field.setSelectionRange) {
+                field.focus();
+                field.setSelectionRange(start, end);
+            } else if (typeof field.selectionStart != 'undefined') {
+                field.selectionStart = start;
+                field.selectionEnd = end;
+                field.focus();
+            }
+        }
+
         $(function () {
-            //$(".datepicker").on("input", function () {
-            //    alert($(this).val());
+            //$(".datepicker").click(function () {
+            //    $(this).select();
             //});
 
             $(".datepicker").on("input", function () {
@@ -52,15 +77,21 @@
 
                 var oldDay = "", newDay = "";
                 if (typeof oldValue[0] === 'undefined')
-                    oldDay = "";
+                    oldDay = "dd";
                 else
                     oldDay = oldValue[0];
                 for (var i = 0; i < oldDay.length; i++) {
                     if (!isNaN(oldDay[i]))
                         newDay += oldDay[i];
 
+                    if (!isNaN(newDay) && newDay.length > 1 && oldValue[1].length > 1) {
+                        var message = document.getElementById('datepicker');
+                        createSelection(message, 3, 5);
+                        message.value.substring(message.selectionStart, message.selectionEnd);
+                    }
+
                     if (isNaN(oldDay))
-                        //newDay = "dd";
+                        newDay = "dd";
 
                     if (i == 1)
                         break;
@@ -68,7 +99,7 @@
 
                 var oldMonth = "", newMonth = "";
                 if (typeof oldValue[1] === 'undefined')
-                    oldMonth = "";
+                    oldMonth = "mm";
                 else
                     oldMonth = oldValue[1];
                 for (var i = 0; i < oldMonth.length; i++) {
@@ -76,7 +107,7 @@
                         newMonth += oldMonth[i];
 
                     if (isNaN(oldMonth))
-                        //newMonth = "mm";
+                        newMonth = "mm";
 
                     if (i == 1)
                         break;
@@ -84,7 +115,7 @@
 
                 var oldYear = "", newYear = "";
                 if (typeof oldValue[2] === 'undefined')
-                    oldYear = "";
+                    oldYear = "yyyy";
                 else
                     oldYear = oldValue[2];
                 for (var i = 0; i < oldYear.length; i++) {
@@ -92,51 +123,11 @@
                         newYear += oldYear[i];
 
                     if (isNaN(oldYear))
-                        //newYear = "yyyy";
+                        newYear = "yyyy";
 
                     if (i == 3)
                         break;
                 }
-
-                //function Check(oldDate, newDate, len) {
-                //    for (var i = len; i < oldDate.length; i++) {
-
-                //        if (!isNaN(oldDate[i]))
-                //            newDate += oldDate[i];
-
-                //        if (oldDate.length == len && isNaN(oldDate)) {
-                //            if (newDate == "") {
-                //                if (len > 1)
-                //                    newDate = "0000";
-                //                else
-                //                    newDate = "00";
-                //            }
-                //            else
-                //                newDate = 0 + newDate;
-                //        }
-
-                //        if (i == len)
-                //            break;
-
-                //    }
-                //}
-
-                //for (var i = 0; i < oldDay.length; i++) {
-
-                //    if (!isNaN(oldDay[i]))
-                //        newDay += oldDay[i];
-
-                //    if (oldDay.length == 1 && isNaN(oldDay)) {
-                //        if (newDay == "")
-                //            newDay = "00";
-                //        else
-                //            newDay = 0 + newDay;
-                //    }
-
-                //    if (i == 1)
-                //        break;
-
-                //}
 
                 $(this).val(newDay + "/" + newMonth + "/" + newYear);
             });
