@@ -39,37 +39,52 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/js/bootstrap-datepicker.js"></script>
     <script>
-        window.onload = function () {
-            var message = document.getElementById('datepicker');
-            // Select a portion of text
-            createSelection(message, 0, 2);
-            // get the selected portion of text
-            var selectedText = message.value.substring(message.selectionStart, message.selectionEnd);
-            //alert(selectedText);
-        };
+        //window.onload = function () {
+        //    var message = document.getElementById('datepicker');
+        //    // Select a portion of text
+        //    createSelection(message, 0, 2);
+        //    // get the selected portion of text
+        //    var selectedText = message.value.substring(message.selectionStart, message.selectionEnd);
+        //    //alert(selectedText);
+        //};
 
-        function createSelection(field, start, end) {
-            if (field.createTextRange) {
-                var selRange = field.createTextRange();
-                selRange.collapse(true);
-                selRange.moveStart('character', start);
-                selRange.moveEnd('character', end);
-                selRange.select();
-                field.focus();
-            } else if (field.setSelectionRange) {
-                field.focus();
-                field.setSelectionRange(start, end);
-            } else if (typeof field.selectionStart != 'undefined') {
-                field.selectionStart = start;
-                field.selectionEnd = end;
-                field.focus();
-            }
-        }
+        //function createSelection(field, start, end) {
+        //    if (field.createTextRange) {
+        //        var selRange = field.createTextRange();
+        //        selRange.collapse(true);
+        //        selRange.moveStart('character', start);
+        //        selRange.moveEnd('character', end);
+        //        selRange.select();
+        //        field.focus();
+        //    } else if (field.setSelectionRange) {
+        //        field.focus();
+        //        field.setSelectionRange(start, end);
+        //    } else if (typeof field.selectionStart != 'undefined') {
+        //        field.selectionStart = start;
+        //        field.selectionEnd = end;
+        //        field.focus();
+        //    }
+        //}
 
         $(function () {
-            //$(".datepicker").click(function () {
-            //    $(this).select();
-            //});
+            $(".datepicker").click(function () {
+                //$(this).select();
+
+                //var i = $(this).index()-1;
+                //console.log(this.value + ', ' + i);
+            });
+
+            //var g = document.getElementById('datepicker');
+            //for (var i = 0, len = g.value.length; i < len; i++) {
+
+            //    (function (index) {
+            //        //console.log(g.value[index]);
+            //        g.value[i].onclick = function () {
+            //            console.log(index);
+            //        }
+            //    })(i);
+
+            //}
 
             $(".datepicker").on("input", function () {
                 var date = $(this).val();
@@ -84,11 +99,11 @@
                     if (!isNaN(oldDay[i]))
                         newDay += oldDay[i];
 
-                    if (!isNaN(newDay) && newDay.length > 1 && oldValue[1].length > 1) {
-                        var message = document.getElementById('datepicker');
-                        createSelection(message, 3, 5);
-                        message.value.substring(message.selectionStart, message.selectionEnd);
-                    }
+                    //if (!isNaN(newDay) && newDay.length > 1 && oldValue[1].length > 1) {
+                    //    var message = document.getElementById('datepicker');
+                    //    createSelection(message, 3, 5);
+                    //    message.value.substring(message.selectionStart, message.selectionEnd);
+                    //}
 
                     if (isNaN(oldDay))
                         newDay = "dd";
