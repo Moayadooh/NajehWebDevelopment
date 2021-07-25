@@ -66,83 +66,70 @@
         //    }
         //}
 
+        //if (!isNaN(newDay) && newDay.length > 1 && oldValue[1].length > 1) {
+        //    var message = document.getElementById('datepicker');
+        //    createSelection(message, 3, 5);
+        //    message.value.substring(message.selectionStart, message.selectionEnd);
+        //}
+
+        //var g = document.getElementById('datepicker');
+        //for (var i = 0, len = g.value.length; i < len; i++) {
+        //    (function (index) {
+        //        //console.log(index);
+        //        g.value[i].onclick = function () {
+        //            console.log(index);
+        //        }
+        //    })(i);
+        //}
+
         $(function () {
             $(".datepicker").click(function () {
                 //$(this).select();
 
-                //var i = $(this).index()-1;
+                //var i = $(this).index(this);
                 //console.log(this.value + ', ' + i);
             });
 
-            //var g = document.getElementById('datepicker');
-            //for (var i = 0, len = g.value.length; i < len; i++) {
-
-            //    (function (index) {
-            //        //console.log(g.value[index]);
-            //        g.value[i].onclick = function () {
-            //            console.log(index);
-            //        }
-            //    })(i);
-
-            //}
-
             $(".datepicker").on("input", function () {
-                var date = $(this).val();
-                var oldValue = date.split("/");
+                var oldValue = $(this).val().split("/");
 
+                function CheckDate(oldDate, newDate, format, len) {
+                    for (var i = 0; i < oldDate.length; i++) {
+                        if (!isNaN(oldDate[i]))
+                            newDate += oldDate[i];
+
+                        if (isNaN(oldDate))
+                            newDate = format;
+
+                        if (i == len)
+                            break;
+                    }
+                    return newDate;
+                }
+
+                //Day
                 var oldDay = "", newDay = "";
                 if (typeof oldValue[0] === 'undefined')
                     oldDay = "dd";
                 else
                     oldDay = oldValue[0];
-                for (var i = 0; i < oldDay.length; i++) {
-                    if (!isNaN(oldDay[i]))
-                        newDay += oldDay[i];
+                newDay = CheckDate(oldDay, newDay, "dd", 1);
 
-                    //if (!isNaN(newDay) && newDay.length > 1 && oldValue[1].length > 1) {
-                    //    var message = document.getElementById('datepicker');
-                    //    createSelection(message, 3, 5);
-                    //    message.value.substring(message.selectionStart, message.selectionEnd);
-                    //}
-
-                    if (isNaN(oldDay))
-                        newDay = "dd";
-
-                    if (i == 1)
-                        break;
-                }
-
+                //Month
                 var oldMonth = "", newMonth = "";
                 if (typeof oldValue[1] === 'undefined')
                     oldMonth = "mm";
                 else
                     oldMonth = oldValue[1];
-                for (var i = 0; i < oldMonth.length; i++) {
-                    if (!isNaN(oldMonth[i]))
-                        newMonth += oldMonth[i];
+                newMonth = CheckDate(oldMonth, newMonth, "mm", 1);
 
-                    if (isNaN(oldMonth))
-                        newMonth = "mm";
-
-                    if (i == 1)
-                        break;
-                }
-
+                //Year
                 var oldYear = "", newYear = "";
                 if (typeof oldValue[2] === 'undefined')
                     oldYear = "yyyy";
                 else
                     oldYear = oldValue[2];
-                for (var i = 0; i < oldYear.length; i++) {
-                    if (!isNaN(oldYear[i]))
-                        newYear += oldYear[i];
-
-                    if (isNaN(oldYear))
-                        newYear = "yyyy";
-
-                    if (i == 3)
-                        break;
-                }
+                newYear = CheckDate(oldYear, newYear, "yyyy", 3);
 
                 $(this).val(newDay + "/" + newMonth + "/" + newYear);
             });
