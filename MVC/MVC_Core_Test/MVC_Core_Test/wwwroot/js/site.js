@@ -27,16 +27,16 @@ function Select(start, end) {
 }
 
 function SelectPartOfDate() {
-    var oldValue = $('.datepickerFrom').val().split("/");
-    if (isNaN(oldValue[0])) {
+    var date = $('.datepickerFrom').val().split("/");
+    if (isNaN(date[0])) {
         //Select(0, 2);
-        Select(0, oldValue[0].length);
+        Select(0, date[0].length);
     }
-    else if (isNaN(oldValue[1])) {
+    else if (isNaN(date[1])) {
         //Select(3, 5);
-        Select(oldValue[0].length + 1, oldValue[0].length + oldValue[1].length + 1);
+        Select(date[0].length + 1, date[0].length + date[1].length + 1);
     }
-    else if (isNaN(oldValue[2])) {
+    else if (isNaN(date[2])) {
         //Select(6, 10);
         Select($('.datepickerFrom').val().length - 4, $('.datepickerFrom').val().length);
     }
@@ -69,21 +69,22 @@ $(function () {
     });
 
     function CheckDate() {
-        var oldValue = $('.datepickerFrom').val().split("/");
-        function CheckPartOfDate(oldDate, newDate, format, len) {
-            for (var i = 0; i < oldDate.length; i++) {
-                if (!isNaN(oldDate[i]))
-                    newDate += oldDate[i];
-                if (isNaN(oldDate))
+        var date = $('.datepickerFrom').val().split("/");
+        function CheckPartOfDate(currentDate, format, len) {
+            var newDate = "";
+            for (var i = 0; i < currentDate.length; i++) {
+                if (!isNaN(currentDate[i]))
+                    newDate += currentDate[i];
+                if (isNaN(currentDate))
                     newDate = format;
                 if (i == len)
                     break;
             }
             if ($('.datepickerFrom').val().length != 9) {
-                if (!isNaN(newDate) && newDate.length > 1 && isNaN(oldValue[1]) && oldValue[1].length > 1) {
+                if (!isNaN(newDate) && newDate.length > 1 && isNaN(date[1]) && date[1].length > 1) {
                     Select(3, 5);
                 }
-                else if (!isNaN(oldValue[1]) && oldValue[1].length > 1 && isNaN(oldValue[2]) && oldValue[2].length > 3) {
+                else if (!isNaN(date[1]) && date[1].length > 1 && isNaN(date[2]) && date[2].length > 3) {
                     Select(6, 10);
                 }
             }
@@ -91,28 +92,28 @@ $(function () {
         }
 
         //Day
-        var oldDay = "", newDay = "";
-        if (typeof oldValue[0] === 'undefined' || oldValue[0] == '')
-            oldDay = "dd";
+        var currentDay = "", newDay = "";
+        if (typeof date[0] === 'undefined' || date[0] == '')
+            currentDay = "dd";
         else
-            oldDay = oldValue[0];
-        newDay = CheckPartOfDate(oldDay, newDay, "dd", 1);
+            currentDay = date[0];
+        newDay = CheckPartOfDate(currentDay, "dd", 1);
 
         //Month
-        var oldMonth = "", newMonth = "";
-        if (typeof oldValue[1] === 'undefined' || oldValue[1] == '')
-            oldMonth = "mm";
+        var currentMonth = "", newMonth = "";
+        if (typeof date[1] === 'undefined' || date[1] == '')
+            currentMonth = "mm";
         else
-            oldMonth = oldValue[1];
-        newMonth = CheckPartOfDate(oldMonth, newMonth, "mm", 1);
+            currentMonth = date[1];
+        newMonth = CheckPartOfDate(currentMonth, "mm", 1);
 
         //Year
-        var oldYear = "", newYear = "";
-        if (typeof oldValue[2] === 'undefined' || oldValue[2] == '')
-            oldYear = "yyyy";
+        var currentYear = "", newYear = "";
+        if (typeof date[2] === 'undefined' || date[2] == '')
+            currentYear = "yyyy";
         else
-            oldYear = oldValue[2];
-        newYear = CheckPartOfDate(oldYear, newYear, "yyyy", 3);
+            currentYear = date[2];
+        newYear = CheckPartOfDate(currentYear, "yyyy", 3);
 
         $('.datepickerFrom').val(newDay + "/" + newMonth + "/" + newYear);
     }
