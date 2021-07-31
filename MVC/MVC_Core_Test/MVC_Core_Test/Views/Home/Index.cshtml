@@ -3,5 +3,8 @@
 }
 
 <input class="datepickerFrom" spellcheck="false" value="dd/mm/yyyy" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" />
+<input type="hidden" id="display-calendar" value="0" />
+@*<input type="hidden" id="btn-calendar-clicked" value="0" />*@
+<input type="hidden" id="selected-date-part" value="0" />
 @*@Html.TextBoxFor(x => x.name, new { @class = "form-control datepickerFrom", spellcheck = "false", @Value = "dd/mm/yyyy", @placeholder = "dd/mm/yyyy", @pattern = @"\d{1,2}/\d{1,2}/\d{4}" })*@
 @*required = "required"*@
