@@ -188,6 +188,15 @@ function Add0BeforeDigits() {
     $('.datepickerFrom').val(date[0] + "/" + date[1] + "/" + date[2]);
 }
 
+function PreventDeleteText() {
+    window.onkeydown = function (event) {
+        if (event.which == 8 || event.which == 46) {
+            event.preventDefault();
+            PartToSelect();
+        }
+    };
+}
+
 $(function () {
     $('.datepickerFrom').datepicker({
         uiLibrary: 'bootstrap4',
@@ -245,6 +254,12 @@ $(function () {
         var date = $('.datepickerFrom').val().split("/");
         if (e.keyCode == '37') {
             e.preventDefault();
+
+            if ($(".datepickerFrom").val().length == 0) {
+                CheckDate();
+                SelectPartOfDate();
+            }
+
             if ($('.datepickerFrom').val().length < 10) {
                 PartToSelect();
             }
@@ -252,18 +267,15 @@ $(function () {
                 Select(0, date[0].length);
             else if ($("#selected-date-part").val() == 3)
                 Select(date[0].length + 1, date[0].length + date[1].length + 1);
-            else {
-                //e.preventDefault();
-                //$('.datepickerFrom').blur();
-                //SetMaxAndMinDayAndMonth();
-                //$(".datepickerFrom").trigger("click");
-                //$(".datepickerFrom").trigger("focus");
-                //Select(0, date[0].length);
-                //Select($('.datepickerFrom').val().length - 4, $('.datepickerFrom').val().length);
-            }
         }
         else if (e.keyCode == '39') {
             e.preventDefault();
+
+            if ($(".datepickerFrom").val().length == 0) {
+                CheckDate();
+                SelectPartOfDate();
+            }
+
             if ($('.datepickerFrom').val().length < 10) {
                 PartToSelect();
             }
@@ -271,15 +283,6 @@ $(function () {
                 Select(date[0].length + 1, date[0].length + date[1].length + 1);
             else if ($("#selected-date-part").val() == 2)
                 Select($('.datepickerFrom').val().length - 4, $('.datepickerFrom').val().length);
-            else {
-                //e.preventDefault();
-                //$('.datepickerFrom').blur();
-                //SetMaxAndMinDayAndMonth();
-                //$(".datepickerFrom").trigger("click");
-                //$(".datepickerFrom").trigger("focus");
-                //Select(0, date[0].length);
-                //Select($('.datepickerFrom').val().length - 4, $('.datepickerFrom').val().length);
-            }
         }
     });
 
@@ -302,7 +305,7 @@ $(function () {
 
     //Press Backspace key
     $(".datepickerFrom").keyup(function (e) {
-        if (e.keyCode == 8) {
+        if (e.keyCode == 8 || e.keyCode == 46) {
             if ($('.datepickerFrom').val().length == 10) {
                 var date = $('.datepickerFrom').val().split("/");
                 if (date[0] == 'dd' || date[1] == 'mm' || date[2] == 'yyyy') {
@@ -344,17 +347,10 @@ $(function () {
     });
 
     $('.datepickerFrom').on("click", function () {
-        if ($("#display-calendar").val() == 1) {
-            $(".btn.btn-outline-secondary.border-left-0").trigger("click");
+        if ($(".datepickerFrom").val().length == 0) {
+            CheckDate();
+            SelectPartOfDate();
         }
-        //SelectPartOfDate();
-    });
-
-    $('.btn.btn-outline-secondary.border-left-0').on("click", function () {
-        if ($("#display-calendar").val() == 0)
-            $("#display-calendar").val(1);
-        else
-            $("#display-calendar").val(0);
     });
 
     $('.datepickerFrom').on("input", function () {
@@ -364,13 +360,7 @@ $(function () {
     });
 
     $(".datepickerFrom").on('select', function () {
-        //Prevent delete selected value
-        window.onkeydown = function (event) {
-            if (event.which == 8) {
-                event.preventDefault();
-                PartToSelect();
-            }
-        };
+        PreventDeleteText();
     });
 
     $('.datepickerFrom').on('blur', function () {
