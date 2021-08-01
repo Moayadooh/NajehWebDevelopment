@@ -17,29 +17,29 @@ function createSelection(field, start, end) {
     }
 }
 
-function Select(start, end) {
-    var message = $('.datepicker')[0];
+function Select(start, end, className, selectedDatePart) {
+    var message = $(className)[0];
     createSelection(message, start, end);
     message.value.substring(message.selectionStart, message.selectionEnd);
     if (start == 0)
-        $("#datepicker-selected-date-part").val(1);
+        $(selectedDatePart).val(1);
     else if (start == 3)
-        $("#datepicker-selected-date-part").val(2);
+        $(selectedDatePart).val(2);
     else if (start == 6)
-        $("#datepicker-selected-date-part").val(3);
+        $(selectedDatePart).val(3);
 }
 
-function SelectNextPartOfDate(e) {
+function SelectNextPartOfDate(e, className, selectedDatePart) {
     e.preventDefault();
-    var date = $('.datepicker').val().split("/");
-    if ($("#datepicker-selected-date-part").val() == 0)
-        Select(0, date[0].length);
-    else if ($("#datepicker-selected-date-part").val() == 1)
-        Select(date[0].length + 1, date[0].length + date[1].length + 1);
-    else if ($("#datepicker-selected-date-part").val() == 2)
-        Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
-    else if ($("#datepicker-selected-date-part").val() == 3)
-        Select(0, date[0].length);
+    var date = $(className).val().split("/");
+    if ($(selectedDatePart).val() == 0)
+        Select(0, date[0].length, className, selectedDatePart);
+    else if ($(selectedDatePart).val() == 1)
+        Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
+    else if ($(selectedDatePart).val() == 2)
+        Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
+    else if ($(selectedDatePart).val() == 3)
+        Select(0, date[0].length, className, selectedDatePart);
 }
 
 function getSelectionText() {
@@ -52,8 +52,8 @@ function getSelectionText() {
     return text;
 }
 
-function CheckDate() {
-    var date = $('.datepicker').val().split("/");
+function CheckDate(className, selectedDatePart) {
+    var date = $(className).val().split("/");
 
     //Day
     var currentDay = "", newDay = "";
@@ -61,7 +61,7 @@ function CheckDate() {
         currentDay = "dd";
     else
         currentDay = date[0];
-    newDay = CheckPartOfDate(currentDay, "dd", 1);
+    newDay = CheckPartOfDate(currentDay, "dd", 1, className, selectedDatePart);
 
     //Month
     var currentMonth = "", newMonth = "";
@@ -69,7 +69,7 @@ function CheckDate() {
         currentMonth = "mm";
     else
         currentMonth = date[1];
-    newMonth = CheckPartOfDate(currentMonth, "mm", 1);
+    newMonth = CheckPartOfDate(currentMonth, "mm", 1, className, selectedDatePart);
 
     //Year
     var currentYear = "", newYear = "";
@@ -77,13 +77,13 @@ function CheckDate() {
         currentYear = "yyyy";
     else
         currentYear = date[2];
-    newYear = CheckPartOfDate(currentYear, "yyyy", 3);
+    newYear = CheckPartOfDate(currentYear, "yyyy", 3, className, selectedDatePart);
 
-    $('.datepicker').val(newDay + "/" + newMonth + "/" + newYear);
+    $(className).val(newDay + "/" + newMonth + "/" + newYear);
 }
 
-function CheckPartOfDate(currentDate, format, len) {
-    var date = $('.datepicker').val().split("/");
+function CheckPartOfDate(currentDate, format, len, className, selectedDatePart) {
+    var date = $(className).val().split("/");
 
     var newDate = "";
     for (var i = 0; i < currentDate.length; i++) {
@@ -95,41 +95,41 @@ function CheckPartOfDate(currentDate, format, len) {
         if (i == len)
             break;
     }
-    if ($('.datepicker').val().length == 10) {
+    if ($(className).val().length == 10) {
         if (!isNaN(newDate) && newDate.length > 1 && isNaN(date[1]) && date[1].length > 1) {
-            Select(3, 5);
+            Select(3, 5, className, selectedDatePart);
         }
         else if (!isNaN(date[1]) && date[1].length > 1 && isNaN(date[2]) && date[2].length > 3) {
-            Select(6, 10);
+            Select(6, 10, className, selectedDatePart);
         }
         else if (isNaN(date[0]) && !isNaN(date[1]) && !isNaN(date[2])) {
-            Select(0, 2);
+            Select(0, 2, className, selectedDatePart);
         }
         else if (!isNaN(date[0]) && !isNaN(date[1]) && !isNaN(date[2])) {
-            Select(0, 2);
+            Select(0, 2, className, selectedDatePart);
         }
     }
     return newDate;
 }
 
-function SelectPartOfDate() {
-    var date = $('.datepicker').val().split("/");
+function SelectPartOfDate(className, selectedDatePart) {
+    var date = $(className).val().split("/");
     if (isNaN(date[0])) {
-        Select(0, date[0].length);
+        Select(0, date[0].length, className, selectedDatePart);
     }
     else if (isNaN(date[1])) {
-        Select(date[0].length + 1, date[0].length + date[1].length + 1);
+        Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
     }
     else if (isNaN(date[2])) {
-        Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
+        Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
     }
     else {
-        Select(0, date[0].length);
+        Select(0, date[0].length, className, selectedDatePart);
     }
 }
 
-function PartToSelect() {
-    var date = $('.datepicker').val().split("/");
+function PartToSelect(className, selectedDatePart) {
+    var date = $(className).val().split("/");
     var partToSelect = 0;
     if (date[0].length < 2)
         partToSelect = 1;
@@ -138,20 +138,20 @@ function PartToSelect() {
     else if (date[2].length < 4)
         partToSelect = 3;
 
-    SetMaxAndMinDayAndMonth();
-    Add0BeforeDigits();
+    SetMaxAndMinDayAndMonth(className);
+    Add0BeforeDigits(className);
 
-    date = $('.datepicker').val().split("/");
+    date = $(className).val().split("/");
     if (partToSelect == 1)
-        Select(0, date[0].length);
+        Select(0, date[0].length, className, selectedDatePart);
     else if (partToSelect == 2)
-        Select(date[0].length + 1, date[0].length + date[1].length + 1);
+        Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
     else if (partToSelect == 3)
-        Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
+        Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
 }
 
-function SetMaxAndMinDayAndMonth() {
-    var date = $('.datepicker').val().split("/");
+function SetMaxAndMinDayAndMonth(className) {
+    var date = $(className).val().split("/");
 
     //Set max month to 12 & min month to 1
     if (!isNaN(date[1]) && date[1] > 12)
@@ -179,11 +179,11 @@ function SetMaxAndMinDayAndMonth() {
             date[0] = 1;
     }
 
-    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
+    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
 }
 
-function Add0BeforeDigits() {
-    var date = $('.datepicker').val().split("/");
+function Add0BeforeDigits(className) {
+    var date = $(className).val().split("/");
 
     if (!isNaN(date[0]) && date[0].length == 1)
         date[0] = '0' + date[0];
@@ -198,20 +198,20 @@ function Add0BeforeDigits() {
     else if (!isNaN(date[2]) && date[2].length == 3)
         date[2] = '0' + date[2];
 
-    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
+    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
 }
 
-function PreventDeleteText() {
+function PreventDeleteText(className, selectedDatePart) {
     window.onkeydown = function (event) {
         if (event.which == 8 || event.which == 46) {
             event.preventDefault();
-            PartToSelect();
+            PartToSelect(className, selectedDatePart);
         }
     };
 }
 
-function InputNumbersOnly() {
-    $(".datepicker").bind({
+function InputNumbersOnly(className) {
+    $(className).bind({
         keydown: function (e) {
             if (e.shiftKey === true) {
                 if (e.which == 9) {
@@ -233,100 +233,110 @@ function InputNumbersOnly() {
     });
 }
 
-function MoveToLeftAndRight(e) {
+function MoveToLeftAndRight(e, className, calendarDisplayed, selectedDatePart) {
     //Move in date parts
-    var date = $('.datepicker').val().split("/");
+    var date = $(className).val().split("/");
     if (e.keyCode == '37') {
         e.preventDefault();
-        if ($("#datepicker-calendar-displayed").val() == 0) {
-            if ($('.datepicker').val().length < 10) {
-                PartToSelect();
+        if ($(calendarDisplayed).val() == 0) {
+            if ($(className).val().length < 10) {
+                PartToSelect(className, selectedDatePart);
             }
-            else if ($("#datepicker-selected-date-part").val() == 2)
-                Select(0, date[0].length);
-            else if ($("#datepicker-selected-date-part").val() == 3)
-                Select(date[0].length + 1, date[0].length + date[1].length + 1);
+            else if ($(selectedDatePart).val() == 2)
+                Select(0, date[0].length, className, selectedDatePart);
+            else if ($(selectedDatePart).val() == 3)
+                Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
         }
     }
     else if (e.keyCode == '39') {
         e.preventDefault();
-        if ($("#datepicker-calendar-displayed").val() == 0) {
-            if ($('.datepicker').val().length < 10) {
-                PartToSelect();
+        if ($(calendarDisplayed).val() == 0) {
+            if ($(className).val().length < 10) {
+                PartToSelect(className, selectedDatePart);
             }
-            else if ($("#datepicker-selected-date-part").val() == 1)
-                Select(date[0].length + 1, date[0].length + date[1].length + 1);
-            else if ($("#datepicker-selected-date-part").val() == 2)
-                Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
+            else if ($(selectedDatePart).val() == 1)
+                Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
+            else if ($(selectedDatePart).val() == 2)
+                Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
         }
     }
 }
 
-function BlurAndAdd0BeforeDigits(e) {
+function EnterKeyPress(e, className) {
     //Press Enter key
     if (e.which == 13) {
-        $('.datepicker').blur();
-        Add0BeforeDigits();
+        $(className).blur();
+        Add0BeforeDigits(className);
     }
 }
 
-function DeletePartOfDate(e) {
+function DeleteKeyPress(e, className, selectedDatePart) {
+    DeletePartOfDate(e, className, selectedDatePart);
+}
+
+function DeletePartOfDate(e, className, selectedDatePart) {
     //Press Backspace or Delete key
     if (e.keyCode == 8 || e.keyCode == 46) {
-        if ($('.datepicker').val().length == 10) {
-            var date = $('.datepicker').val().split("/");
+        e.preventDefault();
+        if ($(className).val().length == 10) {
+            var date = $(className).val().split("/");
             if (date[0] == 'dd' || date[1] == 'mm' || date[2] == 'yyyy') {
                 if (date[1] != 'mm') {
                     date[1] = 'mm';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select(date[0].length + 1, date[0].length + date[1].length + 1);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
                 }
                 else if (date[0] != 'dd') {
                     date[0] = 'dd';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select(0, date[0].length);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select(0, date[0].length, className, selectedDatePart);
                 }
                 else if (date[2] != 'yyyy') {
                     date[2] = 'yyyy';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
                 }
             }
             else {
-                if ($("#datepicker-selected-date-part").val() == 3) {
+                if ($(selectedDatePart).val() == 3) {
                     date[2] = 'yyyy';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select($('.datepicker').val().length - 4, $('.datepicker').val().length);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select($(className).val().length - 4, $(className).val().length, className, selectedDatePart);
                 }
-                else if ($("#datepicker-selected-date-part").val() == 2) {
+                else if ($(selectedDatePart).val() == 2) {
                     date[1] = 'mm';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select(date[0].length + 1, date[0].length + date[1].length + 1);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select(date[0].length + 1, date[0].length + date[1].length + 1, className, selectedDatePart);
                 }
-                else if ($("#datepicker-selected-date-part").val() == 1) {
+                else if ($(selectedDatePart).val() == 1) {
                     date[0] = 'dd';
-                    $('.datepicker').val(date[0] + "/" + date[1] + "/" + date[2]);
-                    Select(0, date[0].length);
+                    $(className).val(date[0] + "/" + date[1] + "/" + date[2]);
+                    Select(0, date[0].length, className, selectedDatePart);
                 }
             }
         }
     }
 }
 
-function ClickEvent(className, calendarDisplayedId) {
-    if ($(calendarDisplayedId).val() == 1) {
+function ClickEvent(className, calendarDisplayed, selectedDatePart) {
+    if ($(className).val().length > 0 && $(calendarDisplayed).val() == 1) {
+        $(className).val("");
         $(className).next("span").find("button").trigger("click");
     }
-    if ($(className).val().length == 0) {
-        CheckDate();
-        SelectPartOfDate();
+    if ($(className).val().length == 0 && $(calendarDisplayed).val() == 0) {
+        CheckDate(className, selectedDatePart);
+        SelectPartOfDate(className, selectedDatePart);
     }
 }
 
-function InputEvent(className) {
+function InputEvent(className, selectedDatePart) {
     if ($(className).val().length == 10)
-        SetMaxAndMinDayAndMonth();
-    CheckDate();
+        SetMaxAndMinDayAndMonth(className);
+    CheckDate(className, selectedDatePart);
+}
+
+function SelectEvent(className, selectedDatePart) {
+    PreventDeleteText(className, selectedDatePart);
 }
 
 //Disable Up and Down Arrows keys
@@ -337,8 +347,21 @@ var disableArrowKeys = function (e) {
     }
 }
 
-$(function () {
-    $('.datepicker').datepicker({
+function MouseClickEvent(e, className, selectedDatePart) {
+    if ($(className).val().length > 0)
+        Add0BeforeDigits(className);
+    SelectNextPartOfDate(e, className, selectedDatePart);
+}
+
+function BlurEvent(className, selectedDatePart) {
+    //CheckDate(className, selectedDatePart);
+    Add0BeforeDigits(className);
+}
+
+function DatePickerConfig(className, calendarDisplayed) {
+    //Library Documentation
+    //https://gijgo.com/datepicker/
+    $(className).datepicker({
         uiLibrary: 'bootstrap4',
         iconsLibrary: 'fontawesome',
         format: 'dd/mm/yyyy',
@@ -347,52 +370,67 @@ $(function () {
         width: 234,
         size: 'small',
         open: function (e) {
-            $("#datepicker-calendar-displayed").val(1);
-
+            $(calendarDisplayed).val(1);
+            $(className).val("");
         },
         close: function (e) {
-            $("#datepicker-calendar-displayed").val(0);
+            $(calendarDisplayed).val(0);
         }
     });
+}
 
-    InputNumbersOnly();
+function DatePicker(className, calendarDisplayed, selectedDatePart) {
+    InputNumbersOnly(className);
 
-    $(".datepicker").mousedown(function (e) {
-        SelectNextPartOfDate(e);
+    $(className).mousedown(function (e) {
+        MouseClickEvent(e, className, selectedDatePart);
     });
 
-    $(".datepicker").keydown(function (e) {
-        MoveToLeftAndRight(e);
+    $(className).keydown(function (e) {
+        MoveToLeftAndRight(e, className, calendarDisplayed, selectedDatePart);
     });
 
-    $(".datepicker").keydown(disableArrowKeys);
+    $(className).keydown(disableArrowKeys);
 
-    $(".datepicker").on('keypress', function (e) {
-        BlurAndAdd0BeforeDigits(e);
+    $(className).on('keypress', function (e) {
+        EnterKeyPress(e, className);
     });
 
-    $(".datepicker").keyup(function (e) {
-        DeletePartOfDate(e);
+    $(className).keyup(function (e) {
+        DeleteKeyPress(e, className, selectedDatePart);
     });
 
-    $('.datepicker').on("click", function () {
-        ClickEvent(".datepicker", "#datepicker-calendar-displayed");
+    $(className).on("click", function () {
+        ClickEvent(className, calendarDisplayed, selectedDatePart);
     });
 
-    $('.datepicker').on("input", function () {
-        InputEvent(".datepicker");
+    $(className).on("input", function () {
+        InputEvent(className, selectedDatePart);
     });
 
-    $(".datepicker").on('select', function () {
-        PreventDeleteText();
+    $(className).on('select', function () {
+        SelectEvent(className, selectedDatePart);
     });
 
-    $('.datepicker').on('blur', function () {
-        CheckDate();
-        Add0BeforeDigits();
+    $(className).on('blur', function () {
+        BlurEvent(className, selectedDatePart);
     });
 
-    jQuery(".datepicker").on("invalid", function (event) {
-        event.target.setCustomValidity('Please enter valid date.');
-    });
+    //jQuery(className).on("invalid", function (event) {
+    //    event.target.setCustomValidity('Please enter valid date.');
+    //});
+}
+
+$(function () {
+    DatePickerConfig(".datepicker1", "#datepicker1-calendar-displayed");
+    DatePicker(".datepicker1", "#datepicker1-calendar-displayed", "#datepicker1-selected-date-part");
+
+    DatePickerConfig(".datepicker2", "#datepicker2-calendar-displayed");
+    DatePicker(".datepicker2", "#datepicker2-calendar-displayed", "#datepicker2-selected-date-part");
+
+    DatePickerConfig(".datepicker3", "#datepicker3-calendar-displayed");
+    DatePicker(".datepicker3", "#datepicker3-calendar-displayed", "#datepicker3-selected-date-part");
+
+    DatePickerConfig(".datepicker4", "#datepicker4-calendar-displayed");
+    DatePicker(".datepicker4", "#datepicker4-calendar-displayed", "#datepicker4-selected-date-part");
 });

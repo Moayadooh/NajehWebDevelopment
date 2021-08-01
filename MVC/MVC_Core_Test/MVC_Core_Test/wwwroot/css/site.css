@@ -72,10 +72,10 @@ body {
 
 
 
-.datepicker::placeholder {
+.datepicker1::placeholder, .datepicker2::placeholder, .datepicker3::placeholder, .datepicker4::placeholder {
     color: #000000;
 }
 
-.datepicker::-ms-input-placeholder { /* Microsoft Edge */
+.datepicker1::-ms-input-placeholder, .datepicker2::-ms-input-placeholder, .datepicker3::-ms-input-placeholder, .datepicker4::-ms-input-placeholder { /* Microsoft Edge */
     color: #000000;
 }
