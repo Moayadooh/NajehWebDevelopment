@@ -61,7 +61,10 @@ namespace MVC_DB_First.Controllers
         //    investigatorRequest.FileData = readerbytes;
         //    investigatorRequest.FileType = FileName.ContentType;
         //}
-
+        
+        //File Upload Extension Validation In ASP.NET Core
+        //https://dotnetthoughts.net/file-upload-extension-validation-in-aspnet-core/
+        
         public FileContentResult GetImage(int id) //https://localhost:44388/Properties/GetImage/1025
         {
             var propimg = db.Images.Find(id);
